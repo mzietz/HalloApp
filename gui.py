@@ -46,6 +46,8 @@ class Flashcards(QWidget):
         self.tableWidget = QTableWidget()
         self.tableWidget.setRowCount(len(self.library.deck))
         self.tableWidget.setColumnCount(2)
+#        for x in range(self.library.deck):
+#            self.tableWidget.setItem(0,0, QTableWidgetItem(self.library.deck[x].name))
         self.tableWidget.setItem(0,0, QTableWidgetItem(self.library.deck[0].name))
         self.tableWidget.setItem(1,0, QTableWidgetItem(self.library.deck[1].name))
         self.tableWidget.setItem(0,1, QTableWidgetItem(str(len(self.library.deck[0].card))))
