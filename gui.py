@@ -3,7 +3,7 @@
 
 import sys
 from PyQt5.QtWidgets import (QWidget, QToolTip, 
-    QPushButton, QApplication, QHBoxLayout, QVBoxLayout, QTableWidget, QTableWidgetItem)
+    QPushButton, QApplication, QLabel, QHBoxLayout, QVBoxLayout, QTableWidget, QTableWidgetItem)
 from PyQt5.QtGui import QFont 
 from PyQt5.QtCore import QProcess
 from library import *
@@ -23,43 +23,52 @@ class Flashcards(QWidget):
     def initUI(self):
         self.setGeometry(self.left, self.top, self.width, self.height)
         self.setWindowTitle('Vocab trainer')    
-        self.createTable()
-        
-        AddCardButton = QPushButton("Add Card")
-        LoadDeckButton = QPushButton("Load Deck")
+        self.layout = QHBoxLayout()
+        self.setLayout(self.layout)
+        self.deckWindow()
 
-        hbox = QHBoxLayout()
-        hbox.addStretch(1)
-        hbox.addWidget(AddCardButton)
-        hbox.addWidget(LoadDeckButton)
-
-        vbox = QVBoxLayout()
-        vbox.addStretch(1)
-        vbox.addWidget(self.tableWidget)
-        vbox.addLayout(hbox)
-        
-        self.setLayout(vbox)
-
-
-    def createTable(self):
+    def deckWindow(self):
        # Create table
+        self.clear()
+        self.layout.addStretch(1)
         self.tableWidget = QTableWidget()
+        self.layout.addWidget(self.tableWidget)
+        self.setLayout(self.layout)
         self.tableWidget.setRowCount(len(self.library.deck))
-        self.tableWidget.setColumnCount(2)
-#        for x in range(self.library.deck):
-#            self.tableWidget.setItem(0,0, QTableWidgetItem(self.library.deck[x].name))
-        self.tableWidget.setItem(0,0, QTableWidgetItem(self.library.deck[0].name))
-        self.tableWidget.setItem(1,0, QTableWidgetItem(self.library.deck[1].name))
-        self.tableWidget.setItem(0,1, QTableWidgetItem(str(len(self.library.deck[0].card))))
-        self.tableWidget.setItem(1,1, QTableWidgetItem(str(len(self.library.deck[1].card))))
+        self.tableWidget.setColumnCount(1)
+        d=0
+        for x in self.library.deck:
+            self.tableWidget.setItem(d,0, QTableWidgetItem(self.library.deck[d].name))
+            d+=1
+        self.tableWidget.clicked.connect(self.on_click_deck)
 
-        self.tableWidget.doubleClicked.connect(self.on_click)
-
-    def on_click(self):
+    def on_click_deck(self):
         print("\n")
         for currentQTableWidgetItem in self.tableWidget.selectedItems():
             print(currentQTableWidgetItem.row(), currentQTableWidgetItem.column(), currentQTableWidgetItem.text())
- 
+            self.trainerWindow(0)
+
+    def on_click_iknow(self):
+        print("i Know")
+
+    def clear(self):
+        for i in reversed(range(self.layout.count())):
+            try: 
+                self.layout.itemAt(i).widget().setParent(None)
+            except:
+                pass
+
+    def trainerWindow(self, deck):
+        self.clear()
+        print (deck)
+        self.iKnowButton = QPushButton("I Know This!")
+        self.questionWidget = QLabel(self.library.deck[deck].card[0].question)
+        self.answerWidget = QLabel(self.library.deck[deck].card[0].answer)
+        self.layout.addWidget(self.questionWidget)
+        self.layout.addWidget(self.answerWidget)
+        self.layout.addWidget(self.iKnowButton)
+        self.setLayout(self.layout)
+        self.iKnowButton.clicked.connect(self.on_click_iknow)
 
 
 if __name__=="__main__":

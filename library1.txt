@@ -5,3 +5,4 @@ D:Deutsch:1
 Was ist 4 mal 5?:20!:0:0
 Was ist 4 mal 6?:24!:0:0
 Was ist 5 mal 6?:30!:0:0
+Was ist 6 mal 6?:36!:0:0
