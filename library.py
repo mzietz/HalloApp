@@ -34,7 +34,7 @@ class Library:
 
 	def saveLibrary(self):
 #		print(self.deck[0].card[0].question+":"+self.deck[0].card[0].answer+":"+self.deck[0].card[0].learnedStatus+":"+self.deck[0].card[0].timeUntilShow)
-		with open("library1.txt", "w") as f:
+		with open("library.txt", "w") as f:
 			d=0 # counter for decks
 			for x1 in self.deck:
 				f.write("D!"+self.deck[d].name+":"+self.deck[d].number)
