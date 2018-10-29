@@ -27,7 +27,6 @@ class Flashcards(QWidget):
         self.layout = QHBoxLayout()
         self.buttonLayout = QHBoxLayout()
         self.vlayout = QVBoxLayout()
-#        self.setLayout(self.layout)
         self.deckWindow()
         self.currentDeck = 0
         self.currentCard = 0
@@ -49,8 +48,8 @@ class Flashcards(QWidget):
         self.tableWidget.verticalHeader().hide()
         self.tableWidget.setMinimumHeight(170)
         self.tableWidget.setMinimumWidth(400)
-        self.tableWidget.setItem(1, 1, QtWidgets.QTableWidgetItem())
-        self.tableWidget.item(1, 1).setBackground(QtGui.QColor(100,150,150))
+        self.tableWidget.setItem(1, 1, QTableWidgetItem())
+        self.tableWidget.item(1, 1).setBackground(QtGui.QColor(0,150,150))
         self.tableWidget.setItem(1,1, QtWidgets.QTableWidgetItem())
         self.tableWidget.item(1,1).setBackground(QtGui.QColor(125,125,125))
         self.layout.addStretch(1)
@@ -90,10 +89,12 @@ class Flashcards(QWidget):
                 self.buttonLayout.itemAt(i).widget().setParent(None)
             except:
                 pass
+
     def trainerWindow(self, deck):
         self.clear()
 #        print("trainer")
         self.library.deck[self.currentDeck].sortDeck()
+        self.library.deck[self.currentDeck].shuffleDeck()
         self.questionWidget = QLabel(self.library.deck[deck].card[0].question)
         self.answerWidget = QLabel(self.library.deck[deck].card[0].answer)
         self.vlayout.insertWidget(0,self.questionWidget)
@@ -125,9 +126,9 @@ class Flashcards(QWidget):
         self.layout.removeWidget(self.cancelButton)
         self.cancelButton.deleteLater()
         self.cancelButton = None
-        self.vlayout.addStretch(0)
+#        self.vlayout.addStretch(0)
         self.vlayout.insertWidget(1, self.answerWidget)
-        self.vlayout.addStretch(1)
+ #       self.vlayout.addStretch(1)
         self.a1Button = QPushButton("Keine Ahnung")
         self.a2Button = QPushButton("Leise Ahnung")
         self.a3Button = QPushButton("Gerade so")
@@ -163,8 +164,8 @@ class Flashcards(QWidget):
         self.submitButton.clicked.connect(self.on_click_addCard)
         self.cancelButton = QPushButton("Cancel!")
         self.cancelButton.clicked.connect(self.on_click_cancel)
-        self.layout.addWidget(self.submitButton)
-        self.layout.addWidget(self.cancelButton) 
+        self.vlayout.addWidget(self.submitButton)
+        self.vlayout.addWidget(self.cancelButton) 
         # setIcon
  #       self.setLayout(self.vlayout)
 

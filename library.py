@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from operator import itemgetter, attrgetter
+from random import shuffle
 
 class Library:
 	def __init__(self):
@@ -64,6 +65,22 @@ class Deck:
 #		self.card[-1].answer = answer
 	def sortDeck(self):
 		self.card.sort(key=attrgetter('learnedStatus'))
+	def shuffleDeck(self):
+		i=0
+		lastStatus = self.card[i].learnedStatus
+		while i < 5:
+			i+=1
+			try:
+				if self.card[i].learnedStatus != lastStatus:
+					break
+			except:
+				break
+#		self.card.shuffle()
+		x=self.card[0:i]				
+		shuffle(x)
+		self.card[0:i] = x
+		if self.card[0].learnedStatus == 4:
+			print("Deck learned")
 
 class Card:
 	def __init__ (self):
@@ -81,12 +98,18 @@ if __name__=="__main__":
 	print (myLibrary.deck[1].card[3].learnedStatus)
 #	myLibrary.saveLibrary()
 	myLibrary.deck[1].sortDeck()
-	myLibrary.saveLibrary()
+	print (myLibrary.deck[1].card[0].question)
+	print (myLibrary.deck[1].card[1].question)
+	print (myLibrary.deck[1].card[2].question)
+	print (myLibrary.deck[1].card[3].question)
+
+	myLibrary.deck[1].shuffleDeck()
 #	print (myLibrary.deck[0].name)
 #	print (myLibrary.deck[1].name)
 #	print (myLibrary.deck[0].number)
 #	print (myLibrary.deck[1].number)
-	print (myLibrary.deck[1].card[0].learnedStatus)
-	print (myLibrary.deck[1].card[1].learnedStatus)
-	print (myLibrary.deck[1].card[2].learnedStatus)
-	print (myLibrary.deck[1].card[3].learnedStatus)
+	print (myLibrary.deck[1].card[0].question)
+	print (myLibrary.deck[1].card[1].question)
+	print (myLibrary.deck[1].card[2].question)
+	print (myLibrary.deck[1].card[3].question)
+	myLibrary.saveLibrary()
