@@ -1,7 +1,7 @@
 D!Koreanisch:0
-Was ist 4 mal 4?:16!:0:0
-Was ist 4 mal 3?:12!:0:0
-Was ist 2 mal 2?:4:0:0
+Was ist 4 mal 4?:16!:4:0
+Was ist 2 mal 2?:4:4:0
+Was ist 4 mal 3?:12!:4:0
 D!Deutsch:1
 Was ist 4 mal 5?:20!:1:0
 Was ist 4 mal 6?:24!:3:0
