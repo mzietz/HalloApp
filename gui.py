@@ -2,7 +2,7 @@
 
 
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
+#from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import (QWidget, QToolTip, 
     QPushButton, QApplication, QLabel, QHBoxLayout, QVBoxLayout, QTableWidget, QTableWidgetItem, QLineEdit, QGridLayout)
 from PyQt5.QtGui import (QFont, QColor) 
@@ -32,38 +32,48 @@ class Flashcards(QWidget):
         self.currentCard = 0
         self.addQuestion = ""
         self.addAnswer = ""
+        self.layout.addStretch(0)
+        self.layout.addStretch(2)
         self.vlayout.addLayout(self.layout)
         self.vlayout.addStretch(1)
         self.vlayout.addLayout(self.buttonLayout)
         self.setLayout(self.vlayout)
+        self.textfont = QFont()      
+        self.textfont.setPointSize(46)
+
+        self.buttonfont = QFont()      
+        self.buttonfont.setPointSize(32)
 
     def deckWindow(self):
         self.clear()
         self.library.saveLibrary()
         self.tableWidget = QTableWidget()
-        self.layout.addWidget(self.tableWidget)
+        #self.vlayout.addWidget(self.tableWidget)
+        self.vlayout.insertWidget(1,self.tableWidget)
         self.tableWidget.setRowCount(len(self.library.deck))
         self.tableWidget.setColumnCount(3)
         self.tableWidget.horizontalHeader().hide()
+        self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.verticalHeader().hide()
-        self.tableWidget.setMinimumHeight(170)
-        self.tableWidget.setMinimumWidth(400)
-        self.tableWidget.setItem(1, 1, QTableWidgetItem())
-        self.tableWidget.item(1, 1).setBackground(QtGui.QColor(0,150,150))
-        self.tableWidget.setItem(1,1, QtWidgets.QTableWidgetItem())
-        self.tableWidget.item(1,1).setBackground(QtGui.QColor(125,125,125))
-        self.layout.addStretch(1)
-   #     self.vlayout.addLayout(self.layout)
-  #      self.vlayout.addStretch(1)
- #       self.vlayout.addLayout(self.buttonLayout)
-#        self.setLayout(self.vlayout)
+        self.tableWidget.setMinimumHeight(700)
+#        self.tableWidget.setMinimumWidth(400)
+        self.tableWidget.setColumnWidth(0,800)
+#        self.tableWidget.setColumnHeight(1, 160)
         d=0
         for x in self.library.deck:
             self.tableWidget.setItem(d,0, QTableWidgetItem(self.library.deck[d].name))
             self.tableWidget.setItem(d,1, QTableWidgetItem("Learn"))
             self.tableWidget.setItem(d,2, QTableWidgetItem("Add Card"))
+            self.tableWidget.item(d, 0).setBackground(QColor(0,100,150))
+            font = self.tableWidget.font()      
+            font.setPointSize(42)               
+            self.tableWidget.setFont(font)            
+            self.tableWidget.item(d, 1).setBackground(QColor(0,150,200))
+            self.tableWidget.item(d, 2).setBackground(QColor(0,175,200))
+
             d+=1
         self.tableWidget.clicked.connect(self.on_click_deck)
+        self.tableWidget.resizeRowsToContents()
 
     def on_click_deck(self):
         for currentQTableWidgetItem in self.tableWidget.selectedItems():
@@ -71,7 +81,7 @@ class Flashcards(QWidget):
             if currentQTableWidgetItem.text() == "Add Card":
                 self.addCardWindow(self.currentDeck)
             if currentQTableWidgetItem.text() == "Learn":
-                self.trainerWindow(self.currentDeck)
+                self.trainerWindow()
 
     def clear(self):
         for i in reversed(range(self.layout.count())):
@@ -90,23 +100,29 @@ class Flashcards(QWidget):
             except:
                 pass
 
-    def trainerWindow(self, deck):
+    def trainerWindow(self):
         self.clear()
-#        print("trainer")
         self.library.deck[self.currentDeck].sortDeck()
         self.library.deck[self.currentDeck].shuffleDeck()
-        self.questionWidget = QLabel(self.library.deck[deck].card[0].question)
-        self.answerWidget = QLabel(self.library.deck[deck].card[0].answer)
-        self.vlayout.insertWidget(0,self.questionWidget)
+        self.questionWidget = QLabel(self.library.deck[self.currentDeck].card[0].question)               
+        self.questionWidget.setFont(self.textfont)
+        self.questionWidget.setWordWrap(True)                   
+        self.answerWidget = QLabel(self.library.deck[self.currentDeck].card[0].answer)
+        self.answerWidget.setFont(self.textfont)                    
+        self.statusWidget = QLabel(self.library.deck[self.currentDeck].learned)
+        self.layout.insertWidget(1,self.questionWidget)
         self.cancelButton = QPushButton("Cancel!")
+        self.cancelButton.setFont(self.buttonfont)                    
         self.showAnswerButton = QPushButton("Show Answer!")
+        self.showAnswerButton.setFont(self.buttonfont)                    
+        self.vlayout.addWidget(self.statusWidget)
         self.vlayout.addWidget(self.showAnswerButton)
         self.vlayout.addWidget(self.cancelButton)        
         self.cancelButton.clicked.connect(self.on_click_cancel)
         self.showAnswerButton.clicked.connect(self.on_click_showAnswer)
 
+     
     def on_click_iknow(self):
-#        print("i Know")
         source = self.sender()
         if source.text() == "Keine Ahnung":
             self.library.deck[self.currentDeck].card[0].learnedStatus=1                
@@ -116,8 +132,7 @@ class Flashcards(QWidget):
             self.library.deck[self.currentDeck].card[0].learnedStatus=3
         elif source.text() == "Easy Peasy":
             self.library.deck[self.currentDeck].card[0].learnedStatus=4
-#        print(self.library.deck[self.currentDeck].card[0].learnedStatus)
-        self.trainerWindow(self.currentDeck)
+        self.trainerWindow()
 
     def on_click_showAnswer(self):
         self.layout.removeWidget(self.showAnswerButton)
@@ -125,12 +140,19 @@ class Flashcards(QWidget):
         self.showAnswerButton = None
         self.layout.removeWidget(self.cancelButton)
         self.cancelButton.deleteLater()
-        self.cancelButton = None
+        self.cancelButton = None        
+        self.layout.removeWidget(self.statusWidget)
+        self.statusWidget.deleteLater()
+        self.statusWidget = None
         self.vlayout.insertWidget(1, self.answerWidget)
         self.a1Button = QPushButton("Keine Ahnung")
         self.a2Button = QPushButton("Leise Ahnung")
         self.a3Button = QPushButton("Gerade so")
         self.a4Button = QPushButton("Easy Peasy")
+        self.a1Button.setFont(self.buttonfont)                    
+        self.a2Button.setFont(self.buttonfont)                    
+        self.a3Button.setFont(self.buttonfont)                    
+        self.a4Button.setFont(self.buttonfont)                    
         self.buttonLayout.addWidget(self.a1Button)
         self.buttonLayout.addWidget(self.a2Button)
         self.buttonLayout.addWidget(self.a3Button)
@@ -141,7 +163,6 @@ class Flashcards(QWidget):
         self.a4Button.clicked.connect(self.on_click_iknow)
     
     def on_click_cancel(self):
-#        print("Cancel")
         self.deckWindow()
 
 
@@ -165,14 +186,10 @@ class Flashcards(QWidget):
         # setIcon
 
     def on_click_addCard(self):
-#        print("add Card")
         self.library.deck[self.currentDeck].addCard()
         self.library.deck[self.currentDeck].card[-1].question = self.questionEdit.text()
         self.library.deck[self.currentDeck].card[-1].answer = self.answerEdit.text()
         self.library.deck[self.currentDeck].card[-1].learnedStatus = 0
-  #      print("Q: " +self.library.deck[self.currentDeck].card[-1].question)
- #       print("A: " +self.library.deck[self.currentDeck].card[-1].answer)
-#        print("1: " +str(self.library.deck[self.currentDeck].card[-1].learnedStatus))
         self.addCardWindow(self.currentDeck)
 
 if __name__=="__main__":
@@ -182,5 +199,5 @@ if __name__=="__main__":
 	myLibrary = Library()
 	myLibrary.loadLibrary()
 	w = Flashcards(myLibrary)
-	w.show()
+	w.showFullScreen()
 	sys.exit(app.exec_())
