@@ -116,7 +116,7 @@ class Flashcards(QWidget):
             self.library.deck[self.currentDeck].card[0].learnedStatus=3
         elif source.text() == "Easy Peasy":
             self.library.deck[self.currentDeck].card[0].learnedStatus=4
-''        print(self.library.deck[self.currentDeck].card[0].learnedStatus)
+#        print(self.library.deck[self.currentDeck].card[0].learnedStatus)
         self.trainerWindow(self.currentDeck)
 
     def on_click_showAnswer(self):
@@ -170,9 +170,9 @@ class Flashcards(QWidget):
         self.library.deck[self.currentDeck].card[-1].question = self.questionEdit.text()
         self.library.deck[self.currentDeck].card[-1].answer = self.answerEdit.text()
         self.library.deck[self.currentDeck].card[-1].learnedStatus = 0
-        print("Q: " +self.library.deck[self.currentDeck].card[-1].question)
-        print("A: " +self.library.deck[self.currentDeck].card[-1].answer)
-        print("2: " +str(self.library.deck[self.currentDeck].card[-1].learnedStatus))
+  #      print("Q: " +self.library.deck[self.currentDeck].card[-1].question)
+ #       print("A: " +self.library.deck[self.currentDeck].card[-1].answer)
+#        print("1: " +str(self.library.deck[self.currentDeck].card[-1].learnedStatus))
         self.addCardWindow(self.currentDeck)
 
 if __name__=="__main__":

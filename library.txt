@@ -4,12 +4,11 @@ Was ist 2 mal 2?:4:4
 징용배상 민관협의 후 정부 입장정리…2005년 전례 따른다:징용배상 민관협의 후 정부 입장정리…2005년 전례 :4
 Was ist 4 mal 4?:16!:4
 D!Deutsch:1
-ich:I:0
-wie:as:0
-dass:that:0
-für:for:0
 sind:are:0
+für:for:0
 mit:with:0
+ich:I:0
+dass:that:0
 sie:they:0
 sein:be:0
 bei:at:0
@@ -103,6 +102,7 @@ Vater:father:0
 war:was:1
 auf:on:2
 er:he:2
+wie:as:3
 seine:his:4
 D!Hanna:2
 Wer ist Max?:Ich bin Max!:3
