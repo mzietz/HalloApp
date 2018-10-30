@@ -29,9 +29,6 @@ class Library:
 					line = line[end+1:]
 					end = line.find(':')
 					self.deck[d-1].card[c-1].learnedStatus = int(line[:end])
-					line = line[end+1:]
-					end = line.find(':')
-					self.deck[d-1].card[c-1].timeUntilShow = int(line[:end])
 
 	def saveLibrary(self):
 #		print(self.deck[0].card[0].question+":"+self.deck[0].card[0].answer+":"+self.deck[0].card[0].learnedStatus+":"+self.deck[0].card[0].timeUntilShow)
@@ -41,7 +38,7 @@ class Library:
 				f.write("D!"+self.deck[d].name+":"+self.deck[d].number)
 				c=0 # counter for cards
 				for x2 in self.deck[d].card:
-					f.write(self.deck[d].card[c].question+":"+self.deck[d].card[c].answer+":"+str(self.deck[d].card[c].learnedStatus)+":"+str(self.deck[d].card[c].timeUntilShow)+"\n")
+					f.write(self.deck[d].card[c].question+":"+self.deck[d].card[c].answer+":"+str(self.deck[d].card[c].learnedStatus)+"\n")
 #					print(self.deck[d].card[c].question+":"+self.deck[d].card[c].answer+":"+self.deck[d].card[c].learnedStatus+":"+self.deck[d].card[c].timeUntilShow)
 					c+=1
 				d+=1
@@ -87,7 +84,6 @@ class Card:
 		self.question = ""
 		self.answer = ""
 		self.learnedStatus = 0
-		self.timeUntilShow = 0
 
 if __name__=="__main__":
 	myLibrary = Library()

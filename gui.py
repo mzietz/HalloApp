@@ -116,7 +116,7 @@ class Flashcards(QWidget):
             self.library.deck[self.currentDeck].card[0].learnedStatus=3
         elif source.text() == "Easy Peasy":
             self.library.deck[self.currentDeck].card[0].learnedStatus=4
-        print(self.library.deck[self.currentDeck].card[0].learnedStatus)
+''        print(self.library.deck[self.currentDeck].card[0].learnedStatus)
         self.trainerWindow(self.currentDeck)
 
     def on_click_showAnswer(self):
@@ -126,9 +126,7 @@ class Flashcards(QWidget):
         self.layout.removeWidget(self.cancelButton)
         self.cancelButton.deleteLater()
         self.cancelButton = None
-#        self.vlayout.addStretch(0)
         self.vlayout.insertWidget(1, self.answerWidget)
- #       self.vlayout.addStretch(1)
         self.a1Button = QPushButton("Keine Ahnung")
         self.a2Button = QPushButton("Leise Ahnung")
         self.a3Button = QPushButton("Gerade so")
@@ -137,8 +135,6 @@ class Flashcards(QWidget):
         self.buttonLayout.addWidget(self.a2Button)
         self.buttonLayout.addWidget(self.a3Button)
         self.buttonLayout.addWidget(self.a4Button)
-#        self.vlayout.addLayout(self.buttonLayout)
-#        self.setLayout(self.vlayout)
         self.a1Button.clicked.connect(self.on_click_iknow)
         self.a2Button.clicked.connect(self.on_click_iknow)
         self.a3Button.clicked.connect(self.on_click_iknow)
@@ -167,18 +163,15 @@ class Flashcards(QWidget):
         self.vlayout.addWidget(self.submitButton)
         self.vlayout.addWidget(self.cancelButton) 
         # setIcon
- #       self.setLayout(self.vlayout)
 
     def on_click_addCard(self):
 #        print("add Card")
         self.library.deck[self.currentDeck].addCard()
         self.library.deck[self.currentDeck].card[-1].question = self.questionEdit.text()
         self.library.deck[self.currentDeck].card[-1].answer = self.answerEdit.text()
-        self.library.deck[self.currentDeck].card[-1].timeUntilShow = 0
         self.library.deck[self.currentDeck].card[-1].learnedStatus = 0
         print("Q: " +self.library.deck[self.currentDeck].card[-1].question)
         print("A: " +self.library.deck[self.currentDeck].card[-1].answer)
-        print("1: " +str(self.library.deck[self.currentDeck].card[-1].timeUntilShow))
         print("2: " +str(self.library.deck[self.currentDeck].card[-1].learnedStatus))
         self.addCardWindow(self.currentDeck)
 
