@@ -64,6 +64,11 @@ class Deck:
 		#sorts deck from not learned to learned
 		self.card.sort(key=attrgetter('learnedStatus'))
 	
+	def resetDeck(self):
+		#sorts deck from not learned to learned
+		for x in self.card:
+			x.learnedStatus = 0
+				
 	def shuffleDeck(self):
 		# Shuffles first few cards of the deck to prevent to much repetition
 		# also checks if all cards have been learned or not
@@ -95,4 +100,5 @@ class Card:
 if __name__=="__main__":
 	myLibrary = Library()
 	myLibrary.loadLibrary()
+	myLibrary.deck[1].resetDeck()
 	myLibrary.saveLibrary()

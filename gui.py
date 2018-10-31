@@ -61,13 +61,13 @@ class Flashcards(QWidget):
         self.clear()
         self.library.saveLibrary()
         self.tableWidget = QTableWidget()
-        self.vlayout.insertWidget(1,self.tableWidget)
+        self.vlayout.insertWidget(0,self.tableWidget)
         self.tableWidget.setRowCount(len(self.library.deck))
         self.tableWidget.setColumnCount(3)
         self.tableWidget.horizontalHeader().hide()
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.verticalHeader().hide()
-        self.tableWidget.setMinimumHeight(700)
+        self.tableWidget.setMinimumHeight(600)
         self.tableWidget.setColumnWidth(0,800)
         d=0
         for x in self.library.deck:
@@ -85,6 +85,11 @@ class Flashcards(QWidget):
         self.tableWidget.clicked.connect(self.on_click_deck)
         self.tableWidget.resizeRowsToContents()
 
+        self.closeButton = QPushButton("CLose!")
+        self.closeButton.setFont(self.buttonfont)
+        self.vlayout.addWidget(self.closeButton)
+        self.closeButton.clicked.connect(self.on_click_close)
+        
     def on_click_deck(self):
         for currentQTableWidgetItem in self.tableWidget.selectedItems():
             self.currentDeck = currentQTableWidgetItem.row()
@@ -196,9 +201,10 @@ class Flashcards(QWidget):
         question.setFont(self.buttonfont)
         self.questionEdit = QLineEdit()
         self.questionEdit.setFixedHeight(150)
+        self.questionEdit.setFont(self.textfont)
         self.answerEdit = QLineEdit()
         self.answerEdit.setFixedHeight(150)
-        #self.topLayout.setSpacing(10)
+        self.answerEdit.setFont(self.textfont)
         self.vlayout.insertWidget(0, question)
         self.vlayout.insertWidget(1, self.questionEdit)
         self.vlayout.insertWidget(2, answer)
@@ -211,7 +217,6 @@ class Flashcards(QWidget):
         self.cancelButton.setFont(self.buttonfont)
         self.vlayout.addWidget(self.submitButton)
         self.vlayout.addWidget(self.cancelButton) 
-        # setIcon
 
     def on_click_addCard(self):
         self.library.deck[self.currentDeck].addCard()
@@ -219,6 +224,9 @@ class Flashcards(QWidget):
         self.library.deck[self.currentDeck].card[-1].answer = self.answerEdit.text()
         self.library.deck[self.currentDeck].card[-1].learnedStatus = 0
         self.addCardWindow(self.currentDeck)
+
+    def on_click_close(self):
+        sys.exit() 
 
 if __name__=="__main__":
 
@@ -228,4 +236,4 @@ if __name__=="__main__":
 	myLibrary.loadLibrary()
 	w = Flashcards(myLibrary)
 	w.showFullScreen()
-	sys.exit(app.exec_())
+#	sys.exit(app.exec_())
