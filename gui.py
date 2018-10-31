@@ -6,7 +6,7 @@ import sys
 from PyQt5.QtWidgets import (QWidget, QToolTip, 
     QPushButton, QApplication, QLabel, QHBoxLayout, QVBoxLayout, QTableWidget, QTableWidgetItem, QLineEdit, QGridLayout, QFrame)
 from PyQt5.QtGui import (QFont, QColor, QIcon) 
-from PyQt5.QtCore import (QProcess, QSize)
+from PyQt5.QtCore import (QProcess, QSize, Qt)
 from library import *
 import random
 
@@ -68,27 +68,40 @@ class Flashcards(QWidget):
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.verticalHeader().hide()
         self.tableWidget.setMinimumHeight(600)
-        self.tableWidget.setColumnWidth(0,800)
+        self.tableWidget.setColumnWidth(0,700)
+        self.tableWidget.setColumnWidth(1,300)
+        self.tableWidget.setColumnWidth(2,300)
+        self.tableWidget.setShowGrid(False)
+
         d=0
         for x in self.library.deck:
             self.tableWidget.setItem(d,0, QTableWidgetItem(self.library.deck[d].name))
             self.tableWidget.setItem(d,1, QTableWidgetItem("Learn"))
             self.tableWidget.setItem(d,2, QTableWidgetItem("Add Card"))
-            self.tableWidget.item(d, 0).setBackground(QColor(0,100,150))
+            self.tableWidget.item(d, 0).setBackground(QColor(0,100,200))
             font = self.tableWidget.font()      
             font.setPointSize(42)               
             self.tableWidget.setFont(font)            
-            self.tableWidget.item(d, 1).setBackground(QColor(0,150,200))
-            self.tableWidget.item(d, 2).setBackground(QColor(0,175,200))
-
+            self.tableWidget.item(d, 1).setBackground(QColor(255,255,255))
+            self.tableWidget.item(d, 2).setBackground(QColor(255,255,255))
+            self.tableWidget.setRowHeight(d, 120)
+            self.tableWidget.item(d, 1).setTextAlignment(Qt.AlignCenter)
+            self.tableWidget.item(d, 2).setTextAlignment(Qt.AlignCenter)
+#            self.tableWidget.item(d, 2).setFrameStyle(QFrame.Box | QFrame.Plain)
             d+=1
         self.tableWidget.clicked.connect(self.on_click_deck)
-        self.tableWidget.resizeRowsToContents()
+#        self.tableWidget.resizeRowsToContents()
+
+        self.addDeckButton = QPushButton("Add Deck!")
+        self.addDeckButton.setFont(self.buttonfont)
+        self.vlayout.addWidget(self.addDeckButton)
+        self.addDeckButton.clicked.connect(self.on_click_addDeckWindow)
 
         self.closeButton = QPushButton("CLose!")
         self.closeButton.setFont(self.buttonfont)
         self.vlayout.addWidget(self.closeButton)
         self.closeButton.clicked.connect(self.on_click_close)
+
         
     def on_click_deck(self):
         for currentQTableWidgetItem in self.tableWidget.selectedItems():
@@ -97,6 +110,31 @@ class Flashcards(QWidget):
                 self.addCardWindow(self.currentDeck)
             if currentQTableWidgetItem.text() == "Learn":
                 self.trainerWindow()
+
+    def on_click_addDeckWindow(self):
+        self.addDeckWindow()
+
+    def addDeckWindow(self):
+        self.clear()
+        adddeck = QLabel('Add Deck')
+        adddeck.setFont(self.buttonfont)
+        self.addDeckEdit = QLineEdit()
+        self.addDeckEdit.setFixedHeight(150)
+        self.addDeckEdit.setFont(self.textfont)
+        self.vlayout.insertWidget(0, adddeck)
+        self.vlayout.insertWidget(1, self.addDeckEdit)
+        self.submitButton = QPushButton("Add Deck!")
+        self.submitButton.clicked.connect(self.on_click_addDeck)
+        self.submitButton.setFont(self.buttonfont)
+        self.cancelButton = QPushButton("Cancel!")
+        self.cancelButton.clicked.connect(self.on_click_cancel)
+        self.cancelButton.setFont(self.buttonfont)
+        self.vlayout.addWidget(self.submitButton)
+        self.vlayout.addWidget(self.cancelButton) 
+
+    def on_click_addDeck(self):
+        self.library.addDeck(self.addDeckEdit.text())
+        self.addDeckWindow()
 
     def clear(self):
         #clear all widget in layout
@@ -123,28 +161,39 @@ class Flashcards(QWidget):
 
     def trainerWindow(self):
         self.clear()
-        #sort and shuffle deck
-
+        #sort and shuffle deck and check if there are cards in the deck
+        if self.library.deck[self.currentDeck].card:
+            self.library.deck[self.currentDeck].status = ""
+        else:        
+            self.library.deck[self.currentDeck].status = "No Cards in Deck"
         self.library.deck[self.currentDeck].sortDeck()
         self.library.deck[self.currentDeck].shuffleDeck()
-        
         #define widgets
-        self.questionWidget = QLabel(self.library.deck[self.currentDeck].card[0].question)               
+        if self.library.deck[self.currentDeck].card:
+            self.questionWidget = QLabel(self.library.deck[self.currentDeck].card[0].question)
+        else:
+            self.questionWidget = QLabel("")            
         self.questionWidget.setFont(self.textfont)
         self.questionWidget.setWordWrap(True)                   
-        self.answerWidget = QLabel(self.library.deck[self.currentDeck].card[0].answer)
+        if self.library.deck[self.currentDeck].card:
+            self.answerWidget = QLabel(self.library.deck[self.currentDeck].card[0].answer)
+        else:            
+            self.answerWidget = QLabel("")
         self.answerWidget.setFont(self.textfont)                    
-        self.statusWidget = QLabel(self.library.deck[self.currentDeck].learned)
+
+        self.statusWidget = QLabel(self.library.deck[self.currentDeck].status)
         self.cancelButton = QPushButton("Cancel!")
         self.cancelButton.setFont(self.buttonfont)                    
         self.showAnswerButton = QPushButton("Show Answer!")
         self.showAnswerButton.setFont(self.buttonfont)
+
         
         #add to topLayout                    
         self.topLayout.insertWidget(1,self.questionWidget)
         self.vlayout.addWidget(self.qframe)
         self.vlayout.addWidget(self.statusWidget)
-        self.vlayout.addWidget(self.showAnswerButton)
+        if self.library.deck[self.currentDeck].card:
+            self.vlayout.addWidget(self.showAnswerButton)
         self.vlayout.addWidget(self.cancelButton)        
         self.cancelButton.clicked.connect(self.on_click_cancel)
         self.showAnswerButton.clicked.connect(self.on_click_showAnswer)
@@ -230,10 +279,11 @@ class Flashcards(QWidget):
 
 if __name__=="__main__":
 
-	print ("Starting")
-	app = QApplication(sys.argv)
-	myLibrary = Library()
-	myLibrary.loadLibrary()
-	w = Flashcards(myLibrary)
-	w.showFullScreen()
+    print ("Starting")
+    app = QApplication(sys.argv)
+    myLibrary = Library()
+    myLibrary.loadLibrary()
+    w = Flashcards(myLibrary)
+    w.showFullScreen()
+#    w.show()
 #	sys.exit(app.exec_())

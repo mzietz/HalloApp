@@ -108,10 +108,10 @@ dies:this:0
 bei:at:0
 seine:his:0
 D!Hanna
-Wann stehen wir morgen auf?:Frag Max:3
+123:dasd:4
+Was gibts heute Abend?:Roastbeef!:4
 scs:ssss:4
 Wer ist Max?:Ich bin Max!:4
-Was gibts heute Abend?:Roastbeef!:4
-123:dasd:4
+Wann stehen wir morgen auf?:Frag Max:4
 Wie verbringe ich Silvester?:Wer weiß?:4
 Wie heißt die höhste Erhebung auf La Palam?:Muchoss dela Playa!:4

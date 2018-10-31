@@ -17,8 +17,8 @@ class Library:
 					line = line.replace('D!', "")
 					end = line.find(':')			
 					self.addDeck(line[:end])
-					line = line[end+1:]
-					self.deck[d-1].number = line[:end]
+#					line = line[end+1:]
+#					self.deck[d-1].number = line[:end]
 				else:
 					c += 1
 					self.deck[d-1].addCard()
@@ -35,11 +35,12 @@ class Library:
 		with open("library.txt", "w") as f:
 			d=0 # counter for decks
 			for x1 in self.deck:
-				f.write("D!"+self.deck[d].name+":"+self.deck[d].number)
-				c=0 # counter for cards
+				if x1.card:
+					f.write("D!"+x1.name+"\n")
+				else:
+					f.write("D!"+x1.name+"\n")					
 				for x2 in self.deck[d].card:
-					f.write(self.deck[d].card[c].question+":"+self.deck[d].card[c].answer+":"+str(self.deck[d].card[c].learnedStatus)+"\n")
-					c+=1
+					f.write(x2.question+":"+x2.answer+":"+str(x2.learnedStatus)+"\n")
 				d+=1
 		f.close()
 		print("saved")
@@ -49,21 +50,24 @@ class Library:
 	
 	def addDeck(self, name):
 		self.deck.append(Deck(name))
+		print(str(len(self.deck)))
+#		self.deck[-1].number = len(self.deck)-1
 
 class Deck:
 	def __init__ (self, name):
 		self.name = name
 		self.number = 0
 		self.card = []
-		self.learned = ""
+		self.status = "" #status can be "learned" or "no cards"
 	
 	def addCard(self):
 		self.card.append(Card())
 	
 	def sortDeck(self):
 		#sorts deck from not learned to learned
-		self.card.sort(key=attrgetter('learnedStatus'))
-	
+		if self.card:
+			self.card.sort(key=attrgetter('learnedStatus'))
+
 	def resetDeck(self):
 		#sorts deck from not learned to learned
 		for x in self.card:
@@ -72,22 +76,23 @@ class Deck:
 	def shuffleDeck(self):
 		# Shuffles first few cards of the deck to prevent to much repetition
 		# also checks if all cards have been learned or not
-		i=0
-		lastStatus = self.card[i].learnedStatus
-		while i < 5:
-			i+=1
-			try:
-				if self.card[i].learnedStatus != lastStatus:
+		if self.card:
+			i=0
+			lastStatus = self.card[i].learnedStatus
+			while i < 5:
+				i+=1
+				try:
+					if self.card[i].learnedStatus != lastStatus:
+						break
+				except:
 					break
-			except:
-				break
-		x=self.card[0:i]				
-		shuffle(x)
-		self.card[0:i] = x
-		if self.card[0].learnedStatus == 4:
-			self.learned = "Deck learned"
-		else:
-			self.learned = ""
+			x=self.card[0:i]				
+			shuffle(x)
+			self.card[0:i] = x
+			if self.card[0].learnedStatus == 4:
+				self.status = "Deck learned"
+			else:
+				self.status = ""
 
 class Card:
 	def __init__ (self):
