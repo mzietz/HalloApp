@@ -1,0 +1,75 @@
+#:kivy 1.10.1
+#:import factory kivy.factory
+#:import ListItemButton kivy.uix.listview.ListItemButton
+#:import ListAdapter kivy.adapters.listadapter.ListAdapter
+
+
+<BoxLayoutTop@BoxLayout>:
+	orientation: 'horizontal'
+	size_hint_y: None
+	pos_hint: {'top': 0}
+	height: '100sp'
+	spacing: '20sp'
+	padding: '10sp'
+
+<Row@BoxLayout>:
+	canvas.before:
+		Color:
+			rgba: 0.5, 0.5, 0.5, 1
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	value: ''
+	Label:
+		text: root.value
+
+<FlatButton@Button>:
+	background_color: (.8,.8,.8,.8)
+
+
+##########     HOME      #############
+
+<PageOne>:
+	id: pageone
+	BoxLayout:
+		orientation: 'vertical'
+		Label:
+			id:	pageonetext
+#			text: app.vocab1
+			text: "Screen One"
+#		Label:
+#			text: app.answer1
+
+
+<PageTwo>:
+	id: pagetwo
+	BoxLayout:
+		orientation: 'vertical'
+		Label:
+			id:	pagetwotext
+			text: "Screen Two"
+#			text: app.vocab2
+#		Label:
+#			text: app.answer2
+
+<WelcomePage>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayoutTop:
+            canvas:
+                Color:
+                    rgb: .3, .3, .3
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                text: 'Banana Learner'
+                text_size: self.size
+                halign: 'left'
+                valign: 'middle'
+
+<SwipeManager>
+    on_touch_down: app.touchdown(args[1])
+    on_touch_up: app.touchup(args[1])
