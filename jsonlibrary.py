@@ -21,16 +21,26 @@ class Library:
 				if x["learned"] == False:
 					self.currentCard = self.library.index(x)
 					return x
+	def cardsLeft(self):
+		i=0
+		for x in self.library:
+			if x["learned"] == False:
+				i+=1	
+		return i
 
 	def iknowCard(self):
 		self.library[self.currentCard]["learned"] = True
 	def idontknowCard(self):
-		self.library[self.currentCard]["learned"] = False
+		self.library.append(self.library[self.currentCard])
+		self.library[-1]["learned"] = False
+		self.library.pop(self.currentCard)
+#		self.library[self.currentCard]["learned"] = False
 
 if __name__=="__main__":
 	myLibrary = Library()
 	myLibrary.loadJSON()
-	myLibrary.iknowCard()
-	myLibrary.nextCard()
-	print(str(myLibrary.library[0]))
-	myLibrary.saveLibrary()
+	print(myLibrary.cardsLeft())
+#	myLibrary.idontknowCard()
+#	myLibrary.nextCard()
+#	print(myLibrary.library)
+#	myLibrary.saveLibrary()

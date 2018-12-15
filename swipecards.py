@@ -28,6 +28,10 @@ class PageTwo(Screen):
 	pass
 class WelcomePage(Screen):
 	pass
+class AnswerBoxOne(BoxLayout):
+	pass
+class AnswerBoxTwo(BoxLayout):
+	pass
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
@@ -39,7 +43,7 @@ class SwipeCardsApp(App):
 		kivy.Config.set('graphics', 'height', 630)
 		self.title = 'Swiper'
 		self.sm = SwipeManager()
-		self.sm.transition = SlideTransition(duration=.2, direction='left')
+		self.sm.transition = SlideTransition(duration=.5, direction='left')
 		self.welcomepage = WelcomePage(name = 'welcome')
 		self.pageone = PageOne(name ='pageone')
 		self.pagetwo = PageTwo(name ='pagetwo')
@@ -50,72 +54,87 @@ class SwipeCardsApp(App):
 		self.lib = Library()
 		self.lib.loadJSON()
 		self.vocab1 = self.lib.library[0]["question"]
-		self.vocab2 = self.lib.library[1]["question"]
-		self.answer1 = self.lib.library[0]["answer"]
-		self.answer2 = self.lib.library[1]["answer"]
+		self.answer1 = ""
+		self.answered = False
 		return self.sm
 
 	def go_from_welcome(self):
 		self.sm.transition.direction = 'left'
+		self.lib.nextCard()		
+		self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
+		self.answer2 = ""
 		self.sm.current = 'pageone'
+
+	def go_to_welcome(self):
+		self.sm.transition.direction = 'left'
+		self.sm.current = 'welcome'
 
 	def go_to_one(self, direction):
-		self.sm.transition.direction = direction
-		self.sm.current = 'pageone'
-
-	def go_to_two(self, direction):
-		self.sm.transition.direction = direction
-		self.sm.current = 'pagetwo'
-
-
-	def swipe(self):
-		if str(type(self.carousel.current_slide)) =="<class '__main__.WelcomePage'>":
-			print("HEllo")
-
-		if str(type(self.carousel.current_slide)) =="<class '__main__.PageOne'>":
-			print("SlideOne")
-			print(str(self.lib.currentCard))
-			self.lib.iknowCard()
-			self.lib.nextCard()
-			self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
-			self.answer2 = self.lib.library[self.lib.currentCard]["answer"]
-		if str(type(self.carousel.current_slide)) =="<class '__main__.PageTwo'>":
-			print("SlideTwo")
-			print(str(self.lib.currentCard))
-
-			self.lib.iknowCard()
+		self.answered = False
+#		print(self.lib.cardsLeft())
+		if self.lib.cardsLeft() == 1 and direction == 'left':
+			self.go_to_welcome()
+		else:	
+			if direction == 'left':
+				self.lib.iknowCard()
+			elif direction == 'right':
+				self.lib.idontknowCard()
 			self.lib.nextCard()
 			self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
-			self.answer1 = self.lib.library[self.lib.currentCard]["answer"]
+			self.answer1 = ""
+			self.sm.transition.direction = direction
+			self.sm.current = 'pageone'
 
+	def go_to_two(self, direction):
+		self.answered = False
+#		print(self.lib.cardsLeft())
+		if self.lib.cardsLeft() == 1 and direction == 'left':
+			self.go_to_welcome()
+		else:
+			if direction == 'left':
+				self.lib.iknowCard()
+			elif direction == 'right':
+				self.lib.idontknowCard()
+			self.lib.nextCard()
+			self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
+			self.answer2 = ""
+			self.sm.transition.direction = direction
+			self.sm.current = 'pagetwo'
+	
+	def show_answer(self, screen):
+		if screen == self.pageone:
+			self.answer1 = self.lib.library[self.lib.currentCard]["answer"]
+#			screen.add_widget(AnswerBoxOne)
+		elif screen == self.pagetwo:
+#			screen.add_widget(AnswerBoxTwo)
+			self.answer2 = self.lib.library[self.lib.currentCard]["answer"]
+	
 	def touchdown(self, touch):
 		self.coordinate = touch.x
 
 	def touchup(self, touch):
-		print(str(self.sm.current))
-		self.distance = touch.x - self.coordinate
+		self.distance = touch.x - self.coordinate		
 		if self.sm.current == "welcome":
 			self.go_from_welcome()
-			print("welcome")
-	
-		elif self.sm.current == "pageone":
-			print("one")
+		else:	
+			if self.answered ==False:
+				if self.sm.current == 'pageone':
+					self.show_answer(self.pageone)
+				elif self.sm.current == 'pagetwo':
+					self.show_answer(self.pagetwo)
+				self.answered = True
+			else:
+				if self.sm.current == "pageone" and self.answered:
+					if self.distance > 50:
+						self.go_to_two('right')
+					elif self.distance < -50:
+						self.go_to_two('left')
 
-			if self.distance > 50:
-				print("right swipe!")
-				self.go_to_two('right')
-			elif self.distance < -50:
-				print("left swipe!")
-				self.go_to_two('left')
-
-		elif self.sm.current == "pagetwo":			
-			print("two")
-			if self.distance > 50:
-				print("right swipe!")
-				self.go_to_one('right')
-			elif self.distance < -50:
-				print("left swipe!")
-				self.go_to_one('left')
+				elif self.sm.current == "pagetwo" and self.answered:			
+					if self.distance > 50:
+						self.go_to_one('right')
+					elif self.distance < -50:
+						self.go_to_one('left')
 
 if __name__ == '__main__':
 	SwipeCardsApp().run()

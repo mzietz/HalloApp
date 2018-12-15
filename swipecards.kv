@@ -3,8 +3,22 @@
 #:import ListItemButton kivy.uix.listview.ListItemButton
 #:import ListAdapter kivy.adapters.listadapter.ListAdapter
 
+<Screen>:
+    canvas:
+        Color:
+            rgb: 1, 1, 1
+        Rectangle:
+			size: self.size
 
-<BoxLayoutTop@BoxLayout>:
+<Question@Label>:
+	font_size: '24sp'
+    color: 0, 0, 0, 1
+
+<Answer@Label>:
+	font_size: '20sp'
+    color: 0, 0, 0 ,1
+
+<HorizontalBox@BoxLayout>:
 	orientation: 'horizontal'
 	size_hint_y: None
 	pos_hint: {'top': 0}
@@ -12,63 +26,98 @@
 	spacing: '20sp'
 	padding: '10sp'
 
-<Row@BoxLayout>:
-	canvas.before:
-		Color:
-			rgba: 0.5, 0.5, 0.5, 1
-		Rectangle:
-			size: self.size
-			pos: self.pos
-	value: ''
-	Label:
-		text: root.value
-
-<FlatButton@Button>:
-	background_color: (.8,.8,.8,.8)
-
+<Spacer@BoxLayout>
+	size_hint_y: None
+	height: '20sp'
+	spacing: '20sp'
+	padding: '10sp'
 
 ##########     HOME      #############
 
 <PageOne>:
-	id: pageone
-	BoxLayout:
-		orientation: 'vertical'
-		Label:
-			id:	pageonetext
-#			text: app.vocab1
-			text: "Screen One"
-#		Label:
-#			text: app.answer1
+    BoxLayout:
+        orientation: 'vertical'
+
+        HorizontalBox:
+            canvas:
+                Color:
+                    rgb: 0, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: 'Swiper'
+                text_size: self.size
+                halign: 'center'
+                valign: 'middle'
+		Question:
+			text: app.vocab1
+		Spacer:
+            canvas:
+                Color:
+                    rgb: 0, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size			
+		Answer:
+			text: app.answer1
 
 
 <PageTwo>:
 	id: pagetwo
 	BoxLayout:
 		orientation: 'vertical'
-		Label:
-			id:	pagetwotext
-			text: "Screen Two"
-#			text: app.vocab2
-#		Label:
-#			text: app.answer2
-
-<WelcomePage>:
-    BoxLayout:
-        orientation: 'vertical'
-
-        BoxLayoutTop:
+        HorizontalBox:
             canvas:
                 Color:
-                    rgb: .3, .3, .3
+                    rgb: 0, .5, 1
                 Rectangle:
                     pos: self.pos
                     size: self.size
 
             Label:
-                text: 'Banana Learner'
+                text: 'Swiper'
                 text_size: self.size
-                halign: 'left'
+                halign: 'center'
                 valign: 'middle'
+
+		Question:
+			text: app.vocab2
+		Spacer:
+            canvas:
+                Color:
+                    rgb: 0, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size			
+
+		Answer:
+			text: app.answer2
+
+<WelcomePage>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        HorizontalBox:
+            canvas:
+                Color:
+                    rgb: 0, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                text: 'Swiper'
+                text_size: self.size
+                halign: 'center'
+                valign: 'middle'
+        Label:
+            text: 'Nach rechts swipen wenn man weiß nach links swipen wenn nicht weiß'
+            color: 0,0,0,1
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+
 
 <SwipeManager>
     on_touch_down: app.touchdown(args[1])
