@@ -39,8 +39,10 @@ class SwipeCardsApp(App):
 	answer1 = StringProperty()
 	answer2 = StringProperty()
 	def build(self):
+#		self.initialize_global_vars()
+#		os.path.join(path)
 		kivy.Config.set('graphics', 'width',  380)
-		kivy.Config.set('graphics', 'height', 630)
+		kivy.Config.set('graphics', 'height', 610)
 		self.title = 'Swiper'
 		self.sm = SwipeManager()
 		self.sm.transition = SlideTransition(duration=.5, direction='left')
@@ -51,12 +53,21 @@ class SwipeCardsApp(App):
 		self.sm.add_widget(self.pageone)
 		self.sm.add_widget(self.pagetwo)
 		self.sm.current = 'welcome'
+		self.chunks = ["Deutsch", "Koreanisch"]
+		self.currentChunk = 0
+		self.init(self.chunks[self.currentChunk])
+		return self.sm
+
+	def init(self, chunk):
 		self.lib = Library()
-		self.lib.loadJSON()
+		self.lib.loadJSON(chunk)
 		self.vocab1 = self.lib.library[0]["question"]
 		self.answer1 = ""
 		self.answered = False
-		return self.sm
+
+#	def initialize_gloval_vars(self):
+#		root_folder = self.user_data_dir
+#		cache_folder = os.path.join(root_folder, 'cache')
 
 	def go_from_welcome(self):
 		self.sm.transition.direction = 'left'
@@ -68,6 +79,10 @@ class SwipeCardsApp(App):
 	def go_to_welcome(self):
 		self.sm.transition.direction = 'left'
 		self.sm.current = 'welcome'
+		self.currentChunk += 1
+		if self.currentChunk >= len(self.chunks):
+			self.currentChunk = 0
+		self.init(self.chunks[self.currentChunk])
 
 	def go_to_one(self, direction):
 		self.answered = False

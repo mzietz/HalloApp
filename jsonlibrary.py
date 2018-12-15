@@ -8,11 +8,11 @@ import json
 class Library:
 	def __init__(self):
 		self.currentCard = 0	
-	def loadJSON(self):
-		with open("data/library2.json") as fd:
+	def loadJSON(self, name):
+		with open("data/"+name+".json") as fd:
 			self.library = json.load(fd)
 	def saveLibrary(self):
-		with open("data/library.json", 'w') as fd:
+		with open("data/cache.json", 'w') as fd:
 			json.dump(self.library, fd)
 			
 	def nextCard(self):
@@ -38,7 +38,7 @@ class Library:
 
 if __name__=="__main__":
 	myLibrary = Library()
-	myLibrary.loadJSON()
+	myLibrary.loadJSON("Deutsch")
 	print(myLibrary.cardsLeft())
 #	myLibrary.idontknowCard()
 #	myLibrary.nextCard()

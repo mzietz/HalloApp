@@ -11,18 +11,25 @@
 			size: self.size
 
 <Question@Label>:
-	font_size: '24sp'
+	font_size: '70sp'
+	font_name: 'data/fonts/Typo_PapyrusM'
     color: 0, 0, 0, 1
 
 <Answer@Label>:
-	font_size: '20sp'
+	font_size: '50sp'
+	font_name: 'data/fonts/Typo_PapyrusM'
+    color: 0, 0, 0 ,1
+
+<Uber@Label>:
+	font_size: '65sp'
+	font_name: 'Lato-Heavy'
     color: 0, 0, 0 ,1
 
 <HorizontalBox@BoxLayout>:
 	orientation: 'horizontal'
 	size_hint_y: None
-	pos_hint: {'top': 0}
-	height: '100sp'
+	pos_hint: {'top': 1}
+	height: '150sp'
 	spacing: '20sp'
 	padding: '10sp'
 
@@ -45,9 +52,8 @@
                 Rectangle:
                     pos: self.pos
                     size: self.size
-            Label:
-                text: 'Swiper'
-                text_size: self.size
+            Uber:
+                text: 'Swipecards'
                 halign: 'center'
                 valign: 'middle'
 		Question:
@@ -75,8 +81,8 @@
                     pos: self.pos
                     size: self.size
 
-            Label:
-                text: 'Swiper'
+            Uber:
+                text: 'Swipecards'
                 text_size: self.size
                 halign: 'center'
                 valign: 'middle'
@@ -97,26 +103,40 @@
 <WelcomePage>:
     BoxLayout:
         orientation: 'vertical'
-
+	    canvas.before:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: 'data/pictures/app.png'
         HorizontalBox:
-            canvas:
-                Color:
-                    rgb: 0, .5, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
 
-            Label:
-                text: 'Swiper'
+            Uber:
+                text: 'Swipecards'
                 text_size: self.size
                 halign: 'center'
                 valign: 'middle'
-        Label:
-            text: 'Nach rechts swipen wenn man weiß nach links swipen wenn nicht weiß'
-            color: 0,0,0,1
-            text_size: self.size
-            halign: 'center'
-            valign: 'middle'
+		Question:
+			text: ""
+
+#            canvas:
+#                Color:
+#                    rgb: 0, .5, 1
+#                Rectangle:
+#                    pos: 'top'
+#                    size: self.size
+#
+#        Image:
+#            source: 'data/pictures/app.png'
+#            mipmap: True
+#            allow_stretch: True
+#            pos: 0,0
+
+#        Label:
+ #           text: 'Nach rechts swipen wenn man weiß nach links swipen wenn nicht weiß'
+  #          color: 0,0,0,1
+   #         text_size: self.size
+     #       halign: 'center'
+    #        valign: 'middle'
 
 
 <SwipeManager>
