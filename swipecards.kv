@@ -11,25 +11,34 @@
 			size: self.size
 
 <Question@Label>:
-	font_size: '70sp'
-	font_name: 'data/fonts/Typo_PapyrusM'
-    color: 0, 0, 0, 1
+	font_size: '60sp'
+	font_name: 'data/fonts/TYPO_CRAYONM'
+    color: 1, 1, 1, 1
 
 <Answer@Label>:
 	font_size: '50sp'
-	font_name: 'data/fonts/Typo_PapyrusM'
-    color: 0, 0, 0 ,1
+	valign: 'top'
+	font_name: 'data/fonts/DK Cool Crayon'
+    color: 1, 1, 1 ,1
 
 <Uber@Label>:
-	font_size: '65sp'
-	font_name: 'Lato-Heavy'
-    color: 0, 0, 0 ,1
+	font_size: '50sp'
+	font_name: 'data/fonts/DK Cool Crayon'
+    color: 1, 1, 1 ,1
 
 <HorizontalBox@BoxLayout>:
 	orientation: 'horizontal'
 	size_hint_y: None
 	pos_hint: {'top': 1}
 	height: '150sp'
+	spacing: '20sp'
+	padding: '10sp'
+
+<QuestionBox@BoxLayout>:
+	orientation: 'horizontal'
+	size_hint_y: None
+	pos_hint: {'top': 1}
+	height: '200sp'
 	spacing: '20sp'
 	padding: '10sp'
 
@@ -43,28 +52,17 @@
 
 <PageOne>:
     BoxLayout:
+	BoxLayout:
         orientation: 'vertical'
+	    canvas.before:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: 'data/pictures/blackboard.png'
 
-        HorizontalBox:
-            canvas:
-                Color:
-                    rgb: 0, .5, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
-            Uber:
-                text: 'Swipecards'
-                halign: 'center'
-                valign: 'middle'
-		Question:
-			text: app.vocab1
-		Spacer:
-            canvas:
-                Color:
-                    rgb: 0, .5, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size			
+		QuestionBox:
+			Question:
+				text: app.vocab1
 		Answer:
 			text: app.answer1
 
@@ -72,30 +70,16 @@
 <PageTwo>:
 	id: pagetwo
 	BoxLayout:
-		orientation: 'vertical'
-        HorizontalBox:
-            canvas:
-                Color:
-                    rgb: 0, .5, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
+        orientation: 'vertical'
+	    canvas.before:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: 'data/pictures/blackboard.png'
 
-            Uber:
-                text: 'Swipecards'
-                text_size: self.size
-                halign: 'center'
-                valign: 'middle'
-
-		Question:
-			text: app.vocab2
-		Spacer:
-            canvas:
-                Color:
-                    rgb: 0, .5, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size			
+		QuestionBox:
+			Question:
+				text: app.vocab2
 
 		Answer:
 			text: app.answer2
@@ -107,7 +91,7 @@
 	        Rectangle:
 	            pos: self.pos
 	            size: self.size
-	            source: 'data/pictures/app.png'
+	            source: 'data/pictures/app_welcome.png'
         HorizontalBox:
 
             Uber:
@@ -117,26 +101,6 @@
                 valign: 'middle'
 		Question:
 			text: ""
-
-#            canvas:
-#                Color:
-#                    rgb: 0, .5, 1
-#                Rectangle:
-#                    pos: 'top'
-#                    size: self.size
-#
-#        Image:
-#            source: 'data/pictures/app.png'
-#            mipmap: True
-#            allow_stretch: True
-#            pos: 0,0
-
-#        Label:
- #           text: 'Nach rechts swipen wenn man weiß nach links swipen wenn nicht weiß'
-  #          color: 0,0,0,1
-   #         text_size: self.size
-     #       halign: 'center'
-    #        valign: 'middle'
 
 
 <SwipeManager>

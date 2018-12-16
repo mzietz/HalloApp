@@ -1,0 +1,112 @@
+#:kivy 1.10.1
+#:import factory kivy.factory
+#:import ListItemButton kivy.uix.listview.ListItemButton
+#:import ListAdapter kivy.adapters.listadapter.ListAdapter
+
+
+<BoxLayoutTop@BoxLayout>:
+	orientation: 'horizontal'
+	size_hint_y: None
+	pos_hint: {'top': 0}
+	height: '100sp'
+	spacing: '20sp'
+	padding: '10sp'
+
+<Row@BoxLayout>:
+	canvas.before:
+		Color:
+			rgba: 0.5, 0.5, 0.5, 1
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	value: ''
+	Label:
+		text: root.value
+
+<FlatButton@Button>:
+	background_color: (.8,.8,.8,.8)
+
+
+##########     HOME      #############
+
+<HomeScreen>:
+	BoxLayout:
+		orientation: 'vertical'
+
+		BoxLayoutTop:
+			canvas:
+				Color:
+					rgb: .8, .8, .8
+				Rectangle:
+					pos: self.pos
+					size: self.size
+
+			Label:
+				text: 'Karteikarten'
+				text_size: self.size
+				halign: 'left'
+				valign: 'middle'
+
+			FlatButton:
+				text: 'Next Screen'
+				size_hint_x: None
+				width: '140sp'
+				font_size: '16sp'
+				on_release: app.go_to_deckscreen()
+
+##########     DECK      #############
+
+<DeckScreen>:
+	BoxLayout:
+		orientation: 'vertical'
+
+		BoxLayoutTop:
+			canvas:
+				Color:
+					rgb: .8, .8, .8
+				Rectangle:
+					pos: self.pos
+					size: self.size
+
+			Label:
+				text: 'Karteikarten'
+				text_size: self.size
+				halign: 'left'
+				valign: 'middle'
+
+			FlatButton:
+				text: 'Next Screen'
+				size_hint_x: None
+				width: '140sp'
+				font_size: '16sp'
+				on_release: app.go_to_learnscreen()
+
+##########     LEARN      #############
+
+<LearnScreen>:
+	BoxLayout:
+		orientation: 'vertical'
+		canvas:
+			Color:
+				rgb: .2, .2, .2
+			Rectangle:
+				pos: self.pos
+				size: self.size
+
+		Label:
+			id:	vocabdz
+			text: app.vocab
+			text_size: self.size
+			halign: 'left'
+			valign: 'middle'
+
+		Button:
+			background_color: (.8,.8,.8,.8)
+			width: '300sp'
+			font_size: '16sp'
+			on_release: app.show_answer()
+			text: 'bababubi'
+		Button:
+        	text: 'swipe'
+        	on_release:
+            	carousel = root.parent.parent
