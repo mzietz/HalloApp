@@ -22,7 +22,7 @@ source.include_exts = py,png,jpg,kv,atlas
 source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-source.exclude_dirs = tests, bin, archiv, utils, __pycache__
+source.exclude_dirs = tests, bin, archiv, utils
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = kivy, python3, json
+requirements = kivy, python3
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -88,19 +88,19 @@ fullscreen = 0
 #android.permissions = INTERNET
 
 # (int) Android API to use
-android.api = 24
+android.api = 21
 
 # (int) Minimum API required. You will need to set the android.ndk.api to be as low as this value.
-#android.minapi = 9
+android.minapi = 15
 
 # (int) Android SDK version to use
-android.sdk = 20
+android.sdk = 24
 
 # (str) Android NDK version to use
-android.ndk = 14b
+android.ndk = 18b
 
 # (int) Android NDK API to use (optional). This is the minimum API your app will support. 
-#android.ndk_api = 19
+android.ndk_api = 21
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True

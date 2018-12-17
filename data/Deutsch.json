@@ -1,1 +1,22 @@
-[{"date": "161220181055", "learned": true}, {"question": "newspaper", "learned": false, "answer": "Die Zeitung"}, {"question": "bicycle", "learned": false, "answer": "Das Fahrrad"}, {"question": "cat", "learned": false, "answer": "Die Katze"}, {"question": "dog", "learned": false, "answer": "Der Hund"}, {"question": "flute", "learned": false, "answer": "Die Flöte"}, {"question": "BigMac", "learned": false, "answer": "BigMax"}]
+
+[
+	{"question": "newspaper", "answer": "Die Zeitung", "learned": false, "chunk": 0},
+	{"question": "bicycle", "answer": "Das Fahrrad", "learned": false, "chunk": 0},
+	{"question": "cat", "answer": "Die Katze", "learned": false, "chunk": 0},
+	{"question": "dog", "answer": "Der Hund", "learned": false, "chunk": 0},
+	{"question": "고양이", "answer": "Die Katze", "learned": false, "chunk": 0}, 
+	{"question": "flute", "answer": "Die Flöte", "learned": false, "chunk": 0},
+	{"question": "BigMac", "answer": "BigMax", "learned": false, "chunk": 1},
+	{"question": "물", "answer": "Das Wasser", "learned": false, "chunk": 1}, 
+	{"question": "고양이", "answer": "Die Katze", "learned": false, "chunk": 1}, 
+	{"question": "말", "answer": "Das Pferd", "learned": false, "chunk": 1}, 
+	{"question": "배", "answer": "Das Schiff", "learned": false, "chunk": 1}, 
+	{"question": "집", "answer": "Das Haus", "learned": false, "chunk": 1},
+	{"question": "trousers", "answer": "Die Hose", "learned": false, "chunk": 2},
+	{"question": "rose", "answer": "Die Rose", "learned": false, "chunk": 2}, 
+	{"question": "trombone", "answer": "Die Posaune", "learned": false, "chunk": 2}, 
+	{"question": "guitar", "answer": "Die Gitarre", "learned": false, "chunk": 2}, 
+	{"question": "man", "answer": "Der Mann", "learned": false, "chunk": 2}, 
+	{"question": "women", "answer": "Die Frau", "learned": false, "chunk": 2}
+]
+

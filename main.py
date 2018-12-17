@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import kivy
 import json
+import os
 from os.path import join, exists
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition, FadeTransition
@@ -22,6 +23,8 @@ class PageTwo(Screen):
 	pass
 class WelcomePage(Screen):
 	pass
+class OptionPage(Screen):
+	pass
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
@@ -29,8 +32,6 @@ class SwipeCardsApp(App):
 	answer1 = StringProperty()
 	answer2 = StringProperty()
 	def build(self):
-#		self.initialize_global_vars()
-#		os.path.join(path)
 		kivy.Config.set('graphics', 'width',  380)
 		kivy.Config.set('graphics', 'height', 610)
 		self.title = 'Swiper'
@@ -43,26 +44,23 @@ class SwipeCardsApp(App):
 		self.sm.add_widget(self.pageone)
 		self.sm.add_widget(self.pagetwo)
 		self.sm.current = 'welcome'
-		self.chunks = ["Deutsch", "Koreanisch"]
-		self.currentChunk = 0
-		self.init(self.chunks[self.currentChunk])
+#		self.init()
 		return self.sm
 
-	def init(self, chunk):
-		print("init")
+	def init(self):
+#		print "init"
 		self.lib = Library()
-		self.lib.loadJSON(chunk)
+		self.lib.loadJSON()
+		self.lib.currentChunk = self.lib.nextChunk()
+		self.lib.nextCard()
 		self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
 		self.answer1 = ""
 		self.answered = False
-
-#	def initialize_gloval_vars(self):
-#		root_folder = self.user_data_dir
-#		cache_folder = os.path.join(root_folder, 'cache')
+		self.lib.difficulty = 0
 
 	def go_from_welcome(self):
 		self.sm.transition.direction = 'left'
-		self.init(self.chunks[self.currentChunk])
+		self.init()
 		self.lib.nextCard()		
 		self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
 		self.answer2 = ""
@@ -70,9 +68,9 @@ class SwipeCardsApp(App):
 
 	def go_to_welcome(self):
 #		print("go to welcome")
-		self.currentChunk += 1
-		if self.currentChunk >= len(self.chunks):
-			self.currentChunk = 0
+#		self.currentChunk += 1
+#		if self.currentChunk >= len(self.chunks):
+#			self.currentChunk = 0
 		self.sm.transition.direction = 'left'
 		self.sm.current = 'welcome'
 
@@ -80,35 +78,38 @@ class SwipeCardsApp(App):
 #		print("go to one")
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
+			self.lib.saveJSON()
 			self.go_to_welcome()
 		else:	
 			if direction == 'left':
 				self.lib.iknowCard()
 			elif direction == 'right':
 				self.lib.idontknowCard()
+#				print self.lib.difficulty
 			self.lib.nextCard()
 			self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
 			self.answer1 = ""
 			self.sm.transition.direction = direction
 			self.sm.current = 'pageone'
-		print(self.lib.cardsLeft())
 
 	def go_to_two(self, direction):
 #		print("go to two")
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
+			self.lib.saveJSON()
 			self.go_to_welcome()
 		else:
 			if direction == 'left':
 				self.lib.iknowCard()
 			elif direction == 'right':
 				self.lib.idontknowCard()
+#				print self.lib.difficulty
+
 			self.lib.nextCard()
 			self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
 			self.answer2 = ""
 			self.sm.transition.direction = direction
 			self.sm.current = 'pagetwo'
-		print(self.lib.cardsLeft())
 	
 	def show_answer(self, screen):
 		if screen == self.pageone:

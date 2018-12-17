@@ -1,0 +1,49 @@
+# Check configuration tokens
+# Ensure build layout
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Run 'dpkg --version'
+# Cwd None
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /home/max/mykivyinstall/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/keytool
+# Install platform
+# Run "/home/max/mykivyinstall/bin/python3 -m pip install -q  'appdirs' 'colorama>=0.3.3' 'jinja2' 'six'"
+# Cwd None
+# Apache ANT found at /home/max/.buildozer/android/platform/apache-ant-1.9.4
+# Android SDK found at /home/max/.buildozer/android/platform/android-sdk-20
+# Android NDK found at /home/max/.buildozer/android/platform/android-ndk-r13b
+# Check application requirements
+# Check garden requirements
+# Compile platform
+# Run '/home/max/mykivyinstall/bin/python3 -m pythonforandroid.toolchain create --dist_name=Swipecardapp --bootstrap=sdl2 --requirements=kivy --arch armeabi-v7a --copy-libs --color=always --storage-dir="/home/max/flashcards/.buildozer/android/platform/build"'
+# Cwd /home/max/flashcards/.buildozer/android/platform/python-for-android-new-toolchain
+# Build the application #4
+# Copy application source from /home/max/flashcards
+# Create directory /home/max/flashcards/.buildozer/android/app
+# Copy /home/max/flashcards/swipecards.kv
+# Copy /home/max/flashcards/main.py
+# Copy /home/max/flashcards/jsonlibrary.py
+# Create directory /home/max/flashcards/.buildozer/android/app/data/pictures
+# Copy /home/max/flashcards/data/pictures/blackboard.png
+# Copy /home/max/flashcards/data/pictures/logo512.png
+# Copy /home/max/flashcards/data/pictures/app.png
+# Copy /home/max/flashcards/data/pictures/app_welcome.png
+# Package the application
+# project.properties updated
+# Gradle project detected, copy files /home/max/flashcards/.buildozer/android/platform/build/dists/Swipecardapp/src/main/java
+# Run '/home/max/mykivyinstall/bin/python3 -m pythonforandroid.toolchain apk --debug --bootstrap=sdl2 --dist_name Swipecardapp --name Swipecards --version 1.0 --package org.swipecardapp.swipecardapp --android_api 19 --minsdk 9 --private /home/max/flashcards/.buildozer/android/app --presplash /home/max/flashcards/./data/pictures/logo512.png --icon /home/max/flashcards/./data/pictures/logo512.png --orientation portrait --window --copy-libs --arch armeabi-v7a --color=always --storage-dir="/home/max/flashcards/.buildozer/android/platform/build"'
+# Cwd /home/max/flashcards/.buildozer/android/platform/python-for-android-new-toolchain
+# Android packaging done!
+# APK Swipecards-1.0-debug.apk available in the bin directory
+# Run '/home/max/.buildozer/android/platform/android-sdk-20/platform-tools/adb devices'
+# Cwd None
+# Deploy on H8WDU16930000485
+# Run '/home/max/.buildozer/android/platform/android-sdk-20/platform-tools/adb install -r "/home/max/flashcards/bin/Swipecards-1.0-debug.apk"'
+# Cwd /home/max/.buildozer/android/platform

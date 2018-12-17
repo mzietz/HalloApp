@@ -4,22 +4,22 @@
 title = Swipecards
 
 # (str) Package name
-package.name = swipecardsapp
+package.name = Swipecardapp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.test
+package.domain = org.swipecardapp
 
 # (str) Source code where the main.py live
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,json,ttf
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
-source.exclude_exts = spec
+#source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
 source.exclude_dirs = tests, bin, archiv, utils
@@ -28,7 +28,7 @@ source.exclude_dirs = tests, bin, archiv, utils
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.1
+version = 1.0
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = kivy, python3
+requirements = kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -51,7 +51,7 @@ presplash.filename = %(source.dir)s/data/pictures/logo512.png
 # (str) Icon of the application
 icon.filename = %(source.dir)s/data/pictures/logo512.png
 
-# (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
+# (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
 
 # (list) List of service to declare
@@ -88,25 +88,22 @@ fullscreen = 0
 #android.permissions = INTERNET
 
 # (int) Android API to use
-android.api = 21
+#android.api = 19
 
-# (int) Minimum API required. You will need to set the android.ndk.api to be as low as this value.
-android.minapi = 15
+# (int) Minimum API required
+#android.minapi = 9
 
 # (int) Android SDK version to use
-android.sdk = 24
+#android.sdk = 20
 
 # (str) Android NDK version to use
-android.ndk = 18b
-
-# (int) Android NDK API to use (optional). This is the minimum API your app will support. 
-android.ndk_api = 21
+android.ndk = 13b
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-#android.ndk_path = ~/.buildozer/crystax-ndk-10.3.2
+#android.ndk_path =
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path =
@@ -153,7 +150,7 @@ android.ndk_api = 21
 #android.add_activites = com.example.ExampleActivity
 
 # (str) python-for-android branch to use, defaults to stable
-p4a.branch = master
+#p4a.branch = stable
 
 # (str) OUYA Console category. Should be one of GAME or APP
 # If you leave this blank, OUYA support will not be enabled

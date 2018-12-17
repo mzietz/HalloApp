@@ -1,1 +1,1 @@
-[{"question": "Frage 2", "learned": false, "answer": "Antwort 2"}, {"question": "Frage 3", "learned": false, "answer": "Antwort 3"}, {"question": "Frage 4", "learned": false, "answer": "Antwort 4"}, {"question": "Frage 5", "learned": false, "answer": "Antwort 5"}, {"question": "Frage 6", "learned": false, "answer": "Antwort 6"}, {"question": "Frage 1", "learned": false, "answer": "Antwort 1"}]
+[{"date": 0, "difficulty": 8, "chunk": 0, "learned": true}, {"date": 0, "difficulty": 7, "chunk": 2, "learned": true}, {"date": 0, "difficulty": 0, "chunk": 1, "learned": true}]
