@@ -27,8 +27,8 @@ class Library:
 				i = 0
 
 
-	def loadVocabs(self):
-		with open(join("data/", 'Deutsch.json')) as fd:
+	def loadVocabs(self, name):
+		with open(join("data/", name+'.json')) as fd:
 			self.library = json.load(fd)
 	def saveVocabs(self):
 		with open(join("data/", 'Deutsch.json'), 'w') as fd:

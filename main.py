@@ -22,7 +22,8 @@ class PageOne(Screen):
 class PageTwo(Screen):
 	pass
 class WelcomePage(Screen):
-	pass
+	picture = StringProperty("data/pictures/app_welcome.png")
+	text = StringProperty('Swipecards')
 class OptionPage(Screen):
 	pass
 
@@ -50,7 +51,7 @@ class SwipeCardsApp(App):
 	def init(self):
 #		print "init"
 		self.lib = Library()
-		self.lib.loadVocabs()
+		self.lib.loadVocabs("Deutsch")
 		self.lib.loadProgress()
 		self.lib.chunkSize = 4
 		self.lib.setChunks()
@@ -66,15 +67,12 @@ class SwipeCardsApp(App):
 	def go_from_welcome(self):
 		self.sm.transition.direction = 'left'
 		self.init()
-#		self.lib.nextCard()		
 		self.sm.current = 'pageone'
 
 	def go_to_welcome(self):
-#		print("go to welcome")
-#		self.currentChunk += 1
-#		if self.currentChunk >= len(self.chunks):
-#			self.currentChunk = 0
 		self.sm.transition.direction = 'left'
+		self.welcomepage.picture = "data/pictures/blackboard.png"
+		self.welcomepage.text = 'Progress saved'
 		self.sm.current = 'welcome'
 
 	def go_to_one(self, direction):
