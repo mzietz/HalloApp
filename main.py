@@ -50,20 +50,23 @@ class SwipeCardsApp(App):
 	def init(self):
 #		print "init"
 		self.lib = Library()
-		self.lib.loadJSON()
+		self.lib.loadVocabs()
+		self.lib.loadProgress()
+		self.lib.chunkSize = 4
+		self.lib.setChunks()
 		self.lib.currentChunk = self.lib.nextChunk()
 		self.lib.nextCard()
 		self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
 		self.answer1 = ""
+		self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
+		self.answer2 = ""
 		self.answered = False
 		self.lib.difficulty = 0
 
 	def go_from_welcome(self):
 		self.sm.transition.direction = 'left'
 		self.init()
-		self.lib.nextCard()		
-		self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
-		self.answer2 = ""
+#		self.lib.nextCard()		
 		self.sm.current = 'pageone'
 
 	def go_to_welcome(self):
@@ -78,7 +81,7 @@ class SwipeCardsApp(App):
 #		print("go to one")
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
-			self.lib.saveJSON()
+			self.lib.saveProgress()
 			self.go_to_welcome()
 		else:	
 			if direction == 'left':
@@ -96,7 +99,7 @@ class SwipeCardsApp(App):
 #		print("go to two")
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
-			self.lib.saveJSON()
+			self.lib.saveProgress()
 			self.go_to_welcome()
 		else:
 			if direction == 'left':
@@ -123,8 +126,11 @@ class SwipeCardsApp(App):
 	def touchup(self, touch):
 		self.distance = touch.x - self.coordinate		
 		if self.sm.current == "welcome":
-			self.go_from_welcome()
-		else:	
+			if self.distance < -50:
+				self.go_from_welcome()
+#			if self.distance > 50:
+#				self.go_from_welcome()
+		else:
 			if self.answered ==False:
 				if self.sm.current == 'pageone':
 					self.show_answer(self.pageone)

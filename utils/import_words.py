@@ -1,6 +1,4 @@
 
-
-
 class ImportWords:
 	def __init__(self):
 		self.newLibrary = "German1000"
