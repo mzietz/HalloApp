@@ -4,27 +4,33 @@
 #:import ListAdapter kivy.adapters.listadapter.ListAdapter
 
 <Screen>:
-    canvas:
-        Color:
-            rgb: 1, 1, 1
-        Rectangle:
+	canvas:
+		Color:
+			rgb: 1, 1, 1
+		Rectangle:
 			size: self.size
+
+<PostitButton@Button>:
+	background_normal: 'button_green.png'
+	width: '50dp'
+	height: '50dp'
+	background_color: (.99,.99,.99,0)
 
 <Question@Label>:
 	font_size: '60sp'
 	font_name: 'data/fonts/TYPO_CRAYONM'
-    color: 1, 1, 1, 1
+	color: 1, 1, 1, 1
 
 <Answer@Label>:
 	font_size: '50sp'
 	valign: 'top'
 	font_name: 'data/fonts/DK Cool Crayon'
-    color: 1, 1, 1 ,1
+	color: 1, 1, 1 ,1
 
 <Uber@Label>:
 	font_size: '50sp'
 	font_name: 'data/fonts/DK Cool Crayon'
-    color: 1, 1, 1 ,1
+	color: 1, 1, 1 ,1
 
 <HorizontalBox@BoxLayout>:
 	orientation: 'horizontal'
@@ -32,7 +38,7 @@
 	pos_hint: {'top': 1}
 	height: '150sp'
 	spacing: '20sp'
-	padding: '10sp'
+	padding: '30sp'
 
 <QuestionBox@BoxLayout>:
 	orientation: 'horizontal'
@@ -51,14 +57,17 @@
 ##########     HOME      #############
 
 <PageOne>:
-    BoxLayout:
+	on_touch_down: app.touchdown(args[1])
+	on_touch_up: app.touchup(args[1])
+
 	BoxLayout:
-        orientation: 'vertical'
-	    canvas.before:
-	        Rectangle:
-	            pos: self.pos
-	            size: self.size
-	            source: 'data/pictures/blackboard.png'
+	BoxLayout:
+		orientation: 'vertical'
+		canvas.before:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: 'data/pictures/blackboard.png'
 
 		QuestionBox:
 			Question:
@@ -67,15 +76,19 @@
 			text: app.answer1
 
 
+
 <PageTwo>:
+	on_touch_down: app.touchdown(args[1])
+	on_touch_up: app.touchup(args[1])
+
 	id: pagetwo
 	BoxLayout:
-        orientation: 'vertical'
-	    canvas.before:
-	        Rectangle:
-	            pos: self.pos
-	            size: self.size
-	            source: 'data/pictures/blackboard.png'
+		orientation: 'vertical'
+		canvas.before:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: 'data/pictures/blackboard.png'
 
 		QuestionBox:
 			Question:
@@ -84,25 +97,86 @@
 		Answer:
 			text: app.answer2
 
-<WelcomePage>:
-    BoxLayout:
-        orientation: 'vertical'
-	    canvas.before:
-	        Rectangle:
-	            pos: self.pos
-	            size: self.size
-	            source: root.picture
-        HorizontalBox:
+<VocabPage>:
+	on_touch_down: app.touchdown(args[1])
+	on_touch_up: app.touchup(args[1])
 
-            Uber:
-                text: root.text
-                text_size: self.size
-                halign: 'center'
-                valign: 'middle'
+	BoxLayout:
+		orientation: 'vertical'
+		canvas.before:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: root.picture
+		HorizontalBox:
+
+			Uber:
+				text: root.text
+				text_size: self.size
+				halign: 'center'
+				valign: 'middle'
+		Question:
+			text: ""
+
+<HomePage>:
+	BoxLayout:
+		orientation: 'vertical'
+		canvas.before:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: root.picture
+		HorizontalBox:
+			Uber:
+				text: root.text
+
+		HorizontalBox:
+			PostitButton:
+				on_release:
+					app.to_vocab()
+		        Image:
+		            source: 'data/pictures/button_grammar.png'
+			        center_x: self.parent.center_x
+        			center_y: self.parent.center_y
+		            size: 170, 170
+		            allow_stretch: True
+
+			PostitButton:
+				on_release:
+					app.to_vocab()
+		        Image:
+		            source: 'data/pictures/button_vocabs.png'
+			        center_x: self.parent.center_x
+        			center_y: self.parent.center_y
+		            size: 170, 170
+		            allow_stretch: True
+		Spacer:
+		
+		HorizontalBox:
+			PostitButton:
+				on_release:
+					app.to_vocab()
+		        Image:
+		            source: 'data/pictures/button_settings.png'
+			        center_x: self.parent.center_x
+        			center_y: self.parent.center_y
+		            size: 170, 170
+		            allow_stretch: True
+		            
+			PostitButton:
+				on_release:
+					app.to_vocab()
+		        Image:
+		            source: 'data/pictures/button_info.png'
+			        center_x: self.parent.center_x
+        			center_y: self.parent.center_y
+		            size: 170, 170
+		            allow_stretch: True
 		Question:
 			text: ""
 
 
+
 <SwipeManager>
-    on_touch_down: app.touchdown(args[1])
-    on_touch_up: app.touchup(args[1])
+#    on_touch_down: app.touchdown(args[1])
+#    on_touch_up: app.touchup(args[1])

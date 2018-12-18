@@ -21,11 +21,18 @@ class PageOne(Screen):
 	pass
 class PageTwo(Screen):
 	pass
-class WelcomePage(Screen):
+class VocabPage(Screen):
 	picture = StringProperty("data/pictures/app_welcome.png")
 	text = StringProperty('Swipecards')
 class OptionPage(Screen):
 	pass
+class HomePage(Screen):
+	picture = StringProperty("data/pictures/blackboard.png")
+	text = StringProperty('Welcome')
+
+class ChunkPage(Screen):
+	picture = StringProperty("data/pictures/blackboard.png")
+	text = StringProperty('Progress Saved')
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
@@ -38,13 +45,15 @@ class SwipeCardsApp(App):
 		self.title = 'Swiper'
 		self.sm = SwipeManager()
 		self.sm.transition = SlideTransition(duration=.4, direction='left')
-		self.welcomepage = WelcomePage(name = 'welcome')
+		self.homepage = HomePage(name = 'home')
+		self.vocabpage = VocabPage(name = 'vocab')
 		self.pageone = PageOne(name ='pageone')
 		self.pagetwo = PageTwo(name ='pagetwo')
-		self.sm.add_widget(self.welcomepage)
+		self.sm.add_widget(self.homepage)
+		self.sm.add_widget(self.vocabpage)
 		self.sm.add_widget(self.pageone)
 		self.sm.add_widget(self.pagetwo)
-		self.sm.current = 'welcome'
+		self.sm.current = 'home'
 #		self.init()
 		return self.sm
 
@@ -64,23 +73,28 @@ class SwipeCardsApp(App):
 		self.answered = False
 		self.lib.difficulty = 0
 
+	def to_vocab(self):
+		self.sm.transition.direction = 'left'
+		self.sm.current = 'vocab'
+
 	def go_from_welcome(self):
 		self.sm.transition.direction = 'left'
 		self.init()
 		self.sm.current = 'pageone'
 
-	def go_to_welcome(self):
+	def go_to_vocab(self):
 		self.sm.transition.direction = 'left'
-		self.welcomepage.picture = "data/pictures/blackboard.png"
-		self.welcomepage.text = 'Progress saved'
-		self.sm.current = 'welcome'
+		self.vocabpage.picture = "data/pictures/blackboard.png"
+		self.vocabpage.text = 'Progress saved'
+		self.sm.current = 'vocab'
+		print "vocab"
 
 	def go_to_one(self, direction):
 #		print("go to one")
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
 			self.lib.saveProgress()
-			self.go_to_welcome()
+			self.go_to_vocab()
 		else:	
 			if direction == 'left':
 				self.lib.iknowCard()
@@ -98,7 +112,7 @@ class SwipeCardsApp(App):
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
 			self.lib.saveProgress()
-			self.go_to_welcome()
+			self.go_to_vocab()
 		else:
 			if direction == 'left':
 				self.lib.iknowCard()
@@ -123,7 +137,7 @@ class SwipeCardsApp(App):
 
 	def touchup(self, touch):
 		self.distance = touch.x - self.coordinate		
-		if self.sm.current == "welcome":
+		if self.sm.current == "vocab":
 			if self.distance < -50:
 				self.go_from_welcome()
 #			if self.distance > 50:
