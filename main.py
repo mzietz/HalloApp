@@ -7,9 +7,14 @@ from os.path import join, exists
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition, FadeTransition
 from kivy.uix.label import Label
-from kivy.properties import StringProperty, NumericProperty, ObjectProperty
+from kivy.uix.recycleview import RecycleView
+from kivy.uix.recycleview.views import RecycleDataViewBehavior
+from kivy.properties import StringProperty, NumericProperty, ObjectProperty, BooleanProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.recycleboxlayout import RecycleBoxLayout
+from kivy.uix.behaviors import FocusBehavior
+from kivy.uix.recycleview.layout import LayoutSelectionBehavior
 from kivy.properties import ListProperty, NumericProperty
 from operator import itemgetter, attrgetter
 from jsonlibrary import *
@@ -49,6 +54,41 @@ class DataPage(Screen):
 	listpicture = StringProperty("data/pictures/stickynote_weiss.png")
 	text = StringProperty('Data')
 
+class DeckData(RecycleView):
+	def __init__(self, **kwargs):
+		super(DeckData, self).__init__(**kwargs)
+		self.data = [{'text': "Deutsche Verben"}, {'text': "Deutsche Adjektive"},{'text': "Deutsche Nomen"},
+		{'text': "Abkurzungen"},{'text': "Deutsche Nomen"},{'text': "Deutsche Nomen"},{'text': "Deutsche Nomen"},
+		{'text': "Deutsche Nomen"}, {'text': "Deutsche Nomen"}, {'text': "Deutsche Nomen"}]
+
+class SelectableRecycleBoxLayout(FocusBehavior, LayoutSelectionBehavior,
+								 RecycleBoxLayout):
+	pass
+
+class SelectableLabel(RecycleDataViewBehavior, Label):
+	index = None
+	selected = BooleanProperty(False)
+	selectable = BooleanProperty(True)
+	font_size = 30
+	font_name = 'data/fonts/TYPO_CRAYONM'
+	def refresh_view_attrs(self, rv, index, data):
+		self.index = index
+		return super(SelectableLabel, self).refresh_view_attrs(
+			rv, index, data)
+
+	def on_touch_down(self, touch):
+		if super(SelectableLabel, self).on_touch_down(touch):
+			return True
+		if self.collide_point(*touch.pos) and self.selectable:
+			return self.parent.select_with_touch(self.index, touch)
+
+	def apply_selection(self, rv, index, is_selected):
+		self.selected = is_selected
+		if is_selected:
+			print("selection changed to {0}".format(rv.data[index]))
+		else:
+			print("selection removed for {0}".format(rv.data[index]))
+
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
 	vocab2 = StringProperty()
@@ -63,29 +103,27 @@ class SwipeCardsApp(App):
 		self.sm.transition = SlideTransition(duration=.4, direction='left')
 		self.homepage = HomePage(name = 'home')
 		self.vocabfrontpage = VocabFrontPage(name = 'vocabfrontpage')
-		self.settings = SettingsPage(name = 'settings')
+		self.settingspage = SettingsPage(name = 'settingspage')
 		self.datapage = DataPage(name = 'datapage')
 		self.chunkpage = ChunkPage(name = 'chunkpage')
 		self.pageone = PageOne(name ='pageone')
 		self.pagetwo = PageTwo(name ='pagetwo')
 		self.sm.add_widget(self.homepage)
-		self.sm.add_widget(self.settings)
+		self.sm.add_widget(self.settingspage)
 		self.sm.add_widget(self.datapage)
 		self.sm.add_widget(self.vocabfrontpage)
 		self.sm.add_widget(self.chunkpage)
 		self.sm.add_widget(self.pageone)
 		self.sm.add_widget(self.pagetwo)
 		self.sm.current = 'home'
-#		self.init()
+		self.lib = Library()
+		self.lib.loadDecks()
+		self.datapage.ids["deck"].data = self.lib.decks#[{'text': "Deutsche Verben"}]
 		return self.sm
 
 	def init(self):
 #		print "init"
-		self.lib = Library()
-		self.lib.loadVocabs("Deutsch")
-		self.lib.loadProgress()
-		self.lib.chunkSize = 4
-		self.lib.setChunks()
+		self.lib.resetLearnedStatus()
 		self.lib.currentChunk = self.lib.nextChunk()
 		self.lib.nextCard()
 		self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
@@ -103,7 +141,7 @@ class SwipeCardsApp(App):
 	def go_to_settings(self):
 		self.homepage.settings_button_size = [170,170]
 		self.sm.transition.direction = 'right'
-		self.sm.current = 'settings'	
+		self.sm.current = 'settingspage'	
 
 	def go_to_data(self):
 		self.homepage.data_button_size = [170,170]
@@ -112,6 +150,7 @@ class SwipeCardsApp(App):
 
 	def go_to_vocab(self):
 		self.sm.transition.direction = 'left'
+		self.lib.loadVocabs("deutsch")
 		self.init()
 		self.sm.current = 'pageone'
 
@@ -122,7 +161,7 @@ class SwipeCardsApp(App):
 	def go_to_one(self, direction):
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
-			self.lib.saveProgress()
+			self.lib.saveVocabs()
 			self.go_to_chunkpage()
 		else:	
 			if direction == 'left':
@@ -138,7 +177,7 @@ class SwipeCardsApp(App):
 	def go_to_two(self, direction):
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
-			self.lib.saveProgress()
+			self.lib.saveVocabs()
 			self.go_to_chunkpage()
 		else:
 			if direction == 'left':

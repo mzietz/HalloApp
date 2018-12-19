@@ -221,6 +221,9 @@
 		HorizontalBox:
 			Uber:
 				text: root.text
+		DeckData:
+			id:deck
+
 #		Image:
 #			source: root.listpicture
 
@@ -238,7 +241,17 @@
 
 		Uber:
 			text: root.text
-			
+<DeckData>:
+    viewclass: 'SelectableLabel'
+    SelectableRecycleBoxLayout:
+        default_size: None, dp(56)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+        multiselect: True
+        touch_multiselect: True
+
 <SwipeManager>
 #    on_touch_down: app.touchdown(args[1])
 #    on_touch_up: app.touchup(args[1])
