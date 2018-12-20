@@ -57,22 +57,24 @@ class DataPage(Screen):
 class DeckData(RecycleView):
 	def __init__(self, **kwargs):
 		super(DeckData, self).__init__(**kwargs)
-		self.data = [{'text': "Deutsche Verben"}, {'text': "Deutsche Adjektive"},{'text': "Deutsche Nomen"},
-		{'text': "Abkurzungen"},{'text': "Deutsche Nomen"},{'text': "Deutsche Nomen"},{'text': "Deutsche Nomen"},
-		{'text': "Deutsche Nomen"}, {'text': "Deutsche Nomen"}, {'text': "Deutsche Nomen"}]
+		self.data = []
+		self.deck = "deutsch"
+		self.initialized = 0
 
 class SelectableRecycleBoxLayout(FocusBehavior, LayoutSelectionBehavior,
 								 RecycleBoxLayout):
 	pass
 
 class SelectableLabel(RecycleDataViewBehavior, Label):
-	index = None
+	index = 0
 	selected = BooleanProperty(False)
 	selectable = BooleanProperty(True)
 	font_size = 30
 	font_name = 'data/fonts/TYPO_CRAYONM'
+	picture = StringProperty()
 	def refresh_view_attrs(self, rv, index, data):
 		self.index = index
+		self.picture = rv.data[index]["picture"]
 		return super(SelectableLabel, self).refresh_view_attrs(
 			rv, index, data)
 
@@ -84,10 +86,17 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 
 	def apply_selection(self, rv, index, is_selected):
 		self.selected = is_selected
+#		rv.initialized += 1
+#		print rv.initialized
+#		if rv.initialized >= 4: 
+#			print "normal"
 		if is_selected:
-			print("selection changed to {0}".format(rv.data[index]))
+			self.picture = "data/pictures/haken.png"
 		else:
-			print("selection removed for {0}".format(rv.data[index]))
+			self.picture = "data/pictures/empty.png"
+#		else:
+#			print "initialisieren"
+#			self.picture = rv.data[index]["picture"]
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
@@ -118,7 +127,7 @@ class SwipeCardsApp(App):
 		self.sm.current = 'home'
 		self.lib = Library()
 		self.lib.loadDecks()
-		self.datapage.ids["deck"].data = self.lib.decks#[{'text': "Deutsche Verben"}]
+		self.datapage.ids["deck"].data = self.lib.decks
 		return self.sm
 
 	def init(self):
@@ -150,13 +159,18 @@ class SwipeCardsApp(App):
 
 	def go_to_vocab(self):
 		self.sm.transition.direction = 'left'
-		self.lib.loadVocabs("deutsch")
+		self.lib.currentDeck = self.datapage.ids["deck"].deck
+		self.lib.loadVocabs()
 		self.init()
 		self.sm.current = 'pageone'
 
 	def go_to_chunkpage(self):
 		self.sm.transition.direction = 'left'
 		self.sm.current = 'chunkpage'
+
+	def go_to_home(self):
+		self.sm.transition.direction = 'left'
+		self.sm.current = 'home'
 
 	def go_to_one(self, direction):
 		self.answered = False

@@ -10,6 +10,7 @@ class Library:
 	def __init__(self):
 		self.currentCard = 0
 		self.currentChunk = 0
+		self.currentDeck = ""
 		self.difficulty = 1
 		self.chunkSize = 6
 		self.numberOfChunks = 0
@@ -19,13 +20,13 @@ class Library:
 		with open(join("data/", 'decks.json')) as fd:
 			self.decks = json.load(fd)
 
-	def loadVocabs(self, name):
-		with open(join("data/", name+'.json')) as fd:
+	def loadVocabs(self):
+		with open(join("data/", self.currentDeck+'.json')) as fd:
 			self.library = json.load(fd)
 	
-	def saveVocabs(self): #for variable chunkssize only
-		with open(join("data/", 'cache.json'), 'w') as fd:
-			json.dump(self.library, fd)
+#	def saveVocabs(self): #for variable chunkssize only
+#		with open(join("data/", 'cache.json'), 'w') as fd:
+#			json.dump(self.library, fd)
 
 	def resetLearnedStatus(self):
 		for x in self.library:
@@ -37,7 +38,7 @@ class Library:
 				x["difficulty"] = self.difficulty
 				x["date"] = unicode(datetime.datetime.now())
 		
-		with open(join("data/",'deutsch.json'), 'w') as fd:
+		with open(join("data/", self.currentDeck+'.json'), 'w') as fd:
 			json.dump(self.library, fd)
 
 			

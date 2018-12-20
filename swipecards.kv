@@ -15,6 +15,20 @@
 	height: '50dp'
 	background_color: (.99,.99,.99,0)
 
+<BackButton@Button>:
+	width: '50dp'
+	height: '50dp'
+	background_color: (.99,.99,.99,0)
+	size_hint: (0.5 ,0.5)
+	pos_hint: {'x': 0.55, "y": 0.25}
+	on_release:
+		app.go_to_home()
+    Image:
+        source: 'data/pictures/logo512.png'
+        allow_stretch: True
+        center_x: self.parent.center_x
+		center_y: self.parent.center_y
+
 <Question@Label>:
 	font_size: '60sp'
 	font_name: 'data/fonts/TYPO_CRAYONM'
@@ -55,13 +69,20 @@
 	spacing: '20sp'
 	padding: '10sp'
 
+<AnswerBox@BoxLayout>:
+	orientation: 'horizontal'
+	size_hint_y: None
+#	pos_hint: None
+	height: '200sp'
+	spacing: '20sp'
+	padding: '10sp'
+
+
 <Spacer@BoxLayout>
 	size_hint_y: None
 	height: '40sp'
 	spacing: '20sp'
 	padding: '10sp'
-
-##########     HOME      #############
 
 <PageOne>:
 	on_touch_down: app.touchdown(args[1])
@@ -100,7 +121,6 @@
 		QuestionBox:
 			Question:
 				text: app.vocab2
-
 		Answer:
 			text: app.answer2
 
@@ -152,7 +172,7 @@
 		            source: 'data/pictures/button_study.png'
 			        center_x: self.parent.center_x
         			center_y: self.parent.center_y
-		            size: root.study_button_size #250, 250
+		            size: 250, 250 #root.study_button_size #
 		            allow_stretch: True
 
 		Spacer:
@@ -200,14 +220,8 @@
 		Uber:
 			text: root.text
 		BottomBox:
-	        Image:
-	            source: 'data/pictures/logo512.png'
-	            size_hint: (0.5 ,0.5)
-				pos_hint: {'x': 0.55, "y": 0.25}
-	            allow_stretch: True
+			BackButton:
 
-#		Image:
-#			source: root.listpicture
 			
 <DataPage>:
 	BoxLayout:
@@ -223,6 +237,8 @@
 				text: root.text
 		DeckData:
 			id:deck
+		BottomBox:
+			BackButton:
 
 #		Image:
 #			source: root.listpicture
@@ -238,9 +254,10 @@
 				pos: self.pos
 				size: self.size
 				source: root.picture
-
 		Uber:
 			text: root.text
+		BottomBox:
+			BackButton:
 <DeckData>:
     viewclass: 'SelectableLabel'
     SelectableRecycleBoxLayout:
@@ -249,9 +266,14 @@
         size_hint_y: None
         height: self.minimum_height
         orientation: 'vertical'
-        multiselect: True
+        multiselect: False
         touch_multiselect: True
-
+        
+<SelectableLabel>
+    Image:
+        source: root.picture
+        center_x: self.parent.center_x + 120
+		center_y: self.parent.center_y
+        size: 50, 50
+        allow_stretch: True
 <SwipeManager>
-#    on_touch_down: app.touchdown(args[1])
-#    on_touch_up: app.touchup(args[1])
