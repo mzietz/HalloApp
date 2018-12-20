@@ -35,8 +35,11 @@
 	color: 1, 1, 1, 1
 
 <Answer@Label>:
-	font_size: '50sp'
+	text_size: self.size
+#	size: self.texture_size
 	valign: 'top'
+	haldign: 'middle'
+	font_size: '45sp'
 	font_name: 'data/fonts/DK Cool Crayon'
 	color: 1, 1, 1 ,1
 
@@ -70,12 +73,13 @@
 	padding: '10sp'
 
 <AnswerBox@BoxLayout>:
+	size: root.size
 	orientation: 'horizontal'
 	size_hint_y: None
-#	pos_hint: None
+	pos_hint: {'x': 0, 'y':0}
 	height: '200sp'
 	spacing: '20sp'
-	padding: '10sp'
+	padding: '40sp'
 
 
 <Spacer@BoxLayout>
@@ -89,7 +93,7 @@
 	on_touch_up: app.touchup_on_pageone(args[1])
 
 	BoxLayout:
-	BoxLayout:
+		padding: '45sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -97,11 +101,45 @@
 				size: self.size
 				source: 'data/pictures/blackboard.png'
 
-		QuestionBox:
+		BoxLayout:
+			orientation: 'vertical'
+			canvas:
+				Color:
+					rgb: 0.4, 1, 0.2
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			size_hint:(1, 0.3)
 			Question:
 				text: app.vocab1
-		Answer:
-			text: app.answer1
+		Image:
+			size_hint:(1, 0.1)
+		    source: 'data/pictures/line.png'
+		    center_x: self.parent.center_x
+			center_y: self.parent.center_y
+		    allow_stretch: True
+		BoxLayout
+			orientation: 'vertical'
+			padding: '5sp'
+			BoxLayout:
+				size_hint:(1, 0.3)
+				canvas:
+					Color:
+						rgb: 0.4, 0, 0.2
+					Rectangle:
+						pos: self.pos
+						size: self.size
+				Answer:
+					text: app.answer1
+			BoxLayout:
+				canvas:
+					Color:
+						rgb: 0.4, 0.5, 0.2
+					Rectangle:
+						pos: self.pos
+						size: self.size
+				Answer
+					text: "infos zur vokabel"
 
 
 
@@ -111,6 +149,8 @@
 
 	id: pagetwo
 	BoxLayout:
+		padding: '45sp'
+
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -121,8 +161,14 @@
 		QuestionBox:
 			Question:
 				text: app.vocab2
-		Answer:
-			text: app.answer2
+		AnswerBox:
+
+			canvas:
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			Answer:
+				text: app.answer2
 
 <VocabFrontPage>:
 	on_touch_down: app.touchdown(args[1])
