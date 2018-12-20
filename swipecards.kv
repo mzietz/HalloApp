@@ -36,7 +36,7 @@
 
 <Answer@Label>:
 	text_size: self.size
-#	size: self.texture_size
+	size: self.texture_size
 	valign: 'top'
 	haldign: 'middle'
 	font_size: '45sp'
@@ -64,24 +64,6 @@
 	spacing: '20sp'
 	padding: '50sp'
 
-<QuestionBox@BoxLayout>:
-	orientation: 'horizontal'
-	size_hint_y: None
-	pos_hint: {'top': 1}
-	height: '200sp'
-	spacing: '20sp'
-	padding: '10sp'
-
-<AnswerBox@BoxLayout>:
-	size: root.size
-	orientation: 'horizontal'
-	size_hint_y: None
-	pos_hint: {'x': 0, 'y':0}
-	height: '200sp'
-	spacing: '20sp'
-	padding: '40sp'
-
-
 <Spacer@BoxLayout>
 	size_hint_y: None
 	height: '40sp'
@@ -103,16 +85,67 @@
 
 		BoxLayout:
 			orientation: 'vertical'
-			canvas:
-				Color:
-					rgb: 0.4, 1, 0.2
-				Rectangle:
-					pos: self.pos
-					size: self.size
+#			canvas:
+#				Color:					#for testing
+#					rgb: 0.4, 1, 0.2	#for testing
+#				Rectangle:
+#					pos: self.pos
+#					size: self.size
 			size_hint:(1, 0.3)
 			Question:
 				text: app.vocab1
-		Image:
+		Image: #bei einfuegen hier ifng der Error an zu kommen
+			size_hint:(1, 0.1)
+		    source: 'data/pictures/line.png'
+		    center_x: self.parent.center_x
+			center_y: self.parent.center_y
+		    allow_stretch: True
+		BoxLayout
+			spacing: '10sp'
+
+			orientation: 'vertical'
+			BoxLayout:
+				size_hint:(1, 0.3)
+#				canvas:
+#					Color:						#for testing
+#						rgb: 0.4, 0, 0.2		#for testing
+#					Rectangle:
+#						pos: self.pos
+#						size: self.size
+				Answer:
+					text: app.answer1
+			BoxLayout:
+#				canvas:
+#					Color:		
+#						rgb: 0.4, 0.5, 0.2
+#					Rectangle:
+#						pos: self.pos
+#						size: self.size
+				Answer:
+					line_height: 1.5
+					text: app.info1
+					font_size: '26sp'
+
+
+<PageTwo>:
+	on_touch_down: app.touchdown(args[1])
+	on_touch_up: app.touchup_on_pagetwo(args[1])
+
+	BoxLayout:
+		padding: '45sp'
+		orientation: 'vertical'
+		canvas.before:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: 'data/pictures/blackboard.png'
+
+		BoxLayout:
+			orientation: 'vertical'
+			size_hint:(1, 0.3)
+			Question:
+				text: app.vocab2
+		Image: #bei einfuegen hier ifng der Error an zu kommen
 			size_hint:(1, 0.1)
 		    source: 'data/pictures/line.png'
 		    center_x: self.parent.center_x
@@ -123,52 +156,15 @@
 			padding: '5sp'
 			BoxLayout:
 				size_hint:(1, 0.3)
-				canvas:
-					Color:
-						rgb: 0.4, 0, 0.2
-					Rectangle:
-						pos: self.pos
-						size: self.size
 				Answer:
-					text: app.answer1
+					text: app.answer2
 			BoxLayout:
-				canvas:
-					Color:
-						rgb: 0.4, 0.5, 0.2
-					Rectangle:
-						pos: self.pos
-						size: self.size
-				Answer
-					text: "infos zur vokabel"
+				Answer:
+					padding_top: '10sp'
 
+					text: app.info2
+					font_size: '26sp'
 
-
-<PageTwo>:
-	on_touch_down: app.touchdown(args[1])
-	on_touch_up: app.touchup_on_pagetwo(args[1])
-
-	id: pagetwo
-	BoxLayout:
-		padding: '45sp'
-
-		orientation: 'vertical'
-		canvas.before:
-			Rectangle:
-				pos: self.pos
-				size: self.size
-				source: 'data/pictures/blackboard.png'
-
-		QuestionBox:
-			Question:
-				text: app.vocab2
-		AnswerBox:
-
-			canvas:
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			Answer:
-				text: app.answer2
 
 <VocabFrontPage>:
 	on_touch_down: app.touchdown(args[1])
@@ -183,7 +179,6 @@
 				source: root.picture
 		Spacer:
 		HorizontalBox:
-
 			Uber:
 				text: root.text
 				text_size: self.size

@@ -38,7 +38,8 @@ class Library:
 				x["difficulty"] = self.difficulty
 				x["date"] = unicode(datetime.datetime.now())
 		
-		with open(join("data/", self.currentDeck+'.json'), 'w') as fd:
+#		with open(join("data/", self.currentDeck+'.json'), 'w') as fd:
+		with open(join("data/", 'cache.json'), 'w') as fd:
 			json.dump(self.library, fd)
 
 			
@@ -72,10 +73,15 @@ class Library:
 		self.library[self.currentCard]["learned"] = True
 
 	def idontknowCard(self):
-		self.library.append(self.library[self.currentCard])
-		self.library[-1]["learned"] = False
-		self.library.pop(self.currentCard)
-		self.difficulty += 1
+#		self.library[self.currentCard]["learned"] = False
+
+		for x in self.library:
+			if x["chunk"] is not self.currentChunk :
+				self.library.insert(self.library.index(x),self.library[self.currentCard])
+				self.library[self.library.index(x)]["learned"] = False
+				self.library.pop(self.currentCard)
+				self.difficulty += 1
+				break
 
 	def addCard(self):
 		self.library.append("{'answer': 'Die ADDADADAD', 'learned': False, 'question': 'newspaper', 'chunk': 0}")

@@ -58,7 +58,7 @@ class DeckData(RecycleView):
 	def __init__(self, **kwargs):
 		super(DeckData, self).__init__(**kwargs)
 		self.data = []
-		self.deck = "deutsch"
+		self.deck = "Deutsch 1"
 		self.initialized = 0
 
 class SelectableRecycleBoxLayout(FocusBehavior, LayoutSelectionBehavior,
@@ -103,6 +103,8 @@ class SwipeCardsApp(App):
 	vocab2 = StringProperty()
 	answer1 = StringProperty()
 	answer2 = StringProperty()
+	info1 = StringProperty()
+	info2 = StringProperty()
 	
 	def build(self):
 		kivy.Config.set('graphics', 'width',  380)
@@ -137,8 +139,10 @@ class SwipeCardsApp(App):
 		self.lib.nextCard()
 		self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
 		self.answer1 = ""
+		self.info1 = ""
 		self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
 		self.answer2 = ""
+		self.info2 = ""
 		self.answered = False
 		self.lib.difficulty = 0
 
@@ -185,7 +189,9 @@ class SwipeCardsApp(App):
 			self.lib.nextCard()
 			self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
 			self.answer1 = ""
+			self.info1 = ""
 			self.sm.transition.direction = direction
+			print self.lib.currentCard
 			self.sm.current = 'pageone'
 
 	def go_to_two(self, direction):
@@ -198,18 +204,21 @@ class SwipeCardsApp(App):
 				self.lib.iknowCard()
 			elif direction == 'right':
 				self.lib.idontknowCard()
-
 			self.lib.nextCard()
 			self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
 			self.answer2 = ""
+			self.info2 = ""
 			self.sm.transition.direction = direction
+			print self.lib.currentCard
 			self.sm.current = 'pagetwo'
 	
 	def show_answer(self, screen):
 		if screen == self.pageone:
 			self.answer1 = self.lib.library[self.lib.currentCard]["answer"]
+			self.info1 = self.lib.library[self.lib.currentCard]["info"]
 		elif screen == self.pagetwo:
 			self.answer2 = self.lib.library[self.lib.currentCard]["answer"]
+			self.info2 = self.lib.library[self.lib.currentCard]["info"]
 	
 	def touchdown(self, touch):
 		self.coordinate = touch.x
