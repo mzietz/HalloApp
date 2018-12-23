@@ -1,0 +1,166 @@
+﻿arbeiten 일하다 arbeitete gearbeitet h
+begrüßen 인사하다 begrüßte begrüßt h
+heißen 불리우다 hieß geheißen h
+kommen 오다 kam gekommen s
+korrigieren 첨삭하다, 고치다 korrigierte korrigiert h
+malen 그리다 malte gemalt h
+passen 알맞다, 어울리다 passte gepasst h
+sammeln 모으다 sammelte gesammelt h
+sein ~이다 war gewesen s
+tauschen 교환하다 tauschte getauscht h
+vorstellen 소개하다 stellte...vor vorgestellt h
+beginnen 시작하다 begann begonnen h
+besuchen 방문하다 besuchte besucht h
+brauchen 필요로 하다 brauchte gebraucht h
+finden 찾다, 생각하다 fand gefunden h
+funktionieren 작동하다 funktionierte funktioniert h
+geben 주다 gab gegeben h
+ergänzen 채워 넣다 ergänzte ergänzt h
+gefallen ~의 마음에 들다 gefiel gefallen h
+gehen 가다 ging gegangen s
+gründen 기초로 하다 gründete gegründet h
+grüßen 안부를 전하다 grüßte gegrüßt h
+haben 가지다 hatte gehabt h
+kennen 알다 kannte gekannt h
+lernen 배우다 lernte gelernt h
+machen 하다, 만들다 machte gemacht h
+planen 계획하다 plante geplant h
+tanzen 춤추다 tanzte getanzt h
+lesen 읽다 las gelesen h
+telefonieren 전화를 걸다 telefonierte telefoniert h
+zeigen 보여주다 zeigte gezeigt h
+essen 먹다 aß gegessen h
+trinken 마시다 trank getrunken h
+besprechen 협의하다 besprach besprochen h
+erzählen 이야기하다 erzählte erzählt h
+kosten 비용이 들다 kostete gekostet h
+tun 하다 tat getan h
+vergleichen 비교하다 verglich verglichen h
+bekommen 받다 bekam bekommen h
+bezahlen 지불하다 bezahlte bezahlt h
+erlauben 허락하다 erlaubte erlaubt h
+fahren 타고 가다 fuhr gefahren s
+feiern 기념하다 feierte gefeiert h
+tragen 운반하다 trug getragen h
+klingeln 벨이 울리다 klingelte geklingelt h
+ankommen 도착하다 kam…an angekommen s
+bewundern 경탄하다 bewunderte bewundert h
+organisieren 조직하다, 형성하다 organisierte organisiert h
+passieren 발생하다 passierte passiert s
+putzen 청소하다 putzte geputzt h
+schaffen 창조하다 schuf geschaffen h
+schlafen 자다 schlief geschlafen h
+schauen 바라보다 schaute geschaut h
+sehen 보다 sah gesehen h
+stürzen 추락하다 stürzte gestürzt s
+suchen 찾다 suchte gesucht h
+treffen 만나다 traf getroffen h
+wissen 알다 wusste gewusst h
+wünschen 원하다, 바라다 wünschte gewünscht h
+abholen 데리러 가다 holte...ab abgeholt h
+aufmachen 열다 machte...auf aufgemacht h
+ausgehen (Heizung) 꺼지다, 작동이 안되다 ging...aus ausgegangen s
+schneiden 자르다 schnitt geschnitten h
+anrufen 통화하다 rief...an angerufen h
+antworten 대답하다 antwortete geantwortet h
+anschauen 응시하다 schaute...an angeschaut h
+singen 노래하다 sang gesungen h
+aussehen ~로 보이다 sah...aus ausgesehen h
+benutzen 사용하다 benutzte benutzt h
+beschreiben 묘사하다 beschrieb beschrieben h
+bleiben 머무르다 blieb geblieben s
+dauern 시간이 걸리다 dauerte gedauert h
+denken 생각하다 dachte gedacht h
+duschen 샤워하다 duschte geduscht h
+erreichen 도달하다 erreichte erreicht h
+glauben 믿다, 생각하다 glaubte geglaubt h
+informieren 정보를 주다 informierte informiert h
+mitbringen 데리고 오다 brachte…mit mitgebracht h
+abfahren 출발하다 fuhr…ab abgefahren s
+bestellen 주문하다 bestellte bestellt h
+reden 말하다 redete geredet h
+regnen 비가 오다 regnete geregnet h
+reparieren 수리하다 reparierte repariert h
+sitzen 앉아 있다 saß gesessen h
+stehen 서 있다 stand gestanden s/h
+messen 측정하다 maß gemessen h
+verbringen 시간을 보내다 verbrachte verbracht h
+vergessen 잊어버리다 vergaß vergessen h
+verwenden 사용하다 verwendete verwendet h
+wechseln 교체하다 wechselte gewechselt h
+fehlen 부족하다 fehlte gefehlt h
+anfangen 시작하다 fing...an angefangen h
+anprobieren 입어보다 probierte...an anprobiert h
+anstoßen 밀치다, 건배하다 stoßte...an angestoßt h
+aufpassen 주의하다 passte…auf aufgepasst h
+ausführen 수출하다 führte...aus ausgeführt h
+bedeuten 의미하다 bedeutete bedeutet h
+bringen 가지고 오다 brachte gebracht h
+kaufen 구매하다 kaufte gekauft h
+eingeben 복용시키다 gab...ein eingegeben h
+einladen 초대하다 lud...ein eingeladen h
+entschuldigen 용서하다 entschuldigte entschuldigt h
+erklären 설명하다 erklärte erklärt h
+fernsehen TV를 보다 sah...fern ferngesehen h
+festhalten 붙잡다, 고집하다 hielt…fest festgehalten h
+helfen 돕다 half geholfen h
+holen 가져오다, 꺼내다 holte geholt h
+kopieren 복사하다 kopierte kopiert h
+lächeln 미소를 짓다 lächelte gelächelt h
+mailen 메일을 보내다 mailte gemailt h
+nachfragen 문의하다 fragte…nach nachgefragt h
+nehmen 취하다, 가지다 nahm genommen h
+nennen 명명하다 nannte genannt h
+sagen 말하다 sagte gesagt h
+empfehlen 추천하다 empfahl empfohlen h
+fliegen 날다 flog geflogen s
+träumen 꿈꾸다 täumte geträumt h
+vermuten 추측하다 vermutete vermutet h
+versuchen 시도하다 versuchte versucht h
+warten 기다리다 wartete gewartet h
+beenden 끝내다 beendete beendet h
+laufen 달리다 lief gelaufen s
+danken 감사하다 dankte gedankt h
+lassen 하게 하다 ließ gelassen h
+aufräumen 정리정돈하다 räumte...auf aufgeräumt h
+hören 듣다 hörte gehört h
+treiben 몰다 trieb getrieben h
+heiraten 결혼하다 heiratete geheiratet h
+lachen 웃다 lachte gelacht h
+leben 살다 lebte gelebt h
+reisen 여행하다 reiste gereist s
+schmecken 맛이 나다 schmeckte geschmeckt h
+sterben 죽다 starb gestorben s
+studieren 전공하다 studierte studiert h
+verstehen 이해하다 verstand verstanden h
+schwimmen 수영하다 schwamm geschwommen s/h
+unterrichten 수업을 하다 unterrichtete unterrichtet h
+werden 되다 wurde geworden s
+gewinnen 이기다, 얻다 gewann gewonnen h
+lieben 사랑하다 liebte geliebt h
+stehlen 훔치다 stahl gestohlen h
+probieren 해보다 probierte probiert h
+zahlen 값을 치르다 zahlte gezahlt h
+dekorieren 장식하다 dekorierte dekoriert h
+schenken 선물하다 schenkte geschenkt h
+brechen 깨다, 부러지다 brach gebrochen h
+buchen 예약하다 buchte gebucht h
+lügen 거짓말하다 log gelogen h
+sprechen 말하다 sprach gesprochen h
+hängen 걸다, 걸려있다 hing gehangen h
+liegen 눕히다, 놓다 lag gelegen h
+legen 놓여있다 legte gelegt h
+spielen 놀다 spielte gespielt h
+stellen 세워두다 stellte gestellt h
+bestehen 합격하다 bestand bestanden h
+kochen 요리하다 kochte gekocht h
+teilen 나누다 teilte geteilt h
+waschen 씻다 wusch gewaschen h
+brennen 불에 타다 brannte gebrannt h
+wandern 등반하다, 걷다 wanderte gewandert s/h
+übersetzen 번역하다 übersetzte übersetzt h
+rauchen 담배를 피다 rauchte geraucht h
+verschieben 연기하다 verschob verschoben h
+verbinden 연결하다 verband verbunden h
+retten 구출하다 rettete gerettet h
+spazieren 산책하다 spazierte spaziert s

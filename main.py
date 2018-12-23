@@ -36,13 +36,13 @@ class VocabFrontPage(Screen):
 class HomePage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
 	text = StringProperty('Welcome')
-	study_button_size = ListProperty([250,250])
-	data_button_size = ListProperty([170,170])
-	settings_button_size = ListProperty([170,170])
+	study_button_size = ListProperty([700,700]) #250
+	data_button_size = ListProperty([400,400]) #170
+	settings_button_size = ListProperty([400,400])
 
 class ChunkPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
-	text = StringProperty('Progress Saved')
+	text = StringProperty('저장했습니다!')
 
 class SettingsPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
@@ -69,12 +69,23 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 	index = 0
 	selected = BooleanProperty(False)
 	selectable = BooleanProperty(True)
-	font_size = 30
-	font_name = 'data/fonts/TYPO_CRAYONM'
 	picture = StringProperty()
+	initialized = False
+	
 	def refresh_view_attrs(self, rv, index, data):
 		self.index = index
-		self.picture = rv.data[index]["picture"]
+		self.selected = rv.data[index]["selected"]
+		if self.selected:
+			self.picture = "data/pictures/mario_hand.png"
+		else:
+			self.picture = "data/pictures/empty.png"
+		print "ljst init"
+		print rv.data[0]["selected"]
+		print rv.data[1]["selected"]
+		print rv.data[2]["selected"]
+		print rv.data[3]["selected"]
+		print rv.data[4]["selected"]
+
 		return super(SelectableLabel, self).refresh_view_attrs(
 			rv, index, data)
 
@@ -82,29 +93,43 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 		if super(SelectableLabel, self).on_touch_down(touch):
 			return True
 		if self.collide_point(*touch.pos) and self.selectable:
+			self.initialized = True
 			return self.parent.select_with_touch(self.index, touch)
 
 	def apply_selection(self, rv, index, is_selected):
-		self.selected = is_selected
-#		rv.initialized += 1
-#		print rv.initialized
-#		if rv.initialized >= 4: 
-#			print "normal"
-		if is_selected:
-			self.picture = "data/pictures/haken.png"
-		else:
-			self.picture = "data/pictures/empty.png"
+		if self.initialized:
+			if is_selected:
+				rv.data[1]["selected"] = False
+				self.picture = "data/pictures/mario_hand.png"
+				rv.data[index]["selected"] = True
+			else:
+				self.picture = "data/pictures/empty.png"
+				rv.data[index]["selected"] = False
+		print "ljst"
+		print rv.data[0]["selected"]
+		print rv.data[1]["selected"]
+		print rv.data[2]["selected"]
+		print rv.data[3]["selected"]
+		print rv.data[4]["selected"]
+	def change(self,touch):
+		print "change2"
+		print self.index
+		print self.selected
+#		return self.parent.select_with_touch(self.index, touch)
+#		if is_selected:
+#			rv.data[index]["selected"] = True
 #		else:
-#			print "initialisieren"
-#			self.picture = rv.data[index]["picture"]
+#			rv.data[index]["selected"] = False	
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
 	vocab2 = StringProperty()
 	answer1 = StringProperty()
 	answer2 = StringProperty()
-	info1 = StringProperty()
-	info2 = StringProperty()
+	info11 = StringProperty()
+	info12 = StringProperty()
+	info21 = StringProperty()
+	info22 = StringProperty()
 	
 	def build(self):
 		kivy.Config.set('graphics', 'width',  380)
@@ -139,33 +164,37 @@ class SwipeCardsApp(App):
 		self.lib.nextCard()
 		self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
 		self.answer1 = ""
-		self.info1 = ""
+		self.info11 = ""
+		self.info12 = ""
 		self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
 		self.answer2 = ""
-		self.info2 = ""
+		self.info21 = ""
+		self.info22 = ""
 		self.answered = False
 		self.lib.difficulty = 0
 
 	def go_to_vocabfrontpage(self):
-		self.homepage.study_button_size = [170,170]
+#		self.homepage.study_button_size = [170,170]
 		self.sm.transition.direction = 'left'
 		self.sm.current = 'vocabfrontpage'
 
 	def go_to_settings(self):
-		self.homepage.settings_button_size = [170,170]
+#		self.homepage.settings_button_size = [170,170]
 		self.sm.transition.direction = 'right'
 		self.sm.current = 'settingspage'	
 
 	def go_to_data(self):
-		self.homepage.data_button_size = [170,170]
+#		self.homepage.data_button_size = [170,170]
 		self.sm.transition.direction = 'right'
 		self.sm.current = 'datapage'
+		print "go to data"
 
 	def go_to_vocab(self):
 		self.sm.transition.direction = 'left'
 		self.lib.currentDeck = self.datapage.ids["deck"].deck
 		self.lib.loadVocabs()
 		self.init()
+#		print self.lib.getLearnedCards()
 		self.sm.current = 'pageone'
 
 	def go_to_chunkpage(self):
@@ -189,9 +218,9 @@ class SwipeCardsApp(App):
 			self.lib.nextCard()
 			self.vocab1 = self.lib.library[self.lib.currentCard]["question"]
 			self.answer1 = ""
-			self.info1 = ""
+			self.info11 = ""
+			self.info12 = ""
 			self.sm.transition.direction = direction
-			print self.lib.currentCard
 			self.sm.current = 'pageone'
 
 	def go_to_two(self, direction):
@@ -207,24 +236,30 @@ class SwipeCardsApp(App):
 			self.lib.nextCard()
 			self.vocab2 = self.lib.library[self.lib.currentCard]["question"]
 			self.answer2 = ""
-			self.info2 = ""
+			self.info21 = ""
+			self.info22 = ""
 			self.sm.transition.direction = direction
-			print self.lib.currentCard
+#			print self.lib.currentCard
 			self.sm.current = 'pagetwo'
 	
 	def show_answer(self, screen):
 		if screen == self.pageone:
 			self.answer1 = self.lib.library[self.lib.currentCard]["answer"]
-			self.info1 = self.lib.library[self.lib.currentCard]["info"]
+			self.info11 = self.lib.library[self.lib.currentCard]["info1"]
+			self.info12 = self.lib.library[self.lib.currentCard]["info2"]
 		elif screen == self.pagetwo:
 			self.answer2 = self.lib.library[self.lib.currentCard]["answer"]
-			self.info2 = self.lib.library[self.lib.currentCard]["info"]
+			self.info21 = self.lib.library[self.lib.currentCard]["info1"]
+			self.info22 = self.lib.library[self.lib.currentCard]["info2"]
 	
 	def touchdown(self, touch):
 		self.coordinate = touch.x
 
 	def touchup_on_pagetwo(self, touch):
-		self.distance = touch.x - self.coordinate		
+		try:
+			self.distance = touch.x - self.coordinate		
+		except:
+			print "Zu schnell"
 		if self.answered == False:
 			self.show_answer(self.pagetwo)
 			self.answered = True
@@ -246,9 +281,12 @@ class SwipeCardsApp(App):
 				self.go_to_two('left')
 	
 	def touchup_on_vocabfrontpage(self, touch):
-		self.distance = touch.x - self.coordinate		
-		if self.distance < -50:
-			self.go_to_vocab()
+		try:
+			self.distance = touch.x - self.coordinate		
+			if self.distance < -50:
+				self.go_to_vocab()
+		except:
+			print "Zu schnell"		
 
 	def touchup_on_chunkpage(self, touch):
 		self.distance = touch.x - self.coordinate		

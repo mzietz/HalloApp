@@ -10,36 +10,65 @@
 		Rectangle:
 			size: self.size
 
+<ButtonImage@Image>:
+
+#    keep_ratio: True
+	size: self.parent.size
+	pos: self.parent.pos  # important!
+	size_hint_y: None
+	size_hint_x: None
+#	height: dp(800)
+#	width: dp(800)
+#	width: self.parent.width*4
+#	height: self.parent.width/self.image_ratio*1.5
+#   center_x: self.parent.center_x
+#	center_y: self.parent.center_y
+	allow_stretch: True
+#	pos_hint_x: (1, 0.5)
+
 <PostitButton@Button>:
-	width: '50dp'
-	height: '50dp'
+#	canvas:
+#		Color:					#for testing
+#			rgb: 0.4, 1, 0.2	#for testing
+#		Rectangle:
+#			pos: self.pos
+#			size: self.size
+#	width: '50dp'
+#	height: '50dp'
+#	size_hint: (0.2 ,0.2)
 	background_color: (.99,.99,.99,0)
 
 <BackButton@Button>:
-	width: '50dp'
-	height: '50dp'
 	background_color: (.99,.99,.99,0)
-	size_hint: (0.5 ,0.5)
-	pos_hint: {'x': 0.55, "y": 0.25}
 	on_release:
 		app.go_to_home()
-    Image:
-        source: 'data/pictures/logo512.png'
-        allow_stretch: True
-        center_x: self.parent.center_x
-		center_y: self.parent.center_y
+	Image:
+
+		source: 'data/pictures/back_button.png'
+		size: self.parent.size
+		pos: self.parent.pos 
+		size_hint_y: None
+		size_hint_x: None
+		allow_stretch: True
 
 <Question@Label>:
-	font_size: '60sp'
-	font_name: 'data/fonts/TYPO_CRAYONM'
-	color: 1, 1, 1, 1
 
-<Answer@Label>:
-	text_size: self.size
-	size: self.texture_size
+	text_size: self.width, None
+	size_hint: 1, None
+	height: self.texture_size[1]
 	valign: 'top'
 	haldign: 'middle'
-	font_size: '45sp'
+	font_name: 'data/fonts/TYPO_CRAYONM'
+	color: 1, 1, 1 ,1
+	pos_hint: {'top': 1}
+
+<Answer@Label>:
+	size: self.texture_size
+	text_size: self.width, None
+	size_hint: 1, None
+	height: self.texture_size[1]
+	valign: 'center'
+	haldign: 'middle'
 	font_name: 'data/fonts/DK Cool Crayon'
 	color: 1, 1, 1 ,1
 
@@ -57,24 +86,22 @@
 	padding: '30sp'
 
 <BottomBox@FloatLayout>:
+	canvas:
+		Color:					#for testing
+			rgb: 0.4, 0, 1	#for testing
+		Rectangle:
+			pos: self.pos
+			size: self.size
 	orientation: 'horizontal'
-	size_hint_y: None
+	size_hint:(1, 0.2)
 	pos_hint: {'top': 0.2}
-	height: '150sp'
-	spacing: '20sp'
-	padding: '50sp'
-
-<Spacer@BoxLayout>
-	size_hint_y: None
-	height: '40sp'
-	spacing: '20sp'
-	padding: '10sp'
 
 <PageOne>:
 	on_touch_down: app.touchdown(args[1])
 	on_touch_up: app.touchup_on_pageone(args[1])
 
 	BoxLayout:
+		spacing: 20
 		padding: '45sp'
 		orientation: 'vertical'
 		canvas.before:
@@ -82,49 +109,53 @@
 				pos: self.pos
 				size: self.size
 				source: 'data/pictures/blackboard.png'
-
 		BoxLayout:
+			height: self.minimum_height
+			width: self.parent.width/1.2
 			orientation: 'vertical'
-#			canvas:
-#				Color:					#for testing
-#					rgb: 0.4, 1, 0.2	#for testing
-#				Rectangle:
-#					pos: self.pos
-#					size: self.size
-			size_hint:(1, 0.3)
+			size_hint:(None, None)
+
 			Question:
+				font_size: '45sp'
 				text: app.vocab1
+
 		Image: #bei einfuegen hier ifng der Error an zu kommen
 			size_hint:(1, 0.1)
-		    source: 'data/pictures/line.png'
-		    center_x: self.parent.center_x
+			source: 'data/pictures/strich.png'
+			center_x: self.parent.center_x
 			center_y: self.parent.center_y
-		    allow_stretch: True
+			allow_stretch: True
 		BoxLayout
 			spacing: '10sp'
-
 			orientation: 'vertical'
 			BoxLayout:
-				size_hint:(1, 0.3)
-#				canvas:
-#					Color:						#for testing
-#						rgb: 0.4, 0, 0.2		#for testing
-#					Rectangle:
-#						pos: self.pos
-#						size: self.size
+				height: self.minimum_height
+				width: self.parent.width
+				size_hint:(None, None)
+
 				Answer:
 					text: app.answer1
+					font_size: '45sp'
 			BoxLayout:
-#				canvas:
-#					Color:		
-#						rgb: 0.4, 0.5, 0.2
-#					Rectangle:
-#						pos: self.pos
-#						size: self.size
+				padding: [20,20,0,0]
+				height: self.minimum_height
+				width: self.parent.width
+				size_hint:(None, None)
+
 				Answer:
-					line_height: 1.5
-					text: app.info1
+					text: app.info11
 					font_size: '26sp'
+			BoxLayout:
+				padding: [20,0,0,0]
+				height: self.minimum_height
+				width: self.parent.width
+				size_hint:(None, None)
+
+				Answer:
+					text: app.info12
+					font_size: '26sp'				
+
+			BoxLayout:
 
 
 <PageTwo>:
@@ -133,188 +164,241 @@
 
 	BoxLayout:
 		padding: '45sp'
+		spacing: 20
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
 				pos: self.pos
 				size: self.size
 				source: 'data/pictures/blackboard.png'
-
 		BoxLayout:
-			orientation: 'vertical'
-			size_hint:(1, 0.3)
+			height: self.minimum_height
+			width: self.parent.width/1.2
+			size_hint:(None, None)
 			Question:
+				font_size: '45sp'
 				text: app.vocab2
-		Image: #bei einfuegen hier ifng der Error an zu kommen
+
+		Image:
 			size_hint:(1, 0.1)
-		    source: 'data/pictures/line.png'
-		    center_x: self.parent.center_x
+			source: 'data/pictures/strich.png'
+			center_x: self.parent.center_x
 			center_y: self.parent.center_y
-		    allow_stretch: True
+			allow_stretch: True
 		BoxLayout
+			spacing: '10sp'
 			orientation: 'vertical'
-			padding: '5sp'
 			BoxLayout:
-				size_hint:(1, 0.3)
+				height: self.minimum_height
+				width: self.parent.width
+				size_hint:(None, None)
 				Answer:
 					text: app.answer2
+					font_size: '45sp'
 			BoxLayout:
+				padding: [20,20,0,0]
+				height: self.minimum_height
+				width: self.parent.width
+				size_hint:(None, None)
 				Answer:
-					padding_top: '10sp'
-
-					text: app.info2
+					text: app.info21
 					font_size: '26sp'
+			BoxLayout:
+				padding: [20,0,0,0]
+				height: self.minimum_height
+				width: self.parent.width
+				size_hint:(None, None)
+				Answer:
+					text: app.info22
+					font_size: '26sp'				
+
+			BoxLayout:
+
 
 
 <VocabFrontPage>:
 	on_touch_down: app.touchdown(args[1])
 	on_touch_up: app.touchup_on_vocabfrontpage(args[1])
-
 	BoxLayout:
+		padding: '20sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
 				pos: self.pos
 				size: self.size
 				source: root.picture
-		Spacer:
-		HorizontalBox:
+		BoxLayout:
+			size_hint:(1, 0.3)
 			Uber:
 				text: root.text
-				text_size: self.size
-				halign: 'center'
-				valign: 'middle'
-		Question:
-			text: ""
+		BoxLayout:
+			padding: '20sp'
+
+			size_hint:(1, 0.7)
+			DeckData:
+				id:deck
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: '5sp'
+			size_hint: (1 ,0.25)
+			BoxLayout:
+				padding: '5sp'
+			BackButton:
+				size_hint: (0.35 ,1)
 
 <HomePage>:
 	BoxLayout:
+		padding: '45sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
 				pos: self.pos
 				size: self.size
 				source: root.picture
-		HorizontalBox:
+		BoxLayout:
+			orientation: 'vertical'
+			size_hint:(1, 0.34)
 			Uber:
 				text: root.text
-		Spacer:
-		
-		HorizontalBox:
+		BoxLayout:
+			padding: '20sp'
+			orientation: 'horizontal'
+			size_hint:(1, 0.7)
+
 			PostitButton:
+				center_x: self.center_x
 				id: study_button
 #				on_press:
 #					app.pushedbutton()
 				on_release:
 					app.go_to_vocabfrontpage()
-				width: '100dp'
-				height: '100dp'
-		        Image:
-		            source: 'data/pictures/button_study.png'
-			        center_x: self.parent.center_x
-        			center_y: self.parent.center_y
-		            size: 250, 250 #root.study_button_size #
-		            allow_stretch: True
+				ButtonImage:
+					source: 'data/pictures/button_study.png'
 
-		Spacer:
-			height: '40sp'
-
-		HorizontalBox:
+		BoxLayout:
+			padding: '10sp'
+			orientation: 'horizontal'
+			size_hint:(1, 0.3)
 			PostitButton:
 				id: settings_button
 #				on_press:
 #					app.pushedbutton()
 				on_release:
 					app.go_to_settings()
-		        Image:
-		            source: 'data/pictures/button_settings.png'
-			        center_x: self.parent.center_x
-        			center_y: self.parent.center_y
-		            size: root.settings_button_size #170, 170
-		            allow_stretch: True
-		            
+				ButtonImage:
+					source: 'data/pictures/button_settings.png'
+			BoxLayout:       
 			PostitButton:
 				id: data_button
 #				on_press:
 #					app.pushedbutton()
 				on_release:
 					app.go_to_data()
-		        Image:
-		            source: 'data/pictures/button_data.png'
-			        center_x: self.parent.center_x
-        			center_y: self.parent.center_y
-		            size: root.data_button_size #170, 170
-		            allow_stretch: True
-		Question:
-			text: ""
+				ButtonImage:
+					source: 'data/pictures/button_data.png'
 
 <SettingsPage>:
 	BoxLayout:
-	BoxLayout:
+		padding: '20sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
 				pos: self.pos
 				size: self.size
 				source: root.picture
-
-		Uber:
-			text: root.text
-		BottomBox:
+		BoxLayout:
+			size_hint:(1, 0.3)
+			Uber:
+				text: root.text
+		BoxLayout:
+			size_hint:(1, 0.7)
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: '5sp'
+			size_hint: (1 ,0.25)
+			BoxLayout:
+				padding: '5sp'
 			BackButton:
+				size_hint: (0.35 ,1)
 
 			
 <DataPage>:
 	BoxLayout:
-	BoxLayout:
+		padding: '20sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
 				pos: self.pos
 				size: self.size
 				source: root.picture
-		HorizontalBox:
+		BoxLayout:
+			size_hint:(1, 0.3)
 			Uber:
 				text: root.text
-		DeckData:
-			id:deck
-		BottomBox:
-			BackButton:
+		BoxLayout:
+			padding: [30,0,0,0]
 
-#		Image:
-#			source: root.listpicture
+			size_hint:(1, 0.7)
+			DeckData:
+				id:deck
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: '5sp'
+			size_hint: (1 ,0.25)
+			BoxLayout:
+				padding: '5sp'
+			BackButton:
+				size_hint: (0.35 ,1)
 
 <ChunkPage>:
 	on_touch_down: app.touchdown(args[1])
-	on_touch_up: app.touchup_on_chunkpage(args[1])
 	BoxLayout:
-	BoxLayout:
+		padding: '20sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
 				pos: self.pos
 				size: self.size
 				source: root.picture
-		Uber:
-			text: root.text
-		BottomBox:
+		BoxLayout:
+			size_hint:(1, 0.3)
+			Uber:
+				text: root.text
+		BoxLayout:
+			padding: [30,0,0,0]
+
+			size_hint:(1, 0.7)
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: '5sp'
+			size_hint: (1 ,0.25)
+			BoxLayout:
+				padding: '5sp'
 			BackButton:
+				size_hint: (0.35 ,1)
 <DeckData>:
-    viewclass: 'SelectableLabel'
-    SelectableRecycleBoxLayout:
-        default_size: None, dp(56)
-        default_size_hint: 1, None
-        size_hint_y: None
-        height: self.minimum_height
-        orientation: 'vertical'
-        multiselect: False
-        touch_multiselect: True
-        
+	viewclass: 'SelectableLabel'
+	SelectableRecycleBoxLayout:
+		multiselect: False
+		touch_multiselect: False
+		default_size: None, dp(150)
+		default_size_hint: 1, None
+		size_hint_y: None
+		height: self.minimum_height
+		orientation: 'vertical'
+		spacing: dp(10)
+		
 <SelectableLabel>
-    Image:
-        source: root.picture
-        center_x: self.parent.center_x + 120
+	font_size: 40 #30
+	text_size: root.width, None
+	size: self.texture_size
+	font_name: 'data/fonts/TYPO_CRAYONM'
+	Image:
+		size: self.parent.size
+		size_hint_y: None
+		size_hint_x: None
+		source: root.picture
+		pos_hint_x: (1, 0.5)
+		center_x: self.parent.width - 250
 		center_y: self.parent.center_y
-        size: 50, 50
-        allow_stretch: True
 <SwipeManager>

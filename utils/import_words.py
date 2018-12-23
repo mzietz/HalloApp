@@ -1,38 +1,53 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import json
+import datetime
+from os.path import join, exists
+
 
 class ImportWords:
 	def __init__(self):
-		self.newLibrary = "German1000"
-		self.txt = "german_lib"
-		self.liste = []
+		self.library = []
+		self.deck = []
+		self.chunkSize = 6
+		self.txt = "A1A2Verben.txt"
 
 	def loadWordsfromTxt(self):
+		n = 0
+		i = 0
 		with open(self.txt) as f:
 			for line in f:
-				line = line.split("	")
-				del line[0]
-				for x in line:
-					line[1] = line[1].rstrip("\r\n")
-				line = [x.strip(' ') for x in line]
-				line.insert(1,":")
-				line.insert(3,":")
-				line.insert(4,"0")
-				for x in line:
-					line = ''.join(line)
-#				line = line[1,2]
-				self.liste.append(line)
-			print(self.liste)
+				line = line.split()
+				self.deck.append({"info1": "","info2": "", "date": "", "chunk": 0, "question": "", "difficulty": 0, "answer": "", "learned": False})
+				self.deck[-1]["info1"] = "Präsens: " + line[-3]
+				self.deck[-1]["info2"] = "Partizip II: " + line[-2]
+				self.deck[-1]["date"] = unicode(datetime.datetime.now())
+				self.deck[-1]["answer"] = line[0]
+				if len(line) == 6:
+					self.deck[-1]["question"] = line[-5]+ " " + line[-4]
+				elif len(line) == 7:
+					self.deck[-1]["question"] = line[-6]+ " " + line[-5]+ " " + line[-4]
+				else:
+					self.deck[-1]["question"] = line[-4]
+				self.deck[-1]["learned"] = False
+				self.deck[-1]["difficulty"] = 2
+				self.deck[-1]["chunk"] = n
+				i += 1
+				if i is self.chunkSize:
+					n += 1
+					i = 0
+#			print(self.liste)
 
 	def saveWordsfromTxt(self):
-#		print(self.deck[0].card[0].question+":"+self.deck[0].card[0].answer+":"+self.deck[0].card[0].learnedStatus+":"+self.deck[0].card[0].timeUntilShow)
-		with open(self.newLibrary, "w") as f:
-			f.write("D!"+self.newLibrary+":"+str(0)+ "\n")
-			for x in self.liste:
-				f.write(x+"\n")
-			f.close()
+		with open(join('Deutsch 1.json'), 'w') as fd:
+			json.dump(self.deck, fd)
 		print("saved")
 
 
 if __name__ == '__main__':
 	myWords = ImportWords()
 	myWords.loadWordsfromTxt()
+	print myWords.deck[4]
+	print myWords.deck[5]
+	print len(myWords.deck)
 	myWords.saveWordsfromTxt()

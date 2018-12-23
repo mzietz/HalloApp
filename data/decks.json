@@ -1,1 +1,1 @@
-[{"text":"Deutsch 1", "picture": "data/pictures/haken.png"}, {"text":"Deutsch 2", "picture": "data/pictures/empty.png"}, {"text":"Deutsch 3", "picture": "data/pictures/empty.png"}]
+[{"text":"Deutsch 1", "selected": false}, {"text":"Deutsch 2", "selected": true}, {"text":"Deutsch 3", "selected": false}, {"text":"Deutsch 4", "selected": false}, {"text":"Deutsch 5", "selected": false}]
