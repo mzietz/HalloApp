@@ -1,1 +1,5 @@
-[{"text":"Deutsch 1", "selected": false}, {"text":"Deutsch 2", "selected": true}, {"text":"Deutsch 3", "selected": false}, {"text":"Deutsch 4", "selected": false}, {"text":"Deutsch 5", "selected": false}]
+[{"text":"Verben_A1_A2", "selected": true, "info": "Das Deck beinhaltet Verben der Level A1 und A2 in Präsens, Präteritum und Pertizip II Form", "picture": "data/pictures/empty.png"}, 
+	{"text":"Deutsch 2", "selected": false, "info": "D", "picture": "data/pictures/mario_hand.png"}, 
+	{"text":"Deutsch 3", "selected": false, "info": "D", "picture": "data/pictures/empty.png"}, 
+	{"text":"Deutsch 4", "selected": false, "info": "D", "picture": "data/pictures/empty.png"}, 
+	{"text":"Deutsch 5", "selected": false, "info": "D", "picture": "data/pictures/empty.png"}]

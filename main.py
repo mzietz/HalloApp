@@ -30,8 +30,8 @@ class PageTwo(Screen):
 	pass
 
 class VocabFrontPage(Screen):
-	picture = StringProperty("data/pictures/app_welcome.png")
-	text = StringProperty('공부하는 방법')
+	picture = StringProperty("data/pictures/blackboard.png")
+	text = StringProperty('Hier steht Deckname')
 
 class HomePage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
@@ -58,7 +58,7 @@ class DeckData(RecycleView):
 	def __init__(self, **kwargs):
 		super(DeckData, self).__init__(**kwargs)
 		self.data = []
-		self.deck = "Deutsch 1"
+		self.deck = ""
 		self.initialized = 0
 
 class SelectableRecycleBoxLayout(FocusBehavior, LayoutSelectionBehavior,
@@ -69,22 +69,15 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 	index = 0
 	selected = BooleanProperty(False)
 	selectable = BooleanProperty(True)
-	picture = StringProperty()
-	initialized = False
 	
+	def prints(self):
+		print "print"
+
 	def refresh_view_attrs(self, rv, index, data):
 		self.index = index
-		self.selected = rv.data[index]["selected"]
-		if self.selected:
-			self.picture = "data/pictures/mario_hand.png"
-		else:
-			self.picture = "data/pictures/empty.png"
-		print "ljst init"
-		print rv.data[0]["selected"]
-		print rv.data[1]["selected"]
-		print rv.data[2]["selected"]
-		print rv.data[3]["selected"]
-		print rv.data[4]["selected"]
+		for x in rv.data:
+			if x["selected"] == True:
+				rv.parent.parent.parent.text = x["text"]
 
 		return super(SelectableLabel, self).refresh_view_attrs(
 			rv, index, data)
@@ -93,33 +86,16 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 		if super(SelectableLabel, self).on_touch_down(touch):
 			return True
 		if self.collide_point(*touch.pos) and self.selectable:
-			self.initialized = True
 			return self.parent.select_with_touch(self.index, touch)
 
 	def apply_selection(self, rv, index, is_selected):
-		if self.initialized:
-			if is_selected:
-				rv.data[1]["selected"] = False
-				self.picture = "data/pictures/mario_hand.png"
-				rv.data[index]["selected"] = True
-			else:
-				self.picture = "data/pictures/empty.png"
-				rv.data[index]["selected"] = False
-		print "ljst"
-		print rv.data[0]["selected"]
-		print rv.data[1]["selected"]
-		print rv.data[2]["selected"]
-		print rv.data[3]["selected"]
-		print rv.data[4]["selected"]
-	def change(self,touch):
-		print "change2"
-		print self.index
-		print self.selected
-#		return self.parent.select_with_touch(self.index, touch)
-#		if is_selected:
-#			rv.data[index]["selected"] = True
-#		else:
-#			rv.data[index]["selected"] = False	
+		print "apply"
+		if is_selected == True:
+			rv.data[index]["selected"] = True
+			rv.parent.parent.parent.text = rv.data[index]["text"]
+		else:
+			rv.data[index]["selected"] = False
+	
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
@@ -130,6 +106,9 @@ class SwipeCardsApp(App):
 	info12 = StringProperty()
 	info21 = StringProperty()
 	info22 = StringProperty()
+
+	currentDeck = StringProperty()
+	currentDeckInfo = StringProperty()
 	
 	def build(self):
 		kivy.Config.set('graphics', 'width',  380)
@@ -155,6 +134,7 @@ class SwipeCardsApp(App):
 		self.lib = Library()
 		self.lib.loadDecks()
 		self.datapage.ids["deck"].data = self.lib.decks
+		self.set_current_deck()
 		return self.sm
 
 	def init(self):
@@ -174,9 +154,18 @@ class SwipeCardsApp(App):
 		self.lib.difficulty = 0
 
 	def go_to_vocabfrontpage(self):
-#		self.homepage.study_button_size = [170,170]
 		self.sm.transition.direction = 'left'
+		self.set_current_deck()
 		self.sm.current = 'vocabfrontpage'
+
+	def set_current_deck(self):
+		self.lib.decks = self.datapage.ids["deck"].data
+		for x in self.lib.decks:
+			if x["selected"] == True:
+				self.currentDeck = x["text"]
+				self.lib.currentDeck = self.currentDeck
+#				self.currentDeckInfo = x["info"] # superslow
+				self.datapage.text = self.currentDeck
 
 	def go_to_settings(self):
 #		self.homepage.settings_button_size = [170,170]
@@ -187,14 +176,11 @@ class SwipeCardsApp(App):
 #		self.homepage.data_button_size = [170,170]
 		self.sm.transition.direction = 'right'
 		self.sm.current = 'datapage'
-		print "go to data"
 
 	def go_to_vocab(self):
 		self.sm.transition.direction = 'left'
-		self.lib.currentDeck = self.datapage.ids["deck"].deck
 		self.lib.loadVocabs()
 		self.init()
-#		print self.lib.getLearnedCards()
 		self.sm.current = 'pageone'
 
 	def go_to_chunkpage(self):
@@ -281,12 +267,13 @@ class SwipeCardsApp(App):
 				self.go_to_two('left')
 	
 	def touchup_on_vocabfrontpage(self, touch):
-		try:
-			self.distance = touch.x - self.coordinate		
-			if self.distance < -50:
-				self.go_to_vocab()
-		except:
-			print "Zu schnell"		
+#		try:
+		print self.currentDeck
+		self.distance = touch.x - self.coordinate		
+		if self.distance < -50:
+			self.go_to_vocab()
+#		except:
+#			print "Zu schnell"		
 
 	def touchup_on_chunkpage(self, touch):
 		self.distance = touch.x - self.coordinate		

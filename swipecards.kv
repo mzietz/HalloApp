@@ -135,7 +135,7 @@
 
 				Answer:
 					text: app.answer1
-					font_size: '45sp'
+					font_size: '42sp'
 			BoxLayout:
 				padding: [20,20,0,0]
 				height: self.minimum_height
@@ -172,13 +172,13 @@
 				size: self.size
 				source: 'data/pictures/blackboard.png'
 		BoxLayout:
+			size_hint:(1, 0.1)
 			height: self.minimum_height
 			width: self.parent.width/1.2
 			size_hint:(None, None)
 			Question:
 				font_size: '45sp'
 				text: app.vocab2
-
 		Image:
 			size_hint:(1, 0.1)
 			source: 'data/pictures/strich.png'
@@ -194,7 +194,7 @@
 				size_hint:(None, None)
 				Answer:
 					text: app.answer2
-					font_size: '45sp'
+					font_size: '42sp'
 			BoxLayout:
 				padding: [20,20,0,0]
 				height: self.minimum_height
@@ -219,8 +219,69 @@
 <VocabFrontPage>:
 	on_touch_down: app.touchdown(args[1])
 	on_touch_up: app.touchup_on_vocabfrontpage(args[1])
+#	BoxLayout:
+#		padding: '45sp'
+#		spacing: 10
+#		orientation: 'vertical'
+#		canvas.before:
+#			Rectangle:
+#				pos: self.pos
+#				size: self.size
+#				source: 'data/pictures/blackboard.png'
+#		BoxLayout:
+#			height: self.minimum_height
+#			width: self.parent.width/1.2
+#			size_hint:(None, None)
+#			Question:
+#				font_size: '45sp'
+#				text: app.currentDeck
+#
+#		Image:
+#			size_hint:(1, 0.2)
+#			width: self.parent.width
+#			source: 'data/pictures/strich.png'
+#			center_x: self.parent.center_x
+#			center_y: self.parent.center_y
+#			allow_stretch: True
+#
+#		BoxLayout
+#			size_hint:(1, 0.7)
+#			canvas:
+#				Color:					#for testing
+#					rgb: 0.4, 1, 0.2	#for testing
+#				Rectangle:
+#					pos: self.pos
+#					size: self.size
+#			spacing: '10sp'
+#			orientation: 'vertical'
+#			BoxLayout:
+#				height: self.minimum_height
+#				width: self.parent.width
+#				size_hint:(None, None)
+#				Answer:
+#					text: app.currentDeckInfo
+#					font_size: '26sp'
+#			BoxLayout:
+#
+#		BoxLayout:
+#		BoxLayout:
+#			canvas:
+#				Color:					#for testing
+#					rgb: 0.4, 1, 1	#for testing
+#				Rectangle:
+#					pos: self.pos
+#					size: self.size
+#			orientation: 'horizontal'
+#			padding: '5sp'
+#			size_hint: (1 ,0.4)
+#			BoxLayout:
+#				padding: '5sp'
+#			BackButton:
+#				size_hint: (0.4 ,1)
+
 	BoxLayout:
-		padding: '20sp'
+		padding: [40,40,30,30]
+		spacing: '10sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -228,24 +289,39 @@
 				size: self.size
 				source: root.picture
 		BoxLayout:
-			size_hint:(1, 0.3)
-			Uber:
-				text: root.text
-		BoxLayout:
-			padding: '20sp'
+			padding: [20,0,0,0]
+			size_hint:(1, 0.1)
+			Question:
+				font_size: '45sp'
+				text: app.currentDeck
+		Image:
+			size_hint:(1, 0.1)
+			source: 'data/pictures/strich.png'
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+			allow_stretch: True
 
+		BoxLayout:
+			orientation: 'vertical'
 			size_hint:(1, 0.7)
-			DeckData:
-				id:deck
+			BoxLayout:
+				padding: [20,0,20,0]
+				height: self.minimum_height
+				width: self.parent.width
+				size_hint:(None, None)
+				Answer:
+					text: app.currentDeckInfo
+					font_size: '26sp'
+			BoxLayout:
+
 		BoxLayout:
 			orientation: 'horizontal'
-			padding: '5sp'
+
 			size_hint: (1 ,0.25)
 			BoxLayout:
 				padding: '5sp'
 			BackButton:
 				size_hint: (0.35 ,1)
-
 <HomePage>:
 	BoxLayout:
 		padding: '45sp'
@@ -352,8 +428,10 @@
 
 <ChunkPage>:
 	on_touch_down: app.touchdown(args[1])
+	on_touch_up: app.touchup_on_chunkpage(args[1])
 	BoxLayout:
 		padding: '20sp'
+		spacing: '20sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -364,10 +442,18 @@
 			size_hint:(1, 0.3)
 			Uber:
 				text: root.text
-		BoxLayout:
-			padding: [30,0,0,0]
+		Image:
+			size_hint:(1, 0.1)
+			source: 'data/pictures/strich.png'
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+			allow_stretch: True
 
+		BoxLayout:
 			size_hint:(1, 0.7)
+
+
+
 		BoxLayout:
 			orientation: 'horizontal'
 			padding: '5sp'
@@ -393,12 +479,16 @@
 	text_size: root.width, None
 	size: self.texture_size
 	font_name: 'data/fonts/TYPO_CRAYONM'
-	Image:
-		size: self.parent.size
-		size_hint_y: None
-		size_hint_x: None
-		source: root.picture
-		pos_hint_x: (1, 0.5)
-		center_x: self.parent.width - 250
-		center_y: self.parent.center_y
+	
+
+
+#	Image:
+#		size: self.parent.size
+#		size_hint_y: None
+#		size_hint_x: None
+#		source: root.picture[root.index]
+#		source: root.picture
+#		pos_hint_x: (1, 0.5)
+#		center_x: self.parent.width - 250
+#		center_y: self.parent.center_y
 <SwipeManager>
