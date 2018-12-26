@@ -245,18 +245,9 @@
 					pos_hint: {'center': 1}
 				BoxLayout:
 					size_hint:(0.5, 1)
-#		BoxLayout:
-#			canvas:
-#				Color:
-#					rgb: 0.4,0.3, 1
-#				Rectangle:
-#					pos: self.pos
-#					size: self.size
-#			size_hint:(1, 0.03)
 		BoxLayout:
 			size_hint:(1, 0.5)
 			orientation: 'vertical'
-#			padding: [20,20,40,20]
 			UberImage:
 				source: 'data/pictures/explain.png'
 			BoxLayout:
@@ -333,7 +324,41 @@
 			UberImage:
 				source: 'data/pictures/Setting_titel.png'
 		BoxLayout:
-			size_hint:(1, 0.7)
+			size_hint:(1, 0.2)
+			padding: [20,10,0,0]
+			orientation: 'horizontal'
+			BoxLayout:
+				size_hint:(0.3, 1)
+
+				UberImage:
+					source: 'data/pictures/currentdeck.png'
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.7, 1)
+		
+				BoxLayout:
+				Question:
+					font_size: '30sp'
+					text: app.currentDeck
+					pos_hint: {'center': 1}
+				BoxLayout:
+					size_hint:(0.5, 1)
+		BoxLayout:
+			size_hint:(1, 0.5)
+			orientation: 'horizontal'
+			BoxLayout:
+				size_hint:(0.1, 1)
+			Button:
+				background_color: (.99,.99,.99,0)
+				center_x: self.center_x
+				id: study_button
+				on_release:
+					app.resetCurrentDeck()
+				ButtonImage:
+					source: 'data/pictures/notlearned.png'
+			BoxLayout:
+				size_hint:(0.1, 1)
+
 		BoxLayout:
 			orientation: 'horizontal'
 			padding: '5sp'
@@ -509,17 +534,6 @@
 	font_size: 70
 	font_name: 'data/fonts/TYPO_CRAYONM'
 	
-
-
-#	Image:
-#		size: self.parent.size
-#		size_hint_y: None
-#		size_hint_x: None
-#		source: root.picture[root.index]
-#		source: root.picture
-#		pos_hint_x: (1, 0.5)
-#		center_x: self.parent.width - 250
-#		center_y: self.parent.center_y
 <SwipeManager>
 
 #		canvas:

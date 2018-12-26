@@ -89,11 +89,22 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 			return self.parent.select_with_touch(self.index, touch)
 
 	def apply_selection(self, rv, index, is_selected):
+#		print index
+		for x in rv.data:
+			x["selected"] = False
 		if is_selected == True:
+#			rv.data[-1]["selected"] = False
 			rv.data[index]["selected"] = True
 			rv.parent.parent.parent.parent.parent.text = rv.data[index]["text"]
-		else:
-			rv.data[index]["selected"] = False
+#			print str(rv.data[index]["text"]) + "is selected"
+#			print str(rv.data[0]["text"]) + " " + str(rv.data[0]["selected"])
+#			print str(rv.data[1]["text"]) + " " + str(rv.data[1]["selected"])
+#			print str(rv.data[2]["text"]) + " " + str(rv.data[2]["selected"])
+#			print str(rv.data[3]["text"]) + " " + str(rv.data[3]["selected"])
+#			print str(rv.data[4]["text"]) + " " + str(rv.data[4]["selected"])
+#			print str(rv.data[5]["text"]) + " " + str(rv.data[5]["selected"])
+#		else:
+#			rv.data[index]["selected"] = False
 	
 
 class SwipeCardsApp(App):
@@ -137,6 +148,7 @@ class SwipeCardsApp(App):
 		self.lib.loadDecks()
 		self.datapage.ids["deck"].data = self.lib.decks
 		self.set_current_deck()
+		print "Initialisiert mit: " +str(self.currentDeck + " und " + str(self.lib.currentDeck))
 		return self.sm
 
 	def init(self):
@@ -159,8 +171,6 @@ class SwipeCardsApp(App):
 
 	def go_to_vocabfrontpage(self):
 		self.sm.transition.direction = 'left'
-		self.set_current_deck()
-		self.lib.saveDecks()
 		self.sm.current = 'vocabfrontpage'
 
 	def set_current_deck(self):
@@ -168,9 +178,10 @@ class SwipeCardsApp(App):
 		for x in self.lib.decks:
 			if x["selected"] == True:
 				self.currentDeck = x["text"]
-				self.lib.currentDeck = self.currentDeck
+				self.lib.currentDeck = x["text"]
 				self.currentDeckInfo = x["info"] # superslow
-				self.datapage.text = self.currentDeck
+				self.datapage.text = x["text"]
+		print "Current Deck is: " + str(self.currentDeck)
 
 	def go_to_settings(self):
 #		self.homepage.settings_button_size = [170,170]
@@ -196,6 +207,8 @@ class SwipeCardsApp(App):
 
 	def go_to_home(self):
 		self.sm.transition.direction = 'left'
+		self.set_current_deck()
+		self.lib.saveDecks()
 		self.sm.current = 'home'
 
 	def go_to_one(self, direction):
@@ -214,6 +227,7 @@ class SwipeCardsApp(App):
 			self.info11 = ""
 			self.info12 = ""
 			self.sm.transition.direction = direction
+#			self.debug()
 			self.sm.current = 'pageone'
 
 	def go_to_two(self, direction):
@@ -233,6 +247,7 @@ class SwipeCardsApp(App):
 			self.info22 = ""
 			self.sm.transition.direction = direction
 #			print self.lib.currentCard
+#			self.debug()
 			self.sm.current = 'pagetwo'
 	
 	def show_answer(self, screen):
@@ -245,8 +260,16 @@ class SwipeCardsApp(App):
 			self.info21 = self.lib.library[self.lib.currentCard]["info1"]
 			self.info22 = self.lib.library[self.lib.currentCard]["info2"]
 	
+	def debug(self):
+		for i,x in enumerate(self.lib.library):
+			print str(i) + x["question"] 
+
 	def touchdown(self, touch):
-		self.coordinate = touch.x
+		self.coordinate = touch.x	
+
+	def resetCurrentDeck(self):
+		self.lib.refreshCurrentDeck()
+		print "refresh" + str(self.currentDeck)
 
 	def touchup_on_pagetwo(self, touch):
 		try:
@@ -274,13 +297,12 @@ class SwipeCardsApp(App):
 				self.go_to_two('left')
 	
 	def touchup_on_vocabfrontpage(self, touch):
-#		try:
-		print self.currentDeck
-		self.distance = touch.x - self.coordinate		
+		try:
+			self.distance = touch.x - self.coordinate	
+		except:
+			print "zu schnell"
 		if self.distance < -50:
-			self.go_to_vocab()
-#		except:
-#			print "Zu schnell"		
+			self.go_to_vocab()	
 
 	def touchup_on_chunkpage(self, touch):
 		self.distance = touch.x - self.coordinate		

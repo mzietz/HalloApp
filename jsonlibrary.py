@@ -12,7 +12,7 @@ class Library:
 		self.currentChunk = 0
 		self.currentDeck = ""
 		self.difficulty = 1
-		self.chunkSize = 6
+		self.chunkSize = 10
 		self.numberOfChunks = 0
 		self.date = datetime.datetime.now()
 
@@ -28,6 +28,7 @@ class Library:
 				x["selected"] = False
 		with open(join("data/", 'decks.json'), 'w') as fd:
 			json.dump(self.decks, fd)
+#		print "decks saved!"
 	
 	def loadVocabs(self):
 		with open(join("data/", self.currentDeck+'.json')) as fd:
@@ -99,8 +100,8 @@ class Library:
 
 		for x in self.library:
 			if x["chunk"] is self.currentChunk :
-				self.library.insert(self.library.index(x)+self.chunkSize+1,self.library[self.currentCard])
-				self.library[self.library.index(x)+self.chunkSize+1]["learned"] = False
+				self.library.insert(self.library.index(x)+self.chunkSize,self.library[self.currentCard])
+				self.library[self.library.index(x)+self.chunkSize]["learned"] = False
 				self.library.pop(self.currentCard)
 				self.difficulty += 1
 				break
@@ -108,12 +109,11 @@ class Library:
 	def addCard(self):
 		self.library.append("{'answer': 'Die ADDADADAD', 'learned': False, 'question': 'newspaper', 'chunk': 0}")
 
-	def getLearnedCards(self):
-		i = 0
+	def refreshCurrentDeck(self):
+		self.loadVocabs()
 		for x in self.library:
-			if x["difficulty"] == 0:
-				i += 1
-		return i
+			x["difficulty"] = 1 # hier kann man noch was machen
+		self.saveVocabs()
 
 ################# UTILITY ##################
 
