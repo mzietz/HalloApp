@@ -77,7 +77,7 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 		self.index = index
 		for x in rv.data:
 			if x["selected"] == True:
-				rv.parent.parent.parent.parent.text = x["text"]
+				rv.parent.parent.parent.parent.parent.text = x["text"]
 
 		return super(SelectableLabel, self).refresh_view_attrs(
 			rv, index, data)
@@ -91,7 +91,7 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 	def apply_selection(self, rv, index, is_selected):
 		if is_selected == True:
 			rv.data[index]["selected"] = True
-			rv.parent.parent.parent.parent.text = rv.data[index]["text"]
+			rv.parent.parent.parent.parent.parent.text = rv.data[index]["text"]
 		else:
 			rv.data[index]["selected"] = False
 	

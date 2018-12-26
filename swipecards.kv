@@ -386,6 +386,7 @@
 			BoxLayout:
 				orientation: 'vertical'
 				size_hint:(0.3, 1)
+				padding: '10sp'
 
 				BoxLayout:
 					UberImage:
@@ -395,6 +396,8 @@
 				orientation: 'vertical'
 				size_hint:(0.7, 1)
 		
+				BoxLayout:
+					size_hint:(1, 0.2)
 				BoxLayout:
 					padding: [0,15,0,15]
 					DeckData:
@@ -434,7 +437,7 @@
 			size_hint:(1, 0.7)
 			orientation: 'vertical'
 			BoxLayout:
-				padding: [20,10,0,0]
+				padding: [30,10,0,0]
 				size_hint:(1, 0.2)
 				orientation: 'horizontal'
 				BoxLayout:
@@ -456,7 +459,7 @@
 					BoxLayout:
 						size_hint:(0.5, 1)
 			BoxLayout:
-				padding: [20,10,0,0]
+				padding: [30,10,0,0]
 				size_hint:(1, 0.2)
 				orientation: 'horizontal'
 				BoxLayout:
@@ -503,7 +506,7 @@
 	size_hint: 1, None
 	height: self.texture_size[1]
 	size: self.texture_size
-	font_size: 60
+	font_size: 70
 	font_name: 'data/fonts/TYPO_CRAYONM'
 	
 
