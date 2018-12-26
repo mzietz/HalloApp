@@ -19,7 +19,7 @@ class ImportWords:
 			for line in f:
 				line = line.split()
 				self.deck.append({"info1": "","info2": "", "date": "", "chunk": 0, "question": "", "difficulty": 0, "answer": "", "learned": False})
-				self.deck[-1]["info1"] = "Präsens: " + line[-3]
+				self.deck[-1]["info1"] = "Präteritum: " + line[-3]
 				self.deck[-1]["info2"] = "Partizip II: " + line[-2]
 				self.deck[-1]["date"] = unicode(datetime.datetime.now())
 				self.deck[-1]["answer"] = line[0]

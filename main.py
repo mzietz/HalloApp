@@ -77,7 +77,7 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 		self.index = index
 		for x in rv.data:
 			if x["selected"] == True:
-				rv.parent.parent.parent.text = x["text"]
+				rv.parent.parent.parent.parent.text = x["text"]
 
 		return super(SelectableLabel, self).refresh_view_attrs(
 			rv, index, data)
@@ -89,10 +89,9 @@ class SelectableLabel(RecycleDataViewBehavior, Label):
 			return self.parent.select_with_touch(self.index, touch)
 
 	def apply_selection(self, rv, index, is_selected):
-		print "apply"
 		if is_selected == True:
 			rv.data[index]["selected"] = True
-			rv.parent.parent.parent.text = rv.data[index]["text"]
+			rv.parent.parent.parent.parent.text = rv.data[index]["text"]
 		else:
 			rv.data[index]["selected"] = False
 	
@@ -109,6 +108,9 @@ class SwipeCardsApp(App):
 
 	currentDeck = StringProperty()
 	currentDeckInfo = StringProperty()
+
+	cardsStudied = StringProperty()
+	cardsNotStudied = StringProperty()
 	
 	def build(self):
 		kivy.Config.set('graphics', 'width',  380)
@@ -151,11 +153,14 @@ class SwipeCardsApp(App):
 		self.info21 = ""
 		self.info22 = ""
 		self.answered = False
+		self.cardsStudied = str(self.lib.cardsStudied())
+		self.cardsNotStudied = str(self.lib.cardsNotStudied())
 		self.lib.difficulty = 0
 
 	def go_to_vocabfrontpage(self):
 		self.sm.transition.direction = 'left'
 		self.set_current_deck()
+		self.lib.saveDecks()
 		self.sm.current = 'vocabfrontpage'
 
 	def set_current_deck(self):
@@ -164,7 +169,7 @@ class SwipeCardsApp(App):
 			if x["selected"] == True:
 				self.currentDeck = x["text"]
 				self.lib.currentDeck = self.currentDeck
-#				self.currentDeckInfo = x["info"] # superslow
+				self.currentDeckInfo = x["info"] # superslow
 				self.datapage.text = self.currentDeck
 
 	def go_to_settings(self):
@@ -185,6 +190,8 @@ class SwipeCardsApp(App):
 
 	def go_to_chunkpage(self):
 		self.sm.transition.direction = 'left'
+		self.cardsStudied = str(self.lib.cardsStudied())
+		self.cardsNotStudied = str(self.lib.cardsNotStudied())
 		self.sm.current = 'chunkpage'
 
 	def go_to_home(self):

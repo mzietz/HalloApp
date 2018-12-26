@@ -19,7 +19,16 @@ class Library:
 	def loadDecks(self):
 		with open(join("data/", 'decks.json')) as fd:
 			self.decks = json.load(fd)
-
+	
+	def saveDecks(self):
+		for x in self.decks:
+			if x["text"] == self.currentDeck:
+				x["selected"] = True
+			else:
+				x["selected"] = False
+		with open(join("data/", 'decks.json'), 'w') as fd:
+			json.dump(self.decks, fd)
+	
 	def loadVocabs(self):
 		with open(join("data/", self.currentDeck+'.json')) as fd:
 			self.library = json.load(fd)
@@ -56,6 +65,19 @@ class Library:
 				i+=1	
 		return i
 
+	def cardsStudied(self):
+		i=0
+		for x in self.library:
+			if x["difficulty"] == 0:
+				i+=1	
+		return i
+
+	def cardsNotStudied(self):
+		i=0
+		for x in self.library:
+			if x["difficulty"] != False:
+				i+=1	
+		return i
 	def nextChunk(self):
 		self.date = datetime.datetime.now()
 		for x in self.library:

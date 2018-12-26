@@ -12,30 +12,14 @@
 
 <ButtonImage@Image>:
 
-#    keep_ratio: True
 	size: self.parent.size
 	pos: self.parent.pos  # important!
 	size_hint_y: None
 	size_hint_x: None
-#	height: dp(800)
-#	width: dp(800)
-#	width: self.parent.width*4
-#	height: self.parent.width/self.image_ratio*1.5
-#   center_x: self.parent.center_x
-#	center_y: self.parent.center_y
 	allow_stretch: True
-#	pos_hint_x: (1, 0.5)
 
 <PostitButton@Button>:
-#	canvas:
-#		Color:					#for testing
-#			rgb: 0.4, 1, 0.2	#for testing
-#		Rectangle:
-#			pos: self.pos
-#			size: self.size
-#	width: '50dp'
-#	height: '50dp'
-#	size_hint: (0.2 ,0.2)
+
 	background_color: (.99,.99,.99,0)
 
 <BackButton@Button>:
@@ -44,12 +28,19 @@
 		app.go_to_home()
 	Image:
 
-		source: 'data/pictures/back_button.png'
+		source: 'data/pictures/mario_hand.png'
 		size: self.parent.size
 		pos: self.parent.pos 
 		size_hint_y: None
 		size_hint_x: None
 		allow_stretch: True
+
+<UberImage@Image>:
+	size: self.parent.size
+	pos: self.parent.pos 
+	size_hint_y: None
+	size_hint_x: None
+	allow_stretch: True
 
 <Question@Label>:
 
@@ -219,68 +210,9 @@
 <VocabFrontPage>:
 	on_touch_down: app.touchdown(args[1])
 	on_touch_up: app.touchup_on_vocabfrontpage(args[1])
-#	BoxLayout:
-#		padding: '45sp'
-#		spacing: 10
-#		orientation: 'vertical'
-#		canvas.before:
-#			Rectangle:
-#				pos: self.pos
-#				size: self.size
-#				source: 'data/pictures/blackboard.png'
-#		BoxLayout:
-#			height: self.minimum_height
-#			width: self.parent.width/1.2
-#			size_hint:(None, None)
-#			Question:
-#				font_size: '45sp'
-#				text: app.currentDeck
-#
-#		Image:
-#			size_hint:(1, 0.2)
-#			width: self.parent.width
-#			source: 'data/pictures/strich.png'
-#			center_x: self.parent.center_x
-#			center_y: self.parent.center_y
-#			allow_stretch: True
-#
-#		BoxLayout
-#			size_hint:(1, 0.7)
-#			canvas:
-#				Color:					#for testing
-#					rgb: 0.4, 1, 0.2	#for testing
-#				Rectangle:
-#					pos: self.pos
-#					size: self.size
-#			spacing: '10sp'
-#			orientation: 'vertical'
-#			BoxLayout:
-#				height: self.minimum_height
-#				width: self.parent.width
-#				size_hint:(None, None)
-#				Answer:
-#					text: app.currentDeckInfo
-#					font_size: '26sp'
-#			BoxLayout:
-#
-#		BoxLayout:
-#		BoxLayout:
-#			canvas:
-#				Color:					#for testing
-#					rgb: 0.4, 1, 1	#for testing
-#				Rectangle:
-#					pos: self.pos
-#					size: self.size
-#			orientation: 'horizontal'
-#			padding: '5sp'
-#			size_hint: (1 ,0.4)
-#			BoxLayout:
-#				padding: '5sp'
-#			BackButton:
-#				size_hint: (0.4 ,1)
 
 	BoxLayout:
-		padding: [40,40,30,30]
+		padding: '20sp'
 		spacing: '10sp'
 		orientation: 'vertical'
 		canvas.before:
@@ -289,37 +221,56 @@
 				size: self.size
 				source: root.picture
 		BoxLayout:
-			padding: [20,0,0,0]
-			size_hint:(1, 0.1)
-			Question:
-				font_size: '45sp'
-				text: app.currentDeck
-		Image:
-			size_hint:(1, 0.1)
-			source: 'data/pictures/strich.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: True
+			size_hint:(1, 0.3)
 
+			UberImage:
+				source: 'data/pictures/learning_titel.png'
 		BoxLayout:
-			orientation: 'vertical'
-			size_hint:(1, 0.7)
+			size_hint:(1, 0.2)
+			padding: [20,10,0,0]
+			orientation: 'horizontal'
 			BoxLayout:
-				padding: [20,0,20,0]
+				size_hint:(0.3, 1)
+
+				UberImage:
+					source: 'data/pictures/currentdeck.png'
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.7, 1)
+		
+				BoxLayout:
+				Question:
+					font_size: '30sp'
+					text: app.currentDeck
+					pos_hint: {'center': 1}
+				BoxLayout:
+					size_hint:(0.5, 1)
+#		BoxLayout:
+#			canvas:
+#				Color:
+#					rgb: 0.4,0.3, 1
+#				Rectangle:
+#					pos: self.pos
+#					size: self.size
+#			size_hint:(1, 0.03)
+		BoxLayout:
+			size_hint:(1, 0.5)
+			orientation: 'vertical'
+#			padding: [20,20,40,20]
+			UberImage:
+				source: 'data/pictures/explain.png'
+			BoxLayout:
+				size_hint:(None, None)
 				height: self.minimum_height
 				width: self.parent.width
-				size_hint:(None, None)
-				Answer:
-					text: app.currentDeckInfo
-					font_size: '26sp'
 			BoxLayout:
 
 		BoxLayout:
+			size_hint: (1 ,0.25)
+			padding: [0,0,10,0]
 			orientation: 'horizontal'
 
-			size_hint: (1 ,0.25)
 			BoxLayout:
-				padding: '5sp'
 			BackButton:
 				size_hint: (0.35 ,1)
 <HomePage>:
@@ -332,10 +283,10 @@
 				size: self.size
 				source: root.picture
 		BoxLayout:
-			orientation: 'vertical'
 			size_hint:(1, 0.34)
-			Uber:
-				text: root.text
+			UberImage:
+				source: 'data/pictures/flashcardlogo.png'
+#				source: 'data/pictures/home_titel2.png'
 		BoxLayout:
 			padding: '20sp'
 			orientation: 'horizontal'
@@ -344,21 +295,17 @@
 			PostitButton:
 				center_x: self.center_x
 				id: study_button
-#				on_press:
-#					app.pushedbutton()
 				on_release:
 					app.go_to_vocabfrontpage()
 				ButtonImage:
 					source: 'data/pictures/button_study.png'
 
 		BoxLayout:
-			padding: '10sp'
+			padding: [10,10,20,0]
 			orientation: 'horizontal'
 			size_hint:(1, 0.3)
 			PostitButton:
 				id: settings_button
-#				on_press:
-#					app.pushedbutton()
 				on_release:
 					app.go_to_settings()
 				ButtonImage:
@@ -366,8 +313,6 @@
 			BoxLayout:       
 			PostitButton:
 				id: data_button
-#				on_press:
-#					app.pushedbutton()
 				on_release:
 					app.go_to_data()
 				ButtonImage:
@@ -383,9 +328,10 @@
 				size: self.size
 				source: root.picture
 		BoxLayout:
+
 			size_hint:(1, 0.3)
-			Uber:
-				text: root.text
+			UberImage:
+				source: 'data/pictures/Setting_titel.png'
 		BoxLayout:
 			size_hint:(1, 0.7)
 		BoxLayout:
@@ -409,14 +355,54 @@
 				source: root.picture
 		BoxLayout:
 			size_hint:(1, 0.3)
-			Uber:
-				text: root.text
-		BoxLayout:
-			padding: [30,0,0,0]
 
+			UberImage:
+				source: 'data/pictures/data_titel.png'
+
+		BoxLayout:
+			padding: [20,10,0,0]
+			size_hint:(1, 0.2)
+			orientation: 'horizontal'
+			BoxLayout:
+				size_hint:(0.3, 1)
+
+				UberImage:
+					source: 'data/pictures/currentdeck.png'
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.7, 1)
+		
+				BoxLayout:
+				Question:
+					font_size: '30sp'
+					text: root.text
+					pos_hint: {'center': 1}
+				BoxLayout:
+					size_hint:(0.5, 1)
+		BoxLayout:
+			padding: [20,10,0,0]
 			size_hint:(1, 0.7)
-			DeckData:
-				id:deck
+			orientation: 'horizontal'
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.3, 1)
+
+				BoxLayout:
+					UberImage:
+						source: 'data/pictures/deck_folder.png'
+				BoxLayout:
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.7, 1)
+		
+				BoxLayout:
+					padding: [0,15,0,15]
+					DeckData:
+						pos: self.pos
+						size: self.size
+						height: self.height 
+						id:deck
+
 		BoxLayout:
 			orientation: 'horizontal'
 			padding: '5sp'
@@ -439,21 +425,58 @@
 				size: self.size
 				source: root.picture
 		BoxLayout:
+
 			size_hint:(1, 0.3)
-			Uber:
-				text: root.text
-		Image:
-			size_hint:(1, 0.1)
-			source: 'data/pictures/strich.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: True
+			UberImage:
+				source: 'data/pictures/saved_titel.png'
 
 		BoxLayout:
 			size_hint:(1, 0.7)
+			orientation: 'vertical'
+			BoxLayout:
+				padding: [20,10,0,0]
+				size_hint:(1, 0.2)
+				orientation: 'horizontal'
+				BoxLayout:
+					size_hint:(0.4, 1)
 
+					UberImage:
+						source: 'data/pictures/learned.png'
+				BoxLayout:
+					size_hint:(0.1, 1)
+				BoxLayout:
+					orientation: 'vertical'
+					size_hint:(0.6, 1)
+			
+					BoxLayout:
+					Question:
+						font_size: '50sp'
+						text: app.cardsStudied
+						pos_hint: {'center': 1}
+					BoxLayout:
+						size_hint:(0.5, 1)
+			BoxLayout:
+				padding: [20,10,0,0]
+				size_hint:(1, 0.2)
+				orientation: 'horizontal'
+				BoxLayout:
+					size_hint:(0.4, 1)
 
-
+					UberImage:
+						source: 'data/pictures/notlearned.png'
+				BoxLayout:
+					size_hint:(0.1, 1)
+				BoxLayout:
+					orientation: 'vertical'
+					size_hint:(0.6, 1)
+			
+					BoxLayout:
+					Question:
+						font_size: '50sp'
+						text: app.cardsNotStudied
+						pos_hint: {'center': 1}
+					BoxLayout:
+						size_hint:(0.5, 1)
 		BoxLayout:
 			orientation: 'horizontal'
 			padding: '5sp'
@@ -465,19 +488,22 @@
 <DeckData>:
 	viewclass: 'SelectableLabel'
 	SelectableRecycleBoxLayout:
+		size: self.size
 		multiselect: False
 		touch_multiselect: False
-		default_size: None, dp(150)
-		default_size_hint: 1, None
 		size_hint_y: None
+		default_size_hint: 1, None
+		default_size: None, dp(200)
 		height: self.minimum_height
 		orientation: 'vertical'
 		spacing: dp(10)
 		
 <SelectableLabel>
-	font_size: 40 #30
-	text_size: root.width, None
+	text_size: self.width, None
+	size_hint: 1, None
+	height: self.texture_size[1]
 	size: self.texture_size
+	font_size: 60
 	font_name: 'data/fonts/TYPO_CRAYONM'
 	
 
@@ -492,3 +518,10 @@
 #		center_x: self.parent.width - 250
 #		center_y: self.parent.center_y
 <SwipeManager>
+
+#		canvas:
+#			Color:
+#				rgb: 0.4, 1, 1
+#			Rectangle:
+#				pos: self.pos
+#					size: self.size
