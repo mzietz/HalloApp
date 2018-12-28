@@ -80,12 +80,18 @@ class Library:
 				i+=1	
 		return i
 	def nextChunk(self):
+
 		self.date = datetime.datetime.now()
 		for x in self.library:
 			if x["difficulty"] > self.difficulty:
 				self.difficulty = x["difficulty"]
 				self.currentChunk = x["chunk"]
-			if x["difficulty"] == self.difficulty and datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f') < self.date:
+				
+			if x["difficulty"] == self.difficulty and x["difficulty"] != 0 and datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f') > self.date:
+				self.date = datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f')
+				self.currentChunk = x["chunk"]
+			
+			if x["difficulty"] == 0 and datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f') < self.date:
 				self.date = datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f')
 				self.currentChunk = x["chunk"]
 		self.difficulty = 0
