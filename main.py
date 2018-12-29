@@ -299,19 +299,19 @@ class SwipeCardsApp(App):
 	def chooseLevelPictures(self, level):
 		if level == "a1":
 			self.currentLevel = "a1"
-			self.datapage.a1_image = "data/pictures/A1groß.png"
+			self.datapage.a1_image = "data/pictures/A1gross.png"
 			self.resetDeckPictures()
 		if level == "a2":
 			self.currentLevel = "a2"
-			self.datapage.a2_image = "data/pictures/A2groß.png"	
+			self.datapage.a2_image = "data/pictures/A2gross.png"	
 			self.resetDeckPictures()	
 		if level == "b1":
 			self.currentLevel = "b1"
-			self.datapage.b1_image = "data/pictures/B1groß.png"	
+			self.datapage.b1_image = "data/pictures/B1gross.png"	
 			self.resetDeckPictures()	
 		if level == "b2":
 			self.currentLevel = "b2"
-			self.datapage.b2_image = "data/pictures/B2groß.png"
+			self.datapage.b2_image = "data/pictures/B2gross.png"
 			self.resetDeckPictures()
 	
 	def on_deck_button(self, deck):
