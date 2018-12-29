@@ -49,7 +49,7 @@ requirements = kivy
 presplash.filename = %(source.dir)s/data/pictures/splash.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/data/pictures/flashcardlogo.png
+icon.filename = %(source.dir)s/data/pictures/logo_sepia.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait

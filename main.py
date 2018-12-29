@@ -31,6 +31,8 @@ class PageTwo(Screen):
 
 class VocabFrontPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
+	deck_image = StringProperty("")
+	level_image = StringProperty("")
 	text = StringProperty('Hier steht Deckname')
 
 class HomePage(Screen):
@@ -46,6 +48,8 @@ class ChunkPage(Screen):
 
 class SettingsPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
+	deck_image = StringProperty("")
+	level_image = StringProperty("")
 	listpicture = StringProperty("data/pictures/stickynote_weiss.png")
 	text = StringProperty('Settings')
 
@@ -58,58 +62,10 @@ class DataPage(Screen):
 	b1_image = StringProperty("data/pictures/B1.png")
 	b2_image = StringProperty("data/pictures/B2.png")
 
-#class DeckData(RecycleView):
-#	def __init__(self, **kwargs):
-#		super(DeckData, self).__init__(**kwargs)
-#		self.data = []
-#		self.deck = ""
-#		self.initialized = 0
-#
-#class SelectableRecycleBoxLayout(FocusBehavior, LayoutSelectionBehavior,
-# 								 RecycleBoxLayout):
-# 	pass
-
-# class SelectableLabel(RecycleDataViewBehavior, Label):
-# 	index = 0
-# 	selected = BooleanProperty(False)
-# 	selectable = BooleanProperty(True)
-	
-# 	def prints(self):
-# 		print "print"
-
-# 	def refresh_view_attrs(self, rv, index, data):
-# 		self.index = index
-# 		for x in rv.data:
-# 			if x["selected"] == True:
-# 				rv.parent.parent.parent.parent.parent.text = x["text"]
-
-# 		return super(SelectableLabel, self).refresh_view_attrs(
-# 			rv, index, data)
-
-# 	def on_touch_down(self, touch):
-# 		if super(SelectableLabel, self).on_touch_down(touch):
-# 			return True
-# 		if self.collide_point(*touch.pos) and self.selectable:
-# 			return self.parent.select_with_touch(self.index, touch)
-
-# 	def apply_selection(self, rv, index, is_selected):
-# #		print index
-# 		for x in rv.data:
-# 			x["selected"] = False
-# 		if is_selected == True:
-# #			rv.data[-1]["selected"] = False
-# 			rv.data[index]["selected"] = True
-# 			rv.parent.parent.parent.parent.parent.text = rv.data[index]["text"]
-# #			print str(rv.data[index]["text"]) + "is selected"
-# #			print str(rv.data[0]["text"]) + " " + str(rv.data[0]["selected"])
-# #			print str(rv.data[1]["text"]) + " " + str(rv.data[1]["selected"])
-# #			print str(rv.data[2]["text"]) + " " + str(rv.data[2]["selected"])
-# #			print str(rv.data[3]["text"]) + " " + str(rv.data[3]["selected"])
-# #			print str(rv.data[4]["text"]) + " " + str(rv.data[4]["selected"])
-# #			print str(rv.data[5]["text"]) + " " + str(rv.data[5]["selected"])
-# #		else:
-# #			rv.data[index]["selected"] = False
-	
+	nomen_image = StringProperty("data/pictures/deck_back.png")
+	verben_image = StringProperty("data/pictures/deck_back.png")
+	adjektive_image = StringProperty("data/pictures/deck_back.png")
+	rest_image = StringProperty("data/pictures/deck_back.png")	
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
@@ -179,25 +135,14 @@ class SwipeCardsApp(App):
 	def set_current_deck(self):
 		for x in self.lib.decks:
 			if x["selected"] == True:
-				self.currentDeck = x["text"][2:]
+				self.currentDeck = x["text"]
 				self.currentLevel = x["text"][:2]
 				self.lib.currentDeck = x["text"]
-
-		# reset images
-		self.datapage.a1_image = "data/pictures/A1.png"
-		self.datapage.a2_image = "data/pictures/A2.png"
-		self.datapage.b1_image = "data/pictures/B1.png"
-		self.datapage.b2_image = "data/pictures/B2.png"
-		if self.currentLevel == "a1":
-			self.datapage.a1_image = "data/pictures/A1groß.png"
-		if self.currentLevel == "a2":
-			self.datapage.a2_image = "data/pictures/A2groß.png"		
-		if self.currentLevel == "b1":
-			self.datapage.b1_image = "data/pictures/B1groß.png"		
-		if self.currentLevel == "b2":
-			self.datapage.b2_image = "data/pictures/B2groß.png"
+				self.resetLevelPictures()
+				self.chooseLevelPictures(x["text"][:2])
+				self.chooseDeckPictures(x["text"][2:])
+				self.setDeckandLevelImages("settingspage", x["text"][:2],x["text"][2:])
 		self.lib.saveDecks()
-
 		print "Current Level is: " + str(self.currentLevel)
 		print "Current Deck is: " + str(self.currentDeck)
 
@@ -208,7 +153,7 @@ class SwipeCardsApp(App):
 
 	def go_to_data(self):
 #		self.homepage.data_button_size = [170,170]
-		self.set_current_deck()
+		# self.set_current_deck()
 		self.sm.transition.direction = 'right'
 		self.sm.current = 'datapage'
 
@@ -327,29 +272,81 @@ class SwipeCardsApp(App):
 			self.go_to_vocab()	
 
 	def on_level_button(self, level):
+		self.resetLevelPictures()
+		self.chooseLevelPictures(level)
+	
+	def resetDeckPictures(self):
+		self.datapage.nomen_image = "data/pictures/deck_back.png"
+		self.datapage.verben_image = "data/pictures/deck_back.png"
+		self.datapage.adjektive_image = "data/pictures/deck_back.png"
+		self.datapage.rest_image = "data/pictures/deck_back.png"	
+	def resetLevelPictures(self):
 		self.datapage.a1_image = "data/pictures/A1.png"
 		self.datapage.a2_image = "data/pictures/A2.png"
 		self.datapage.b1_image = "data/pictures/B1.png"
 		self.datapage.b2_image = "data/pictures/B2.png"
-		if level == "A1":
+	
+	def chooseDeckPictures(self, deck):
+		if deck == "nomen":
+			self.datapage.nomen_image = "data/pictures/nomen.png"
+		if deck == "verben":
+			self.datapage.verben_image = "data/pictures/verben.png"		
+		if deck == "adjektive":
+			self.datapage.adjektive_image = "data/pictures/adjektive.png"		
+		if deck == "rest":
+			self.datapage.rest_image = "data/pictures/rest.png"
+
+	def chooseLevelPictures(self, level):
+		if level == "a1":
 			self.currentLevel = "a1"
 			self.datapage.a1_image = "data/pictures/A1groß.png"
-		if level == "A2":
+			self.resetDeckPictures()
+		if level == "a2":
 			self.currentLevel = "a2"
-			self.datapage.a2_image = "data/pictures/A2groß.png"		
-		if level == "B1":
+			self.datapage.a2_image = "data/pictures/A2groß.png"	
+			self.resetDeckPictures()	
+		if level == "b1":
 			self.currentLevel = "b1"
-			self.datapage.b1_image = "data/pictures/B1groß.png"		
-		if level == "B2":
+			self.datapage.b1_image = "data/pictures/B1groß.png"	
+			self.resetDeckPictures()	
+		if level == "b2":
 			self.currentLevel = "b2"
 			self.datapage.b2_image = "data/pictures/B2groß.png"
+			self.resetDeckPictures()
 	
 	def on_deck_button(self, deck):
 		self.currentDeck = self.currentLevel + deck
 		self.lib.currentDeck = self.currentDeck
-		self.lib.saveDecks()	
-		print "Current Level is: " + str(self.currentLevel)
-		print "Current Deck is: " + str(self.currentDeck)
+		self.lib.saveDecks()
+		self.set_current_deck()
+		self.resetDeckPictures()
+		self.chooseDeckPictures(deck)
+
+	def setDeckandLevelImages(self, page, level, deck):
+		if deck == "nomen":
+			self.settingspage.deck_image = "data/pictures/nomen.png"
+			self.vocabfrontpage.deck_image = "data/pictures/nomen.png"
+		if deck == "verben":
+			self.settingspage.deck_image = "data/pictures/verben.png"		
+			self.vocabfrontpage.deck_image = "data/pictures/verben.png"		
+		if deck == "adjektive":
+			self.settingspage.deck_image = "data/pictures/adjektive.png"		
+			self.vocabfrontpage.deck_image = "data/pictures/adjektive.png"		
+		if deck == "rest":
+			self.settingspage.deck_image = "data/pictures/rest.png"
+			self.vocabfrontpage.deck_image = "data/pictures/rest.png"
+		if level == "a1":
+			self.settingspage.level_image = "data/pictures/A1.png"
+			self.vocabfrontpage.level_image = "data/pictures/A1.png"
+		if level == "a2":
+			self.settingspage.level_image = "data/pictures/A2.png"	
+			self.vocabfrontpage.level_image = "data/pictures/A2.png"	
+		if level == "b1":
+			self.settingspage.level_image = "data/pictures/B1.png"	
+			self.vocabfrontpage.level_image = "data/pictures/B1.png"	
+		if level == "b2":
+			self.settingspage.level_image = "data/pictures/B2.png"
+			self.vocabfrontpage.level_image = "data/pictures/B2.png"
 
 	def pushedbutton(self):
 		print self.homepage.ids.items()

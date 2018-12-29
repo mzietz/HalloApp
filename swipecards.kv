@@ -29,7 +29,7 @@
 		app.go_to_home()
 	Image:
 
-		source: 'data/pictures/mario_hand.png'
+		source: 'data/pictures/mario_hand2.png'
 		size: self.parent.size
 		pos: self.parent.pos 
 		size_hint_y: None
@@ -50,7 +50,7 @@
 	height: self.texture_size[1]
 	valign: 'top'
 	haldign: 'middle'
-	font_name: 'data/fonts/TYPO_CRAYONM'
+	font_name: 'data/fonts/DK Cool Crayon'
 	color: 1, 1, 1 ,1
 	pos_hint: {'top': 1}
 
@@ -61,7 +61,7 @@
 	height: self.texture_size[1]
 	valign: 'center'
 	haldign: 'middle'
-	font_name: 'data/fonts/DK Cool Crayon'
+	font_name: 'data/fonts/TYPO_CRAYONM' 
 	color: 1, 1, 1 ,1
 
 <Uber@Label>:
@@ -108,7 +108,7 @@
 			size_hint:(None, None)
 
 			Question:
-				font_size: '45sp'
+				font_size: '42sp'
 				text: app.vocab1
 
 		Image: #bei einfuegen hier ifng der Error an zu kommen
@@ -136,6 +136,7 @@
 
 				Answer:
 					text: app.info11
+					font_name: 'data/fonts/DK Cool Crayon'
 					font_size: '26sp'
 			BoxLayout:
 				padding: [20,0,0,0]
@@ -169,7 +170,7 @@
 			width: self.parent.width/1.2
 			size_hint:(None, None)
 			Question:
-				font_size: '45sp'
+				font_size: '42sp'
 				text: app.vocab2
 		Image:
 			size_hint:(1, 0.1)
@@ -194,6 +195,7 @@
 				size_hint:(None, None)
 				Answer:
 					text: app.info21
+					font_name: 'data/fonts/DK Cool Crayon'
 					font_size: '26sp'
 			BoxLayout:
 				padding: [20,0,0,0]
@@ -225,27 +227,30 @@
 			size_hint:(1, 0.3)
 
 			UberImage:
-				source: 'data/pictures/learning_titel.png'
+				source: 'data/pictures/study_titel.png'
 		BoxLayout:
 			size_hint:(1, 0.2)
-			padding: [20,10,0,0]
 			orientation: 'horizontal'
 			BoxLayout:
-				size_hint:(0.3, 1)
-
-				UberImage:
-					source: 'data/pictures/currentdeck.png'
+				size_hint:(0.05, 1)
 			BoxLayout:
-				orientation: 'vertical'
-				size_hint:(0.7, 1)
-		
-				BoxLayout:
-				Question:
-					font_size: '30sp'
-					text: app.currentDeck
-					pos_hint: {'center': 1}
-				BoxLayout:
-					size_hint:(0.5, 1)
+				size_hint:(0.2, 1)
+				UberImage:
+					source: 'data/pictures/lilie_links.png'
+			BoxLayout:
+				size_hint:(0.3, 1)
+				UberImage:
+					source: root.level_image
+			BoxLayout:
+				size_hint:(0.3, 1)
+				UberImage:
+					source: root.deck_image
+			BoxLayout:
+				size_hint:(0.2, 1)
+				UberImage:
+					source: 'data/pictures/lilie_rechts.png'
+			BoxLayout:
+				size_hint:(0.05, 1)
 		BoxLayout:
 			size_hint:(1, 0.5)
 			orientation: 'vertical'
@@ -267,7 +272,7 @@
 				size_hint: (0.35 ,1)
 <HomePage>:
 	BoxLayout:
-		padding: '45sp'
+		padding: [0,0,0,0]
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -275,14 +280,17 @@
 				size: self.size
 				source: root.picture
 		BoxLayout:
-			size_hint:(1, 0.34)
+			size_hint:(1, 0.02)
+		BoxLayout:
+#			padding: [0,30,0,0]
+			size_hint:(1, 0.3)
 			UberImage:
-				source: 'data/pictures/flashcardlogo.png'
+				source: 'data/pictures/banner.png'
 #				source: 'data/pictures/home_titel2.png'
 		BoxLayout:
-			padding: '20sp'
+			padding: [20,10,20,10]
 			orientation: 'horizontal'
-			size_hint:(1, 0.7)
+			size_hint:(1, 0.4)
 
 			PostitButton:
 				center_x: self.center_x
@@ -290,10 +298,10 @@
 				on_release:
 					app.go_to_vocabfrontpage()
 				ButtonImage:
-					source: 'data/pictures/study_button.png'
+					source: 'data/pictures/deck_back2.png'
 
 		BoxLayout:
-			padding: [10,10,20,0]
+			padding: [40,0,40,25]
 			orientation: 'horizontal'
 			size_hint:(1, 0.3)
 			PostitButton:
@@ -303,6 +311,7 @@
 				ButtonImage:
 					source: 'data/pictures/settings_button.png'
 			BoxLayout:       
+				size_hint:(0.2, 1)
 			PostitButton:
 				id: data_button
 				on_release:
@@ -325,27 +334,35 @@
 			UberImage:
 				source: 'data/pictures/Setting_titel.png'
 		BoxLayout:
+			size_hint:(1, 0.1)
+		BoxLayout:
 			size_hint:(1, 0.2)
-			padding: [20,10,0,0]
 			orientation: 'horizontal'
 			BoxLayout:
-				size_hint:(0.3, 1)
-
-				UberImage:
-					source: 'data/pictures/currentdeck.png'
+				size_hint:(0.05, 1)
 			BoxLayout:
-				orientation: 'vertical'
-				size_hint:(0.7, 1)
-		
-				BoxLayout:
-				Question:
-					font_size: '30sp'
-					text: app.currentDeck
-					pos_hint: {'center': 1}
-				BoxLayout:
-					size_hint:(0.5, 1)
+				size_hint:(0.2, 1)
+				UberImage:
+					source: 'data/pictures/lilie_links.png'
+			BoxLayout:
+				size_hint:(0.3, 1)
+				UberImage:
+					source: root.level_image
+			BoxLayout:
+				size_hint:(0.3, 1)
+				UberImage:
+					source: root.deck_image
+			BoxLayout:
+				size_hint:(0.2, 1)
+				UberImage:
+					source: 'data/pictures/lilie_rechts.png'
+			BoxLayout:
+				size_hint:(0.05, 1)
 		BoxLayout:
-			size_hint:(1, 0.5)
+			size_hint:(1, 0.1)		
+		BoxLayout:
+			size_hint:(1, 0.4)
+			padding: '10sp'
 			orientation: 'horizontal'
 			BoxLayout:
 				size_hint:(0.1, 1)
@@ -383,30 +400,10 @@
 			size_hint:(1, 0.3)
 
 			UberImage:
-				source: 'data/pictures/data_titel.png'
+				source: 'data/pictures/data_titel2.png'
 
-#		BoxLayout:
-#			size_hint:(1, 0.2)
-#			padding: [20,10,0,0]
-#			orientation: 'horizontal'
-#			BoxLayout:
-#				size_hint:(0.3, 1)
-#
-#				UberImage:
-#					source: 'data/pictures/currentdeck.png'
-#			BoxLayout:
-#				orientation: 'vertical'
-#				size_hint:(0.7, 1)
-#		
-#				BoxLayout:
-#				Question:
-#					font_size: '30sp'
-#					text: app.currentDeck
-#					pos_hint: {'center': 1}
-#				BoxLayout:
-#					size_hint:(0.5, 1)
 		BoxLayout:
-			padding: [10,10,10,0]
+			padding: [15,10,10,0]
 			size_hint:(1, 0.2)
 			orientation: 'vertical'
 			GridLayout:
@@ -415,25 +412,25 @@
 			    GridButton:
 			        id: label1
 			        on_release:
-						app.on_level_button("A1")
+						app.on_level_button("a1")
 			        ButtonImage:
 			        	source: root.a1_image
 			    GridButton:
 			        id: label2
 			        on_release:
-						app.on_level_button("A2")
+						app.on_level_button("a2")
 			        ButtonImage:
 			        	source: root.a2_image
 			    GridButton:
 			        id: label3
 			        on_release:
-						app.on_level_button("B1")
+						app.on_level_button("b1")
 			        ButtonImage:
 			        	source: root.b1_image
 			    GridButton:
 			        id: label4
 			        on_release:
-						app.on_level_button("B2")
+						app.on_level_button("b2")
 			        ButtonImage:
 			        	source: root.b2_image
 
@@ -449,25 +446,25 @@
 			        on_release:
 						app.on_deck_button("nomen")
 			        ButtonImage:
-			        	source: 'data/pictures/nomen.png'
+			        	source: root.nomen_image
 			    GridButton:
 			        id: label6
 			        on_release:
 						app.on_deck_button("verben")
 			        ButtonImage:
-			        	source: 'data/pictures/verben.png'
+			        	source: root.verben_image
 			    GridButton:
 			        id: label7
 			        on_release:
 						app.on_deck_button("adjektive")
 			        ButtonImage:
-			        	source: 'data/pictures/adjektive.png'
+			        	source: root.adjektive_image
 			    GridButton:
 			        id: label8
 			        on_release:
 						app.on_deck_button("rest")
 			        ButtonImage:
-			        	source: 'data/pictures/rest.png'
+			        	source: root.rest_image
 		BoxLayout:
 			orientation: 'horizontal'
 			padding: '5sp'

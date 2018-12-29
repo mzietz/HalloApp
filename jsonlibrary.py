@@ -105,9 +105,13 @@ class Library:
 #		self.library[self.currentCard]["learned"] = False
 
 		for x in self.library:
-			if x["chunk"] is self.currentChunk :
+			if x["chunk"] is self.currentChunk:
+				s = self.getRealChunksize()
 				self.library.insert(self.library.index(x)+self.chunkSize,self.library[self.currentCard])
-				self.library[self.library.index(x)+self.chunkSize]["learned"] = False
+				try:
+					self.library[self.library.index(x)+self.chunkSize]["learned"] = False
+				except:
+					self.library[self.library.index(x)+s]["learned"] = False
 				self.library.pop(self.currentCard)
 				self.difficulty += 1
 				break
@@ -121,6 +125,12 @@ class Library:
 			x["difficulty"] = 1 # hier kann man noch was machen
 		self.saveVocabs()
 
+	def getRealChunksize(self):
+		i=0
+		for x in self.library:
+			if x["chunk"] is self.currentChunk:
+				i+=1
+		return i
 ################# UTILITY ##################
 
 	def setChunks(self):
