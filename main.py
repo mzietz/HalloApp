@@ -53,58 +53,62 @@ class DataPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
 	listpicture = StringProperty("data/pictures/stickynote_weiss.png")
 	text = StringProperty('Data')
+	a1_image = StringProperty("data/pictures/A1.png")
+	a2_image = StringProperty("data/pictures/A2.png")
+	b1_image = StringProperty("data/pictures/B1.png")
+	b2_image = StringProperty("data/pictures/B2.png")
 
-class DeckData(RecycleView):
-	def __init__(self, **kwargs):
-		super(DeckData, self).__init__(**kwargs)
-		self.data = []
-		self.deck = ""
-		self.initialized = 0
+#class DeckData(RecycleView):
+#	def __init__(self, **kwargs):
+#		super(DeckData, self).__init__(**kwargs)
+#		self.data = []
+#		self.deck = ""
+#		self.initialized = 0
+#
+#class SelectableRecycleBoxLayout(FocusBehavior, LayoutSelectionBehavior,
+# 								 RecycleBoxLayout):
+# 	pass
 
-class SelectableRecycleBoxLayout(FocusBehavior, LayoutSelectionBehavior,
-								 RecycleBoxLayout):
-	pass
-
-class SelectableLabel(RecycleDataViewBehavior, Label):
-	index = 0
-	selected = BooleanProperty(False)
-	selectable = BooleanProperty(True)
+# class SelectableLabel(RecycleDataViewBehavior, Label):
+# 	index = 0
+# 	selected = BooleanProperty(False)
+# 	selectable = BooleanProperty(True)
 	
-	def prints(self):
-		print "print"
+# 	def prints(self):
+# 		print "print"
 
-	def refresh_view_attrs(self, rv, index, data):
-		self.index = index
-		for x in rv.data:
-			if x["selected"] == True:
-				rv.parent.parent.parent.parent.parent.text = x["text"]
+# 	def refresh_view_attrs(self, rv, index, data):
+# 		self.index = index
+# 		for x in rv.data:
+# 			if x["selected"] == True:
+# 				rv.parent.parent.parent.parent.parent.text = x["text"]
 
-		return super(SelectableLabel, self).refresh_view_attrs(
-			rv, index, data)
+# 		return super(SelectableLabel, self).refresh_view_attrs(
+# 			rv, index, data)
 
-	def on_touch_down(self, touch):
-		if super(SelectableLabel, self).on_touch_down(touch):
-			return True
-		if self.collide_point(*touch.pos) and self.selectable:
-			return self.parent.select_with_touch(self.index, touch)
+# 	def on_touch_down(self, touch):
+# 		if super(SelectableLabel, self).on_touch_down(touch):
+# 			return True
+# 		if self.collide_point(*touch.pos) and self.selectable:
+# 			return self.parent.select_with_touch(self.index, touch)
 
-	def apply_selection(self, rv, index, is_selected):
-#		print index
-		for x in rv.data:
-			x["selected"] = False
-		if is_selected == True:
-#			rv.data[-1]["selected"] = False
-			rv.data[index]["selected"] = True
-			rv.parent.parent.parent.parent.parent.text = rv.data[index]["text"]
-#			print str(rv.data[index]["text"]) + "is selected"
-#			print str(rv.data[0]["text"]) + " " + str(rv.data[0]["selected"])
-#			print str(rv.data[1]["text"]) + " " + str(rv.data[1]["selected"])
-#			print str(rv.data[2]["text"]) + " " + str(rv.data[2]["selected"])
-#			print str(rv.data[3]["text"]) + " " + str(rv.data[3]["selected"])
-#			print str(rv.data[4]["text"]) + " " + str(rv.data[4]["selected"])
-#			print str(rv.data[5]["text"]) + " " + str(rv.data[5]["selected"])
-#		else:
-#			rv.data[index]["selected"] = False
+# 	def apply_selection(self, rv, index, is_selected):
+# #		print index
+# 		for x in rv.data:
+# 			x["selected"] = False
+# 		if is_selected == True:
+# #			rv.data[-1]["selected"] = False
+# 			rv.data[index]["selected"] = True
+# 			rv.parent.parent.parent.parent.parent.text = rv.data[index]["text"]
+# #			print str(rv.data[index]["text"]) + "is selected"
+# #			print str(rv.data[0]["text"]) + " " + str(rv.data[0]["selected"])
+# #			print str(rv.data[1]["text"]) + " " + str(rv.data[1]["selected"])
+# #			print str(rv.data[2]["text"]) + " " + str(rv.data[2]["selected"])
+# #			print str(rv.data[3]["text"]) + " " + str(rv.data[3]["selected"])
+# #			print str(rv.data[4]["text"]) + " " + str(rv.data[4]["selected"])
+# #			print str(rv.data[5]["text"]) + " " + str(rv.data[5]["selected"])
+# #		else:
+# #			rv.data[index]["selected"] = False
 	
 
 class SwipeCardsApp(App):
@@ -146,7 +150,6 @@ class SwipeCardsApp(App):
 		self.sm.current = 'home'
 		self.lib = Library()
 		self.lib.loadDecks()
-		self.datapage.ids["deck"].data = self.lib.decks
 		self.set_current_deck()
 		print "Initialisiert mit: " +str(self.currentDeck + " und " + str(self.lib.currentDeck))
 		return self.sm
@@ -174,13 +177,28 @@ class SwipeCardsApp(App):
 		self.sm.current = 'vocabfrontpage'
 
 	def set_current_deck(self):
-		self.lib.decks = self.datapage.ids["deck"].data
 		for x in self.lib.decks:
 			if x["selected"] == True:
-				self.currentDeck = x["text"]
+				self.currentDeck = x["text"][2:]
+				self.currentLevel = x["text"][:2]
 				self.lib.currentDeck = x["text"]
-				self.currentDeckInfo = x["info"] # superslow
-				self.datapage.text = x["text"]
+
+		# reset images
+		self.datapage.a1_image = "data/pictures/A1.png"
+		self.datapage.a2_image = "data/pictures/A2.png"
+		self.datapage.b1_image = "data/pictures/B1.png"
+		self.datapage.b2_image = "data/pictures/B2.png"
+		if self.currentLevel == "a1":
+			self.datapage.a1_image = "data/pictures/A1groß.png"
+		if self.currentLevel == "a2":
+			self.datapage.a2_image = "data/pictures/A2groß.png"		
+		if self.currentLevel == "b1":
+			self.datapage.b1_image = "data/pictures/B1groß.png"		
+		if self.currentLevel == "b2":
+			self.datapage.b2_image = "data/pictures/B2groß.png"
+		self.lib.saveDecks()
+
+		print "Current Level is: " + str(self.currentLevel)
 		print "Current Deck is: " + str(self.currentDeck)
 
 	def go_to_settings(self):
@@ -190,6 +208,7 @@ class SwipeCardsApp(App):
 
 	def go_to_data(self):
 #		self.homepage.data_button_size = [170,170]
+		self.set_current_deck()
 		self.sm.transition.direction = 'right'
 		self.sm.current = 'datapage'
 
@@ -207,8 +226,6 @@ class SwipeCardsApp(App):
 
 	def go_to_home(self):
 		self.sm.transition.direction = 'left'
-		self.set_current_deck()
-		self.lib.saveDecks()
 		self.sm.current = 'home'
 
 	def go_to_one(self, direction):
@@ -308,6 +325,31 @@ class SwipeCardsApp(App):
 		self.distance = touch.x - self.coordinate		
 		if self.distance < -50:
 			self.go_to_vocab()	
+
+	def on_level_button(self, level):
+		self.datapage.a1_image = "data/pictures/A1.png"
+		self.datapage.a2_image = "data/pictures/A2.png"
+		self.datapage.b1_image = "data/pictures/B1.png"
+		self.datapage.b2_image = "data/pictures/B2.png"
+		if level == "A1":
+			self.currentLevel = "a1"
+			self.datapage.a1_image = "data/pictures/A1groß.png"
+		if level == "A2":
+			self.currentLevel = "a2"
+			self.datapage.a2_image = "data/pictures/A2groß.png"		
+		if level == "B1":
+			self.currentLevel = "b1"
+			self.datapage.b1_image = "data/pictures/B1groß.png"		
+		if level == "B2":
+			self.currentLevel = "b2"
+			self.datapage.b2_image = "data/pictures/B2groß.png"
+	
+	def on_deck_button(self, deck):
+		self.currentDeck = self.currentLevel + deck
+		self.lib.currentDeck = self.currentDeck
+		self.lib.saveDecks()	
+		print "Current Level is: " + str(self.currentLevel)
+		print "Current Deck is: " + str(self.currentDeck)
 
 	def pushedbutton(self):
 		print self.homepage.ids.items()

@@ -1,5 +1,5 @@
-﻿die Abfahrt#Vor der Abfahrt rufe ich an.
-der Absender#Da ist ein Brief für dich ohne Absender.
+﻿die Abfahrt #Vor der Abfahrt rufe ich an.
+der Absender #Da ist ein Brief für dich ohne Absender.
 die Adresse,-en #Können Sie mir seine Adresse sagen?
 das Angebot, -e #Heute sind Sportschuhe im Angebot.
 der Anfang #Sie wohnt am Anfang der Straße.

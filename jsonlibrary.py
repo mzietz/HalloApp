@@ -28,7 +28,7 @@ class Library:
 				x["selected"] = False
 		with open(join("data/", 'decks.json'), 'w') as fd:
 			json.dump(self.decks, fd)
-#		print "decks saved!"
+		print "decks saved!"
 	
 	def loadVocabs(self):
 		with open(join("data/", self.currentDeck+'.json')) as fd:

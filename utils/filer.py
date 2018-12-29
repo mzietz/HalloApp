@@ -25,6 +25,6 @@ class Filer():
 
 if __name__ == '__main__':
 	myFiler = Filer()
-	myFiler.openJSON("A1NomenKorean.json")
+	myFiler.openTXT("A1Verben.json")
 	myFiler.saveTXT("text.txt")
 	print myFiler.data[1]
