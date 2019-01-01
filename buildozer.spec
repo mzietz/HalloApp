@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = Swipecards
+title = 1앱
 
 # (str) Package name
 package.name = Swipecardapp
@@ -49,7 +49,7 @@ requirements = kivy
 presplash.filename = %(source.dir)s/data/pictures/logo_sepia.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/data/pictures/deck_back.png
+icon.filename = %(source.dir)s/data/pictures/pils_gezeichnet.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait

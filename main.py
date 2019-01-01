@@ -62,10 +62,10 @@ class DataPage(Screen):
 	b1_image = StringProperty("data/pictures/B1.png")
 	b2_image = StringProperty("data/pictures/B2.png")
 
-	nomen_image = StringProperty("data/pictures/deck_back.png")
-	verben_image = StringProperty("data/pictures/deck_back.png")
-	adjektive_image = StringProperty("data/pictures/deck_back.png")
-	rest_image = StringProperty("data/pictures/deck_back.png")	
+	nomen_image = StringProperty("data/pictures/deck_pilz.png")
+	verben_image = StringProperty("data/pictures/deck_pilz.png")
+	adjektive_image = StringProperty("data/pictures/deck_pilz.png")
+	rest_image = StringProperty("data/pictures/deck_pilz.png")	
 
 class SwipeCardsApp(App):
 	vocab1 = StringProperty()
@@ -130,6 +130,8 @@ class SwipeCardsApp(App):
 
 	def go_to_vocabfrontpage(self):
 		self.sm.transition.direction = 'left'
+		self.lib.loadVocabs()
+		self.init()
 		self.sm.current = 'vocabfrontpage'
 
 	def set_current_deck(self):
@@ -159,8 +161,6 @@ class SwipeCardsApp(App):
 
 	def go_to_vocab(self):
 		self.sm.transition.direction = 'left'
-		self.lib.loadVocabs()
-		self.init()
 		self.sm.current = 'pageone'
 
 	def go_to_chunkpage(self):
@@ -258,6 +258,7 @@ class SwipeCardsApp(App):
 			elif self.distance < -50:
 				self.go_to_two('left')
 	
+	#not needed anymore
 	def touchup_on_vocabfrontpage(self, touch):
 		try:
 			self.distance = touch.x - self.coordinate	
@@ -276,10 +277,10 @@ class SwipeCardsApp(App):
 		self.chooseLevelPictures(level)
 	
 	def resetDeckPictures(self):
-		self.datapage.nomen_image = "data/pictures/deck_back.png"
-		self.datapage.verben_image = "data/pictures/deck_back.png"
-		self.datapage.adjektive_image = "data/pictures/deck_back.png"
-		self.datapage.rest_image = "data/pictures/deck_back.png"	
+		self.datapage.nomen_image = "data/pictures/deck_pilz.png"
+		self.datapage.verben_image = "data/pictures/deck_pilz.png"
+		self.datapage.adjektive_image = "data/pictures/deck_pilz.png"
+		self.datapage.rest_image = "data/pictures/deck_pilz.png"	
 	def resetLevelPictures(self):
 		self.datapage.a1_image = "data/pictures/A1.png"
 		self.datapage.a2_image = "data/pictures/A2.png"

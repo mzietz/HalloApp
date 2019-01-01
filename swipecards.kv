@@ -21,8 +21,10 @@
 <PostitButton@Button>:
 
 	background_color: (.99,.99,.99,0)
+
 <GridButton@Button>:
 	background_color: (.99,.99,.99,0)
+
 <BackButton@Button>:
 	background_color: (.99,.99,.99,0)
 	on_release:
@@ -211,12 +213,11 @@
 
 
 <VocabFrontPage>:
-	on_touch_down: app.touchdown(args[1])
-	on_touch_up: app.touchup_on_vocabfrontpage(args[1])
+#	on_touch_down: app.touchdown(args[1])
+#	on_touch_up: app.touchup_on_vocabfrontpage(args[1])
 
 	BoxLayout:
 		padding: '20sp'
-		spacing: '10sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -229,50 +230,111 @@
 			UberImage:
 				source: 'data/pictures/study_titel.png'
 		BoxLayout:
+			size_hint:(1, 0.05)
+
+		BoxLayout:
 			size_hint:(1, 0.2)
 			orientation: 'horizontal'
 			BoxLayout:
 				size_hint:(0.05, 1)
 			BoxLayout:
+				size_hint:(0.4, 1)
+				UberImage:
+					source: 'data/pictures/deck_pilz.png'
+			BoxLayout:
 				size_hint:(0.2, 1)
 				UberImage:
-					source: 'data/pictures/lilie_links.png'
+					source: 'data/pictures/equal2.png'
 			BoxLayout:
-				size_hint:(0.3, 1)
+				size_hint:(0.2, 1)
 				UberImage:
 					source: root.level_image
 			BoxLayout:
-				size_hint:(0.3, 1)
+				size_hint:(0.2, 1)
 				UberImage:
 					source: root.deck_image
 			BoxLayout:
-				size_hint:(0.2, 1)
+				size_hint:(0.05, 1)
+		BoxLayout:
+			size_hint:(1, 0.08)
+			padding: '5sp'
+			Image:
+				source: 'data/pictures/strich.png'
+				center_x: self.parent.center_x
+				center_y: self.parent.center_y
+				allow_stretch: True	
+		BoxLayout:
+			size_hint:(1, 0.2)
+			orientation: 'horizontal'
+			BoxLayout:
+				size_hint:(0.05, 1)
+			BoxLayout:
+				size_hint:(0.4, 1)
 				UberImage:
-					source: 'data/pictures/lilie_rechts.png'
+					source: 'data/pictures/learned.png'
+			BoxLayout:
+				size_hint:(0.1, 1)
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.5, 1)
+		
+				BoxLayout:
+				Question:
+					font_size: '50sp'
+					text: app.cardsStudied
+					pos_hint: {'center': 1}
+				BoxLayout:
+					size_hint:(0.5, 1)
 			BoxLayout:
 				size_hint:(0.05, 1)
 		BoxLayout:
-			size_hint:(1, 0.5)
-			orientation: 'vertical'
-			UberImage:
-				source: 'data/pictures/explain.png'
+			size_hint:(1, 0.2)
+			orientation: 'horizontal'
 			BoxLayout:
-				size_hint:(None, None)
-				height: self.minimum_height
-				width: self.parent.width
+				size_hint:(0.05, 1)
 			BoxLayout:
+				size_hint:(0.4, 1)
+				UberImage:
+					source: 'data/pictures/notlearned.png'
+			BoxLayout:
+				size_hint:(0.1, 1)
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.5, 1)
+		
+				BoxLayout:
+				Question:
+					font_size: '50sp'
+					text: app.cardsNotStudied
+					pos_hint: {'center': 1}
+				BoxLayout:
+					size_hint:(0.5, 1)
+			BoxLayout:
+				size_hint:(0.05, 1)
 
 		BoxLayout:
 			size_hint: (1 ,0.25)
-			padding: [0,0,10,0]
+			padding: [15,0,15,0]
 			orientation: 'horizontal'
-
-			BoxLayout:
 			BackButton:
 				size_hint: (0.35 ,1)
+			BoxLayout:
+				size_hint: (0.55 ,1)
+			Button:
+				size_hint: (0.35 ,1)
+				background_color: (.99,.99,.99,0)
+				on_release:
+					app.go_to_vocab()
+				Image:
+					source: 'data/pictures/pils_thumbnail.png'
+					size: self.parent.size
+					pos: self.parent.pos 
+					size_hint_y: None
+					size_hint_x: None
+					allow_stretch: True
 <HomePage>:
 	BoxLayout:
-		padding: [0,0,0,0]
+		padding: '20sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -280,13 +342,9 @@
 				size: self.size
 				source: root.picture
 		BoxLayout:
-			size_hint:(1, 0.02)
-		BoxLayout:
-#			padding: [0,30,0,0]
 			size_hint:(1, 0.3)
 			UberImage:
-				source: 'data/pictures/banner.png'
-#				source: 'data/pictures/home_titel2.png'
+				source: 'data/pictures/home_titel_pilz.png'
 		BoxLayout:
 			padding: [20,10,20,10]
 			orientation: 'horizontal'
@@ -298,7 +356,7 @@
 				on_release:
 					app.go_to_vocabfrontpage()
 				ButtonImage:
-					source: 'data/pictures/deck_back2.png'
+					source: 'data/pictures/deck_pilz.png'
 
 		BoxLayout:
 			padding: [60,0,60,30]
@@ -334,39 +392,48 @@
 			UberImage:
 				source: 'data/pictures/Setting_titel.png'
 		BoxLayout:
-			size_hint:(1, 0.1)
+			size_hint:(1, 0.05)
+		
 		BoxLayout:
 			size_hint:(1, 0.2)
 			orientation: 'horizontal'
 			BoxLayout:
 				size_hint:(0.05, 1)
 			BoxLayout:
+				size_hint:(0.4, 1)
+				UberImage:
+					source: 'data/pictures/deck_pilz.png'
+			BoxLayout:
 				size_hint:(0.2, 1)
 				UberImage:
-					source: 'data/pictures/lilie_links.png'
+					source: 'data/pictures/equal2.png'
 			BoxLayout:
-				size_hint:(0.3, 1)
+				size_hint:(0.2, 1)
 				UberImage:
 					source: root.level_image
 			BoxLayout:
-				size_hint:(0.3, 1)
+				size_hint:(0.2, 1)
 				UberImage:
 					source: root.deck_image
 			BoxLayout:
-				size_hint:(0.2, 1)
-				UberImage:
-					source: 'data/pictures/lilie_rechts.png'
-			BoxLayout:
 				size_hint:(0.05, 1)
 		BoxLayout:
-			size_hint:(1, 0.1)		
+			size_hint:(1, 0.08)
+			padding: '5sp'
+			Image:
+				source: 'data/pictures/strich.png'
+				center_x: self.parent.center_x
+				center_y: self.parent.center_y
+				allow_stretch: True		
+
+
 		BoxLayout:
-			size_hint:(1, 0.4)
-			padding: '10sp'
+			size_hint:(1, 0.2)
 			orientation: 'horizontal'
 			BoxLayout:
-				size_hint:(0.1, 1)
+				size_hint:(0.05, 1)
 			Button:
+				size_hint:(0.4, 1)
 				background_color: (.99,.99,.99,0)
 				center_x: self.center_x
 				id: study_button
@@ -375,17 +442,62 @@
 				ButtonImage:
 					source: 'data/pictures/reset_button.png'
 			BoxLayout:
-				size_hint:(0.1, 1)
-
+				orientation: 'vertical'
+				size_hint:(0.6, 1)
+				BoxLayout:
+				Label:
+					text_size: self.width, None
+					size_hint: 1, None
+					height: self.texture_size[1]
+					valign: 'center'
+					haldign: 'middle'
+					font_name: 'data/fonts/DK Cool Crayon'
+					color: 1, 1, 1 ,1
+#					pos_hint: {'top': 1}
+					text: ' Reset Deck'
+					font_size: '28sp'
+				BoxLayout:
+			BoxLayout:
+				size_hint:(0.05, 1)
+		BoxLayout:
+			size_hint:(1, 0.2)
+			orientation: 'horizontal'
+			BoxLayout:
+				size_hint:(0.05, 1)
+			Button:
+				size_hint:(0.4, 1)
+				background_color: (.99,.99,.99,0)
+				center_x: self.center_x
+				id: study_button
+				on_release:
+					app.resetCurrentDeck()
+				ButtonImage:
+					source: 'data/pictures/deck_pilz.png'
+			BoxLayout:
+				orientation: 'vertical'
+				size_hint:(0.6, 1)
+				BoxLayout:
+				Label:
+					text_size: self.width, None
+					size_hint: 1, None
+					height: self.texture_size[1]
+					valign: 'center'
+					haldign: 'middle'
+					font_name: 'data/fonts/DK Cool Crayon'
+					color: 1, 1, 1 ,1
+#					pos_hint: {'top': 1}
+					text: ' Tutorial'
+					font_size: '28sp'
+				BoxLayout:
+			BoxLayout:
+				size_hint:(0.05, 1)
 		BoxLayout:
 			orientation: 'horizontal'
-			padding: '5sp'
+			padding: [15,0,0,0]
 			size_hint: (1 ,0.25)
-			BoxLayout:
-				padding: '5sp'
 			BackButton:
 				size_hint: (0.35 ,1)
-
+			BoxLayout:
 			
 <DataPage>:
 	BoxLayout:
@@ -467,12 +579,11 @@
 			        	source: root.rest_image
 		BoxLayout:
 			orientation: 'horizontal'
-			padding: '5sp'
+			padding: [15,0,0,0]
 			size_hint: (1 ,0.25)
-			BoxLayout:
-				padding: '5sp'
 			BackButton:
 				size_hint: (0.35 ,1)
+			BoxLayout:
 
 <ChunkPage>:
 	on_touch_down: app.touchdown(args[1])
@@ -540,13 +651,25 @@
 					BoxLayout:
 						size_hint:(0.5, 1)
 		BoxLayout:
-			orientation: 'horizontal'
-			padding: '5sp'
 			size_hint: (1 ,0.25)
-			BoxLayout:
-				padding: '5sp'
+			padding: [15,0,15,0]
+			orientation: 'horizontal'
 			BackButton:
 				size_hint: (0.35 ,1)
+			BoxLayout:
+				size_hint: (0.55 ,1)
+			Button:
+				size_hint: (0.35 ,1)
+				background_color: (.99,.99,.99,0)
+				on_release:
+					app.go_to_vocab()
+				Image:
+					source: 'data/pictures/pils_thumbnail.png'
+					size: self.parent.size
+					pos: self.parent.pos 
+					size_hint_y: None
+					size_hint_x: None
+					allow_stretch: True
 #<DeckData>:
 #	viewclass: 'SelectableLabel'
 #	SelectableRecycleBoxLayout:
