@@ -27,17 +27,13 @@ class Library:
 			else:
 				x["selected"] = False
 		with open(join("data/", 'decks.json'), 'w') as fd:
-			json.dump(self.decks, fd)
+			json.dump(self.decks, fd, indent=2)
 		print "decks saved!"
 	
 	def loadVocabs(self):
 		with open(join("data/", self.currentDeck+'.json')) as fd:
 			self.library = json.load(fd)
 	
-#	def saveVocabs(self): #for variable chunkssize only
-#		with open(join("data/", 'cache.json'), 'w') as fd:
-#			json.dump(self.library, fd)
-
 	def resetLearnedStatus(self):
 		for x in self.library:
 			x["learned"] = False
@@ -48,9 +44,8 @@ class Library:
 				x["difficulty"] = self.difficulty
 				x["date"] = unicode(datetime.datetime.now())
 		
-#		with open(join("data/", self.currentDeck+'.json'), 'w') as fd:
 		with open(join("data/", self.currentDeck+'.json'), 'w') as fd:
-			json.dump(self.library, fd)
+			json.dump(self.library, fd, indent=2)
 
 			
 	def nextCard(self):
@@ -68,25 +63,25 @@ class Library:
 
 	def cardsStudied(self):
 		i=0
-		for x in self.library:
-			if x["difficulty"] == 0:
+		for x in xrange(len(self.library)/self.chunkSize):
+			if self.library[x*self.chunkSize]["difficulty"] == 0:
 				i+=1	
 		return i
 
 	def cardsNotStudied(self):
 		i=0
-		for x in self.library:
-			if x["difficulty"] != False:
+		for x in xrange(len(self.library)/self.chunkSize):
+			if self.library[x*self.chunkSize]["difficulty"] != False:
 				i+=1	
 		return i
-	def nextChunk(self):
 
+	def nextChunk(self):
 		self.date = datetime.datetime.now()
 		for x in self.library:
 			if x["difficulty"] > self.difficulty:
 				self.difficulty = x["difficulty"]
 				self.currentChunk = x["chunk"]
-				
+
 			if x["difficulty"] == self.difficulty and x["difficulty"] != 0 and datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f') > self.date:
 				self.date = datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f')
 				self.currentChunk = x["chunk"]
@@ -94,8 +89,9 @@ class Library:
 			if x["difficulty"] == 0 and datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f') < self.date:
 				self.date = datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f')
 				self.currentChunk = x["chunk"]
-		self.difficulty = 0
+		self.difficulty = 0 # wird gesetzt bei go_to_vocab()
 		self.date = datetime.datetime.now()
+#		print self.currentChunk
 		return self.currentChunk
 
 	def iknowCard(self):
@@ -116,14 +112,13 @@ class Library:
 				self.difficulty += 1
 				break
 
-	def addCard(self):
-		self.library.append("{'answer': 'Die ADDADADAD', 'learned': False, 'question': 'newspaper', 'chunk': 0}")
-
 	def refreshCurrentDeck(self):
-		self.loadVocabs()
 		for x in self.library:
-			x["difficulty"] = 1 # hier kann man noch was machen
-		self.saveVocabs()
+			x["difficulty"] = 1
+			x["date"] = unicode(datetime.datetime.now())
+		
+		with open(join("data/", self.currentDeck+'.json'), 'w') as fd:
+			json.dump(self.library, fd, indent=2)
 
 	def getRealChunksize(self):
 		i=0

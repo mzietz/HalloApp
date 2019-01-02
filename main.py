@@ -44,7 +44,10 @@ class HomePage(Screen):
 
 class ChunkPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
-	text = StringProperty('저장했습니다!')
+
+class IntroPage(Screen):
+	picture = StringProperty("data/pictures/blackboard.png")
+	page = NumericProperty("0")
 
 class SettingsPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
@@ -96,7 +99,9 @@ class SwipeCardsApp(App):
 		self.chunkpage = ChunkPage(name = 'chunkpage')
 		self.pageone = PageOne(name ='pageone')
 		self.pagetwo = PageTwo(name ='pagetwo')
+		self.intropage = IntroPage(name ='intropage')
 		self.sm.add_widget(self.homepage)
+		self.sm.add_widget(self.intropage)
 		self.sm.add_widget(self.settingspage)
 		self.sm.add_widget(self.datapage)
 		self.sm.add_widget(self.vocabfrontpage)
@@ -107,11 +112,11 @@ class SwipeCardsApp(App):
 		self.lib = Library()
 		self.lib.loadDecks()
 		self.set_current_deck()
+		self.lib.loadVocabs()
 		print "Initialisiert mit: " +str(self.currentDeck + " und " + str(self.lib.currentDeck))
 		return self.sm
 
 	def init(self):
-#		print "init"
 		self.lib.resetLearnedStatus()
 		self.lib.currentChunk = self.lib.nextChunk()
 		self.lib.nextCard()
@@ -126,7 +131,8 @@ class SwipeCardsApp(App):
 		self.answered = False
 		self.cardsStudied = str(self.lib.cardsStudied())
 		self.cardsNotStudied = str(self.lib.cardsNotStudied())
-		self.lib.difficulty = 0
+#		print "Cards studied: " +str(self.cardsStudied)
+#		print "Cards not studied: " +str(self.cardsNotStudied)
 
 	def go_to_vocabfrontpage(self):
 		self.sm.transition.direction = 'left'
@@ -145,8 +151,8 @@ class SwipeCardsApp(App):
 				self.chooseDeckPictures(x["text"][2:])
 				self.setDeckandLevelImages("settingspage", x["text"][:2],x["text"][2:])
 		self.lib.saveDecks()
-		print "Current Level is: " + str(self.currentLevel)
-		print "Current Deck is: " + str(self.currentDeck)
+#		print "Current Level is: " + str(self.currentLevel)
+#		print "Current Deck is: " + str(self.currentDeck)
 
 	def go_to_settings(self):
 #		self.homepage.settings_button_size = [170,170]
@@ -161,6 +167,9 @@ class SwipeCardsApp(App):
 
 	def go_to_vocab(self):
 		self.sm.transition.direction = 'left'
+		self.lib.loadVocabs()
+		self.init()
+#		self.lib.difficulty = 0
 		self.sm.current = 'pageone'
 
 	def go_to_chunkpage(self):
@@ -172,6 +181,12 @@ class SwipeCardsApp(App):
 	def go_to_home(self):
 		self.sm.transition.direction = 'left'
 		self.sm.current = 'home'
+
+	def go_to_intro(self):
+		self.sm.transition.direction = 'left'
+		self.intropage.page +=1
+		print self.intropage.page
+		self.sm.current = 'intropage'
 
 	def go_to_one(self, direction):
 		self.answered = False
@@ -189,7 +204,7 @@ class SwipeCardsApp(App):
 			self.info11 = ""
 			self.info12 = ""
 			self.sm.transition.direction = direction
-#			self.debug()
+#			self.debug()		
 			self.sm.current = 'pageone'
 
 	def go_to_two(self, direction):
@@ -231,7 +246,10 @@ class SwipeCardsApp(App):
 
 	def resetCurrentDeck(self):
 		self.lib.refreshCurrentDeck()
-		print "refresh" + str(self.currentDeck)
+		print "resetted"
+		
+		self.cardsStudied = str(self.lib.cardsStudied())
+		self.cardsNotStudied = str(self.lib.cardsNotStudied())
 
 	def touchup_on_pagetwo(self, touch):
 		try:
