@@ -5,20 +5,16 @@ import json
 import os
 from os.path import join, exists
 from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition, FadeTransition
+from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition
 from kivy.uix.label import Label
-from kivy.uix.recycleview import RecycleView
-from kivy.uix.recycleview.views import RecycleDataViewBehavior
 from kivy.properties import StringProperty, NumericProperty, ObjectProperty, BooleanProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.recycleboxlayout import RecycleBoxLayout
 from kivy.uix.behaviors import FocusBehavior
-from kivy.uix.recycleview.layout import LayoutSelectionBehavior
 from kivy.properties import ListProperty, NumericProperty
 from operator import itemgetter, attrgetter
 from jsonlibrary import *
-
+from kivy.base import EventLoop
 
 class SwipeManager(ScreenManager):
 	pass
@@ -33,14 +29,9 @@ class VocabFrontPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
 	deck_image = StringProperty("")
 	level_image = StringProperty("")
-	text = StringProperty('Hier steht Deckname')
 
 class HomePage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
-	text = StringProperty('Welcome')
-	study_button_size = ListProperty([700,700]) #250
-	data_button_size = ListProperty([400,400]) #170
-	settings_button_size = ListProperty([400,400])
 
 class ChunkPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
@@ -54,12 +45,11 @@ class SettingsPage(Screen):
 	deck_image = StringProperty("")
 	level_image = StringProperty("")
 	listpicture = StringProperty("data/pictures/stickynote_weiss.png")
-	text = StringProperty('Settings')
 
 class DataPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
 	listpicture = StringProperty("data/pictures/stickynote_weiss.png")
-	text = StringProperty('Data')
+
 	a1_image = StringProperty("data/pictures/A1.png")
 	a2_image = StringProperty("data/pictures/A2.png")
 	b1_image = StringProperty("data/pictures/B1.png")
@@ -113,7 +103,6 @@ class SwipeCardsApp(App):
 		self.lib.loadDecks()
 		self.set_current_deck()
 		self.lib.loadVocabs()
-		print "Initialisiert mit: " +str(self.currentDeck + " und " + str(self.lib.currentDeck))
 		return self.sm
 
 	def init(self):
@@ -131,15 +120,23 @@ class SwipeCardsApp(App):
 		self.answered = False
 		self.cardsStudied = str(self.lib.cardsStudied())
 		self.cardsNotStudied = str(self.lib.cardsNotStudied())
-#		print "Cards studied: " +str(self.cardsStudied)
-#		print "Cards not studied: " +str(self.cardsNotStudied)
+
+	def on_start(self):
+		from kivy.base import EventLoop
+		EventLoop.window.bind(on_keyboard=self.hook_keyboard)
+
+	def hook_keyboard(self, window, key, *largs):
+		if key == 27:
+			self.sm.transition.direction = 'left'
+			self.go_to_home()
+			return True 
 
 	def go_to_vocabfrontpage(self):
 		self.sm.transition.direction = 'left'
 		self.lib.loadVocabs()
 		self.init()
 		self.sm.current = 'vocabfrontpage'
-
+		
 	def set_current_deck(self):
 		for x in self.lib.decks:
 			if x["selected"] == True:
@@ -155,13 +152,10 @@ class SwipeCardsApp(App):
 #		print "Current Deck is: " + str(self.currentDeck)
 
 	def go_to_settings(self):
-#		self.homepage.settings_button_size = [170,170]
 		self.sm.transition.direction = 'right'
 		self.sm.current = 'settingspage'	
 
 	def go_to_data(self):
-#		self.homepage.data_button_size = [170,170]
-		# self.set_current_deck()
 		self.sm.transition.direction = 'right'
 		self.sm.current = 'datapage'
 
@@ -169,7 +163,6 @@ class SwipeCardsApp(App):
 		self.sm.transition.direction = 'left'
 		self.lib.loadVocabs()
 		self.init()
-#		self.lib.difficulty = 0
 		self.sm.current = 'pageone'
 
 	def go_to_chunkpage(self):
@@ -204,7 +197,6 @@ class SwipeCardsApp(App):
 			self.info11 = ""
 			self.info12 = ""
 			self.sm.transition.direction = direction
-#			self.debug()		
 			self.sm.current = 'pageone'
 
 	def go_to_two(self, direction):
@@ -223,8 +215,6 @@ class SwipeCardsApp(App):
 			self.info21 = ""
 			self.info22 = ""
 			self.sm.transition.direction = direction
-#			print self.lib.currentCard
-#			self.debug()
 			self.sm.current = 'pagetwo'
 	
 	def show_answer(self, screen):
@@ -274,16 +264,7 @@ class SwipeCardsApp(App):
 			if self.distance > 50:
 				self.go_to_two('right')
 			elif self.distance < -50:
-				self.go_to_two('left')
-	
-	#not needed anymore
-	def touchup_on_vocabfrontpage(self, touch):
-		try:
-			self.distance = touch.x - self.coordinate	
-		except:
-			print "zu schnell"
-		if self.distance < -50:
-			self.go_to_vocab()	
+				self.go_to_two('left')	
 
 	def touchup_on_chunkpage(self, touch):
 		self.distance = touch.x - self.coordinate		
@@ -376,5 +357,6 @@ class SwipeCardsApp(App):
 				self.homepage.data_button_size = [160,160]
 			if key[0] == "setting_button":
 				self.homepage.setting_button_size = [160,160]
+
 if __name__ == '__main__':
 	SwipeCardsApp().run()

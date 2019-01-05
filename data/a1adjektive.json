@@ -1,1 +1,742 @@
-[{"date": "2019-01-01 22:31:27.859526", "chunk": 0, "question": "\ufeffalt ", "info1": "Wie alt sind Sie?", "difficulty": 0, "answer": "(\ub098\uc774\uac00) \u2219\u2219\u2219\uc0b4\uc778\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859593", "chunk": 0, "question": "arbeitslos ", "info1": "Es gibt bei uns viele Leute, die schon lange arbeitslos", "difficulty": 0, "answer": "\uc2e4\uc9c1\uc911\uc778, \ubb34\uc9c1\uc758\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859619", "chunk": 0, "question": "ausl\u00e4ndisch ", "info1": "Leider habe ich nur ausl\u00e4ndisches Geld.", "difficulty": 0, "answer": "\uc678\uad6d\uc758, \uc678\uad6d\uc0b0\uc758\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859639", "chunk": 0, "question": "automatisch ", "info1": "Du musst nichts machen. Das geht automatisch.", "difficulty": 0, "answer": "\uc790\ub3d9\uc801\uc778, \uc790\ub3d9\uc2dd\uc758\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859657", "chunk": 0, "question": "bar ", "info1": "Muss ich bar zahlen oder geht\u2018s auch mit Karte?", "difficulty": 0, "answer": "\ud604\uae08\uc758\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859676", "chunk": 0, "question": "bekannt ", "info1": "Picasso ist sehr bekannt.", "difficulty": 0, "answer": "\uc798 \uc54c\ub824\uc9c4, \uc720\uba85\ud55c\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859696", "chunk": 0, "question": "besetzt ", "info1": "Die Nummer ist immer besetzt.", "difficulty": 0, "answer": "\uc810\ub839, \uc810\ub839\ud558\ub2e4\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859714", "chunk": 0, "question": "besser ", "info1": "Es geht mir schon besser.", "difficulty": 0, "answer": "\ubd80\uc0ac \ubcf4\ub2e4 \uc88b\uc740\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859732", "chunk": 0, "question": "billig ", "info1": "Die Jacke kostet nur 10 Euro! Die ist aber billig!", "difficulty": 0, "answer": "(\uac12\uc774) \uc2fc\n", "learned": true, "info2": ""}, {"date": "2019-01-01 22:31:27.859750", "chunk": 0, "question": "bisschen ", "info1": "Ich spreche Englisch, Franz\u00f6sisch und ein bisschen", "difficulty": 0, "answer": "\uc18c\ub7c9\uc758, \uc57d\uac04\uc758\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "b\u00f6se ", "info1": "Sie ist b\u00f6se auf mich.", "difficulty": 1, "answer": "\ub098\uc05c, \ubd88\ucf8c\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "breit ", "info1": "Wie breit ist der Schrank?", "difficulty": 1, "answer": "\ub113\uc740\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "eilig ", "info1": "Hast du es eilig?", "difficulty": 1, "answer": "\uc11c\ub458\ub7ec\uc57c \ud560, \uae34\uae09\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "einfach ", "info1": "Die Pr\u00fcfung ist ganz einfach.", "difficulty": 1, "answer": "\uac04\ub2e8\ud55c, \uc26c\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "falsch ", "info1": "Das ist falsch.", "difficulty": 1, "answer": "\uac00\uc9dc\uc758, \uc704\uc870\ub41c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "fertig ", "info1": "Bist du fertig?", "difficulty": 1, "answer": "\uc900\ube44\uac00 \ub41c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "frei ", "info1": "Ist der Platz noch frei?", "difficulty": 1, "answer": "\uc790\uc720\ubbfc\uc758, \ub178\uc608\uac00 \uc544\ub2cc\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "fremd ", "info1": "Das wei\u00df ich nicht; ich bin fremd hier.", "difficulty": 1, "answer": "\uc678\ub798\uc758, \uc678\uad6d\uc5d0\uc11c \uc628\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "fr\u00fcher ", "info1": "Fr\u00fcher waren wir oft zusammen im Kino.", "difficulty": 1, "answer": "\ubcf4\ub2e4 \uc774\ub978\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 1, "question": "geboren ", "info1": "Ich bin in Zagreb geboren.", "difficulty": 1, "answer": "\ud0dc\uc5b4\ub09c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 2, "question": "gern(e) ", "info1": "Ich gehe gerne einkaufen.", "difficulty": 1, "answer": "\ubc18\uac00\uc774, \uc990\uac70\uc6b4 \ub9c8\uc74c\uc73c\ub85c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 2, "question": "gestorben ", "info1": "Meine Frau ist gestern gestorben.", "difficulty": 1, "answer": "\uc8fd\uc740, \uc0ac\ub9dd\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 2, "question": "gleich ", "info1": "Das ist der gleiche Preis.", "difficulty": 1, "answer": "\uac19\uc740, \ub3d9\uc77c\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.700899", "chunk": 2, "question": "gl\u00fccklich ", "info1": "Meine Kinder sind gl\u00fccklich verheiratet.", "difficulty": 1, "answer": "\uc131\uacf5\ud55c, \uc6b4\uc774 \uc88b\uc740\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 2, "question": "gro\u00df ", "info1": "Mein Bruder und ich sind gleich gro\u00df.", "difficulty": 1, "answer": "\ud070, \uac15\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 2, "question": "g\u00fcltig ", "info1": "Der Pass ist nicht mehr g\u00fcltig.", "difficulty": 1, "answer": "\uc720\ud6a8\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 2, "question": "g\u00fcnstig ", "info1": "Dort gibt es g\u00fcnstige Angebote.", "difficulty": 1, "answer": "(\uac12\uc774) \uc2fc\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 2, "question": "gut ", "info1": "Das finde ich gut.", "difficulty": 1, "answer": "\uc88b\uc740, \uc120\ub7c9\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 2, "question": "hell ", "info1": "Im Sommer ist es bis 21 Uhr hell.", "difficulty": 1, "answer": "\ub9d1\uc740\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 2, "question": "herzlich ", "info1": "Herzlichen Gl\u00fcckwunsch!", "difficulty": 1, "answer": "\uc9c4\uc2ec\uc758, \uac04\uc808\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "hoch ", "info1": "Der Mount Everest ist 8.880 Meter hoch.", "difficulty": 1, "answer": "\ub192\uc740\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "international ", "info1": "Unser Deutschkurs ist international: Silvana kommtaus Italien, Conchi aus Spanien, Yin aus China \u2026", "difficulty": 1, "answer": "\uad6d\uc81c\uac04\uc758, \uad6d\uc81c\uc801\uc778\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "jung ", "info1": "Claudia ist 21. \u2013 Was? Noch so jung?", "difficulty": 1, "answer": "\uc80a\uc740, \uc5b4\ub9b0\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "kaputt ", "info1": "Das Glas war teuer. Es geht sehr leicht kaputt.", "difficulty": 1, "answer": "\ubd80\uc11c\uc9c4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "klein ", "info1": "Eltville ist eine kleine Stadt am Rhein.", "difficulty": 1, "answer": "\uc791\uc740, \uc801\uc740\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "krank ", "info1": "Ich kann heute nicht zur Arbeit kommen, ich bin krank und liege im Bett.", "difficulty": 1, "answer": "\uc553\ub294, \ubcd1\ub4e0\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "kulturell ", "info1": "Ich bin kulturell interessiert. Ich gehe oft ins Museum.", "difficulty": 1, "answer": "\ubb38\ud654(\uc0c1) \uc758, \ubb38\ud654\uc801\uc778\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "kurz ", "info1": "Ricardo hat kurzes Haar.", "difficulty": 1, "answer": "\uc9e7\uc740, \uac00\uae4c\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "lang ", "info1": "Die Jeans ist zu lang.", "difficulty": 1, "answer": "\uae34, \uae38\uc774\uac00 \uc788\ub294\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 3, "question": "lange ", "info1": "Wie lange f\u00e4hrt der Zug von Hamburg nach Berlin?", "difficulty": 1, "answer": "\ubd80\uc0ac \uc624\ub798, \uc624\ub7ab\ub3d9\uc548\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 4, "question": "langsam ", "info1": "K\u00f6nnten Sie bitte etwas langsamer sprechen?", "difficulty": 1, "answer": "\ub290\ub9b0\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 4, "question": "laut ", "info1": "Nicht so laut! Das Baby schl\u00e4ft.", "difficulty": 1, "answer": "\uc2dc\ub044\ub7ec\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 4, "question": "ledig ", "info1": "Sind Sie verheiratet? \u2013 Nein. Ledig.", "difficulty": 1, "answer": "\uc2f1\uae00\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 4, "question": "leicht ", "info1": "Der Koffer ist leicht.", "difficulty": 1, "answer": "\uac00\ubcbc\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 4, "question": "leise ", "info1": "Seid leise. Die anderen schlafen schon.", "difficulty": 1, "answer": " \ub0ae\uc740 \ubaa9\uc18c\ub9ac\uc758\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 4, "question": "lustig ", "info1": "Frau Mertens ist lustig. Sie lacht immer.", "difficulty": 1, "answer": "\uc6c3\uae34, \uc990\uac70\uc6b4, \uae30\uc05c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.701863", "chunk": 4, "question": "m\u00e4nnlich ", "info1": "Kreuzen Sie bitte an: \u201eweiblich\u201c oder \u201em\u00e4nnlich\u201c.", "difficulty": 1, "answer": "\ub0a8\uc790\uc758, \uc218\ucef7\uc758\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 4, "question": "mehr ", "info1": "Dieses Auto kostet 1.000 Euro mehr als das andere.", "difficulty": 1, "answer": "\ubd80\uc0ac \ub354\uc6b1, \ud55c\uce35 \ub354, \ub354 \ub9ce\uc774\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 4, "question": "m\u00f6glich ", "info1": "Mit dieser Fahrkarte ist die Fahrt ab 9 Uhr m\u00f6glich.", "difficulty": 1, "answer": "\uac00\ub2a5\ud55c, \ud560 \uc218 \uc788\ub294\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 4, "question": "m\u00fcde ", "info1": "Ich bin m\u00fcde. Ich gehe schlafen.", "difficulty": 1, "answer": "\ud53c\ub85c\ud55c, \uc9c0\uce5c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "neu ", "info1": "Ich bin der neue Kollege.", "difficulty": 1, "answer": "\uc0c8, \uc0c8\ub85c\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "normal ", "info1": "75 kg. Sein Gewicht ist normal.", "difficulty": 1, "answer": "\ud45c\uc900\uc758, \uc815\uaddc\uc758\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "ge\u00f6ffnet ", "info1": "Der Laden ist samstags bis 16.00 Uhr ge\u00f6ffnet.", "difficulty": 1, "answer": "(\ubb38 \ub4f1\uc774) \uc5f4\ub824 \uc788\ub294, \uc601\uc5c5\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "p\u00fcnktlich ", "info1": "Der Bus f\u00e4hrt p\u00fcnktlich um acht Uhr.", "difficulty": 1, "answer": "\uc2dc\uac04\uc744 \uc5c4\uc218\ud558\ub294, \uc815\uc2dc\uc758\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "richtig ", "info1": "Habe ich das richtig verstanden?", "difficulty": 1, "answer": "\ub9de\ub294, (\uc62c) \ubc14\ub978, \ud2c0\ub9bc\uc5c6\ub294\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "ruhig ", "info1": "Ich m\u00f6chte ein ruhiges Zimmer.", "difficulty": 1, "answer": "\uc870\uc6a9\ud55c, \ub9d0\uc5c6\ub294\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "schlecht ", "info1": "Mir ist schlecht!", "difficulty": 1, "answer": "\ub098\uc05c, \uc5f4\ub4f1\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "geschlossen ", "info1": "Die Bank hat am Samstag geschlossen.", "difficulty": 1, "answer": "\ub2eb\ud78c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "schnell ", "info1": "Er f\u00e4hrt schnell.", "difficulty": 1, "answer": "\ube60\ub978, \uc2e0\uc18d\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 5, "question": "sch\u00f6n ", "info1": "Das ist sehr sch\u00f6n.", "difficulty": 1, "answer": "\uc544\ub984\ub2e4\uc6b4, \uc88b\uc740, \uba4b\uc9c4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "schwer ", "info1": "Ist Ihr Gep\u00e4ck sehr schwer?", "difficulty": 1, "answer": "\ubb34\uac70\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "selbstst\u00e4ndig ", "info1": "Er ist selbstst\u00e4ndig.", "difficulty": 1, "answer": "\ub3c5\ub9bd\uc801\uc778, \uc790\ub9bd\uc801\uc778\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "sp\u00e4t ", "info1": "Es ist schon sp\u00e4t, ich muss gehen.", "difficulty": 1, "answer": "\ub2a6\uc740, \uc9c0\uac01\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "teuer ", "info1": "Das ist mir zu teuer.", "difficulty": 1, "answer": "\ube44\uc2fc\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "tot ", "info1": "Sein Vater ist schon lange tot.", "difficulty": 1, "answer": "\uc8fd\uc740, \uc8fd\uc740 \ub4ef\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "verboten ", "info1": "Hier ist Rauchen verboten.", "difficulty": 1, "answer": "\uae08\uc9c0\ub41c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "verheiratet ", "info1": "Ich bin verheiratet und habe drei Kinder.", "difficulty": 1, "answer": "\uae30\ud63c\uc758.\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "weiblich ", "info1": "Kreuzen Sie bitte an: \u201eweiblich\u201c oder \u201em\u00e4nnlich\u201c.", "difficulty": 1, "answer": "\uc5ec\uc790\uc758, \uc554\ucef7\uc758\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "weit ", "info1": "Zum Bahnhof ist es nicht weit.", "difficulty": 1, "answer": "\ub113\uc740, \uad11\ud65c\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 6, "question": "wenig ", "info1": "Ich habe leider nur wenig verstanden.", "difficulty": 1, "answer": " \uc57d\uac04\uc758, \uc5bc\ub9c8 \uc548 \ub418\ub294, \uc801\uc740\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 7, "question": "wichtig ", "info1": "Dieses Formular ist sehr wichtig.", "difficulty": 1, "answer": "\uc911\uc694\ud55c\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 7, "question": "willkommen ", "info1": "Herzlich willkommen!", "difficulty": 1, "answer": "\ud658\uc601\ubc1b\ub294, \ud658\ub300\ubc1b\ub294, \ubc18\uac00\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 7, "question": "wunderbar ", "info1": "Das Essen schmeckt wunderbar.", "difficulty": 1, "answer": "\ub180\ub77c\uc6b4\n", "learned": false, "info2": ""}, {"date": "2018-12-29 21:08:40.702861", "chunk": 7, "question": "zufrieden ", "info1": "Ich bin mit der Wohnung zufrieden.", "difficulty": 1, "answer": "\ub9cc\uc871\ud55c, \ud589\ubcf5\ud55c\n", "learned": false, "info2": ""}]
+[
+  {
+    "answer": "(\ub098\uc774\uac00) \u2219\u2219\u2219\uc0b4\uc778\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "\ufeffalt ", 
+    "info1": "Wie alt sind Sie?", 
+    "date": "2019-01-01 22:31:27.859526", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc2e4\uc9c1\uc911\uc778, \ubb34\uc9c1\uc758\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "arbeitslos ", 
+    "info1": "Es gibt bei uns viele Leute, die schon lange arbeitslos", 
+    "date": "2019-01-01 22:31:27.859593", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc678\uad6d\uc758, \uc678\uad6d\uc0b0\uc758\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "ausl\u00e4ndisch ", 
+    "info1": "Leider habe ich nur ausl\u00e4ndisches Geld.", 
+    "date": "2019-01-01 22:31:27.859619", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc790\ub3d9\uc801\uc778, \uc790\ub3d9\uc2dd\uc758\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "automatisch ", 
+    "info1": "Du musst nichts machen. Das geht automatisch.", 
+    "date": "2019-01-01 22:31:27.859639", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ud604\uae08\uc758\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "bar ", 
+    "info1": "Muss ich bar zahlen oder geht\u2018s auch mit Karte?", 
+    "date": "2019-01-01 22:31:27.859657", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc798 \uc54c\ub824\uc9c4, \uc720\uba85\ud55c\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "bekannt ", 
+    "info1": "Picasso ist sehr bekannt.", 
+    "date": "2019-01-01 22:31:27.859676", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc810\ub839, \uc810\ub839\ud558\ub2e4\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "besetzt ", 
+    "info1": "Die Nummer ist immer besetzt.", 
+    "date": "2019-01-01 22:31:27.859696", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubd80\uc0ac \ubcf4\ub2e4 \uc88b\uc740\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "besser ", 
+    "info1": "Es geht mir schon besser.", 
+    "date": "2019-01-01 22:31:27.859714", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "(\uac12\uc774) \uc2fc\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "billig ", 
+    "info1": "Die Jacke kostet nur 10 Euro! Die ist aber billig!", 
+    "date": "2019-01-01 22:31:27.859732", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc18c\ub7c9\uc758, \uc57d\uac04\uc758\n", 
+    "difficulty": 0, 
+    "chunk": 0, 
+    "question": "bisschen ", 
+    "info1": "Ich spreche Englisch, Franz\u00f6sisch und ein bisschen", 
+    "date": "2019-01-01 22:31:27.859750", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub098\uc05c, \ubd88\ucf8c\ud55c\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "b\u00f6se ", 
+    "info1": "Sie ist b\u00f6se auf mich.", 
+    "date": "2019-01-05 18:30:56.592333", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub113\uc740\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "breit ", 
+    "info1": "Wie breit ist der Schrank?", 
+    "date": "2019-01-05 18:30:56.592401", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc11c\ub458\ub7ec\uc57c \ud560, \uae34\uae09\ud55c\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "eilig ", 
+    "info1": "Hast du es eilig?", 
+    "date": "2019-01-05 18:30:56.592425", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uac04\ub2e8\ud55c, \uc26c\uc6b4\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "einfach ", 
+    "info1": "Die Pr\u00fcfung ist ganz einfach.", 
+    "date": "2019-01-05 18:30:56.592447", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uac00\uc9dc\uc758, \uc704\uc870\ub41c\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "falsch ", 
+    "info1": "Das ist falsch.", 
+    "date": "2019-01-05 18:30:56.592467", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc900\ube44\uac00 \ub41c\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "fertig ", 
+    "info1": "Bist du fertig?", 
+    "date": "2019-01-05 18:30:56.592485", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc790\uc720\ubbfc\uc758, \ub178\uc608\uac00 \uc544\ub2cc\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "frei ", 
+    "info1": "Ist der Platz noch frei?", 
+    "date": "2019-01-05 18:30:56.592505", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc678\ub798\uc758, \uc678\uad6d\uc5d0\uc11c \uc628\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "fremd ", 
+    "info1": "Das wei\u00df ich nicht; ich bin fremd hier.", 
+    "date": "2019-01-05 18:30:56.592524", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubcf4\ub2e4 \uc774\ub978\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "fr\u00fcher ", 
+    "info1": "Fr\u00fcher waren wir oft zusammen im Kino.", 
+    "date": "2019-01-05 18:30:56.592540", 
+    "learned": true, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ud0dc\uc5b4\ub09c\n", 
+    "difficulty": 0, 
+    "chunk": 1, 
+    "question": "geboren ", 
+    "info1": "Ich bin in Zagreb geboren.", 
+    "date": "2019-01-05 18:30:56.592558", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubc18\uac00\uc774, \uc990\uac70\uc6b4 \ub9c8\uc74c\uc73c\ub85c\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "gern(e) ", 
+    "info1": "Ich gehe gerne einkaufen.", 
+    "date": "2018-12-29 21:08:40.700899", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc8fd\uc740, \uc0ac\ub9dd\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "gestorben ", 
+    "info1": "Meine Frau ist gestern gestorben.", 
+    "date": "2018-12-29 21:08:40.700899", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uac19\uc740, \ub3d9\uc77c\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "gleich ", 
+    "info1": "Das ist der gleiche Preis.", 
+    "date": "2018-12-29 21:08:40.700899", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc131\uacf5\ud55c, \uc6b4\uc774 \uc88b\uc740\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "gl\u00fccklich ", 
+    "info1": "Meine Kinder sind gl\u00fccklich verheiratet.", 
+    "date": "2018-12-29 21:08:40.700899", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ud070, \uac15\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "gro\u00df ", 
+    "info1": "Mein Bruder und ich sind gleich gro\u00df.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc720\ud6a8\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "g\u00fcltig ", 
+    "info1": "Der Pass ist nicht mehr g\u00fcltig.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "(\uac12\uc774) \uc2fc\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "g\u00fcnstig ", 
+    "info1": "Dort gibt es g\u00fcnstige Angebote.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc88b\uc740, \uc120\ub7c9\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "gut ", 
+    "info1": "Das finde ich gut.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub9d1\uc740\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "hell ", 
+    "info1": "Im Sommer ist es bis 21 Uhr hell.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc9c4\uc2ec\uc758, \uac04\uc808\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 2, 
+    "question": "herzlich ", 
+    "info1": "Herzlichen Gl\u00fcckwunsch!", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub192\uc740\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "hoch ", 
+    "info1": "Der Mount Everest ist 8.880 Meter hoch.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uad6d\uc81c\uac04\uc758, \uad6d\uc81c\uc801\uc778\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "international ", 
+    "info1": "Unser Deutschkurs ist international: Silvana kommtaus Italien, Conchi aus Spanien, Yin aus China \u2026", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc80a\uc740, \uc5b4\ub9b0\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "jung ", 
+    "info1": "Claudia ist 21. \u2013 Was? Noch so jung?", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubd80\uc11c\uc9c4\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "kaputt ", 
+    "info1": "Das Glas war teuer. Es geht sehr leicht kaputt.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc791\uc740, \uc801\uc740\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "klein ", 
+    "info1": "Eltville ist eine kleine Stadt am Rhein.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc553\ub294, \ubcd1\ub4e0\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "krank ", 
+    "info1": "Ich kann heute nicht zur Arbeit kommen, ich bin krank und liege im Bett.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubb38\ud654(\uc0c1) \uc758, \ubb38\ud654\uc801\uc778\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "kulturell ", 
+    "info1": "Ich bin kulturell interessiert. Ich gehe oft ins Museum.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc9e7\uc740, \uac00\uae4c\uc6b4\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "kurz ", 
+    "info1": "Ricardo hat kurzes Haar.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uae34, \uae38\uc774\uac00 \uc788\ub294\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "lang ", 
+    "info1": "Die Jeans ist zu lang.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubd80\uc0ac \uc624\ub798, \uc624\ub7ab\ub3d9\uc548\n", 
+    "difficulty": 1, 
+    "chunk": 3, 
+    "question": "lange ", 
+    "info1": "Wie lange f\u00e4hrt der Zug von Hamburg nach Berlin?", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub290\ub9b0\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "langsam ", 
+    "info1": "K\u00f6nnten Sie bitte etwas langsamer sprechen?", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc2dc\ub044\ub7ec\uc6b4\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "laut ", 
+    "info1": "Nicht so laut! Das Baby schl\u00e4ft.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc2f1\uae00\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "ledig ", 
+    "info1": "Sind Sie verheiratet? \u2013 Nein. Ledig.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uac00\ubcbc\uc6b4\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "leicht ", 
+    "info1": "Der Koffer ist leicht.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": " \ub0ae\uc740 \ubaa9\uc18c\ub9ac\uc758\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "leise ", 
+    "info1": "Seid leise. Die anderen schlafen schon.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc6c3\uae34, \uc990\uac70\uc6b4, \uae30\uc05c\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "lustig ", 
+    "info1": "Frau Mertens ist lustig. Sie lacht immer.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub0a8\uc790\uc758, \uc218\ucef7\uc758\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "m\u00e4nnlich ", 
+    "info1": "Kreuzen Sie bitte an: \u201eweiblich\u201c oder \u201em\u00e4nnlich\u201c.", 
+    "date": "2018-12-29 21:08:40.701863", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubd80\uc0ac \ub354\uc6b1, \ud55c\uce35 \ub354, \ub354 \ub9ce\uc774\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "mehr ", 
+    "info1": "Dieses Auto kostet 1.000 Euro mehr als das andere.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uac00\ub2a5\ud55c, \ud560 \uc218 \uc788\ub294\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "m\u00f6glich ", 
+    "info1": "Mit dieser Fahrkarte ist die Fahrt ab 9 Uhr m\u00f6glich.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ud53c\ub85c\ud55c, \uc9c0\uce5c\n", 
+    "difficulty": 1, 
+    "chunk": 4, 
+    "question": "m\u00fcde ", 
+    "info1": "Ich bin m\u00fcde. Ich gehe schlafen.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc0c8, \uc0c8\ub85c\uc6b4\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "neu ", 
+    "info1": "Ich bin der neue Kollege.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ud45c\uc900\uc758, \uc815\uaddc\uc758\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "normal ", 
+    "info1": "75 kg. Sein Gewicht ist normal.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "(\ubb38 \ub4f1\uc774) \uc5f4\ub824 \uc788\ub294, \uc601\uc5c5\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "ge\u00f6ffnet ", 
+    "info1": "Der Laden ist samstags bis 16.00 Uhr ge\u00f6ffnet.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc2dc\uac04\uc744 \uc5c4\uc218\ud558\ub294, \uc815\uc2dc\uc758\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "p\u00fcnktlich ", 
+    "info1": "Der Bus f\u00e4hrt p\u00fcnktlich um acht Uhr.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub9de\ub294, (\uc62c) \ubc14\ub978, \ud2c0\ub9bc\uc5c6\ub294\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "richtig ", 
+    "info1": "Habe ich das richtig verstanden?", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc870\uc6a9\ud55c, \ub9d0\uc5c6\ub294\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "ruhig ", 
+    "info1": "Ich m\u00f6chte ein ruhiges Zimmer.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub098\uc05c, \uc5f4\ub4f1\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "schlecht ", 
+    "info1": "Mir ist schlecht!", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub2eb\ud78c\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "geschlossen ", 
+    "info1": "Die Bank hat am Samstag geschlossen.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ube60\ub978, \uc2e0\uc18d\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "schnell ", 
+    "info1": "Er f\u00e4hrt schnell.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc544\ub984\ub2e4\uc6b4, \uc88b\uc740, \uba4b\uc9c4\n", 
+    "difficulty": 1, 
+    "chunk": 5, 
+    "question": "sch\u00f6n ", 
+    "info1": "Das ist sehr sch\u00f6n.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ubb34\uac70\uc6b4\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "schwer ", 
+    "info1": "Ist Ihr Gep\u00e4ck sehr schwer?", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub3c5\ub9bd\uc801\uc778, \uc790\ub9bd\uc801\uc778\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "selbstst\u00e4ndig ", 
+    "info1": "Er ist selbstst\u00e4ndig.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub2a6\uc740, \uc9c0\uac01\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "sp\u00e4t ", 
+    "info1": "Es ist schon sp\u00e4t, ich muss gehen.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ube44\uc2fc\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "teuer ", 
+    "info1": "Das ist mir zu teuer.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc8fd\uc740, \uc8fd\uc740 \ub4ef\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "tot ", 
+    "info1": "Sein Vater ist schon lange tot.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uae08\uc9c0\ub41c\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "verboten ", 
+    "info1": "Hier ist Rauchen verboten.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uae30\ud63c\uc758.\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "verheiratet ", 
+    "info1": "Ich bin verheiratet und habe drei Kinder.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc5ec\uc790\uc758, \uc554\ucef7\uc758\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "weiblich ", 
+    "info1": "Kreuzen Sie bitte an: \u201eweiblich\u201c oder \u201em\u00e4nnlich\u201c.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub113\uc740, \uad11\ud65c\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "weit ", 
+    "info1": "Zum Bahnhof ist es nicht weit.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": " \uc57d\uac04\uc758, \uc5bc\ub9c8 \uc548 \ub418\ub294, \uc801\uc740\n", 
+    "difficulty": 1, 
+    "chunk": 6, 
+    "question": "wenig ", 
+    "info1": "Ich habe leider nur wenig verstanden.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\uc911\uc694\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 7, 
+    "question": "wichtig ", 
+    "info1": "Dieses Formular ist sehr wichtig.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ud658\uc601\ubc1b\ub294, \ud658\ub300\ubc1b\ub294, \ubc18\uac00\uc6b4\n", 
+    "difficulty": 1, 
+    "chunk": 7, 
+    "question": "willkommen ", 
+    "info1": "Herzlich willkommen!", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub180\ub77c\uc6b4\n", 
+    "difficulty": 1, 
+    "chunk": 7, 
+    "question": "wunderbar ", 
+    "info1": "Das Essen schmeckt wunderbar.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }, 
+  {
+    "answer": "\ub9cc\uc871\ud55c, \ud589\ubcf5\ud55c\n", 
+    "difficulty": 1, 
+    "chunk": 7, 
+    "question": "zufrieden ", 
+    "info1": "Ich bin mit der Wohnung zufrieden.", 
+    "date": "2018-12-29 21:08:40.702861", 
+    "learned": false, 
+    "info2": ""
+  }
+]

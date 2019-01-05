@@ -15,10 +15,13 @@ class Library:
 		self.chunkSize = 10
 		self.numberOfChunks = 0
 		self.date = datetime.datetime.now()
+		self.intro = None
 
 	def loadDecks(self):
 		with open(join("data/", 'decks.json')) as fd:
-			self.decks = json.load(fd)
+			data = json.load(fd)
+			self.decks = data["decks"]
+			self.intro = data["intro"]
 	
 	def saveDecks(self):
 		for x in self.decks:
@@ -27,8 +30,8 @@ class Library:
 			else:
 				x["selected"] = False
 		with open(join("data/", 'decks.json'), 'w') as fd:
-			json.dump(self.decks, fd, indent=2)
-		print "decks saved!"
+			data = { "intro" : self.intro, "decks" : self.decks}
+			json.dump(data, fd, indent=2)
 	
 	def loadVocabs(self):
 		with open(join("data/", self.currentDeck+'.json')) as fd:
@@ -98,8 +101,6 @@ class Library:
 		self.library[self.currentCard]["learned"] = True
 
 	def idontknowCard(self):
-#		self.library[self.currentCard]["learned"] = False
-
 		for x in self.library:
 			if x["chunk"] is self.currentChunk:
 				s = self.getRealChunksize()
@@ -126,20 +127,11 @@ class Library:
 			if x["chunk"] is self.currentChunk:
 				i+=1
 		return i
-################# UTILITY ##################
-
-	def setChunks(self):
-		i = 0
-		n = 0
-		for x in self.library:
-			self.numberOfChunks = n+1
-			x["chunk"] = n
-			i += 1
-			if i is self.chunkSize:
-				n += 1
-				i = 0
 
 if __name__=="__main__":
 	myLibrary = Library()
-	myLibrary.loadVocabs("deutsch")
+#	myLibrary.loadVocabs("deutsch")
 	myLibrary.loadDecks()
+	print myLibrary.decks
+	print myLibrary.intro
+	myLibrary.saveDecks()

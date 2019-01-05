@@ -30,7 +30,6 @@
 	on_release:
 		app.go_to_home()
 	Image:
-
 		source: 'data/pictures/mario_hand2.png'
 		size: self.parent.size
 		pos: self.parent.pos 
@@ -71,31 +70,12 @@
 	font_name: 'data/fonts/TYPO_CRAYONM'
 	color: 1, 1, 1 ,1
 
-<HorizontalBox@BoxLayout>:
-	orientation: 'horizontal'
-	size_hint_y: None
-	pos_hint: {'top': 1}
-	height: '150sp'
-	spacing: '20sp'
-	padding: '30sp'
-
-<BottomBox@FloatLayout>:
-	canvas:
-		Color:					#for testing
-			rgb: 0.4, 0, 1	#for testing
-		Rectangle:
-			pos: self.pos
-			size: self.size
-	orientation: 'horizontal'
-	size_hint:(1, 0.2)
-	pos_hint: {'top': 0.2}
-
 <PageOne>:
 	on_touch_down: app.touchdown(args[1])
 	on_touch_up: app.touchup_on_pageone(args[1])
 
 	BoxLayout:
-		spacing: 20
+		spacing: 10
 		padding: '45sp'
 		orientation: 'vertical'
 		canvas.before:
@@ -110,10 +90,10 @@
 			size_hint:(None, None)
 
 			Question:
-				font_size: '42sp'
+				font_size: '38sp'
 				text: app.vocab1
 
-		Image: #bei einfuegen hier ifng der Error an zu kommen
+		Image:
 			size_hint:(1, 0.1)
 			source: 'data/pictures/strich.png'
 			center_x: self.parent.center_x
@@ -129,7 +109,7 @@
 
 				Answer:
 					text: app.answer1
-					font_size: '42sp'
+					font_size: '38sp'
 			BoxLayout:
 				padding: [20,20,0,0]
 				height: self.minimum_height
@@ -159,7 +139,7 @@
 
 	BoxLayout:
 		padding: '45sp'
-		spacing: 20
+		spacing: 10
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -172,7 +152,7 @@
 			width: self.parent.width/1.2
 			size_hint:(None, None)
 			Question:
-				font_size: '42sp'
+				font_size: '38sp'
 				text: app.vocab2
 		Image:
 			size_hint:(1, 0.1)
@@ -189,7 +169,7 @@
 				size_hint:(None, None)
 				Answer:
 					text: app.answer2
-					font_size: '42sp'
+					font_size: '38sp'
 			BoxLayout:
 				padding: [20,20,0,0]
 				height: self.minimum_height
@@ -213,11 +193,9 @@
 
 
 <VocabFrontPage>:
-#	on_touch_down: app.touchdown(args[1])
-#	on_touch_up: app.touchup_on_vocabfrontpage(args[1])
 
 	BoxLayout:
-		padding: '20sp'
+		padding: '30sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -255,14 +233,6 @@
 					source: root.deck_image
 			BoxLayout:
 				size_hint:(0.05, 1)
-#		BoxLayout:
-#			size_hint:(1, 0.08)
-#			padding: '5sp'
-#			Image:
-#				source: 'data/pictures/strich.png'
-#				center_x: self.parent.center_x
-#				center_y: self.parent.center_y
-#				allow_stretch: True	
 		BoxLayout:
 			size_hint:(1, 0.2)
 			orientation: 'horizontal'
@@ -315,7 +285,7 @@
 			size_hint:(1, 0.1)
 	
 		BoxLayout:
-			padding: [15,0,0,0]
+			padding: '10sp'
 			size_hint: (1 ,0.25)
 			orientation: 'horizontal'
 			BackButton:
@@ -336,7 +306,7 @@
 					allow_stretch: True
 <HomePage>:
 	BoxLayout:
-		padding: '20sp'
+		padding: '30sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -348,7 +318,6 @@
 			UberImage:
 				source: 'data/pictures/home_titel_pilz.png'
 		BoxLayout:
-			padding: [20,10,20,10]
 			orientation: 'horizontal'
 			size_hint:(1, 0.4)
 
@@ -361,7 +330,6 @@
 					source: 'data/pictures/deck_pilz.png'
 
 		BoxLayout:
-			padding: [60,0,60,30]
 			orientation: 'horizontal'
 			size_hint:(1, 0.3)
 			PostitButton:
@@ -381,7 +349,7 @@
 
 <SettingsPage>:
 	BoxLayout:
-		padding: '20sp'
+		padding: '30sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -514,7 +482,7 @@
 			
 <DataPage>:
 	BoxLayout:
-		padding: '20sp'
+		padding: '30sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -528,7 +496,6 @@
 				source: 'data/pictures/data_titel2.png'
 
 		BoxLayout:
-			padding: [15,10,10,0]
 			size_hint:(1, 0.2)
 			orientation: 'vertical'
 			GridLayout:
@@ -560,7 +527,6 @@
 			        	source: root.b2_image
 
 		BoxLayout:
-			padding: [10,10,10,0]
 			size_hint:(1, 0.4)
 			orientation: 'vertical'
 			GridLayout:
@@ -602,7 +568,7 @@
 #	on_touch_down: app.touchdown(args[1])
 #	on_touch_up: app.touchup_on_chunkpage(args[1])
 	BoxLayout:
-		padding: '20sp'
+		padding: '30sp'
 		orientation: 'vertical'
 		canvas.before:
 			Rectangle:
@@ -668,7 +634,7 @@
 			size_hint:(1, 0.2)
 	
 		BoxLayout:
-			padding: [15,0,0,0]
+			padding: '10sp'
 			size_hint: (1 ,0.25)
 			orientation: 'horizontal'
 			BackButton:
@@ -687,27 +653,7 @@
 					size_hint_y: None
 					size_hint_x: None
 					allow_stretch: True
-#<DeckData>:
-#	viewclass: 'SelectableLabel'
-#	SelectableRecycleBoxLayout:
-#		size: self.size
-#		multiselect: False
-#		touch_multiselect: False
-#		size_hint_y: None
-#		default_size_hint: 1, None
-#		default_size: None, dp(200)
-#		height: self.minimum_height
-#		orientation: 'vertical'
-#		spacing: dp(10)
-#		
-#<SelectableLabel>
-#	text_size: self.width, None
-#	size_hint: 1, None
-#	height: self.texture_size[1]
-#	size: self.texture_size
-#	font_size: 70
-#	font_name: 'data/fonts/TYPO_CRAYONM'
-#	
+
 <SwipeManager>
 
 #		canvas:
