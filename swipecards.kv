@@ -131,6 +131,12 @@
 					font_size: '26sp'				
 
 			BoxLayout:
+				Image:
+					source: root.picture
+					size: self.parent.size
+					opacity: root.picture_opacity
+					pos: self.parent.pos 
+					allow_stretch: True
 
 
 <PageTwo>:
@@ -421,11 +427,10 @@
 					height: self.texture_size[1]
 					valign: 'center'
 					haldign: 'middle'
-					font_name: 'data/fonts/DK Cool Crayon'
+					font_name: 'data/fonts/TYPO_CRAYONM'
 					color: 1, 1, 1 ,1
-#					pos_hint: {'top': 1}
-					text: ' Reset Deck'
-					font_size: '28sp'
+					text: ' 재설정하기'
+					font_size: '34sp'
 				BoxLayout:
 			BoxLayout:
 				size_hint:(0.05, 1)
@@ -456,7 +461,7 @@
 					font_name: 'data/fonts/DK Cool Crayon'
 					color: 1, 1, 1 ,1
 #					pos_hint: {'top': 1}
-					text: ' Tutorial'
+					text: ' About'
 					font_size: '28sp'
 				BoxLayout:
 			BoxLayout:

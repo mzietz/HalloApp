@@ -15,14 +15,14 @@ class Library:
 		self.chunkSize = 10
 		self.numberOfChunks = 0
 		self.date = datetime.datetime.now()
-		self.intro = None
+		self.firsttime = None
 
 	def loadDecks(self):
 		with open(join("data/", 'decks.json')) as fd:
 			data = json.load(fd)
 			self.decks = data["decks"]
-			self.intro = data["intro"]
-	
+			self.firsttime = data["firsttime"]
+
 	def saveDecks(self):
 		for x in self.decks:
 			if x["text"] == self.currentDeck:
@@ -30,7 +30,7 @@ class Library:
 			else:
 				x["selected"] = False
 		with open(join("data/", 'decks.json'), 'w') as fd:
-			data = { "intro" : self.intro, "decks" : self.decks}
+			data = { "firsttime" : self.firsttime, "decks" : self.decks}
 			json.dump(data, fd, indent=2)
 	
 	def loadVocabs(self):
@@ -133,5 +133,5 @@ if __name__=="__main__":
 #	myLibrary.loadVocabs("deutsch")
 	myLibrary.loadDecks()
 	print myLibrary.decks
-	print myLibrary.intro
+	print myLibrary.firsttime
 	myLibrary.saveDecks()

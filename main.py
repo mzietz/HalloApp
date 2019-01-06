@@ -20,8 +20,8 @@ class SwipeManager(ScreenManager):
 	pass
 
 class PageOne(Screen):
-	pass
-
+	picture = StringProperty("data/pictures/anleitung.png")
+	picture_opacity = NumericProperty(1)
 class PageTwo(Screen):
 	pass
 
@@ -103,6 +103,7 @@ class SwipeCardsApp(App):
 		self.lib.loadDecks()
 		self.set_current_deck()
 		self.lib.loadVocabs()
+		self.loadIntro()
 		return self.sm
 
 	def init(self):
@@ -130,6 +131,13 @@ class SwipeCardsApp(App):
 			self.sm.transition.direction = 'left'
 			self.go_to_home()
 			return True 
+
+	def loadIntro(self):
+		if self.lib.firsttime:
+			self.pageone.picture_opacity = "1"
+			self.lib.firsttime = False
+		else: 
+			self.pageone.picture_opacity = "0"
 
 	def go_to_vocabfrontpage(self):
 		self.sm.transition.direction = 'left'
@@ -167,6 +175,8 @@ class SwipeCardsApp(App):
 
 	def go_to_chunkpage(self):
 		self.sm.transition.direction = 'left'
+		self.lib.saveVocabs()
+		self.lib.saveDecks()
 		self.cardsStudied = str(self.lib.cardsStudied())
 		self.cardsNotStudied = str(self.lib.cardsNotStudied())
 		self.sm.current = 'chunkpage'
@@ -184,7 +194,6 @@ class SwipeCardsApp(App):
 	def go_to_one(self, direction):
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
-			self.lib.saveVocabs()
 			self.go_to_chunkpage()
 		else:	
 			if direction == 'left':
@@ -202,7 +211,6 @@ class SwipeCardsApp(App):
 	def go_to_two(self, direction):
 		self.answered = False
 		if self.lib.cardsLeft() == 1 and direction == 'left':
-			self.lib.saveVocabs()
 			self.go_to_chunkpage()
 		else:
 			if direction == 'left':
@@ -242,10 +250,7 @@ class SwipeCardsApp(App):
 		self.cardsNotStudied = str(self.lib.cardsNotStudied())
 
 	def touchup_on_pagetwo(self, touch):
-		try:
-			self.distance = touch.x - self.coordinate		
-		except:
-			print "Zu schnell"
+		self.distance = touch.x - self.coordinate		
 		if self.answered == False:
 			self.show_answer(self.pagetwo)
 			self.answered = True
@@ -256,15 +261,18 @@ class SwipeCardsApp(App):
 				self.go_to_one('left')
 
 	def touchup_on_pageone(self, touch):
-		self.distance = touch.x - self.coordinate		
-		if self.answered == False:
-			self.show_answer(self.pageone)
-			self.answered = True
+		self.distance = touch.x - self.coordinate
+		if self.pageone.picture_opacity != 0:
+			self.pageone.picture_opacity = 0	
 		else:
-			if self.distance > 50:
-				self.go_to_two('right')
-			elif self.distance < -50:
-				self.go_to_two('left')	
+			if self.answered == False:
+				self.show_answer(self.pageone)
+				self.answered = True
+			else:
+				if self.distance > 50:
+					self.go_to_two('right')
+				elif self.distance < -50:
+					self.go_to_two('left')	
 
 	def touchup_on_chunkpage(self, touch):
 		self.distance = touch.x - self.coordinate		
