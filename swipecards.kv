@@ -445,9 +445,9 @@
 				center_x: self.center_x
 				id: study_button
 				on_release:
-					app.go_to_intro()
+					app.go_to_about()
 				ButtonImage:
-					source: 'data/pictures/deck_pilz.png'
+					source: 'data/pictures/about.png'
 			BoxLayout:
 				orientation: 'vertical'
 				size_hint:(0.6, 1)
@@ -473,17 +473,6 @@
 			BackButton:
 				size_hint: (0.35 ,1)
 			BoxLayout:
-
-<IntroPage>
-	on_touch_up: app.go_to_intro()
-	BoxLayout:
-		padding: '20sp'
-		orientation: 'vertical'
-		canvas.before:
-			Rectangle:
-				pos: self.pos
-				size: self.size
-				source: root.picture
 			
 <DataPage>:
 	BoxLayout:
@@ -658,6 +647,31 @@
 					size_hint_y: None
 					size_hint_x: None
 					allow_stretch: True
+<AboutPage>:
+	BoxLayout:
+		padding: '30sp'
+		orientation: 'vertical'
+		canvas.before:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: root.picture
+		BoxLayout:
+			size_hint:(1, 0.3)
+
+			UberImage:
+				source: 'data/pictures/data_titel2.png'
+
+		BoxLayout:
+			size_hint:(1, 0.7)
+
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: [15,0,0,0]
+			size_hint: (1 ,0.25)
+			BackButton:
+				size_hint: (0.35 ,1)
+			BoxLayout:
 
 <SwipeManager>
 

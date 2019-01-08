@@ -36,9 +36,8 @@ class HomePage(Screen):
 class ChunkPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
 
-class IntroPage(Screen):
+class AboutPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
-	page = NumericProperty("0")
 
 class SettingsPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
@@ -89,9 +88,9 @@ class SwipeCardsApp(App):
 		self.chunkpage = ChunkPage(name = 'chunkpage')
 		self.pageone = PageOne(name ='pageone')
 		self.pagetwo = PageTwo(name ='pagetwo')
-		self.intropage = IntroPage(name ='intropage')
+		self.aboutpage = AboutPage(name ='aboutpage')
 		self.sm.add_widget(self.homepage)
-		self.sm.add_widget(self.intropage)
+		self.sm.add_widget(self.aboutpage)
 		self.sm.add_widget(self.settingspage)
 		self.sm.add_widget(self.datapage)
 		self.sm.add_widget(self.vocabfrontpage)
@@ -103,7 +102,6 @@ class SwipeCardsApp(App):
 		self.lib.loadDecks()
 		self.set_current_deck()
 		self.lib.loadVocabs()
-		self.loadIntro()
 		return self.sm
 
 	def init(self):
@@ -131,13 +129,6 @@ class SwipeCardsApp(App):
 			self.sm.transition.direction = 'left'
 			self.go_to_home()
 			return True 
-
-	def loadIntro(self):
-		if self.lib.firsttime:
-			self.pageone.picture_opacity = "1"
-			self.lib.firsttime = False
-		else: 
-			self.pageone.picture_opacity = "0"
 
 	def go_to_vocabfrontpage(self):
 		self.sm.transition.direction = 'left'
@@ -185,11 +176,9 @@ class SwipeCardsApp(App):
 		self.sm.transition.direction = 'left'
 		self.sm.current = 'home'
 
-	def go_to_intro(self):
+	def go_to_about(self):
 		self.sm.transition.direction = 'left'
-		self.intropage.page +=1
-		print self.intropage.page
-		self.sm.current = 'intropage'
+		self.sm.current = 'aboutpage'
 
 	def go_to_one(self, direction):
 		self.answered = False
@@ -245,7 +234,6 @@ class SwipeCardsApp(App):
 	def resetCurrentDeck(self):
 		self.lib.refreshCurrentDeck()
 		print "resetted"
-		
 		self.cardsStudied = str(self.lib.cardsStudied())
 		self.cardsNotStudied = str(self.lib.cardsNotStudied())
 
