@@ -673,6 +673,32 @@
 				size_hint: (0.35 ,1)
 			BoxLayout:
 
+<FinishedPage>:
+	BoxLayout:
+		padding: '30sp'
+		orientation: 'vertical'
+		canvas.before:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: root.picture
+		BoxLayout:
+			size_hint:(1, 0.3)
+
+			UberImage:
+				source: 'data/pictures/data_titel2.png'
+
+		BoxLayout:
+			size_hint:(1, 0.7)
+
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: [15,0,0,0]
+			size_hint: (1 ,0.25)
+			BackButton:
+				size_hint: (0.35 ,1)
+			BoxLayout:
+
 <SwipeManager>
 
 #		canvas:

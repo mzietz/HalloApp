@@ -13,7 +13,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.behaviors import FocusBehavior
 from kivy.properties import ListProperty, NumericProperty
 from operator import itemgetter, attrgetter
-from jsonlibrary import *
+from jsonlibrary import Library
 from kivy.base import EventLoop
 
 class SwipeManager(ScreenManager):
@@ -24,6 +24,9 @@ class PageOne(Screen):
 	picture_opacity = NumericProperty(1)
 class PageTwo(Screen):
 	pass
+
+class FinishedPage(Screen):
+	picture = StringProperty("data/pictures/blackboard.png")
 
 class VocabFrontPage(Screen):
 	picture = StringProperty("data/pictures/blackboard.png")
@@ -89,12 +92,14 @@ class SwipeCardsApp(App):
 		self.pageone = PageOne(name ='pageone')
 		self.pagetwo = PageTwo(name ='pagetwo')
 		self.aboutpage = AboutPage(name ='aboutpage')
+		self.finishedpage = FinishedPage(name ='finishedpage')
 		self.sm.add_widget(self.homepage)
 		self.sm.add_widget(self.aboutpage)
 		self.sm.add_widget(self.settingspage)
 		self.sm.add_widget(self.datapage)
 		self.sm.add_widget(self.vocabfrontpage)
 		self.sm.add_widget(self.chunkpage)
+		self.sm.add_widget(self.finishedpage)
 		self.sm.add_widget(self.pageone)
 		self.sm.add_widget(self.pagetwo)
 		self.sm.current = 'home'
@@ -102,6 +107,7 @@ class SwipeCardsApp(App):
 		self.lib.loadDecks()
 		self.set_current_deck()
 		self.lib.loadVocabs()
+		self.loadIntro()
 		return self.sm
 
 	def init(self):
@@ -147,8 +153,6 @@ class SwipeCardsApp(App):
 				self.chooseDeckPictures(x["text"][2:])
 				self.setDeckandLevelImages("settingspage", x["text"][:2],x["text"][2:])
 		self.lib.saveDecks()
-#		print "Current Level is: " + str(self.currentLevel)
-#		print "Current Deck is: " + str(self.currentDeck)
 
 	def go_to_settings(self):
 		self.sm.transition.direction = 'right'
@@ -162,7 +166,10 @@ class SwipeCardsApp(App):
 		self.sm.transition.direction = 'left'
 		self.lib.loadVocabs()
 		self.init()
-		self.sm.current = 'pageone'
+		if self.lib.finished:
+			self.sm.current = 'finishedpage'
+		else:
+			self.sm.current = 'pageone'
 
 	def go_to_chunkpage(self):
 		self.sm.transition.direction = 'left'
@@ -214,6 +221,14 @@ class SwipeCardsApp(App):
 			self.sm.transition.direction = direction
 			self.sm.current = 'pagetwo'
 	
+	def loadIntro(self):
+		if self.lib.firsttime:
+			self.pageone.picture_opacity = 1
+		else:
+			self.pageone.picture_opacity = 0
+		self.lib.firsttime = False
+		self.lib.saveDecks()
+
 	def show_answer(self, screen):
 		if screen == self.pageone:
 			self.answer1 = self.lib.library[self.lib.currentCard]["answer"]
@@ -233,7 +248,6 @@ class SwipeCardsApp(App):
 
 	def resetCurrentDeck(self):
 		self.lib.refreshCurrentDeck()
-		print "resetted"
 		self.cardsStudied = str(self.lib.cardsStudied())
 		self.cardsNotStudied = str(self.lib.cardsNotStudied())
 
@@ -249,7 +263,10 @@ class SwipeCardsApp(App):
 				self.go_to_one('left')
 
 	def touchup_on_pageone(self, touch):
-		self.distance = touch.x - self.coordinate
+		try:
+			self.distance = touch.x - self.coordinate
+		except:
+			pass
 		if self.pageone.picture_opacity != 0:
 			self.pageone.picture_opacity = 0	
 		else:
@@ -275,7 +292,8 @@ class SwipeCardsApp(App):
 		self.datapage.nomen_image = "data/pictures/deck_pilz.png"
 		self.datapage.verben_image = "data/pictures/deck_pilz.png"
 		self.datapage.adjektive_image = "data/pictures/deck_pilz.png"
-		self.datapage.rest_image = "data/pictures/deck_pilz.png"	
+		self.datapage.rest_image = "data/pictures/deck_pilz.png"
+
 	def resetLevelPictures(self):
 		self.datapage.a1_image = "data/pictures/A1.png"
 		self.datapage.a2_image = "data/pictures/A2.png"
@@ -343,16 +361,6 @@ class SwipeCardsApp(App):
 		if level == "b2":
 			self.settingspage.level_image = "data/pictures/B2.png"
 			self.vocabfrontpage.level_image = "data/pictures/B2.png"
-
-	def pushedbutton(self):
-		print self.homepage.ids.items()
-		for key in self.homepage.ids.items():
-			if key[0] == "study_button":
-				self.homepage.study_button_size = [240,240]
-			if key[0] == "data_button":
-				self.homepage.data_button_size = [160,160]
-			if key[0] == "setting_button":
-				self.homepage.setting_button_size = [160,160]
 
 if __name__ == '__main__':
 	SwipeCardsApp().run()

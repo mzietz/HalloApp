@@ -2,7 +2,7 @@
 
 from os.path import join, exists
 from operator import itemgetter, attrgetter
-from random import shuffle
+from collections import Counter
 import json
 import datetime
 import random
@@ -15,10 +15,12 @@ class Library:
 		self.currentDeck = ""
 		self.difficulty = 1
 		self.chunkSize = 10
-		self.numberOfChunks = 0
 		self.date = datetime.datetime.now()
 		self.firsttime = None
+		self.finished = False
 		
+	def __repr__(self):
+		return "Library({})".format(self.date)
 
 	def loadDecks(self):
 		with open(join("data/", 'decks.json')) as fd:
@@ -76,50 +78,23 @@ class Library:
 
 	def cardsNotStudied(self):
 		i=0
-		for x in xrange(len(self.library)/self.chunkSize):
+		for x in xrange(int(math.ceil(len(self.library)/float(self.chunkSize)))):
 			if self.library[x*self.chunkSize]["difficulty"] != False:
 				i+=1	
 		return i
-
-	def nextChunkOld(self): #not used anymore
-		self.date = datetime.datetime.now()
-		self.nextThree = [0,0,0]
-		for x in self.library:
-			if x["difficulty"] > self.difficulty:
-				self.difficulty = x["difficulty"]
-#				self.currentChunk = x["chunk"]
-				print "1"
-				self.nextThree.append(x["chunk"])
-				self.nextThree.pop(0)
-
-			if x["difficulty"] == self.difficulty and x["difficulty"] != 0 and datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f') > self.date:
-				self.date = datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f')
-				print "2"
-#				self.currentChunk = x["chunk"]
-				self.nextThree.append(x["chunk"])
-				self.nextThree.pop(0)
-			
-			if x["difficulty"] == 0 and datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f') < self.date:
-				self.date = datetime.datetime.strptime(x["date"], '%Y-%m-%d %X.%f')
-				print "3"
-#				self.currentChunk = x["chunk"]
-				self.nextThree.append(x["chunk"])
-				self.nextThree.pop(0)
-		self.difficulty = 0 # wird gesetzt bei go_to_vocab()
-		self.currentChunk = self.nextThree[2]
-		print self.nextThree
-		self.date = datetime.datetime.now()
-		return self.currentChunk
 	
 	def nextChunk(self):
 		self.nextThree = []
+		self.finished = False
 		for x in xrange(3):
-			s = sorted(self.library, key=lambda k: (k['difficulty'], k['date']), reverse=True)[x*self.chunkSize]["chunk"]
-			if s != 0:
-				self.nextThree.append(s)
-		print self.nextThree	
+			s = sorted(self.library, key=lambda k: (k['difficulty'], k['date']), reverse=True)[x*self.chunkSize]
+			if s['difficulty'] != 0:
+				self.nextThree.append(s["chunk"])
 		self.difficulty = 0
-		return random.choice(self.nextThree)
+		if not self.nextThree:
+			self.finished = True
+		else:
+			return random.choice(self.nextThree)
 	
 	def iknowCard(self):
 		self.library[self.currentCard]["learned"] = True
@@ -127,12 +102,12 @@ class Library:
 	def idontknowCard(self):
 		for x in self.library:
 			if x["chunk"] is self.currentChunk:
-				s = self.getRealChunksize()
-				self.library.insert(self.library.index(x)+self.chunkSize,self.library[self.currentCard])
-				try:
-					self.library[self.library.index(x)+self.chunkSize]["learned"] = False
-				except:
-					self.library[self.library.index(x)+s]["learned"] = False
+				if self.getChunksize() == self.chunkSize:
+					self.library.insert(self.library.index(x)+self.getChunksize(),self.library[self.currentCard])
+					self.library[self.library.index(x)+self.getChunksize()]["learned"] = False
+				else:
+					self.library.append(self.library[self.currentCard])
+					self.library[-1]["learned"] = False
 				self.library.pop(self.currentCard)
 				self.difficulty += 1
 				break
@@ -141,21 +116,20 @@ class Library:
 		for x in self.library:
 			x["difficulty"] = 1
 			x["date"] = unicode(datetime.datetime.now())
-		
 		with open(join("data/", self.currentDeck+'.json'), 'w') as fd:
 			json.dump(self.library, fd, indent=2)
 
-	def getRealChunksize(self):
-		i=0
-		for x in self.library:
-			if x["chunk"] is self.currentChunk:
-				i+=1
-		return i
+	def getChunksize(self):
+		c = Counter(x["chunk"] for x in self.library)
+		return c[self.currentChunk]
 
 if __name__=="__main__":
 	myLibrary = Library()
+	myLibrary.loadDecks()
 	myLibrary.currentDeck = "a1adjektive"
 	myLibrary.loadVocabs()
-	print myLibrary.nextChunk()
-#	print myLibrary.library
-	# myLibrary.saveDecks()
+#	myLibrary.cardsNotStudied()
+#	print len(myLibrary.library)
+#	myLibrary.firsttime = True
+#	print myLibrary.firsttime
+#	myLibrary.saveDecks()
