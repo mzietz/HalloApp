@@ -1,1 +1,12 @@
-[{"date": "2018-12-29 23:11:51.267609", "difficulty": 0, "chunk": 0, "question": "Error", "info1": "", "answer": "Deck leider nicht vorhanden", "learned": false, "info2": ""}]
+[
+  {
+    "answer": "Deck leider nicht vorhanden", 
+    "chunk": 0, 
+    "question": "Error", 
+    "info1": "", 
+    "difficulty": 2, 
+    "date": "2019-01-10 20:50:30.233347", 
+    "learned": false, 
+    "info2": ""
+  }
+]
