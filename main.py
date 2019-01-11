@@ -63,7 +63,7 @@ class DataPage(Screen):
     adjektive_image = StringProperty("data/pictures/deck_pilz.png")
     rest_image = StringProperty("data/pictures/deck_pilz.png")  
 
-class SwipeCardsApp(App):
+class OneApp(App):
     vocab1 = StringProperty()
     vocab2 = StringProperty()
     answer1 = StringProperty()
@@ -370,4 +370,4 @@ class SwipeCardsApp(App):
             self.vocabfrontpage.level_image = "data/pictures/B2.png"
 
 if __name__ == '__main__':
-    SwipeCardsApp().run()
+    OneApp().run()

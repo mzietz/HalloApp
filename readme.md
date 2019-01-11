@@ -1,4 +1,4 @@
-# 1 App
+# 1앱 - 1App
 
 ## A learning app for german learning koreans.
 
