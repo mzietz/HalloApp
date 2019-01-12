@@ -311,6 +311,7 @@
                     size_hint_x: None
                     allow_stretch: True
 <HomePage>:
+
     BoxLayout:
         padding: '30sp'
         orientation: 'vertical'
@@ -324,6 +325,7 @@
             UberImage:
                 source: 'data/pictures/home_titel_pilz.png'
         BoxLayout:
+            padding: '15sp'
             orientation: 'horizontal'
             size_hint:(1, 0.4)
 
@@ -349,7 +351,7 @@
             PostitButton:
                 id: data_button
                 on_release:
-                    app.go_to_data()
+                    app.go_to_data()               
                 ButtonImage:
                     source: 'data/pictures/data_button.png'
 

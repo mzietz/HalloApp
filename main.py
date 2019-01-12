@@ -16,6 +16,9 @@ from operator import itemgetter, attrgetter
 from jsonlibrary import Library
 from kivy.base import EventLoop
 
+from kivy.animation import Animation
+from kivy.clock import Clock
+
 class SwipeManager(ScreenManager):
     pass
 
@@ -35,6 +38,19 @@ class VocabFrontPage(Screen):
 
 class HomePage(Screen):
     picture = StringProperty("data/pictures/blackboard.png")
+    # first_time = True
+    # def on_enter(self):
+    #     if self.first_time:
+    #         Clock.schedule_once(self.animate, timeout=1.2)
+    #         self.first_time = False
+    #     else:
+    #         Clock.schedule_once(self.animate)
+    # def animate(self, dt):
+    #     for x in [self.ids.study_button, self.ids.settings_button, self.ids.data_button]:
+    #         animation = Animation(duration=.5)
+    #         animation = Animation(y=x.y+10, t='in_out_cubic', duration=.2)
+    #         animation += Animation(y=x.y-10, t='out_bounce', duration=.3)
+    #         animation.start(x)
 
 class ChunkPage(Screen):
     picture = StringProperty("data/pictures/blackboard.png")
@@ -115,8 +131,6 @@ class OneApp(App):
         self.lib.reset_learned_status()
         self.lib.current_chunk = self.lib.next_chunk()
         self.lib.next_card()
-        # print "größe Library:"+str(len(self.lib.library))
-        # print "Current Card:"+str(self.lib.current_card)
         self.vocab1 = self.lib.library[self.lib.current_card]["question"]
         self.answer1 = ""
         self.info11 = ""
@@ -128,6 +142,8 @@ class OneApp(App):
         self.answered = False
         self.cards_studied = str(self.lib.cards_studied())
         self.cards_not_studied = str(self.lib.cards_not_studied())
+
+
 
     def on_start(self):
         from kivy.base import EventLoop
@@ -156,14 +172,15 @@ class OneApp(App):
                 self.choose_deck_pictures(x["text"][2:])
                 self.set_deck_and_level_images("settingspage", x["text"][:2],x["text"][2:])
         self.lib.save_decks()
+        
 
     def go_to_settings(self):
-        self.sm.transition.direction = 'right'
+        self.sm.transition.direction = 'left'
         self.sm.current = 'settingspage'    
         self.settingspage.reset_string = "재설정하기"
 
     def go_to_data(self):
-        self.sm.transition.direction = 'right'
+        self.sm.transition.direction = 'left'
         self.sm.current = 'datapage'
 
     def go_to_vocab(self):
@@ -184,7 +201,7 @@ class OneApp(App):
         self.sm.current = 'chunkpage'
 
     def go_to_home(self):
-        self.sm.transition.direction = 'left'
+        self.sm.transition.direction = 'right'
         self.sm.current = 'home'
 
     def go_to_about(self):
@@ -251,7 +268,6 @@ class OneApp(App):
         self.coordinate = touch.x   
 
     def reset_current_deck(self):
-        print self.current_deck
         self.lib.reset_deck()
         self.cards_studied = str(self.lib.cards_studied())
         self.cards_not_studied = str(self.lib.cards_not_studied())
@@ -341,7 +357,6 @@ class OneApp(App):
         self.set_current_deck()
         self.reset_deck_pictures()
         self.choose_deck_pictures(deck)
-        print self.lib.current_deck
 
     def set_deck_and_level_images(self, page, level, deck):
         if deck == "nomen":
@@ -368,6 +383,17 @@ class OneApp(App):
         if level == "b2":
             self.settingspage.level_image = "data/pictures/B2.png"
             self.vocabfrontpage.level_image = "data/pictures/B2.png"
+
+    # def click_animate(self, instance):
+    #     # animation = Animation(size_hint_x = instance.size_hint_x - .05, duration=.01)
+    #     animation = Animation(size_hint_y = instance.size_hint_y - .05, duration=.01)
+    #     # animation += Animation(size_hint_x = instance.size_hint_x + .05, duration=.2)
+    #     animation += Animation(size_hint_y = instance.size_hint_y + .05, duration=.2)
+    #     animation.start(instance)
+    #     # animation = Animation(size_hint_x = instance.size_hint_x - .001, duration=.1)
+    #     # animation &= Animation(size_hint_y = instance.size_hint_y - .001, duration=.1)
+    #     # animation.start(instance)
+
 
 if __name__ == '__main__':
     OneApp().run()

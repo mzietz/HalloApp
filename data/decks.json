@@ -3,11 +3,11 @@
   "decks": [
     {
       "text": "a1nomen", 
-      "selected": false
+      "selected": true
     }, 
     {
       "text": "a1verben", 
-      "selected": true
+      "selected": false
     }, 
     {
       "text": "a1adjektive", 
