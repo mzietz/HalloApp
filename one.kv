@@ -10,32 +10,36 @@
         Rectangle:
             size: self.size
 
-<ButtonImage@Image>:
+<Scribble@Label>:
+    font_size: '38sp'
+    text_size: self.width, None
+    size_hint: 1, None
+    height: self.texture_size[1]
+    font_name: 'data/fonts/UhBee puding Bold'
+    color: 0, 0, 0 ,1
 
+<ButtonImage@Image>:
     size: self.parent.size
     pos: self.parent.pos  # important!
     size_hint_y: None
     size_hint_x: None
     allow_stretch: True
 
-<PostitButton@Button>:
+<BackButton@Button>:
+    background_color: (.99,.99,.99,0)
+    pos_hint: {"center_x": 0.22, 'y':0.04}
+    size_hint: 0.23, 0.2
+    id: data_button
+    on_release:
+        app.go_to_home()               
+    ButtonImage:
+        source: 'data/pictures/mario_hand_schatten.png'
 
+<ImageButton@Button>:
     background_color: (.99,.99,.99,0)
 
 <GridButton@Button>:
     background_color: (.99,.99,.99,0)
-
-<BackButton@Button>:
-    background_color: (.99,.99,.99,0)
-    on_release:
-        app.go_to_home()
-    Image:
-        source: 'data/pictures/mario_hand_schatten.png'
-        size: self.parent.size
-        pos: self.parent.pos 
-        size_hint_y: None
-        size_hint_x: None
-        allow_stretch: True
 
 <UberImage@Image>:
     size: self.parent.size
@@ -45,7 +49,6 @@
     allow_stretch: True
 
 <Question@Label>:
-
     text_size: self.width, None
     size_hint: 1, None
     height: self.texture_size[1]
@@ -199,456 +202,228 @@
 
 
 <VocabFrontPage>:
-
-    BoxLayout:
-        padding: '30sp'
-        orientation: 'vertical'
+    FloatLayout:
         canvas.before:
             Rectangle:
                 pos: self.pos
                 size: self.size
                 source: root.picture
         BoxLayout:
-            size_hint:(1, 0.3)
-
-            UberImage:
-                source: 'data/pictures/study_titel.png'
-        BoxLayout:
-            size_hint:(1, 0.05)
-
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
+            orientation: "vertical"
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source: 'data/pictures/stack.png'
+            pos_hint: {"center_x": 0.5, 'center_y':0.5}
+            size_hint: 0.85, 0.4
             BoxLayout:
-                size_hint:(0.05, 1)
+                orientation: "horizontal"
+                size_hint: 0.6, 0.2
+                pos_hint: {'center_x': 0.5}
+                Scribble:
+                    pos_hint: {'center_x': 0.5}
+                    text: " - " + str(root.level) + " " + str(root.deck) + " - "
             BoxLayout:
-                size_hint:(0.4, 1)
-                UberImage:
-                    source: 'data/pictures/deck_pilz.png'
+                size_hint: 1, 0.02
             BoxLayout:
-                size_hint:(0.2, 1)
-                UberImage:
-                    source: 'data/pictures/equal2.png'
-            BoxLayout:
-                size_hint:(0.2, 1)
-                UberImage:
-                    source: root.level_image
-            BoxLayout:
-                size_hint:(0.2, 1)
-                UberImage:
-                    source: root.deck_image
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
-            BoxLayout:
-                size_hint:(0.05, 1)
-            BoxLayout:
-                size_hint:(0.4, 1)
-                UberImage:
-                    source: 'data/pictures/learned.png'
-            BoxLayout:
-                size_hint:(0.1, 1)
-            BoxLayout:
-                orientation: 'vertical'
-                size_hint:(0.5, 1)
-        
-                BoxLayout:
-                Question:
-                    font_size: '50sp'
-                    text: app.cards_studied
-                    pos_hint: {'center': 1}
-                BoxLayout:
-                    size_hint:(0.5, 1)
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
-            BoxLayout:
-                size_hint:(0.05, 1)
-            BoxLayout:
-                size_hint:(0.4, 1)
-                UberImage:
-                    source: 'data/pictures/notlearned.png'
-            BoxLayout:
-                size_hint:(0.1, 1)
-            BoxLayout:
-                orientation: 'vertical'
-                size_hint:(0.5, 1)
-        
-                BoxLayout:
-                Question:
-                    font_size: '50sp'
-                    text: app.cards_not_studied
-                    pos_hint: {'center': 1}
-                BoxLayout:
-                    size_hint:(0.5, 1)
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            size_hint:(1, 0.1)
-    
-        BoxLayout:
-            padding: '10sp'
-            size_hint: (1 ,0.25)
-            orientation: 'horizontal'
-            BackButton:
-                size_hint: (0.35 ,1)
-            BoxLayout:
-                size_hint: (0.55 ,1)
-            Button:
-                size_hint: (0.35 ,1)
-                background_color: (.99,.99,.99,0)
-                on_release:
-                    app.go_to_vocab()
+                orientation: "horizontal"
+                size_hint: 1, 0.15
+                padding: [30,0,0,0]
                 Image:
-                    source: 'data/pictures/pilz_digital_schatten.png'
-                    size: self.parent.size
-                    pos: self.parent.pos 
-                    size_hint_y: None
-                    size_hint_x: None
-                    allow_stretch: True
+                    size_hint: 0.8, 1
+                    source: 'data/pictures/pfeil_gruen.png'
+                BoxLayout:
+                    size_hint: 0.1, 1
+                Scribble:
+                    text: str(app.swipe_right)
+                    pos_hint: {'center_y': 0.7}
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint: 1, 0.15
+                padding: [30,0,0,0]
+                Image:
+                    size_hint: 0.8, 1
+                    source: 'data/pictures/pfeil_rot.png'
+                BoxLayout:
+                    size_hint: 0.1, 1
+                Scribble:
+                    text: str(app.swipe_left)
+                    pos_hint: {'center_y': 0.7}
+            BoxLayout:
+                size_hint: 1, 0.05
+        ImageButton:
+            pos_hint: {"center_x": 0.8, 'y':0.04}
+            size_hint: 0.26, 0.2
+            id: data_button
+            on_release:
+                app.go_to_vocab()               
+            ButtonImage:
+                source: 'data/pictures/start_pixel.png'
+        BackButton:
+
 <HomePage>:
-
-    BoxLayout:
-        padding: '30sp'
+    FloatLayout:
         orientation: 'vertical'
         canvas.before:
             Rectangle:
                 pos: self.pos
                 size: self.size
                 source: root.picture
-        BoxLayout:
-            size_hint:(1, 0.3)
-            UberImage:
-                source: 'data/pictures/home_titel_pilz.png'
-        BoxLayout:
-            padding: '15sp'
-            orientation: 'horizontal'
-            size_hint:(1, 0.4)
-
-            PostitButton:
-                center_x: self.center_x
-                id: study_button
-                on_release:
-                    app.go_to_vocabfrontpage()
-                ButtonImage:
-                    source: 'data/pictures/deck_pilz.png'
-
-        BoxLayout:
-            orientation: 'horizontal'
-            size_hint:(1, 0.3)
-            PostitButton:
-                id: settings_button
-                on_release:
-                    app.go_to_settings()
-                ButtonImage:
-                    source: 'data/pictures/settings_button.png'
-            BoxLayout:       
-                size_hint:(0.2, 1)
-            PostitButton:
-                id: data_button
-                on_release:
-                    app.go_to_data()               
-                ButtonImage:
-                    source: 'data/pictures/data_button.png'
-
-<SettingsPage>:
-    BoxLayout:
-        padding: '30sp'
-        orientation: 'vertical'
-        canvas.before:
-            Rectangle:
-                pos: self.pos
-                size: self.size
-                source: root.picture
-        BoxLayout:
-
-            size_hint:(1, 0.3)
-            UberImage:
-                source: 'data/pictures/Setting_titel.png'
-        BoxLayout:
-            size_hint:(1, 0.05)
-        
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
-            BoxLayout:
-                size_hint:(0.05, 1)
-            BoxLayout:
-                size_hint:(0.4, 1)
-                UberImage:
-                    source: 'data/pictures/deck_pilz.png'
-            BoxLayout:
-                size_hint:(0.2, 1)
-                UberImage:
-                    source: 'data/pictures/equal2.png'
-            BoxLayout:
-                size_hint:(0.2, 1)
-                UberImage:
-                    source: root.level_image
-            BoxLayout:
-                size_hint:(0.2, 1)
-                UberImage:
-                    source: root.deck_image
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            size_hint:(1, 0.08)
-            padding: '5sp'
-            Image:
-                source: 'data/pictures/strich.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
-                allow_stretch: True     
-
-
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
-            BoxLayout:
-                size_hint:(0.05, 1)
-            Button:
-                size_hint:(0.4, 1)
-                background_color: (.99,.99,.99,0)
-                center_x: self.center_x
-                id: study_button
-                on_release:
-                    app.reset_current_deck()
-                ButtonImage:
-                    source: 'data/pictures/reset_button.png'
-            BoxLayout:
-                orientation: 'vertical'
-                size_hint:(0.6, 1)
-                BoxLayout:
-                Label:
-                    text_size: self.width, None
-                    size_hint: 1, None
-                    height: self.texture_size[1]
-                    valign: 'center'
-                    haldign: 'middle'
-                    font_name: 'data/fonts/TYPO_CRAYONM'
-                    color: 1, 1, 1 ,1
-                    text: root.reset_string #' 재설정하기'
-                    font_size: '34sp'
-                BoxLayout:
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
-            BoxLayout:
-                size_hint:(0.05, 1)
-            Button:
-                size_hint:(0.4, 1)
-                background_color: (.99,.99,.99,0)
-                center_x: self.center_x
-                id: study_button
-                on_release:
-                    app.go_to_about()
-                ButtonImage:
-                    source: 'data/pictures/about.png'
-            BoxLayout:
-                orientation: 'vertical'
-                size_hint:(0.6, 1)
-                BoxLayout:
-                Label:
-                    text_size: self.width, None
-                    size_hint: 1, None
-                    height: self.texture_size[1]
-                    valign: 'center'
-                    haldign: 'middle'
-                    font_name: 'data/fonts/DK Cool Crayon'
-                    color: 1, 1, 1 ,1
-#                   pos_hint: {'top': 1}
-                    text: ' About'
-                    font_size: '28sp'
-                BoxLayout:
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            orientation: 'horizontal'
-            padding: [15,0,0,0]
-            size_hint: (1 ,0.25)
-            BackButton:
-                size_hint: (0.35 ,1)
-            BoxLayout:
+        ImageButton:
+            size_hint: 0.6, 0.4
+            pos_hint: {"center_x": 0.5, 'center_y': 0.45}
+            id: study_button
+            on_release:
+                app.go_to_vocabfrontpage()
+            ButtonImage:
+                source: 'data/pictures/deck_hallo.png'
+        ImageButton:
+            pos_hint: {"center_x": 0.5, 'y':0.05}
+            size_hint: 0.3, 0.2
+            id: data_button
+            on_release:
+                app.go_to_data()               
+            ButtonImage:
+                source: 'data/pictures/data_button_stark.png'
             
 <DataPage>:
-    BoxLayout:
-        padding: '30sp'
-        orientation: 'vertical'
+    FloatLayout:
         canvas.before:
             Rectangle:
                 pos: self.pos
                 size: self.size
                 source: root.picture
-        BoxLayout:
-            size_hint:(1, 0.3)
-
-            UberImage:
-                source: 'data/pictures/data_titel2.png'
 
         BoxLayout:
-            size_hint:(1, 0.2)
             orientation: 'vertical'
-            GridLayout:
-                cols: 4
-                rows: 1
-                GridButton:
-                    id: label1
-                    on_release:
-                        app.on_level_button("a1")
-                    ButtonImage:
-                        source: root.a1_image
-                GridButton:
-                    id: label2
-                    on_release:
-                        app.on_level_button("a2")
-                    ButtonImage:
-                        source: root.a2_image
-                GridButton:
-                    id: label3
-                    on_release:
-                        app.on_level_button("b1")
-                    ButtonImage:
-                        source: root.b1_image
-                GridButton:
-                    id: label4
-                    on_release:
-                        app.on_level_button("b2")
-                    ButtonImage:
-                        source: root.b2_image
+            size_hint: 0.8, 0.5
+            pos_hint: {"center_x": 0.5, 'center_y': 0.5}
 
-        BoxLayout:
-            size_hint:(1, 0.4)
-            orientation: 'vertical'
-            GridLayout:
-                cols: 2
-                rows: 2
-                GridButton:
-                    id: label5
-                    on_release:
-                        app.on_deck_button("nomen")
-                    ButtonImage:
-                        source: root.nomen_image
-                GridButton:
-                    id: label6
-                    on_release:
-                        app.on_deck_button("verben")
-                    ButtonImage:
-                        source: root.verben_image
-                GridButton:
-                    id: label7
-                    on_release:
-                        app.on_deck_button("adjektive")
-                    ButtonImage:
-                        source: root.adjektive_image
-                GridButton:
-                    id: label8
-                    on_release:
-                        app.on_deck_button("rest")
-                    ButtonImage:
-                        source: root.rest_image
-        BoxLayout:
-            orientation: 'horizontal'
-            padding: [15,0,0,0]
-            size_hint: (1 ,0.25)
-            BackButton:
-                size_hint: (0.35 ,1)
             BoxLayout:
+                size_hint:(1, 0.3)
+                orientation: 'vertical'
+                GridLayout:
+                    cols: 4
+                    rows: 1
+                    GridButton:
+                        id: label1
+                        on_release:
+                            app.on_level_button("a1")
+                        ButtonImage:
+                            source: root.a1_image
+                    GridButton:
+                        id: label2
+                        on_release:
+                            app.on_level_button("a2")
+                        ButtonImage:
+                            source: root.a2_image
+                    GridButton:
+                        id: label3
+                        on_release:
+                            app.on_level_button("b1")
+                        ButtonImage:
+                            source: root.b1_image
+                    GridButton:
+                        id: label4
+                        on_release:
+                            app.on_level_button("b2")
+                        ButtonImage:
+                            source: root.b2_image
+            BoxLayout:
+                size_hint:(1, 0.6)
+                orientation: 'vertical'
+                GridLayout:
+                    cols: 2
+                    rows: 2
+                    GridButton:
+                        id: label5
+                        on_release:
+                            app.on_deck_button("nomen")
+                        ButtonImage:
+                            source: root.nomen_image
+                    GridButton:
+                        id: label6
+                        on_release:
+                            app.on_deck_button("verben")
+                        ButtonImage:
+                            source: root.verben_image
+                    GridButton:
+                        id: label7
+                        on_release:
+                            app.on_deck_button("adjektive")
+                        ButtonImage:
+                            source: root.adjektive_image
+                    GridButton:
+                        id: label8
+                        on_release:
+                            app.on_deck_button("rest")
+                        ButtonImage:
+                            source: root.rest_image
+        BackButton:
+
 
 <ChunkPage>:
-#   on_touch_down: app.touchdown(args[1])
-#   on_touch_up: app.touchup_on_chunkpage(args[1])
-    BoxLayout:
-        padding: '30sp'
-        orientation: 'vertical'
+    FloatLayout:
         canvas.before:
             Rectangle:
                 pos: self.pos
                 size: self.size
                 source: root.picture
-        BoxLayout:
-            size_hint:(1, 0.3)
 
-            UberImage:
-                source: 'data/pictures/chunk_titel.png'
         BoxLayout:
-            size_hint:(1, 0.15)
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
+            orientation: "vertical"
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source: 'data/pictures/stack.png'
+            pos_hint: {"center_x": 0.5, 'center_y':0.5}
+            size_hint: 0.85, 0.4
             BoxLayout:
-                size_hint:(0.05, 1)
+                orientation: "horizontal"
+                size_hint: 0.6, 0.2
+                pos_hint: {'center_x': 0.5}
+                Scribble:
+                    pos_hint: {'center_x': 0.5}
+                    text: " - " + str(root.level) + " " + str(root.deck) + " - "
             BoxLayout:
-                size_hint:(0.4, 1)
-                UberImage:
-                    source: 'data/pictures/learned.png'
+                size_hint: 1, 0.02
             BoxLayout:
-                size_hint:(0.1, 1)
-            BoxLayout:
-                orientation: 'vertical'
-                size_hint:(0.5, 1)
-        
-                BoxLayout:
-                Question:
-                    font_size: '50sp'
-                    text: app.cards_studied
-                    pos_hint: {'center': 1}
-                BoxLayout:
-                    size_hint:(0.5, 1)
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            size_hint:(1, 0.2)
-            orientation: 'horizontal'
-            BoxLayout:
-                size_hint:(0.05, 1)
-            BoxLayout:
-                size_hint:(0.4, 1)
-                UberImage:
-                    source: 'data/pictures/notlearned.png'
-            BoxLayout:
-                size_hint:(0.1, 1)
-            BoxLayout:
-                orientation: 'vertical'
-                size_hint:(0.5, 1)
-        
-                BoxLayout:
-                Question:
-                    font_size: '50sp'
-                    text: app.cards_not_studied
-                    pos_hint: {'center': 1}
-                BoxLayout:
-                    size_hint:(0.5, 1)
-            BoxLayout:
-                size_hint:(0.05, 1)
-        BoxLayout:
-            size_hint:(1, 0.2)
-    
-        BoxLayout:
-            padding: '10sp'
-            size_hint: (1 ,0.25)
-            orientation: 'horizontal'
-            BackButton:
-                size_hint: (0.35 ,1)
-            BoxLayout:
-                size_hint: (0.55 ,1)
-            Button:
-                size_hint: (0.35 ,1)
-                background_color: (.99,.99,.99,0)
-                on_release:
-                    app.go_to_vocab()
+                orientation: "horizontal"
+                size_hint: 1, 0.15
+                padding: [30,0,0,0]
                 Image:
-                    source: 'data/pictures/pilz_digital_schatten.png'
-                    size: self.parent.size
-                    pos: self.parent.pos 
-                    size_hint_y: None
-                    size_hint_x: None
-                    allow_stretch: True
+                    size_hint: 0.8, 1
+                    source: 'data/pictures/pfeil_gruen.png'
+                BoxLayout:
+                    size_hint: 0.1, 1
+                Scribble:
+                    text: str(app.swipe_right)
+                    pos_hint: {'center_y': 0.7}
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint: 1, 0.15
+                padding: [30,0,0,0]
+                Image:
+                    size_hint: 0.8, 1
+                    source: 'data/pictures/pfeil_rot.png'
+                BoxLayout:
+                    size_hint: 0.1, 1
+                Scribble:
+                    text: str(app.swipe_left)
+                    pos_hint: {'center_y': 0.7}
+            BoxLayout:
+                size_hint: 1, 0.05
+        ImageButton:
+            pos_hint: {"center_x": 0.8, 'y':0.04}
+            size_hint: 0.26, 0.2
+            id: data_button
+            on_release:
+                app.go_to_vocab()               
+            ButtonImage:
+                source: 'data/pictures/weiter_pixel.png'
+        BackButton:
 <AboutPage>:
     BoxLayout:
         padding: '30sp'
@@ -692,6 +467,16 @@
 
         BoxLayout:
             size_hint:(1, 0.7)
+            Button:
+#                size_hint:(0.4, 1)
+                background_color: (.99,.99,.99,0)
+                center_x: self.center_x
+                id: study_button
+                on_release:
+                    app.reset_current_deck()
+                    app.go_to_home()
+                ButtonImage:
+                    source: 'data/pictures/reset_button.png'
 
         BoxLayout:
             orientation: 'horizontal'

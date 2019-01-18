@@ -25,19 +25,20 @@ class SwipeManager(ScreenManager):
 class PageOne(Screen):
     picture = StringProperty("data/pictures/anleitung.png")
     picture_opacity = NumericProperty(1)
+
 class PageTwo(Screen):
     pass
 
 class FinishedPage(Screen):
-    picture = StringProperty("data/pictures/blackboard.png")
+    picture = StringProperty("data/pictures/homescreen.png")
 
 class VocabFrontPage(Screen):
-    picture = StringProperty("data/pictures/blackboard.png")
-    deck_image = StringProperty("")
-    level_image = StringProperty("")
+    picture = StringProperty("data/pictures/homescreen.png")
+    deck = StringProperty("")
+    level = StringProperty("")
 
 class HomePage(Screen):
-    picture = StringProperty("data/pictures/blackboard.png")
+    picture = StringProperty("data/pictures/homescreen.png")
     # first_time = True
     # def on_enter(self):
     #     if self.first_time:
@@ -53,31 +54,24 @@ class HomePage(Screen):
     #         animation.start(x)
 
 class ChunkPage(Screen):
-    picture = StringProperty("data/pictures/blackboard.png")
+    picture = StringProperty("data/pictures/homescreen.png")
+    deck = StringProperty("")
+    level = StringProperty("")
 
 class AboutPage(Screen):
     picture = StringProperty("data/pictures/aboutpage.png")
 
-class SettingsPage(Screen):
-    picture = StringProperty("data/pictures/blackboard.png")
-    deck_image = StringProperty("")
-    level_image = StringProperty("")
-    reset_string = StringProperty("재설정하기")
-    listpicture = StringProperty("data/pictures/stickynote_weiss.png")
-
 class DataPage(Screen):
-    picture = StringProperty("data/pictures/blackboard.png")
-    listpicture = StringProperty("data/pictures/stickynote_weiss.png")
-
+    picture = StringProperty("data/pictures/homescreen.png")
     a1_image = StringProperty("data/pictures/A1.png")
     a2_image = StringProperty("data/pictures/A2.png")
     b1_image = StringProperty("data/pictures/B1.png")
     b2_image = StringProperty("data/pictures/B2.png")
 
-    nomen_image = StringProperty("data/pictures/deck_pilz.png")
-    verben_image = StringProperty("data/pictures/deck_pilz.png")
-    adjektive_image = StringProperty("data/pictures/deck_pilz.png")
-    rest_image = StringProperty("data/pictures/deck_pilz.png")  
+    nomen_image = StringProperty("data/pictures/deck_hallo_raw.png")
+    verben_image = StringProperty("data/pictures/deck_hallo_raw.png")
+    adjektive_image = StringProperty("data/pictures/deck_hallo_raw.png")
+    rest_image = StringProperty("data/pictures/deck_hallo_raw.png")  
 
 class OneApp(App):
     vocab1 = StringProperty()
@@ -88,12 +82,9 @@ class OneApp(App):
     info12 = StringProperty()
     info21 = StringProperty()
     info22 = StringProperty()
-
     current_deck = StringProperty()
-    currentDeckInfo = StringProperty()
-
-    cards_studied = StringProperty()
-    cards_not_studied = StringProperty()
+    swipe_left = NumericProperty()
+    swipe_right = NumericProperty()
     
     def build(self):
         kivy.Config.set('graphics', 'width',  380)
@@ -103,7 +94,6 @@ class OneApp(App):
         self.sm.transition = SlideTransition(duration=.4, direction='left')
         self.homepage = HomePage(name = 'home')
         self.vocabfrontpage = VocabFrontPage(name = 'vocabfrontpage')
-        self.settingspage = SettingsPage(name = 'settingspage')
         self.datapage = DataPage(name = 'datapage')
         self.chunkpage = ChunkPage(name = 'chunkpage')
         self.pageone = PageOne(name ='pageone')
@@ -112,7 +102,6 @@ class OneApp(App):
         self.finishedpage = FinishedPage(name ='finishedpage')
         self.sm.add_widget(self.homepage)
         self.sm.add_widget(self.aboutpage)
-        self.sm.add_widget(self.settingspage)
         self.sm.add_widget(self.datapage)
         self.sm.add_widget(self.vocabfrontpage)
         self.sm.add_widget(self.chunkpage)
@@ -125,11 +114,12 @@ class OneApp(App):
         self.set_current_deck()
         self.lib.load_vocabs()
         self.load_intro()
+        self.swipe_left, self.swipe_right = self.lib.swipe_value()
         return self.sm
 
     def init(self):
-        self.lib.reset_learned_status()
         self.lib.current_chunk = self.lib.next_chunk()
+        self.lib.reset_learned_status()
         self.lib.next_card()
         self.vocab1 = self.lib.library[self.lib.current_card]["question"]
         self.answer1 = ""
@@ -140,10 +130,6 @@ class OneApp(App):
         self.info21 = ""
         self.info22 = ""
         self.answered = False
-        self.cards_studied = str(self.lib.cards_studied())
-        self.cards_not_studied = str(self.lib.cards_not_studied())
-
-
 
     def on_start(self):
         from kivy.base import EventLoop
@@ -172,12 +158,6 @@ class OneApp(App):
                 self.choose_deck_pictures(x["text"][2:])
                 self.set_deck_and_level_images("settingspage", x["text"][:2],x["text"][2:])
         self.lib.save_decks()
-        
-
-    def go_to_settings(self):
-        self.sm.transition.direction = 'left'
-        self.sm.current = 'settingspage'    
-        self.settingspage.reset_string = "재설정하기"
 
     def go_to_data(self):
         self.sm.transition.direction = 'left'
@@ -196,8 +176,7 @@ class OneApp(App):
         self.sm.transition.direction = 'left'
         self.lib.save_vocabs()
         self.lib.save_decks()
-        self.cards_studied = str(self.lib.cards_studied())
-        self.cards_not_studied = str(self.lib.cards_not_studied())
+        self.swipe_left, self.swipe_right = self.lib.swipe_value()
         self.sm.current = 'chunkpage'
 
     def go_to_home(self):
@@ -212,6 +191,7 @@ class OneApp(App):
         self.answered = False
         if self.lib.cards_left() == 1 and direction == 'left':
             self.go_to_chunkpage()
+            self.lib.add_swipe('right')
         else:   
             if direction == 'left':
                 self.lib.i_know_card()
@@ -229,6 +209,7 @@ class OneApp(App):
         self.answered = False
         if self.lib.cards_left() == 1 and direction == 'left':
             self.go_to_chunkpage()
+            self.lib.add_swipe('right')
         else:
             if direction == 'left':
                 self.lib.i_know_card()
@@ -259,19 +240,12 @@ class OneApp(App):
             self.answer2 = self.lib.library[self.lib.current_card]["answer"]
             self.info21 = self.lib.library[self.lib.current_card]["info1"]
             self.info22 = self.lib.library[self.lib.current_card]["info2"]
-    
-    def debug(self):
-        for i,x in enumerate(self.lib.library):
-            print str(i) + x["question"] 
 
     def touchdown(self, touch):
         self.coordinate = touch.x   
 
     def reset_current_deck(self):
         self.lib.reset_deck()
-        self.cards_studied = str(self.lib.cards_studied())
-        self.cards_not_studied = str(self.lib.cards_not_studied())
-        self.settingspage.reset_string = "재설정"
 
     def touchup_on_pagetwo(self, touch):
         self.distance = touch.x - self.coordinate       
@@ -301,20 +275,15 @@ class OneApp(App):
                 elif self.distance < -50:
                     self.go_to_two('left')  
 
-    def touchup_on_chunkpage(self, touch):
-        self.distance = touch.x - self.coordinate       
-        if self.distance < -50:
-            self.go_to_vocab()  
-
     def on_level_button(self, level):
         self.reset_level_pictures()
         self.choose_level_pictures(level)
     
     def reset_deck_pictures(self):
-        self.datapage.nomen_image = "data/pictures/deck_pilz.png"
-        self.datapage.verben_image = "data/pictures/deck_pilz.png"
-        self.datapage.adjektive_image = "data/pictures/deck_pilz.png"
-        self.datapage.rest_image = "data/pictures/deck_pilz.png"
+        self.datapage.nomen_image = "data/pictures/deck_hallo_raw.png"
+        self.datapage.verben_image = "data/pictures/deck_hallo_raw.png"
+        self.datapage.adjektive_image = "data/pictures/deck_hallo_raw.png"
+        self.datapage.rest_image = "data/pictures/deck_hallo_raw.png"
 
     def reset_level_pictures(self):
         self.datapage.a1_image = "data/pictures/A1.png"
@@ -360,29 +329,29 @@ class OneApp(App):
 
     def set_deck_and_level_images(self, page, level, deck):
         if deck == "nomen":
-            self.settingspage.deck_image = "data/pictures/nomen.png"
-            self.vocabfrontpage.deck_image = "data/pictures/nomen.png"
+            self.vocabfrontpage.deck = "명사"
+            self.chunkpage.deck = "명사"
         if deck == "verben":
-            self.settingspage.deck_image = "data/pictures/verben.png"       
-            self.vocabfrontpage.deck_image = "data/pictures/verben.png"     
+            self.vocabfrontpage.deck = "동사"     
+            self.chunkpage.deck = "동사"
         if deck == "adjektive":
-            self.settingspage.deck_image = "data/pictures/adjektive.png"        
-            self.vocabfrontpage.deck_image = "data/pictures/adjektive.png"      
+            self.vocabfrontpage.deck = "형용사"      
+            self.chunkpage.deck = "형용사"
         if deck == "rest":
-            self.settingspage.deck_image = "data/pictures/rest.png"
-            self.vocabfrontpage.deck_image = "data/pictures/rest.png"
+            self.vocabfrontpage.deck = "나머지"
+            self.chunkpage.deck = "나머지"
         if level == "a1":
-            self.settingspage.level_image = "data/pictures/A1.png"
-            self.vocabfrontpage.level_image = "data/pictures/A1.png"
+            self.vocabfrontpage.level = "A1"
+            self.chunkpage.level = "A1"
         if level == "a2":
-            self.settingspage.level_image = "data/pictures/A2.png"  
-            self.vocabfrontpage.level_image = "data/pictures/A2.png"    
+            self.vocabfrontpage.level = "A2"    
+            self.chunkpage.level = "A2"    
         if level == "b1":
-            self.settingspage.level_image = "data/pictures/B1.png"  
-            self.vocabfrontpage.level_image = "data/pictures/B1.png"    
+            self.vocabfrontpage.level = "B1"    
+            self.chunkpage.level = "B1"    
         if level == "b2":
-            self.settingspage.level_image = "data/pictures/B2.png"
-            self.vocabfrontpage.level_image = "data/pictures/B2.png"
+            self.vocabfrontpage.level = "B2"
+            self.chunkpage.level = "B2"
 
     # def click_animate(self, instance):
     #     # animation = Animation(size_hint_x = instance.size_hint_x - .05, duration=.01)
@@ -393,7 +362,6 @@ class OneApp(App):
     #     # animation = Animation(size_hint_x = instance.size_hint_x - .001, duration=.1)
     #     # animation &= Animation(size_hint_y = instance.size_hint_y - .001, duration=.1)
     #     # animation.start(instance)
-
 
 if __name__ == '__main__':
     OneApp().run()

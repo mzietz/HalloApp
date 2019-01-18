@@ -1,0 +1,101 @@
+{
+  "firsttime": false, 
+  "decks": [
+    {
+      "text": "a1nomen", 
+      "selected": true,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "a1verben", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "a1adjektive", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "a1rest", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "a2nomen", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "a2verben", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "a2adjektive", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "a2rest", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b1nomen", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b1verben", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b1adjektive", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b1rest", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b2nomen", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b2verben", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b2adjektive", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }, 
+    {
+      "text": "b2rest", 
+      "selected": false,
+      "swipe_left": 0,
+      "swipe_right": 0
+    }
+  ]
+}

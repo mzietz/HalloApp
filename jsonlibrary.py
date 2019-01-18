@@ -9,6 +9,7 @@ import datetime
 import random
 import math
 
+
 class Library:
     """This class implements a flashcard deck."""
     def __init__(self):
@@ -20,27 +21,37 @@ class Library:
         self.date = datetime.datetime.now()
         self.firsttime = None
         self.finished = False
+        # self.swipe_right = 0
+        # self.swipe_left = 0
         
     def __repr__(self):
         return "Library({})".format(self.date)
 
+    def library_logger(orig_func):
+        """Logging decorator logs all relevant library data"""
+        import logging
+        logging.basicConfig(level=logging.INFO)
+        def wrapper(self):
+            logging.info('Logger: Card: {}, Deck: {}, Chunk: {}, Difficulty: {}'.format(self.current_card, self.current_deck, self.current_chunk, self.difficulty))
+            return orig_func(self)
+        return wrapper
+
     def load_decks(self):
+        """Loads the decks from its json file"""
         with open(join("data/", 'decks.json')) as fd:
             data = json.load(fd)
             self.decks = data["decks"]
             self.firsttime = data["firsttime"]
 
     def save_decks(self):
-        """Saves libraries decks to a json file
-
-        This includes: names of the decks, which of the deck is selected,
-        and a flag indicating wether its the users first time using the app or not
-        """
+        """Saves libraries decks to a json file"""
         for x in self.decks:
             if x["text"] == self.current_deck:
                 x["selected"] = True
+#                print "saved {} as current deck".format(self.current_deck)
             else:
                 x["selected"] = False
+
         with open(join("data/", 'decks.json'), 'w') as fd:
             data = { "firsttime" : self.firsttime, "decks" : self.decks}
             json.dump(data, fd, indent=2)
@@ -53,7 +64,8 @@ class Library:
     def reset_learned_status(self):
         """Resets the status of all cards to not studied"""
         for x in self.library:
-            x["learned"] = False
+            if x["chunk"] == self.current_chunk:
+                x["learned"] = False
 
     def save_vocabs(self):
         """Saves the vocabs of the current deck to its json file"""
@@ -64,40 +76,34 @@ class Library:
         
         with open(join("data/", self.current_deck+'.json'), 'w') as fd:
             json.dump(self.library, fd, indent=2)
-
             
     def next_card(self):
         """Calculates which card appears next"""
         for x in self.library:
             if x["learned"] == False and x["chunk"] == self.current_chunk:
                 self.current_card = self.library.index(x)
-                # print "index" +str(self.library.index(x))
                 break
         
     def cards_left(self):
-        """Counts the decks left in the deck"""
+        """Counts the decks left in the current chunk"""
         i=0
         for x in self.library:
             if x["learned"] == False and x["chunk"] == self.current_chunk:
                 i+=1    
         return i
 
-    def cards_studied(self):
-        """Counts how many cards in the current deck have been studied"""
-        i=0
-        for x in xrange(int(math.ceil(len(self.library)/self.chunk_size))):
-            if self.library[x*self.chunk_size]["difficulty"] == 0:
-                i+=1    
-        return i
+    def add_swipe(self, direction):
+        """Adds left or right swipe to its respective counter"""
+        print "added"
+        if direction == 'right':
+            for x in self.decks:
+                if x["text"] == self.current_deck:
+                    x["swipe_right"] += 1
+        elif direction == 'left':
+            for x in self.decks:
+                if x["text"] == self.current_deck:
+                    x["swipe_left"] += 1
 
-    def cards_not_studied(self):
-        """Counts how many cards in the current deck havent been studied"""
-        i=0
-        for x in xrange(int(math.ceil(len(self.library)/float(self.chunk_size)))):
-            if self.library[x*self.chunk_size]["difficulty"] != False:
-                i+=1    
-        return i
-    
     def next_chunk(self):
         """Calculats which chunk of cards is next"""
         self.nextThree = []
@@ -115,11 +121,19 @@ class Library:
             return 0
         else:
             return random.choice(self.nextThree)
-    
+
+    def swipe_value(self):
+        for x in self.decks:
+            if x["text"] == self.current_deck:
+                return (x["swipe_left"], x["swipe_right"])
+
+    @library_logger
     def i_know_card(self):
         """Sets learned status of current card to True"""
         self.library[self.current_card]["learned"] = True
+        self.add_swipe('right')
 
+    @library_logger
     def i_dont_know_card(self):
         """ Sets learned status of current card to False and outs card to the back of the current chunk"""
         for x in self.library:
@@ -132,6 +146,7 @@ class Library:
                     self.library[-1]["learned"] = False
                 self.library.pop(self.current_card)
                 self.difficulty += 1
+                self.add_swipe('left')
                 break
 
     def reset_deck(self):
@@ -140,6 +155,7 @@ class Library:
         self.shuffle_library()
         for x in self.library:
             x["difficulty"] = 1
+            x["learned"] = False
             x["date"] = unicode(datetime.datetime.now())
         with open(join("data/", self.current_deck+'.json'), 'w') as fd:
             json.dump(self.library, fd, indent=2)
@@ -163,5 +179,6 @@ class Library:
 
 if __name__=="__main__":
     myLibrary = Library()
-    help(myLibrary)
-
+    myLibrary.load_decks()
+    myLibrary.current_deck = "a1adjektive"
+    myLibrary.load_vocabs()
