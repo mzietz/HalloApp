@@ -18,11 +18,8 @@ class Library:
         self.current_deck = ""
         self.difficulty = 1
         self.chunk_size = 10
-        self.date = datetime.datetime.now()
         self.firsttime = None
         self.finished = False
-        # self.swipe_right = 0
-        # self.swipe_left = 0
         
     def __repr__(self):
         return "Library({})".format(self.date)
@@ -72,7 +69,7 @@ class Library:
         for x in self.library:
             if x["chunk"] == self.current_chunk:
                 x["difficulty"] = self.difficulty
-                x["date"] = unicode(datetime.datetime.now())
+#                x["date"] = unicode(datetime.datetime.now())
         
         with open(join("data/", self.current_deck+'.json'), 'w') as fd:
             json.dump(self.library, fd, indent=2)
@@ -94,15 +91,16 @@ class Library:
 
     def add_swipe(self, direction):
         """Adds left or right swipe to its respective counter"""
-        print "added"
         if direction == 'right':
             for x in self.decks:
                 if x["text"] == self.current_deck:
                     x["swipe_right"] += 1
+#                    print "added right, total:" + str(x["swipe_right"])
         elif direction == 'left':
             for x in self.decks:
                 if x["text"] == self.current_deck:
                     x["swipe_left"] += 1
+#                    print "added left, total:" + str(x["swipe_left"])
 
     def next_chunk(self):
         """Calculats which chunk of cards is next"""
@@ -110,12 +108,13 @@ class Library:
         self.finished = False
         for x in xrange(3):
             if len(self.library) > 30: # in case of not yet implemented decks get selected
-                s = sorted(self.library, key=lambda k: (k['difficulty'], k['date']), reverse=True)[x*self.chunk_size]
+                s = sorted(self.library, key=lambda k: k['difficulty'], reverse=True)[x*self.chunk_size]
             else:
                 return 0
             if s['difficulty'] != 0:
                 self.nextThree.append(s["chunk"])
         self.difficulty = 0
+        print self.nextThree
         if not self.nextThree:
             self.finished = True
             return 0
@@ -156,7 +155,10 @@ class Library:
         for x in self.library:
             x["difficulty"] = 1
             x["learned"] = False
-            x["date"] = unicode(datetime.datetime.now())
+        for x in self.decks:
+            if x["text"] == self.current_deck:
+                x["swipe_left"] = 0
+                x["swipe_right"] = 0
         with open(join("data/", self.current_deck+'.json'), 'w') as fd:
             json.dump(self.library, fd, indent=2)
 
@@ -171,6 +173,7 @@ class Library:
             if n == self.chunk_size:
                 i+=1
                 n=0
+        list(reversed(self.library))
 
     def get_chunksize(self):
         """Calculates the amount of cards in a chunk"""

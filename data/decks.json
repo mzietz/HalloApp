@@ -2,10 +2,10 @@
   "firsttime": false, 
   "decks": [
     {
-      "swipe_left": 0, 
+      "swipe_left": 1, 
       "text": "a1nomen", 
-      "swipe_right": 44, 
-      "selected": true
+      "swipe_right": 83, 
+      "selected": false
     }, 
     {
       "swipe_left": 0, 
@@ -17,7 +17,7 @@
       "swipe_left": 0, 
       "text": "a1adjektive", 
       "swipe_right": 0, 
-      "selected": false
+      "selected": true
     }, 
     {
       "swipe_left": 14, 

@@ -31,7 +31,10 @@ class PageTwo(Screen):
 
 class FinishedPage(Screen):
     picture = StringProperty("data/pictures/homescreen.png")
-
+    # def on_enter(self):
+    #     animation = Animation(duration=.5)
+    #     animation = Animation(pos_hint_y = 1, t='in_out_cubic', duration=.2)
+    #     animation.start(self.ids.complete)
 class VocabFrontPage(Screen):
     picture = StringProperty("data/pictures/homescreen.png")
     deck = StringProperty("")
@@ -59,7 +62,7 @@ class ChunkPage(Screen):
     level = StringProperty("")
 
 class AboutPage(Screen):
-    picture = StringProperty("data/pictures/aboutpage.png")
+    picture = StringProperty("data/pictures/aboutdesign.png")
 
 class DataPage(Screen):
     picture = StringProperty("data/pictures/homescreen.png")
@@ -143,6 +146,7 @@ class OneApp(App):
 
     def go_to_vocabfrontpage(self):
         self.sm.transition.direction = 'left'
+        self.swipe_left, self.swipe_right = self.lib.swipe_value()
         self.lib.load_vocabs()
         self.init()
         self.sm.current = 'vocabfrontpage'
@@ -190,8 +194,8 @@ class OneApp(App):
     def go_to_one(self, direction):
         self.answered = False
         if self.lib.cards_left() == 1 and direction == 'left':
-            self.go_to_chunkpage()
             self.lib.add_swipe('right')
+            self.go_to_chunkpage()
         else:   
             if direction == 'left':
                 self.lib.i_know_card()
@@ -208,8 +212,8 @@ class OneApp(App):
     def go_to_two(self, direction):
         self.answered = False
         if self.lib.cards_left() == 1 and direction == 'left':
-            self.go_to_chunkpage()
             self.lib.add_swipe('right')
+            self.go_to_chunkpage()
         else:
             if direction == 'left':
                 self.lib.i_know_card()
