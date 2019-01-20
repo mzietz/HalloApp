@@ -30,41 +30,38 @@ class PageTwo(Screen):
     pass
 
 class FinishedPage(Screen):
+    back_image = StringProperty("data/pictures/mario_hand_schatten.png")
+
     picture = StringProperty("data/pictures/homescreen.png")
     # def on_enter(self):
     #     animation = Animation(duration=.5)
     #     animation = Animation(pos_hint_y = 1, t='in_out_cubic', duration=.2)
     #     animation.start(self.ids.complete)
 class VocabFrontPage(Screen):
+    back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     picture = StringProperty("data/pictures/homescreen.png")
+    start_image = StringProperty("data/pictures/start_pixel.png")
     deck = StringProperty("")
     level = StringProperty("")
 
 class HomePage(Screen):
     picture = StringProperty("data/pictures/homescreen.png")
-    # first_time = True
-    # def on_enter(self):
-    #     if self.first_time:
-    #         Clock.schedule_once(self.animate, timeout=1.2)
-    #         self.first_time = False
-    #     else:
-    #         Clock.schedule_once(self.animate)
-    # def animate(self, dt):
-    #     for x in [self.ids.study_button, self.ids.settings_button, self.ids.data_button]:
-    #         animation = Animation(duration=.5)
-    #         animation = Animation(y=x.y+10, t='in_out_cubic', duration=.2)
-    #         animation += Animation(y=x.y-10, t='out_bounce', duration=.3)
-    #         animation.start(x)
+    data_image = StringProperty("data/pictures/data_button_stark.png")
+    deck_image = StringProperty("data/pictures/deck_hallo.png")
 
 class ChunkPage(Screen):
     picture = StringProperty("data/pictures/homescreen.png")
+    back_image = StringProperty("data/pictures/mario_hand_schatten.png")
+    continue_image = StringProperty("data/pictures/weiter_pixel.png")
     deck = StringProperty("")
     level = StringProperty("")
 
 class AboutPage(Screen):
     picture = StringProperty("data/pictures/aboutdesign.png")
+    back_image = StringProperty("data/pictures/mario_hand_schatten.png")
 
 class DataPage(Screen):
+    back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     picture = StringProperty("data/pictures/homescreen.png")
     a1_image = StringProperty("data/pictures/A1.png")
     a2_image = StringProperty("data/pictures/A2.png")
@@ -331,6 +328,9 @@ class OneApp(App):
         self.reset_deck_pictures()
         self.choose_deck_pictures(deck)
 
+    def button_animation(self):
+        print "test"
+
     def set_deck_and_level_images(self, page, level, deck):
         if deck == "nomen":
             self.vocabfrontpage.deck = "명사"
@@ -357,15 +357,32 @@ class OneApp(App):
             self.vocabfrontpage.level = "B2"
             self.chunkpage.level = "B2"
 
-    # def click_animate(self, instance):
-    #     # animation = Animation(size_hint_x = instance.size_hint_x - .05, duration=.01)
-    #     animation = Animation(size_hint_y = instance.size_hint_y - .05, duration=.01)
-    #     # animation += Animation(size_hint_x = instance.size_hint_x + .05, duration=.2)
-    #     animation += Animation(size_hint_y = instance.size_hint_y + .05, duration=.2)
-    #     animation.start(instance)
-    #     # animation = Animation(size_hint_x = instance.size_hint_x - .001, duration=.1)
-    #     # animation &= Animation(size_hint_y = instance.size_hint_y - .001, duration=.1)
-    #     # animation.start(instance)
+    def click_animate(self, widget):
+        if widget == "back":
+            self.datapage.back_image = "data/pictures/mario_hand.png"
+            self.vocabfrontpage.back_image = "data/pictures/mario_hand.png"
+            self.chunkpage.back_image = "data/pictures/mario_hand.png"
+            self.finishedpage.back_image = "data/pictures/mario_hand.png"
+            self.aboutpage.back_image = "data/pictures/mario_hand.png"
+        if widget == "data":
+            self.homepage.data_image = "data/pictures/data_button_down.png"
+        if widget == "vocab":
+            self.homepage.deck_image = "data/pictures/deck_hallo_down.png"
+        if widget == "continue":
+            self.chunkpage.continue_image = "data/pictures/weiter_pixel_down.png"
+        if widget == "start":
+            self.vocabfrontpage.start_image = "data/pictures/start_pixel_down.png"
+
+    def reset_images(self, instance):
+        self.vocabfrontpage.back_image = "data/pictures/mario_hand_schatten.png"
+        self.datapage.back_image = "data/pictures/mario_hand_schatten.png"
+        self.chunkpage.back_image = "data/pictures/mario_hand_schatten.png"
+        self.aboutpage.back_image = "data/pictures/mario_hand_schatten.png"
+        self.homepage.deck_image = "data/pictures/deck_hallo.png"
+        self.homepage.data_image = "data/pictures/data_button_stark.png"
+        self.vocabfrontpage.start_image = "data/pictures/start_pixel.png"
+        self.chunkpage.continue_image = "data/pictures/weiter_pixel.png"
+
 
 if __name__ == '__main__':
     OneApp().run()

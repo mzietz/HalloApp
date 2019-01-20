@@ -30,10 +30,12 @@
     pos_hint: {"center_x": 0.22, 'y':0.04}
     size_hint: 0.23, 0.2
     id: data_button
+    on_press:
+        app.click_animate("back")              
     on_release:
         app.go_to_home()               
     ButtonImage:
-        source: 'data/pictures/mario_hand_schatten.png'
+        source: root.parent.parent.back_image
 
 <ImageButton@Button>:
     background_color: (.99,.99,.99,0)
@@ -186,6 +188,7 @@
 
 
 <VocabFrontPage>:
+    on_touch_up: app.reset_images(self)
     FloatLayout:
         canvas.before:
             Rectangle:
@@ -240,14 +243,16 @@
         ImageButton:
             pos_hint: {"center_x": 0.8, 'y':0.04}
             size_hint: 0.26, 0.2
-            id: data_button
+            on_press:
+                app.click_animate("start") 
             on_release:
                 app.go_to_vocab()               
             ButtonImage:
-                source: 'data/pictures/start_pixel.png'
+                source: root.start_image
         BackButton:
 
 <HomePage>:
+    on_touch_up: app.reset_images(self)
     FloatLayout:
         orientation: 'vertical'
         canvas.before:
@@ -265,20 +270,25 @@
             size_hint: 0.6, 0.4
             pos_hint: {"center_x": 0.5, 'center_y': 0.45}
             id: study_button
+            on_press:
+                app.click_animate("vocab")           
             on_release:
                 app.go_to_vocabfrontpage()
             ButtonImage:
-                source: 'data/pictures/deck_hallo.png'
+                source: root.deck_image
         ImageButton:
-            pos_hint: {"center_x": 0.5, 'y':0.05}
             size_hint: 0.3, 0.2
+            pos_hint: {"center_x": 0.5, 'y':0.05}
             id: data_button
+            on_press:
+                app.click_animate("data")
             on_release:
                 app.go_to_data()               
             ButtonImage:
-                source: 'data/pictures/data_button_stark.png'
+                source: root.data_image
             
 <DataPage>:
+    on_touch_up: app.reset_images(self)
     FloatLayout:
         canvas.before:
             Rectangle:
@@ -355,6 +365,8 @@
 
 
 <ChunkPage>:
+    on_touch_up: app.reset_images(self)
+
     FloatLayout:
         canvas.before:
             Rectangle:
@@ -411,13 +423,17 @@
         ImageButton:
             pos_hint: {"center_x": 0.8, 'y':0.04}
             size_hint: 0.26, 0.2
-            id: data_button
+            on_press:
+                app.click_animate("continue") 
             on_release:
                 app.go_to_vocab()               
             ButtonImage:
-                source: 'data/pictures/weiter_pixel.png'
+                source: root.continue_image
         BackButton:
+
 <AboutPage>:
+    on_touch_up: app.reset_images(self)
+
     FloatLayout:
         canvas.before:
             Rectangle:

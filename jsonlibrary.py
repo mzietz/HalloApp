@@ -29,7 +29,7 @@ class Library:
         import logging
         logging.basicConfig(level=logging.INFO)
         def wrapper(self):
-            logging.info('Logger: Card: {}, Deck: {}, Chunk: {}, Difficulty: {}'.format(self.current_card, self.current_deck, self.current_chunk, self.difficulty))
+            logging.info('Logger: Function: {}, Card: {}, Deck: {}, Chunk: {}, Difficulty: {}'.format(orig_func.__name__, self.current_card, self.current_deck, self.current_chunk, self.difficulty))
             return orig_func(self)
         return wrapper
 
@@ -114,7 +114,6 @@ class Library:
             if s['difficulty'] != 0:
                 self.nextThree.append(s["chunk"])
         self.difficulty = 0
-        print self.nextThree
         if not self.nextThree:
             self.finished = True
             return 0

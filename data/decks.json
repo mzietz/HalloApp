@@ -26,9 +26,9 @@
       "selected": false
     }, 
     {
-      "swipe_left": 0, 
+      "swipe_left": 1, 
       "text": "a2nomen", 
-      "swipe_right": 0, 
+      "swipe_right": 1, 
       "selected": false
     }, 
     {
@@ -50,9 +50,9 @@
       "selected": false
     }, 
     {
-      "swipe_left": 0, 
+      "swipe_left": 1, 
       "text": "b1nomen", 
-      "swipe_right": 0, 
+      "swipe_right": 2, 
       "selected": false
     }, 
     {
