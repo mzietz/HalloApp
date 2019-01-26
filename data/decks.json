@@ -17,7 +17,7 @@
       "swipe_left": 0, 
       "text": "a1adjektive", 
       "swipe_right": 0, 
-      "selected": true
+      "selected": false
     }, 
     {
       "swipe_left": 14, 
@@ -53,7 +53,7 @@
       "swipe_left": 1, 
       "text": "b1nomen", 
       "swipe_right": 2, 
-      "selected": false
+      "selected": true
     }, 
     {
       "swipe_left": 0, 

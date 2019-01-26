@@ -162,6 +162,7 @@ class OneApp(App):
 
     def go_to_data(self):
         self.sm.transition.direction = 'left'
+        self.set_current_deck()
         self.sm.current = 'datapage'
 
     def go_to_vocab(self):
