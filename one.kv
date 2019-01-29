@@ -41,84 +41,77 @@
     background_color: (.99,.99,.99,0)
 
 <Question@Label>:
-    text_size: self.width, None
     size_hint: 1, None
+    size : self.texture_size
+    text_size: self.width, None
     height: self.texture_size[1]
     valign: 'top'
     haldign: 'middle'
     font_name: 'data/fonts/DK Cool Crayon'
     color: 1, 1, 1 ,1
-    pos_hint: {'top': 1}
+    pos_hint: {'top': 1, 'center_x' : 0.5}
 
 <Answer@Label>:
-    size: self.texture_size
     text_size: self.width, None
     size_hint: 1, None
     height: self.texture_size[1]
-    valign: 'center'
+    valign: 'top'
     haldign: 'middle'
     font_name: 'data/fonts/TYPO_CRAYONM' 
+    pos_hint: {'top': 1}
     color: 1, 1, 1 ,1
 
 <PageOne>:
     on_touch_down: app.touchdown(args[1])
     on_touch_up: app.touchup_on_pageone(args[1])
 
-    BoxLayout:
-        spacing: 10
-        padding: '45sp'
-        orientation: 'vertical'
+    FloatLayout:
         canvas.before:
             Rectangle:
                 pos: self.pos
                 size: self.size
                 source: 'data/pictures/blackboard.png'
         BoxLayout:
-            height: self.minimum_height
-            width: self.parent.width/1.2
             orientation: 'vertical'
-            size_hint:(None, None)
+            spacing: 10
+            pos_hint: {"center_x": 0.5, 'center_y':0.5}
+            size_hint: 0.80, 0.85
+
+            BoxLayout:
+                height: self.minimum_height
+                width: self.parent.width
+                orientation: 'vertical'
+                size_hint:(None, None)
+                Question:
+                    font_size: '32sp'
+                    text: app.vocab1
+
+            Image:
+                size_hint:(None, None)
+                height: '30sp'
+                width: self.parent.width
+                source: 'data/pictures/strich.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+                allow_stretch: True
 
             Question:
-                font_size: '38sp'
-                text: app.vocab1
-
-        Image:
-            size_hint:(1, 0.1)
-            source: 'data/pictures/strich.png'
-            center_x: self.parent.center_x
-            center_y: self.parent.center_y
-            allow_stretch: True
-        BoxLayout
-            spacing: '10sp'
-            orientation: 'vertical'
+                font_name: 'data/fonts/TYPO_CRAYONM'
+                text: app.answer1
+                font_size: '40sp'
             BoxLayout:
-                height: self.minimum_height
-                width: self.parent.width
-                size_hint:(None, None)
-
-                Answer:
-                    text: app.answer1
-                    font_size: '38sp'
+                size_hint: 1, 0.05                
+            Question:
+                text: app.info11
+                font_name: 'data/fonts/DK Cool Crayon'
+                font_size: '30sp'
             BoxLayout:
-                padding: [20,20,0,0]
-                height: self.minimum_height
-                width: self.parent.width
-                size_hint:(None, None)
-
-                Answer:
-                    text: app.info11
-                    font_name: 'data/fonts/DK Cool Crayon'
-                    font_size: '26sp'
+                size_hint: 1, 0.05
+            Answer:
+                text: app.info12
+                font_name: 'data/fonts/DK Cool Crayon'
+                font_size: '30sp'               
             BoxLayout:
-                padding: [20,0,0,0]
-                height: self.minimum_height
-                width: self.parent.width
-                size_hint:(None, None)
-
-                Answer:
-                    text: app.info12
-                    font_size: '26sp'               
 
             BoxLayout:
                 Image:
@@ -133,59 +126,53 @@
     on_touch_down: app.touchdown(args[1])
     on_touch_up: app.touchup_on_pagetwo(args[1])
 
-    BoxLayout:
-        padding: '45sp'
-        spacing: 10
-        orientation: 'vertical'
+    FloatLayout:
         canvas.before:
             Rectangle:
                 pos: self.pos
                 size: self.size
                 source: 'data/pictures/blackboard.png'
         BoxLayout:
-            size_hint:(1, 0.1)
-            height: self.minimum_height
-            width: self.parent.width/1.2
-            size_hint:(None, None)
-            Question:
-                font_size: '38sp'
-                text: app.vocab2
-        Image:
-            size_hint:(1, 0.1)
-            source: 'data/pictures/strich.png'
-            center_x: self.parent.center_x
-            center_y: self.parent.center_y
-            allow_stretch: True
-        BoxLayout
-            spacing: '10sp'
             orientation: 'vertical'
-            BoxLayout:
-                height: self.minimum_height
-                width: self.parent.width
-                size_hint:(None, None)
-                Answer:
-                    text: app.answer2
-                    font_size: '38sp'
-            BoxLayout:
-                padding: [20,20,0,0]
-                height: self.minimum_height
-                width: self.parent.width
-                size_hint:(None, None)
-                Answer:
-                    text: app.info21
-                    font_name: 'data/fonts/DK Cool Crayon'
-                    font_size: '26sp'
-            BoxLayout:
-                padding: [20,0,0,0]
-                height: self.minimum_height
-                width: self.parent.width
-                size_hint:(None, None)
-                Answer:
-                    text: app.info22
-                    font_size: '26sp'               
+            spacing: 10
+            pos_hint: {"center_x": 0.5, 'center_y':0.5}
+            size_hint: 0.80, 0.85
 
             BoxLayout:
+                height: self.minimum_height
+                width: self.parent.width
+                orientation: 'vertical'
+                size_hint:(None, None)
+                Question:
+                    font_size: '32sp'
+                    text: app.vocab2
 
+            Image:
+                size_hint:(None, None)
+                height: '30sp'
+                width: self.parent.width
+                source: 'data/pictures/strich.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+                allow_stretch: True
+
+            Question:
+                font_name: 'data/fonts/TYPO_CRAYONM'
+                text: app.answer2
+                font_size: '40sp'
+            BoxLayout:
+                size_hint: 1, 0.05                
+            Question:
+                text: app.info21
+                font_name: 'data/fonts/DK Cool Crayon'
+                font_size: '30sp'
+            BoxLayout:
+                size_hint: 1, 0.05
+            Answer:
+                text: app.info22
+                font_name: 'data/fonts/DK Cool Crayon'
+                font_size: '30sp'               
+            BoxLayout:
 
 <VocabFrontPage>:
     on_touch_up: app.reset_images(self)
@@ -443,6 +430,8 @@
         BackButton:
 
 <FinishedPage>:
+    on_touch_up: app.reset_images(self)
+
     FloatLayout:
         canvas.before:
             Rectangle:
@@ -453,16 +442,16 @@
             id: complete
             source: 'data/pictures/complete.png'
             size_hint: 0.6, 0.4
-            pos_hint: {"y": 1, 'center_x': 0.5}
         ImageButton:
             size_hint: 0.6, 0.4
             pos_hint: {"center_x": 0.5, 'center_y': 0.45}
+            on_press:
+                app.click_animate("refresh")             
             on_release:
                 app.reset_current_deck()
                 app.go_to_home()
             ButtonImage:
-                source: 'data/pictures/deck_refresh.png'
-
+                source: root.refresh_image
         BackButton:
 
 <SwipeManager>

@@ -31,12 +31,20 @@ class PageTwo(Screen):
 
 class FinishedPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
-
     picture = StringProperty("data/pictures/homescreen.png")
-    # def on_enter(self):
-    #     animation = Animation(duration=.5)
-    #     animation = Animation(pos_hint_y = 1, t='in_out_cubic', duration=.2)
-    #     animation.start(self.ids.complete)
+    refresh_image = StringProperty("data/pictures/deck_refresh.png")
+    back_image = StringProperty("data/pictures/mario_hand_schatten.png")
+    
+    def __init__(self, **kwargs):
+        super(FinishedPage, self).__init__(**kwargs)#
+        self.ids.complete.pos_hint ={'center_y': 1.3, 'center_x': .5}
+        self.ids.complete.size_hint =(.6, .6)
+
+    def on_enter(self):
+        animation = Animation(duration=.5)
+        animation = Animation(pos_hint = {'center_y': 0.84}, t='in_out_cubic', duration=1)
+        animation.start(self.ids.complete)
+
 class VocabFrontPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     picture = StringProperty("data/pictures/homescreen.png")
@@ -373,16 +381,20 @@ class OneApp(App):
             self.chunkpage.continue_image = "data/pictures/weiter_pixel_down.png"
         if widget == "start":
             self.vocabfrontpage.start_image = "data/pictures/start_pixel_down.png"
+        if widget == "refresh":
+            self.finishedpage.refresh_image = "data/pictures/deck_refresh_down.png"
 
     def reset_images(self, instance):
         self.vocabfrontpage.back_image = "data/pictures/mario_hand_schatten.png"
         self.datapage.back_image = "data/pictures/mario_hand_schatten.png"
         self.chunkpage.back_image = "data/pictures/mario_hand_schatten.png"
         self.aboutpage.back_image = "data/pictures/mario_hand_schatten.png"
+        self.finishedpage.back_image = "data/pictures/mario_hand_schatten.png"
         self.homepage.deck_image = "data/pictures/deck_hallo.png"
         self.homepage.data_image = "data/pictures/data_button_stark.png"
         self.vocabfrontpage.start_image = "data/pictures/start_pixel.png"
         self.chunkpage.continue_image = "data/pictures/weiter_pixel.png"
+        self.finishedpage.refresh_image = "data/pictures/deck_refresh.png"
 
 
 if __name__ == '__main__':

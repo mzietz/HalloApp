@@ -1,1 +1,12 @@
-[{"date": "2018-12-29 18:56:28.520464", "difficulty": 0, "chunk": 0, "question": "Error", "info1": "", "answer": "Deck leider nicht vorhanden", "learned": false, "info2": ""}]
+[
+  {
+    "date": "2018-12-29 18:56:28.520464", 
+    "difficulty": 1, 
+    "chunk": 0, 
+    "question": "BeispielsatzBeispielsatzBeispielsatz", 
+    "info1": "", 
+    "answer": "\ud314", 
+    "learned": false, 
+    "info2": "Beispielsatz der als Beispielsatz z\u00e4hlt. Beispielsatz der als Beispielsatz z\u00e4hlt."
+  }
+]
