@@ -1,12 +1,22 @@
 [
   {
-    "date": "2018-12-19 12:08:38.804181", 
-    "difficulty": 2, 
+    "answer": "\ub3c4\ucc29", 
+    "difficulty": 1, 
     "chunk": 0, 
-    "question": "Error", 
+    "question": "die Ankunft", 
+    "info1": "(die Ank\u00fcnfte)", 
+    "date": "2019-01-12 14:59:16.552259", 
+    "learned": true, 
+    "info2": "Auf diesem Plan steht nur die Ankunft(-szeit) der Z\u00fcge."
+  }, 
+  {
+    "answer": "\ub3c4\ucc29", 
+    "difficulty": 1, 
+    "chunk": 0, 
+    "question": "die Ankunft", 
     "info1": "", 
-    "answer": "Deck leider nicht vorhanden", 
+    "date": "2019-01-12 14:59:16.552259", 
     "learned": false, 
-    "info2": ""
+    "info2": "Auf diesem Plan steht nur die Ankunftszeit der Z\u00fcge."
   }
 ]

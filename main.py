@@ -37,12 +37,12 @@ class FinishedPage(Screen):
     
     def __init__(self, **kwargs):
         super(FinishedPage, self).__init__(**kwargs)#
-        self.ids.complete.pos_hint ={'center_y': 1.3, 'center_x': .5}
-        self.ids.complete.size_hint =(.6, .6)
+        self.ids.complete.pos_hint ={'center_y': 1.35, 'center_x': .5}
+        self.ids.complete.size_hint =(.65, .65)
 
     def on_enter(self):
         animation = Animation(duration=.5)
-        animation = Animation(pos_hint = {'center_y': 0.84}, t='in_out_cubic', duration=1)
+        animation = Animation(pos_hint = {'center_y': 0.9}, t='in_out_cubic', duration=1)
         animation.start(self.ids.complete)
 
 class VocabFrontPage(Screen):

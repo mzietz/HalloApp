@@ -83,7 +83,6 @@
                 size_hint:(None, None)
                 Question:
                     font_size: '34sp'
-#                    text: "PPPP"
                     text: app.vocab1
             Image:
                 size_hint:(None, None)
@@ -94,15 +93,15 @@
                 center_y: self.parent.center_y
                 allow_stretch: True
             Question:
+                text: app.info11
+                font_name: 'data/fonts/DK Cool Crayon'
+                font_size: '20sp'
+#            BoxLayout:
+#                size_hint: 1, 0.02
+            Question:
                 font_name: 'data/fonts/TYPO_CRAYONM'
                 text: app.answer1
                 font_size: '34sp'
-            BoxLayout:
-                size_hint: 1, 0.05
-            Question:
-                text: app.info11
-                font_name: 'data/fonts/DK Cool Crayon'
-                font_size: '26sp'
             BoxLayout:
                 size_hint: 1, 0.05
             Answer:
@@ -155,15 +154,15 @@
                 allow_stretch: True
 
             Question:
+                text: app.info21
+                font_name: 'data/fonts/DK Cool Crayon'
+                font_size: '20sp'
+ #           BoxLayout:
+#                size_hint: 1, 0.02                
+            Question:
                 font_name: 'data/fonts/TYPO_CRAYONM'
                 text: app.answer2
                 font_size: '34sp'
-            BoxLayout:
-                size_hint: 1, 0.05                
-            Question:
-                text: app.info21
-                font_name: 'data/fonts/DK Cool Crayon'
-                font_size: '26sp'
             BoxLayout:
                 size_hint: 1, 0.05
             Answer:
