@@ -1,21 +1,21 @@
 [
   {
-    "answer": "\ub3c4\ucc29", 
-    "difficulty": 1, 
+    "date": "2019-01-12 14:59:16.552259", 
     "chunk": 0, 
     "question": "die Ankunft", 
     "info1": "(die Ank\u00fcnfte)", 
-    "date": "2019-01-12 14:59:16.552259", 
+    "difficulty": 1, 
+    "answer": "\ub3c4\ucc29", 
     "learned": true, 
     "info2": "Auf diesem Plan steht nur die Ankunft(-szeit) der Z\u00fcge."
   }, 
   {
-    "answer": "\ub3c4\ucc29", 
-    "difficulty": 1, 
+    "date": "2019-01-12 14:59:16.552259", 
     "chunk": 0, 
     "question": "die Ankunft", 
-    "info1": "", 
-    "date": "2019-01-12 14:59:16.552259", 
+    "info1": "die Ank\u00fcnfte", 
+    "difficulty": 1, 
+    "answer": "\ub3c4\ucc29", 
     "learned": false, 
     "info2": "Auf diesem Plan steht nur die Ankunftszeit der Z\u00fcge."
   }

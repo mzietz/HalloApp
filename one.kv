@@ -65,6 +65,7 @@
     on_touch_up: app.touchup_on_pageone(args[1])
 
     FloatLayout:
+        id: float
         canvas.before:
             Rectangle:
                 pos: self.pos
@@ -117,6 +118,11 @@
                     opacity: root.picture_opacity
                     pos: self.parent.pos 
                     allow_stretch: True
+        Image:
+            id: right
+            source: root.picture_answer
+ #           size_hint: 0.6, 0.4
+            allow_stretch: True
 
 
 <PageTwo>:
@@ -170,6 +176,10 @@
                 font_name: 'data/fonts/DK Cool Crayon'
                 font_size: '26sp'               
             BoxLayout:
+        Image:
+            id: right
+            source: root.picture_answer
+            allow_stretch: True
 
 <VocabFrontPage>:
     on_touch_up: app.reset_images(self)

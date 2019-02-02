@@ -4,7 +4,7 @@
     {
       "swipe_left": 1, 
       "text": "a1nomen", 
-      "swipe_right": 160, 
+      "swipe_right": 200, 
       "selected": true
     }, 
     {
@@ -52,7 +52,7 @@
     {
       "swipe_left": 3, 
       "text": "b1nomen", 
-      "swipe_right": 18, 
+      "swipe_right": 20, 
       "selected": false
     }, 
     {

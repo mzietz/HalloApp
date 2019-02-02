@@ -24,10 +24,30 @@ class SwipeManager(ScreenManager):
 
 class PageOne(Screen):
     picture = StringProperty("data/pictures/anleitung.png")
+    picture_answer = StringProperty("")
     picture_opacity = NumericProperty(1)
 
+    def __init__(self, **kwargs):
+        super(PageOne, self).__init__(**kwargs)
+        self.ids.right.pos_hint ={'center_y': -0.2, 'center_x': .5}
+        self.ids.right.size_hint =(0.7, 1)
+
+    def on_pre_enter(self):
+        animation = Animation(pos_hint = {'center_y': 0.2}, t='in_out_cubic', duration=0.5)
+        animation += Animation(pos_hint = {'center_y': -0.2}, t='in_out_cubic', duration=0.7)
+        animation.start(self.ids.right)
 class PageTwo(Screen):
-    pass
+    picture_answer = StringProperty("")
+
+    def __init__(self, **kwargs):
+        super(PageTwo, self).__init__(**kwargs)
+        self.ids.right.pos_hint ={'center_y': -0.2, 'center_x': .5}
+        self.ids.right.size_hint =(0.7, 1)
+
+    def on_pre_enter(self):
+        animation = Animation(pos_hint = {'center_y': 0.2}, t='in_out_cubic', duration=0.5)
+        animation += Animation(pos_hint = {'center_y': -0.2}, t='in_out_cubic', duration=0.7)
+        animation.start(self.ids.right)
 
 class FinishedPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
@@ -36,7 +56,7 @@ class FinishedPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     
     def __init__(self, **kwargs):
-        super(FinishedPage, self).__init__(**kwargs)#
+        super(FinishedPage, self).__init__(**kwargs)
         self.ids.complete.pos_hint ={'center_y': 1.35, 'center_x': .5}
         self.ids.complete.size_hint =(.65, .65)
 
@@ -138,6 +158,8 @@ class OneApp(App):
         self.info21 = ""
         self.info22 = ""
         self.answered = False
+        self.pageone.picture_answer = "data/pictures/empty.png"
+        self.pagetwo.picture_answer = "data/pictures/empty.png"
 
     def on_start(self):
         from kivy.base import EventLoop
@@ -205,8 +227,10 @@ class OneApp(App):
         else:   
             if direction == 'left':
                 self.lib.i_know_card()
+                self.pageone.picture_answer = "data/pictures/plusone_gruen.png"
             elif direction == 'right':
                 self.lib.i_dont_know_card()
+                self.pageone.picture_answer = "data/pictures/plusone_rot.png"
             self.lib.next_card()
             self.vocab1 = self.lib.library[self.lib.current_card]["question"]
             self.answer1 = ""
@@ -222,8 +246,10 @@ class OneApp(App):
             self.go_to_chunkpage()
         else:
             if direction == 'left':
+                self.pagetwo.picture_answer = "data/pictures/plusone_gruen.png"
                 self.lib.i_know_card()
             elif direction == 'right':
+                self.pagetwo.picture_answer = "data/pictures/plusone_rot.png"
                 self.lib.i_dont_know_card()
             self.lib.next_card()
             self.vocab2 = self.lib.library[self.lib.current_card]["question"]
@@ -294,7 +320,12 @@ class OneApp(App):
         self.datapage.verben_image = "data/pictures/deck_hallo_raw.png"
         self.datapage.adjektive_image = "data/pictures/deck_hallo_raw.png"
         self.datapage.rest_image = "data/pictures/deck_hallo_raw.png"
-
+        # if self.currentLevel == "a1" or self.currentLevel == "a2":
+        # elif self.currentLevel == "b1" or self.currentLevel == "b2":
+        #     self.datapage.nomen_image = "data/pictures/deck_hallo_grey.png"
+        #     self.datapage.verben_image = "data/pictures/deck_hallo_grey.png"
+        #     self.datapage.adjektive_image = "data/pictures/deck_hallo_grey.png"
+        #     self.datapage.rest_image = "data/pictures/deck_hallo_grey.png"
     def reset_level_pictures(self):
         self.datapage.a1_image = "data/pictures/A1.png"
         self.datapage.a2_image = "data/pictures/A2.png"
@@ -311,6 +342,16 @@ class OneApp(App):
         if deck == "rest":
             self.datapage.rest_image = "data/pictures/rest.png"
 
+        # if self.currentLevel == "a1" or self.currentLevel == "a2":
+        # elif self.currentLevel == "b1" or self.currentLevel == "b2":
+        #     if deck == "nomen":
+        #         self.datapage.nomen_image = "data/pictures/nomen_grey.png"
+        #     if deck == "verben":
+        #         self.datapage.verben_image = "data/pictures/verben_grey.png"     
+        #     if deck == "adjektive":
+        #         self.datapage.adjektive_image = "data/pictures/adjektive_grey.png"       
+        #     if deck == "rest":
+        #         self.datapage.rest_image = "data/pictures/rest_grey.png"
     def choose_level_pictures(self, level):
         if level == "a1":
             self.currentLevel = "a1"
@@ -395,7 +436,6 @@ class OneApp(App):
         self.vocabfrontpage.start_image = "data/pictures/start_pixel.png"
         self.chunkpage.continue_image = "data/pictures/weiter_pixel.png"
         self.finishedpage.refresh_image = "data/pictures/deck_refresh.png"
-
 
 if __name__ == '__main__':
     OneApp().run()
