@@ -11,7 +11,6 @@ from kivy.properties import StringProperty, NumericProperty, ObjectProperty, Boo
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.behaviors import FocusBehavior
-from kivy.properties import ListProperty, NumericProperty
 from operator import itemgetter, attrgetter
 from jsonlibrary import Library
 from kivy.base import EventLoop
@@ -29,24 +28,24 @@ class PageOne(Screen):
 
     def __init__(self, **kwargs):
         super(PageOne, self).__init__(**kwargs)
-        self.ids.right.pos_hint ={'center_y': -0.2, 'center_x': .5}
+        self.ids.right.pos_hint ={'center_y': -0.3, 'center_x': .5}
         self.ids.right.size_hint =(0.7, 1)
 
     def on_pre_enter(self):
         animation = Animation(pos_hint = {'center_y': 0.2}, t='in_out_cubic', duration=0.5)
-        animation += Animation(pos_hint = {'center_y': -0.2}, t='in_out_cubic', duration=0.7)
+        animation += Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.7)
         animation.start(self.ids.right)
 class PageTwo(Screen):
     picture_answer = StringProperty("")
 
     def __init__(self, **kwargs):
         super(PageTwo, self).__init__(**kwargs)
-        self.ids.right.pos_hint ={'center_y': -0.2, 'center_x': .5}
+        self.ids.right.pos_hint ={'center_y': -0.3, 'center_x': .5}
         self.ids.right.size_hint =(0.7, 1)
 
     def on_pre_enter(self):
         animation = Animation(pos_hint = {'center_y': 0.2}, t='in_out_cubic', duration=0.5)
-        animation += Animation(pos_hint = {'center_y': -0.2}, t='in_out_cubic', duration=0.7)
+        animation += Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.7)
         animation.start(self.ids.right)
 
 class FinishedPage(Screen):
@@ -58,11 +57,11 @@ class FinishedPage(Screen):
     def __init__(self, **kwargs):
         super(FinishedPage, self).__init__(**kwargs)
         self.ids.complete.pos_hint ={'center_y': 1.35, 'center_x': .5}
-        self.ids.complete.size_hint =(.65, .65)
+        self.ids.complete.size_hint =(.60, .60)
 
     def on_enter(self):
         animation = Animation(duration=.5)
-        animation = Animation(pos_hint = {'center_y': 0.9}, t='in_out_cubic', duration=1)
+        animation = Animation(pos_hint = {'center_y': 0.85}, t='in_out_cubic', duration=1)
         animation.start(self.ids.complete)
 
 class VocabFrontPage(Screen):
@@ -227,10 +226,10 @@ class OneApp(App):
         else:   
             if direction == 'left':
                 self.lib.i_know_card()
-                self.pageone.picture_answer = "data/pictures/plusone_gruen.png"
+                self.pageone.picture_answer = "data/pictures/plusone_green.png"
             elif direction == 'right':
                 self.lib.i_dont_know_card()
-                self.pageone.picture_answer = "data/pictures/plusone_rot.png"
+                self.pageone.picture_answer = "data/pictures/plusone_red.png"
             self.lib.next_card()
             self.vocab1 = self.lib.library[self.lib.current_card]["question"]
             self.answer1 = ""
@@ -246,10 +245,10 @@ class OneApp(App):
             self.go_to_chunkpage()
         else:
             if direction == 'left':
-                self.pagetwo.picture_answer = "data/pictures/plusone_gruen.png"
+                self.pagetwo.picture_answer = "data/pictures/plusone_green.png"
                 self.lib.i_know_card()
             elif direction == 'right':
-                self.pagetwo.picture_answer = "data/pictures/plusone_rot.png"
+                self.pagetwo.picture_answer = "data/pictures/plusone_red.png"
                 self.lib.i_dont_know_card()
             self.lib.next_card()
             self.vocab2 = self.lib.library[self.lib.current_card]["question"]
