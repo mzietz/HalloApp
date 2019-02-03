@@ -179,6 +179,12 @@ class Library:
         c = Counter(x["chunk"] for x in self.library)
         return c[self.current_chunk]
 
+    def get_decksize(self):
+        """Gets the amount of cards in a deck"""
+        for x in self.decks:
+            if x["text"] == self.current_deck:
+                return x["cards"]
+
 if __name__=="__main__":
     myLibrary = Library()
     myLibrary.load_decks()

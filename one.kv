@@ -218,7 +218,7 @@
                 BoxLayout:
                     size_hint: 0.1, 1
                 Scribble:
-                    text: str(app.swipe_right)
+                    text: str(app.swipe_right_total)
                     pos_hint: {'center_y': 0.7}
             BoxLayout:
                 orientation: "horizontal"
@@ -231,7 +231,7 @@
                 BoxLayout:
                     size_hint: 0.1, 1
                 Scribble:
-                    text: str(app.swipe_left)
+                    text: str(app.swipe_left_total)
                     pos_hint: {'center_y': 0.7}
             BoxLayout:
                 size_hint: 1, 0.05
@@ -293,14 +293,16 @@
 
         BoxLayout:
             orientation: 'vertical'
-            size_hint: 0.8, 0.5
+            spacing: 10
+            size_hint: 0.8, 0.48
             pos_hint: {"center_x": 0.5, 'center_y': 0.5}
 
             BoxLayout:
-                size_hint:(1, 0.3)
+                size_hint:(0.85, 0.24)
+                pos_hint: {"center_x": 0.5}
                 orientation: 'vertical'
                 GridLayout:
-                    cols: 4
+                    cols: 3
                     rows: 1
                     ImageButton:
                         id: label1
@@ -320,14 +322,14 @@
                             app.on_level_button("b1")
                         ButtonImage:
                             source: root.b1_image
-                    ImageButton:
-                        id: label4
-                        on_release:
-                            app.on_level_button("b2")
-                        ButtonImage:
-                            source: root.b2_image
+#                    ImageButton:
+#                        id: label4
+#                        on_release:
+#                            app.on_level_button("b2")
+#                        ButtonImage:
+#                            source: root.b2_image
             BoxLayout:
-                size_hint:(1, 0.6)
+                size_hint:(1, 0.5)
                 orientation: 'vertical'
                 GridLayout:
                     cols: 2
@@ -356,6 +358,22 @@
                             app.on_deck_button("rest")
                         ButtonImage:
                             source: root.rest_image
+        BoxLayout:
+            padding: '12sp'
+            id: size
+            orientation: "vertical"
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source: 'data/pictures/schild.png'
+            Answer:
+                text: "카드의 수:"
+                font_size: '28sp' 
+            Answer:
+                text: "  " + str(root.deck_size)
+                font_size: '40sp'
+            BoxLayout:
         BackButton:
 
 
@@ -384,7 +402,9 @@
                 pos_hint: {'center_x': 0.5}
                 Scribble:
                     pos_hint: {'center_x': 0.5}
-                    text: " - " + str(root.level) + " " + str(root.deck) + " - "
+#                    text: " - " + str(root.level) + " " + str(root.deck) + " - "
+                    text: "- 지난 10 카드 -"
+                    font_size: '32sp'
             BoxLayout:
                 size_hint: 1, 0.02
             BoxLayout:
@@ -398,7 +418,7 @@
                 BoxLayout:
                     size_hint: 0.1, 1
                 Scribble:
-                    text: str(app.swipe_right)
+                    text: str(app.swipe_right_chunk)
                     pos_hint: {'center_y': 0.7}
             BoxLayout:
                 orientation: "horizontal"
@@ -411,7 +431,7 @@
                 BoxLayout:
                     size_hint: 0.1, 1
                 Scribble:
-                    text: str(app.swipe_left)
+                    text: str(app.swipe_left_chunk)
                     pos_hint: {'center_y': 0.7}
             BoxLayout:
                 size_hint: 1, 0.05
@@ -424,6 +444,11 @@
                 app.go_to_vocab()               
             ButtonImage:
                 source: root.continue_image
+        Image:
+            id: chunk_complete
+            source: 'data/pictures/complete.png'
+            allow_stretch: True
+
         BackButton:
 
 <AboutPage>:

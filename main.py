@@ -35,6 +35,7 @@ class PageOne(Screen):
         animation = Animation(pos_hint = {'center_y': 0.2}, t='in_out_cubic', duration=0.5)
         animation += Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.7)
         animation.start(self.ids.right)
+
 class PageTwo(Screen):
     picture_answer = StringProperty("")
 
@@ -82,7 +83,21 @@ class ChunkPage(Screen):
     continue_image = StringProperty("data/pictures/weiter_pixel.png")
     deck = StringProperty("")
     level = StringProperty("")
+    chunk_complete = BooleanProperty()
+    def __init__(self, **kwargs):
+        super(ChunkPage, self).__init__(**kwargs)
+        self.ids.chunk_complete.pos_hint ={'center_y': 1.35, 'center_x': .5}
+        self.ids.chunk_complete.size_hint =(.60, .60)
 
+    def on_enter(self):
+        if self.chunk_complete:
+            animation = Animation(pos_hint = {'center_y': 0.85}, t='in_out_cubic', duration=0.5)
+            animation.start(self.ids.chunk_complete)
+        else:
+            pass
+    def reset_image(self):
+        animation = Animation(pos_hint = {'center_y': 1.35}, t='in_out_cubic', duration=0.5)
+        animation.start(self.ids.chunk_complete)
 class AboutPage(Screen):
     picture = StringProperty("data/pictures/aboutdesign.png")
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
@@ -90,15 +105,39 @@ class AboutPage(Screen):
 class DataPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     picture = StringProperty("data/pictures/homescreen.png")
+    size_image = StringProperty("data/pictures/weiter_pixel.png")
     a1_image = StringProperty("data/pictures/A1.png")
     a2_image = StringProperty("data/pictures/A2.png")
     b1_image = StringProperty("data/pictures/B1.png")
-    b2_image = StringProperty("data/pictures/B2.png")
+    # b2_image = StringProperty("data/pictures/B2.png")
 
     nomen_image = StringProperty("data/pictures/deck_hallo_raw.png")
     verben_image = StringProperty("data/pictures/deck_hallo_raw.png")
     adjektive_image = StringProperty("data/pictures/deck_hallo_raw.png")
-    rest_image = StringProperty("data/pictures/deck_hallo_raw.png")  
+    rest_image = StringProperty("data/pictures/deck_hallo_raw.png")
+    deck_size = NumericProperty()
+    deck_size_cache = NumericProperty()
+
+    def __init__(self, **kwargs):
+        super(DataPage, self).__init__(**kwargs)
+        self.ids.size.pos_hint ={'center_y': -0.3, 'center_x': .7}
+        self.ids.size.size_hint =(0.45, 0.45)
+
+    def animate_deck_size(self, size):
+        print size
+        animation = Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.15)
+        animation.bind(on_complete=self.deanimate_deck_size)
+        self.deck_size_cache = size
+        animation.start(self.ids.size)
+
+    def deanimate_deck_size(self, *args):
+        animation = Animation(pos_hint = {'center_y': 0.02}, t='in_out_cubic', duration=0.3)
+        self.deck_size = self.deck_size_cache
+        animation.start(self.ids.size)
+
+    def animate_deck_size_out(self):
+        animation = Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.15)
+        animation.start(self.ids.size)
 
 class OneApp(App):
     vocab1 = StringProperty()
@@ -110,9 +149,16 @@ class OneApp(App):
     info21 = StringProperty()
     info22 = StringProperty()
     current_deck = StringProperty()
-    swipe_left = NumericProperty()
-    swipe_right = NumericProperty()
-    
+    current_deck_size = NumericProperty()
+    swipe_left_total = NumericProperty()
+    swipe_right_total = NumericProperty()
+
+    swipe_left_chunk = NumericProperty()
+    swipe_right_chunk = NumericProperty()
+
+    swipe_left_last = NumericProperty()
+    swipe_right_last = NumericProperty()
+
     def build(self):
         kivy.Config.set('graphics', 'width',  380)
         kivy.Config.set('graphics', 'height', 610)
@@ -141,7 +187,7 @@ class OneApp(App):
         self.set_current_deck()
         self.lib.load_vocabs()
         self.load_intro()
-        self.swipe_left, self.swipe_right = self.lib.swipe_value()
+        self.swipe_left_total, self.swipe_right_total = self.lib.swipe_value()
         return self.sm
 
     def init(self):
@@ -157,8 +203,10 @@ class OneApp(App):
         self.info21 = ""
         self.info22 = ""
         self.answered = False
+        # self.chunkpage.swipe_left, self.chunkpage.swipe_right = (self.lib.difficulty, 10)
         self.pageone.picture_answer = "data/pictures/empty.png"
         self.pagetwo.picture_answer = "data/pictures/empty.png"
+        self.chunkpage.reset_image()
 
     def on_start(self):
         from kivy.base import EventLoop
@@ -172,7 +220,8 @@ class OneApp(App):
 
     def go_to_vocabfrontpage(self):
         self.sm.transition.direction = 'left'
-        self.swipe_left, self.swipe_right = self.lib.swipe_value()
+        self.swipe_left_total, self.swipe_right_total = self.lib.swipe_value()
+        self.swipe_left_chunk, self.swipe_right_chunk = (0,0)
         self.lib.load_vocabs()
         self.init()
         self.sm.current = 'vocabfrontpage'
@@ -190,6 +239,7 @@ class OneApp(App):
         self.lib.save_decks()
 
     def go_to_data(self):
+        self.datapage.animate_deck_size_out()
         self.sm.transition.direction = 'left'
         self.set_current_deck()
         self.sm.current = 'datapage'
@@ -207,7 +257,12 @@ class OneApp(App):
         self.sm.transition.direction = 'left'
         self.lib.save_vocabs()
         self.lib.save_decks()
-        self.swipe_left, self.swipe_right = self.lib.swipe_value()
+        if self.lib.difficulty == 0:
+            self.chunkpage.chunk_complete = True
+        else:
+            self.chunkpage.chunk_complete = False
+        self.swipe_left_total, self.swipe_right_total = self.lib.swipe_value()
+        self.swipe_left_chunk, self.swipe_right_chunk = (self.lib.difficulty, 10)
         self.sm.current = 'chunkpage'
 
     def go_to_home(self):
@@ -311,6 +366,7 @@ class OneApp(App):
                     self.go_to_two('left')  
 
     def on_level_button(self, level):
+        self.datapage.animate_deck_size_out()
         self.reset_level_pictures()
         self.choose_level_pictures(level)
     
@@ -319,17 +375,12 @@ class OneApp(App):
         self.datapage.verben_image = "data/pictures/deck_hallo_raw.png"
         self.datapage.adjektive_image = "data/pictures/deck_hallo_raw.png"
         self.datapage.rest_image = "data/pictures/deck_hallo_raw.png"
-        # if self.currentLevel == "a1" or self.currentLevel == "a2":
-        # elif self.currentLevel == "b1" or self.currentLevel == "b2":
-        #     self.datapage.nomen_image = "data/pictures/deck_hallo_grey.png"
-        #     self.datapage.verben_image = "data/pictures/deck_hallo_grey.png"
-        #     self.datapage.adjektive_image = "data/pictures/deck_hallo_grey.png"
-        #     self.datapage.rest_image = "data/pictures/deck_hallo_grey.png"
+
     def reset_level_pictures(self):
         self.datapage.a1_image = "data/pictures/A1.png"
         self.datapage.a2_image = "data/pictures/A2.png"
         self.datapage.b1_image = "data/pictures/B1.png"
-        self.datapage.b2_image = "data/pictures/B2.png"
+        # self.datapage.b2_image = "data/pictures/B2.png"
     
     def choose_deck_pictures(self, deck):
         if deck == "nomen":
@@ -341,16 +392,6 @@ class OneApp(App):
         if deck == "rest":
             self.datapage.rest_image = "data/pictures/rest.png"
 
-        # if self.currentLevel == "a1" or self.currentLevel == "a2":
-        # elif self.currentLevel == "b1" or self.currentLevel == "b2":
-        #     if deck == "nomen":
-        #         self.datapage.nomen_image = "data/pictures/nomen_grey.png"
-        #     if deck == "verben":
-        #         self.datapage.verben_image = "data/pictures/verben_grey.png"     
-        #     if deck == "adjektive":
-        #         self.datapage.adjektive_image = "data/pictures/adjektive_grey.png"       
-        #     if deck == "rest":
-        #         self.datapage.rest_image = "data/pictures/rest_grey.png"
     def choose_level_pictures(self, level):
         if level == "a1":
             self.currentLevel = "a1"
@@ -366,7 +407,7 @@ class OneApp(App):
             self.reset_deck_pictures()    
         if level == "b2":
             self.currentLevel = "b2"
-            self.datapage.b2_image = "data/pictures/B2gross.png"
+            # self.datapage.b2_image = "data/pictures/B2gross.png"
             self.reset_deck_pictures()
     
     def on_deck_button(self, deck):
@@ -375,6 +416,8 @@ class OneApp(App):
         self.lib.save_decks()
         self.set_current_deck()
         self.reset_deck_pictures()
+        self.current_deck_size = self.lib.get_decksize()
+        self.datapage.animate_deck_size(self.current_deck_size)
         self.choose_deck_pictures(deck)
 
     def button_animation(self):

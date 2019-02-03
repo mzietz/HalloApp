@@ -200,31 +200,11 @@
     "info2": "Wir spielen Fu\u00dfball auf der gr\u00fcnen Wiese."
   }, 
   {
-    "date": "2019-02-02 10:33:58.982547", 
-    "chunk": 2, 
-    "question": "schwarz", 
-    "info1": "", 
-    "difficulty": 2, 
-    "answer": "\uac80\uc0c9", 
-    "learned": true, 
-    "info2": "Die Schuhe sind schwarz."
-  }, 
-  {
-    "date": "2019-02-02 10:33:58.982547", 
-    "chunk": 2, 
-    "question": "geschlossen ", 
-    "info1": "", 
-    "difficulty": 2, 
-    "answer": "\ub2eb\ud78c, \ubb38\uc744 \ub2eb\ub294", 
-    "learned": true, 
-    "info2": "Die Bank hat am Samstag geschlossen."
-  }, 
-  {
     "date": "2019-02-02 10:33:58.979586", 
     "chunk": 2, 
     "question": "besetzt ", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\uc810\ub839, \uc810\ub839\ud558\ub2e4", 
     "learned": true, 
     "info2": "Die Nummer ist immer besetzt."
@@ -234,7 +214,7 @@
     "chunk": 2, 
     "question": "teuer ", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\ube44\uc2fc", 
     "learned": true, 
     "info2": "Das ist mir zu teuer."
@@ -244,7 +224,7 @@
     "chunk": 2, 
     "question": "sch\u00f6n ", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\uc544\ub984\ub2e4\uc6b4, \uc88b\uc740, \uba4b\uc9c4", 
     "learned": true, 
     "info2": "Das ist sehr sch\u00f6n."
@@ -254,7 +234,7 @@
     "chunk": 2, 
     "question": "ausl\u00e4ndisch ", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\uc678\uad6d\uc758", 
     "learned": true, 
     "info2": "Leider habe ich nur ausl\u00e4ndisches Geld."
@@ -264,7 +244,7 @@
     "chunk": 2, 
     "question": "blau", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\ud30c\ub780\uc0c9", 
     "learned": true, 
     "info2": "Heute ist der Himmel blau."
@@ -274,7 +254,7 @@
     "chunk": 2, 
     "question": "grau", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\ud68c\uc0c9", 
     "learned": true, 
     "info2": "Ich bekomme langsam graue Haare."
@@ -284,7 +264,7 @@
     "chunk": 2, 
     "question": "lang ", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\uae34, \uae38\uc774\uac00 \uc788\ub294", 
     "learned": true, 
     "info2": "Die Jeans ist zu lang."
@@ -294,10 +274,30 @@
     "chunk": 2, 
     "question": "mehr ", 
     "info1": "", 
-    "difficulty": 2, 
+    "difficulty": 0, 
     "answer": "\ub354\uc6b1, \ub354 \ub9ce\uc774", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Dieses Auto kostet 1.000 Euro mehr als das andere."
+  }, 
+  {
+    "date": "2019-02-02 10:33:58.982547", 
+    "chunk": 2, 
+    "question": "schwarz", 
+    "info1": "", 
+    "difficulty": 0, 
+    "answer": "\uac80\uc0c9", 
+    "learned": true, 
+    "info2": "Die Schuhe sind schwarz."
+  }, 
+  {
+    "date": "2019-02-02 10:33:58.982547", 
+    "chunk": 2, 
+    "question": "geschlossen ", 
+    "info1": "", 
+    "difficulty": 0, 
+    "answer": "\ub2eb\ud78c, \ubb38\uc744 \ub2eb\ub294", 
+    "learned": false, 
+    "info2": "Die Bank hat am Samstag geschlossen."
   }, 
   {
     "date": "2019-02-02 10:33:58.982547", 
@@ -604,9 +604,9 @@
     "chunk": 6, 
     "question": "geboren ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ud0dc\uc5b4\ub09c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich bin in Zagreb geboren."
   }, 
   {
@@ -614,9 +614,9 @@
     "chunk": 6, 
     "question": "fr\u00fcher ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uc61b\ub0a0\uc5d0, \ubcf4\ub2e4 \uc774\ub978", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Fr\u00fcher waren wir oft zusammen im Kino."
   }, 
   {
@@ -624,9 +624,9 @@
     "chunk": 6, 
     "question": "frei ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uc790\uc720\ub85c\uc6b4, ...\uc5d0 \uc5c6\ub2e4", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ist der Platz noch frei?"
   }, 
   {
@@ -634,9 +634,9 @@
     "chunk": 6, 
     "question": "fremd ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uc678\ub798\uc758, \uc678\uad6d\uc5d0\uc11c \uc628", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Das wei\u00df ich nicht; ich bin fremd hier."
   }, 
   {
@@ -644,9 +644,9 @@
     "chunk": 6, 
     "question": "jung ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uc80a\uc740, \uc5b4\ub9b0", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Claudia ist 21. - Was? Noch so jung?"
   }, 
   {
@@ -654,9 +654,9 @@
     "chunk": 6, 
     "question": "zufrieden ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub9cc\uc871\ud55c, \ud589\ubcf5\ud55c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich bin mit der Wohnung zufrieden."
   }, 
   {
@@ -664,9 +664,9 @@
     "chunk": 6, 
     "question": "einfach ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uac04\ub2e8\ud55c, \uc26c\uc6b4", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Die Pr\u00fcfung ist ganz einfach."
   }, 
   {
@@ -674,9 +674,9 @@
     "chunk": 6, 
     "question": "gro\u00df ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ud070, \uac15\ud55c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Mein Bruder und ich sind gleich gro\u00df."
   }, 
   {
@@ -684,9 +684,9 @@
     "chunk": 6, 
     "question": "hell ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub9d1\uc740", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Im Sommer ist es bis 21 Uhr hell."
   }, 
   {
@@ -694,7 +694,7 @@
     "chunk": 6, 
     "question": "schlecht ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub098\uc05c, (\uae30\ubd84\uc774)\uc88b\uc9c0 \uc54a\uc740", 
     "learned": false, 
     "info2": "Mir ist schlecht!"
@@ -704,9 +704,9 @@
     "chunk": 7, 
     "question": "richtig ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub9de\ub294, (\uc62c) \ubc14\ub978, \ud2c0\ub9bc\uc5c6\ub294", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Habe ich das richtig verstanden?"
   }, 
   {
@@ -714,9 +714,9 @@
     "chunk": 7, 
     "question": "billig ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "(\uac12\uc774) \uc2fc", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Die Jacke kostet nur 10 Euro! Die ist aber billig!"
   }, 
   {
@@ -724,9 +724,9 @@
     "chunk": 7, 
     "question": "rot", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ube68\uac04\uc0c9", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Sie tr\u00e4gt einen roten Mantel"
   }, 
   {
@@ -734,9 +734,9 @@
     "chunk": 7, 
     "question": "b\u00f6se ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub098\uc05c, \ubd88\ucf8c\ud55c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Sie ist b\u00f6se auf mich."
   }, 
   {
@@ -744,9 +744,9 @@
     "chunk": 7, 
     "question": "langsam ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub290\ub9b0", 
-    "learned": false, 
+    "learned": true, 
     "info2": "K\u00f6nnten Sie bitte etwas langsamer sprechen?"
   }, 
   {
@@ -754,9 +754,9 @@
     "chunk": 7, 
     "question": "kaputt ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uace0\uc7a5\uc774 \ub09c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Das Glas war teuer. Es geht sehr leicht kaputt."
   }, 
   {
@@ -764,9 +764,9 @@
     "chunk": 7, 
     "question": "ledig ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uc2f1\uae00", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Sind Sie verheiratet? - Nein. Ledig."
   }, 
   {
@@ -774,9 +774,9 @@
     "chunk": 7, 
     "question": "wunderbar ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub180\ub77c\uc6b4", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Das Essen schmeckt wunderbar."
   }, 
   {
@@ -784,9 +784,9 @@
     "chunk": 7, 
     "question": "hoch ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub192\uc740", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Der Mount Everest ist 8.880 Meter hoch."
   }, 
   {
@@ -794,7 +794,7 @@
     "chunk": 7, 
     "question": "lieber ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "lieb (\uc0ac\ub791\ud558\ub294)\uc758 \ube44\uad50\uae09", 
     "learned": false, 
     "info2": "Sie f\u00e4hrt lieber mit der Bahn."
