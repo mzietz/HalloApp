@@ -159,14 +159,15 @@ class OneApp(App):
     swipe_left_chunk = NumericProperty()
     swipe_right_chunk = NumericProperty()
 
-    swipe_left_last = NumericProperty()
-    swipe_right_last = NumericProperty()
-
     lines = ListProperty(["data/pictures/strich_alt_1.png", 
         "data/pictures/strich_alt_2.png", 
         "data/pictures/strich_alt_3.png", 
-        "data/pictures/strich_alt_4.png", 
-        "data/pictures/strich_alt_5.png"])
+        "data/pictures/strich_alt_4.png",
+        "data/pictures/strich_alt_5.png", 
+        "data/pictures/strich_alt_6.png", 
+        "data/pictures/strich_alt_7.png", 
+        "data/pictures/strich_alt_8.png", 
+        "data/pictures/strich_alt_9.png"])
 
     def build(self):
         kivy.Config.set('graphics', 'width',  380)

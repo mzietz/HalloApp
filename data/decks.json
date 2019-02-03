@@ -5,7 +5,7 @@
       "cards": 341, 
       "swipe_left": 16, 
       "swipe_right": 451, 
-      "selected": true, 
+      "selected": false, 
       "text": "a1nomen"
     }, 
     {
@@ -24,9 +24,9 @@
     }, 
     {
       "cards": 193, 
-      "swipe_left": 14, 
-      "swipe_right": 134, 
-      "selected": false, 
+      "swipe_left": 15, 
+      "swipe_right": 154, 
+      "selected": true, 
       "text": "a1rest"
     }, 
     {
