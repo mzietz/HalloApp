@@ -3,11 +3,12 @@
 import kivy
 import json
 import os
+import random
 from os.path import join, exists
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition
 from kivy.uix.label import Label
-from kivy.properties import StringProperty, NumericProperty, ObjectProperty, BooleanProperty
+from kivy.properties import StringProperty, NumericProperty, ObjectProperty, BooleanProperty, ListProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.behaviors import FocusBehavior
@@ -25,6 +26,7 @@ class PageOne(Screen):
     picture = StringProperty("data/pictures/anleitung.png")
     picture_answer = StringProperty("")
     picture_opacity = NumericProperty(1)
+    line_image = StringProperty("")
 
     def __init__(self, **kwargs):
         super(PageOne, self).__init__(**kwargs)
@@ -38,6 +40,7 @@ class PageOne(Screen):
 
 class PageTwo(Screen):
     picture_answer = StringProperty("")
+    line_image = StringProperty("")
 
     def __init__(self, **kwargs):
         super(PageTwo, self).__init__(**kwargs)
@@ -159,6 +162,12 @@ class OneApp(App):
     swipe_left_last = NumericProperty()
     swipe_right_last = NumericProperty()
 
+    lines = ListProperty(["data/pictures/strich_alt_1.png", 
+        "data/pictures/strich_alt_2.png", 
+        "data/pictures/strich_alt_3.png", 
+        "data/pictures/strich_alt_4.png", 
+        "data/pictures/strich_alt_5.png"])
+
     def build(self):
         kivy.Config.set('graphics', 'width',  380)
         kivy.Config.set('graphics', 'height', 610)
@@ -220,6 +229,7 @@ class OneApp(App):
 
     def go_to_vocabfrontpage(self):
         self.sm.transition.direction = 'left'
+        self.set_random_line()
         self.swipe_left_total, self.swipe_right_total = self.lib.swipe_value()
         self.swipe_left_chunk, self.swipe_right_chunk = (0,0)
         self.lib.load_vocabs()
@@ -380,7 +390,6 @@ class OneApp(App):
         self.datapage.a1_image = "data/pictures/A1.png"
         self.datapage.a2_image = "data/pictures/A2.png"
         self.datapage.b1_image = "data/pictures/B1.png"
-        # self.datapage.b2_image = "data/pictures/B2.png"
     
     def choose_deck_pictures(self, deck):
         if deck == "nomen":
@@ -405,10 +414,6 @@ class OneApp(App):
             self.currentLevel = "b1"
             self.datapage.b1_image = "data/pictures/B1gross.png"    
             self.reset_deck_pictures()    
-        if level == "b2":
-            self.currentLevel = "b2"
-            # self.datapage.b2_image = "data/pictures/B2gross.png"
-            self.reset_deck_pictures()
     
     def on_deck_button(self, deck):
         self.current_deck = self.currentLevel + deck
@@ -445,9 +450,6 @@ class OneApp(App):
         if level == "b1":
             self.vocabfrontpage.level = "B1"    
             self.chunkpage.level = "B1"    
-        if level == "b2":
-            self.vocabfrontpage.level = "B2"
-            self.chunkpage.level = "B2"
 
     def click_animate(self, widget):
         if widget == "back":
@@ -478,6 +480,11 @@ class OneApp(App):
         self.vocabfrontpage.start_image = "data/pictures/start_pixel.png"
         self.chunkpage.continue_image = "data/pictures/weiter_pixel.png"
         self.finishedpage.refresh_image = "data/pictures/deck_refresh.png"
+
+    def set_random_line(self):
+        line = random.choice(self.lines)
+        self.pageone.line_image = line
+        self.pagetwo.line_image = line
 
 if __name__ == '__main__':
     OneApp().run()
