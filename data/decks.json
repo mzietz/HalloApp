@@ -18,15 +18,15 @@
     {
       "cards": 183, 
       "swipe_left": 6, 
-      "swipe_right": 220, 
-      "selected": false, 
+      "swipe_right": 250, 
+      "selected": true, 
       "text": "a1adjektive"
     }, 
     {
       "cards": 193, 
-      "swipe_left": 15, 
-      "swipe_right": 154, 
-      "selected": true, 
+      "swipe_left": 16, 
+      "swipe_right": 174, 
+      "selected": false, 
       "text": "a1rest"
     }, 
     {

@@ -206,7 +206,7 @@
     "info1": "", 
     "difficulty": 1, 
     "answer": "\uadf8\ub54c, \uadf8 \uacbd\uc6b0\uc5d0, \uadf8\ub7f4 \ub54c\ub294", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich muss noch schnell zur Post, dann komme ich."
   }, 
   {
@@ -216,7 +216,7 @@
     "info1": "", 
     "difficulty": 1, 
     "answer": "\ub108\uc758", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ist das dein Auto?"
   }, 
   {
@@ -226,7 +226,7 @@
     "info1": "", 
     "difficulty": 1, 
     "answer": "\uc65c\ub0d0\ud558\uba74", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich kann nicht kommen, denn ich bin krank."
   }, 
   {
@@ -236,8 +236,58 @@
     "info1": "", 
     "difficulty": 1, 
     "answer": "\uc815\uad00\uc0ac", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich nehme das da."
+  }, 
+  {
+    "date": "2019-02-02 10:34:38.075292", 
+    "chunk": 2, 
+    "question": "dies- ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc774, \uc774\uac83, \uc774 \uc0ac\ub78c", 
+    "learned": true, 
+    "info2": "Ich nehme lieber diesen Kuchen."
+  }, 
+  {
+    "date": "2019-02-02 10:34:38.075292", 
+    "chunk": 2, 
+    "question": "dir ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "du\uc758 3\uaca9.", 
+    "learned": true, 
+    "info2": "Gefallen dir die Blumen?"
+  }, 
+  {
+    "date": "2019-02-02 10:34:38.075292", 
+    "chunk": 2, 
+    "question": "dort ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac70\uae30\uc5d0(\uc11c), \uc800\uae30\uc5d0(\uc11c)", 
+    "learned": true, 
+    "info2": "Dort ist unser Haus."
+  }, 
+  {
+    "date": "2019-02-02 10:34:38.075292", 
+    "chunk": 2, 
+    "question": "drau\u00dfen ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubc16\uc5d0\uc11c, \uc678\ubd80\uc5d0", 
+    "learned": true, 
+    "info2": "Wollen wir drau\u00dfen sitzen?"
+  }, 
+  {
+    "date": "2019-02-02 10:34:38.075292", 
+    "chunk": 2, 
+    "question": "durch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud1b5\uacfc\ud558\uc5ec, \uc9c0\ub098\uc11c", 
+    "learned": true, 
+    "info2": "Am besten gehen Sie durch die Breite Stra\u00dfe."
   }, 
   {
     "date": "2019-02-02 10:34:38.074281", 
@@ -251,60 +301,10 @@
   }, 
   {
     "date": "2019-02-02 10:34:38.075292", 
-    "chunk": 2, 
-    "question": "dies- ", 
-    "info1": "", 
-    "difficulty": 1, 
-    "answer": "\uc774, \uc774\uac83, \uc774 \uc0ac\ub78c", 
-    "learned": false, 
-    "info2": "Ich nehme lieber diesen Kuchen."
-  }, 
-  {
-    "date": "2019-02-02 10:34:38.075292", 
-    "chunk": 2, 
-    "question": "dir ", 
-    "info1": "", 
-    "difficulty": 1, 
-    "answer": "du\uc758 3\uaca9.", 
-    "learned": false, 
-    "info2": "Gefallen dir die Blumen?"
-  }, 
-  {
-    "date": "2019-02-02 10:34:38.075292", 
-    "chunk": 2, 
-    "question": "dort ", 
-    "info1": "", 
-    "difficulty": 1, 
-    "answer": "\uac70\uae30\uc5d0(\uc11c), \uc800\uae30\uc5d0(\uc11c)", 
-    "learned": false, 
-    "info2": "Dort ist unser Haus."
-  }, 
-  {
-    "date": "2019-02-02 10:34:38.075292", 
-    "chunk": 2, 
-    "question": "drau\u00dfen ", 
-    "info1": "", 
-    "difficulty": 1, 
-    "answer": "\ubc16\uc5d0\uc11c, \uc678\ubd80\uc5d0", 
-    "learned": false, 
-    "info2": "Wollen wir drau\u00dfen sitzen?"
-  }, 
-  {
-    "date": "2019-02-02 10:34:38.075292", 
-    "chunk": 2, 
-    "question": "durch ", 
-    "info1": "", 
-    "difficulty": 1, 
-    "answer": "\ud1b5\uacfc\ud558\uc5ec, \uc9c0\ub098\uc11c", 
-    "learned": false, 
-    "info2": "Am besten gehen Sie durch die Breite Stra\u00dfe."
-  }, 
-  {
-    "date": "2019-02-02 10:34:38.075292", 
     "chunk": 3, 
     "question": "ein- ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ud55c-", 
     "learned": false, 
     "info2": "Ich nehme ein Bier. Willst du auch eins?"
@@ -314,9 +314,9 @@
     "chunk": 3, 
     "question": "einmal ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ud55c\ubc88", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Diese Pr\u00fcfung mache ich nicht noch einmal."
   }, 
   {
@@ -324,9 +324,9 @@
     "chunk": 3, 
     "question": "er ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uadf8, \uadf8\uc0ac\ub78c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Er hei\u00dft Ali."
   }, 
   {
@@ -334,9 +334,9 @@
     "chunk": 3, 
     "question": "es ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uadf8\uac83", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Es regnet."
   }, 
   {
@@ -344,9 +344,9 @@
     "chunk": 3, 
     "question": "euer ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\ub108\ud76c\ub4e4\uc758", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Euer Kurs beginnt heute."
   }, 
   {
@@ -354,9 +354,9 @@
     "chunk": 3, 
     "question": "f\u00fcr ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "...\uc704\ud55c, ...\uc758", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Das ist f\u00fcr Sie."
   }, 
   {
@@ -364,9 +364,9 @@
     "chunk": 3, 
     "question": "gegen ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "...\uc744 \ud5a5\ud558\uc5ec, \ucabd\uc73c\ub85c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Fahr nicht gegen den Baum!"
   }, 
   {
@@ -374,9 +374,9 @@
     "chunk": 3, 
     "question": "gerade ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uace7\uc740, \uc9c0\uae08 \uace7", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Da kommt er ja gerade."
   }, 
   {
@@ -384,9 +384,9 @@
     "chunk": 3, 
     "question": "geradeaus ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uc9c1\uc9c4, \uace7\ubc14\ub85c", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Gehen Sie immer geradeaus!"
   }, 
   {
@@ -394,7 +394,7 @@
     "chunk": 3, 
     "question": "gestern ", 
     "info1": "", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "answer": "\uc5b4\uc81c", 
     "learned": false, 
     "info2": "Gestern war ich krank."
