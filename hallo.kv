@@ -97,8 +97,6 @@
                 text: app.info11
                 font_name: 'data/fonts/DK Cool Crayon'
                 font_size: '20sp'
-#            BoxLayout:
-#                size_hint: 1, 0.02
             Question:
                 font_name: 'data/fonts/TYPO_CRAYONM'
                 text: app.answer1
@@ -111,13 +109,13 @@
                 font_size: '26sp'               
             BoxLayout:
 
-            BoxLayout:
-                Image:
-                    source: root.picture
-                    size: self.parent.size
-                    opacity: root.picture_opacity
-                    pos: self.parent.pos 
-                    allow_stretch: True
+        BoxLayout:
+            Image:
+                source: root.picture
+                size_hint: 0.7, 0.7
+                pos_hint: {"center_x": 0.5, 'center_y':0.35}
+                opacity: root.picture_opacity
+                allow_stretch: True
                     
         Image:
             id: right

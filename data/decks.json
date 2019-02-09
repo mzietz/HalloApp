@@ -19,7 +19,7 @@
       "cards": 183, 
       "swipe_left": 6, 
       "swipe_right": 250, 
-      "selected": true, 
+      "selected": false, 
       "text": "a1adjektive"
     }, 
     {
@@ -61,7 +61,7 @@
       "cards": 1, 
       "swipe_left": 3, 
       "swipe_right": 22, 
-      "selected": false, 
+      "selected": true, 
       "text": "b1nomen"
     }, 
     {

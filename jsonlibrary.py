@@ -125,13 +125,11 @@ class Library:
             if x["text"] == self.current_deck:
                 return (x["swipe_left"], x["swipe_right"])
 
-    @library_logger
     def i_know_card(self):
         """Sets learned status of current card to True"""
         self.library[self.current_card]["learned"] = True
         self.add_swipe('right')
 
-    @library_logger
     def i_dont_know_card(self):
         """ Sets learned status of current card to False and outs card to the back of the current chunk"""
         for x in self.library:
@@ -184,9 +182,3 @@ class Library:
         for x in self.decks:
             if x["text"] == self.current_deck:
                 return x["cards"]
-
-if __name__=="__main__":
-    myLibrary = Library()
-    myLibrary.load_decks()
-    myLibrary.current_deck = "a1adjektive"
-    myLibrary.load_vocabs()
