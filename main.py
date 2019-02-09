@@ -54,7 +54,7 @@ class PageTwo(Screen):
 
 class FinishedPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
-    picture = StringProperty("data/pictures/homescreen.png")
+    picture = StringProperty("data/pictures/homescreen2.png")
     refresh_image = StringProperty("data/pictures/deck_refresh.png")
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     
@@ -70,7 +70,7 @@ class FinishedPage(Screen):
 
 class VocabFrontPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
-    picture = StringProperty("data/pictures/homescreen.png")
+    picture = StringProperty("data/pictures/homescreen2.png")
     start_image = StringProperty("data/pictures/start_pixel.png")
     deck = StringProperty("")
     level = StringProperty("")
@@ -81,7 +81,7 @@ class HomePage(Screen):
     deck_image = StringProperty("data/pictures/deck_hallo.png")
 
 class ChunkPage(Screen):
-    picture = StringProperty("data/pictures/homescreen.png")
+    picture = StringProperty("data/pictures/homescreen2.png")
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     continue_image = StringProperty("data/pictures/weiter_pixel.png")
     deck = StringProperty("")
@@ -107,7 +107,7 @@ class AboutPage(Screen):
 
 class DataPage(Screen):
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
-    picture = StringProperty("data/pictures/homescreen.png")
+    picture = StringProperty("data/pictures/homescreen2.png")
     size_image = StringProperty("data/pictures/weiter_pixel.png")
     a1_image = StringProperty("data/pictures/A1.png")
     a2_image = StringProperty("data/pictures/A2.png")
@@ -142,7 +142,7 @@ class DataPage(Screen):
         animation = Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.15)
         animation.start(self.ids.size)
 
-class OneApp(App):
+class HalloApp(App):
     vocab1 = StringProperty()
     vocab2 = StringProperty()
     answer1 = StringProperty()
@@ -488,4 +488,4 @@ class OneApp(App):
         self.pagetwo.line_image = line
 
 if __name__ == '__main__':
-    OneApp().run()
+    HalloApp().run()

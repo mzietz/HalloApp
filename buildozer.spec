@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = 하루하루할로
+title = 할로독일어
 
 # (str) Package name
-package.name = Swipecardapp
+package.name = HalloApp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.swipecardapp
+package.domain = de.dogileo
 
 # (str) Source code where the main.py live
 source.dir = .
