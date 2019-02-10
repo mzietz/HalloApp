@@ -1701,97 +1701,97 @@
   }, 
   {
     "answer": "\ud1b5\ubcf4, \ubcf4\ub3c4", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "die Information", 
     "info1": "(die Informationen)", 
     "date": "2019-02-02 10:32:44.068718", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Wenn Sie Fragen haben, gehen Sie zur Information."
   }, 
   {
     "answer": "\uc778\ud130\ub137", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "das Internet ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.068718", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Das findest du im Internet. "
   }, 
   {
     "answer": "\uc7ac\ud0b7", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "die Jacke", 
     "info1": "(die Jacken)", 
     "date": "2019-02-02 10:32:44.068718", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Zieh dir eine Jacke an. Es ist kalt."
   }, 
   {
     "answer": "\uc77c, \uc9c1\uc5c5", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "der Job", 
     "info1": "(die Jobs)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Jenny hat einen neuen Job bei der Post."
   }, 
   {
     "answer": "\uccad\uc18c\ub144", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "der Jugendliche", 
     "info1": "(die Jugendlichen)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Viele Jugendliche kaufen gern ein."
   }, 
   {
     "answer": "\uc18c\ub144", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "der Junge", 
     "info1": "(die Jungen)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich habe zwei Kinder. Einen Jungen und ein M\u00e4dchen."
   }, 
   {
     "answer": "\ucee4\ud53c", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "der Kaffee ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Zum Fr\u00fchst\u00fcck trinke ich immer Kaffee."
   }, 
   {
     "answer": "\uce74\ub4dc", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "die Karte", 
     "info1": "(die Karten)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich schreibe meinen Bekannten eine Karte aus dem"
   }, 
   {
     "answer": "\uc2e0\uc6a9 \uce74\ub4dc", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "die Kreditkarte", 
     "info1": "(die Kreditkarten)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Kann ich auch mit Karte (be-) zahlen?"
   }, 
   {
     "answer": "\uac10\uc790", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 17, 
     "question": "die Kartoffel", 
     "info1": "(die Kartoffeln)", 
@@ -1801,97 +1801,97 @@
   }, 
   {
     "answer": "\uacc4\uc0b0\ub300", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "die Kasse ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Zahlen Sie bitte an der Kasse."
   }, 
   {
     "answer": "\uc544\uae30", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "das Kind", 
     "info1": "(die Kinder)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Wie viele Kinder haben Sie?"
   }, 
   {
     "answer": "\uc720\uce58\uc6d0", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "der Kindergarten ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Die kleine Laura geht schon in den Kindergarten."
   }, 
   {
     "answer": "\uc601\ud654\uad00", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "das Kino", 
     "info1": "(die Kinos)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Wir sehen heute Abend im Kino einen sch\u00f6nen Film."
   }, 
   {
     "answer": "\ub9e4\uc810", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "der Kiosk ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Am Kiosk bekommen Sie Getr\u00e4nke, Zigaretten und Zeitungen."
   }, 
   {
     "answer": "\uae09, \ud559\uae09", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "die Klasse ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "In unserer Klasse sind f\u00fcnfundzwanzig Sch\u00fcler."
   }, 
   {
     "answer": "\uc637", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "die Kleidung ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Wo finde ich Kleidung? - Jacken im ersten, Jeans im"
   }, 
   {
     "answer": "\ud2b8\ub801\ud06c, \uc5ec\ud589\uc6a9 \uac00\ubc29", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "der Koffer", 
     "info1": "(die Koffer)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ist das Ihr Koffer?"
   }, 
   {
     "answer": "\ub3d9\ub8cc, \ub3d9\uc5c5\uc790", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "der Kollege", 
     "info1": "(die Kollegen)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Wie hei\u00dft die neue Kollegin?"
   }, 
   {
     "answer": "\uacc4\uc88c", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 18, 
     "question": "das Konto ", 
     "info1": "", 
@@ -1900,58 +1900,98 @@
     "info2": "Das Geld \u00fcberweisen wir am ersten M\u00e4rz auf Ihr Konto."
   }, 
   {
+    "answer": "\uac15\uc88c, \uac15\uc758", 
+    "difficulty": 0, 
+    "chunk": 19, 
+    "question": "der Kurs", 
+    "info1": "(die Kurse)", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Der Deutschkurs geht bis zum Sommer."
+  }, 
+  {
+    "answer": "\uac00\uac8c, \uc810\ud3ec", 
+    "difficulty": 0, 
+    "chunk": 19, 
+    "question": "der Laden", 
+    "info1": "(die L\u00e4den)", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Im Buchladen k\u00f6nnen Sie B\u00fccher kaufen."
+  }, 
+  {
+    "answer": "\ub098\ub77c", 
+    "difficulty": 0, 
+    "chunk": 19, 
+    "question": "das Land", 
+    "info1": "(die L\u00e4nder)", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Italien ist ein sch\u00f6nes Land."
+  }, 
+  {
+    "answer": "\uc591\uc2dd, \uc2dd\ub8cc", 
+    "difficulty": 0, 
+    "chunk": 19, 
+    "question": "die Lebensmittel ", 
+    "info1": "", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Lebensmittel bekommen Sie im Supermarkt."
+  }, 
+  {
     "answer": "\uba38\ub9ac", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 19, 
     "question": "der Kopf", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Mein Kopf tut weh!"
   }, 
   {
     "answer": "\ubd80\uc5cc, \uc8fc\ubc29", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 19, 
     "question": "die K\u00fcche ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Der neue Herd kommt in die K\u00fcche."
   }, 
   {
     "answer": "\uacfc\uc790, \ucf00\uc774\ud06c", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 19, 
     "question": "der Kuchen ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Ich nehme ein St\u00fcck Kuchen."
   }, 
   {
     "answer": "\ubcfc\ud39c", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 19, 
     "question": "der Kugelschreiber ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Hast du einen Kugelschreiber f\u00fcr mich?"
   }, 
   {
     "answer": "\ub0c9\uc7a5\uace0", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 19, 
     "question": "der K\u00fchlschrank ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Haben wir noch Milch? - Ja, im K\u00fchlschrank."
   }, 
   {
     "answer": "\uace0\uac1d, \uc190\ub2d8", 
-    "difficulty": 1, 
+    "difficulty": 0, 
     "chunk": 19, 
     "question": "der Kunde", 
     "info1": "(die Kunden)", 
@@ -1960,154 +2000,104 @@
     "info2": "Einen Moment, bitte. Ich habe eine Kundin."
   }, 
   {
-    "answer": "\uac15\uc88c, \uac15\uc758", 
-    "difficulty": 1, 
-    "chunk": 19, 
-    "question": "der Kurs", 
-    "info1": "(die Kurse)", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Der Deutschkurs geht bis zum Sommer."
-  }, 
-  {
-    "answer": "\uac00\uac8c, \uc810\ud3ec", 
-    "difficulty": 1, 
-    "chunk": 19, 
-    "question": "der Laden", 
-    "info1": "(die L\u00e4den)", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Im Buchladen k\u00f6nnen Sie B\u00fccher kaufen."
-  }, 
-  {
-    "answer": "\ub098\ub77c", 
-    "difficulty": 1, 
-    "chunk": 19, 
-    "question": "das Land", 
-    "info1": "(die L\u00e4nder)", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Italien ist ein sch\u00f6nes Land."
-  }, 
-  {
-    "answer": "\uc591\uc2dd, \uc2dd\ub8cc", 
-    "difficulty": 1, 
-    "chunk": 19, 
-    "question": "die Lebensmittel ", 
-    "info1": "", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Lebensmittel bekommen Sie im Supermarkt."
-  }, 
-  {
     "answer": "\uc120\uc0dd\ub2d8", 
-    "difficulty": 1, 
+    "difficulty": 6, 
     "chunk": 20, 
     "question": "der Lehrer", 
     "info1": "(die Lehrer)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Unsere Deutschlehrerin hei\u00dft Frau M\u00fcller."
   }, 
   {
     "answer": "\uc0ac\ub78c\ub4e4", 
-    "difficulty": 1, 
+    "difficulty": 6, 
     "chunk": 20, 
     "question": "die Leute (pl.)  ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "In der Disko sind viele Leute."
   }, 
   {
     "answer": "\ube5b, \ubc1d\uae30", 
-    "difficulty": 1, 
+    "difficulty": 6, 
     "chunk": 20, 
     "question": "das Licht ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Wo macht man hier das Licht an?"
   }, 
   {
-    "answer": "\ub178\ub798", 
-    "difficulty": 1, 
-    "chunk": 20, 
-    "question": "das Lied", 
-    "info1": "(die Lieder)", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Welches ist dein Lieblingslied?"
-  }, 
-  {
-    "answer": "\ud654\ubb3c \uc790\ub3d9\ucc28", 
-    "difficulty": 1, 
-    "chunk": 20, 
-    "question": "der Lkw", 
-    "info1": "(die Lkws)", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Dieser Lastkraftwagen ist sehr gro\u00df."
-  }, 
-  {
-    "answer": "\uc74c\uc2dd\uc810, \uc2dd\ub2f9, \uc220\uc9d1", 
-    "difficulty": 1, 
-    "chunk": 20, 
-    "question": "das Lokal ", 
-    "info1": "", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "In unserer Stra\u00dfe gibt es ein neues Lokal."
-  }, 
-  {
     "answer": "\ud574\ubc95, \ud574\uacb0\ucc45", 
-    "difficulty": 1, 
+    "difficulty": 6, 
     "chunk": 20, 
     "question": "die L\u00f6sung", 
     "info1": "(die L\u00f6sungen)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Die L\u00f6sung ist ganz einfach."
   }, 
   {
+    "answer": "\ub0a8\uc790", 
+    "difficulty": 6, 
+    "chunk": 20, 
+    "question": "der Mann", 
+    "info1": "(die M\u00e4nner)", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Mein Mann arbeitet bei der Polizei."
+  }, 
+  {
+    "answer": "\ub178\ub798", 
+    "difficulty": 6, 
+    "chunk": 20, 
+    "question": "das Lied", 
+    "info1": "(die Lieder)", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Welches ist dein Lieblingslied?"
+  }, 
+  {
+    "answer": "\ud654\ubb3c \uc790\ub3d9\ucc28", 
+    "difficulty": 6, 
+    "chunk": 20, 
+    "question": "der Lkw", 
+    "info1": "(die Lkws)", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Dieser Lastkraftwagen ist sehr gro\u00df."
+  }, 
+  {
+    "answer": "\uc74c\uc2dd\uc810, \uc2dd\ub2f9, \uc220\uc9d1", 
+    "difficulty": 6, 
+    "chunk": 20, 
+    "question": "das Lokal ", 
+    "info1": "", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "In unserer Stra\u00dfe gibt es ein neues Lokal."
+  }, 
+  {
+    "answer": "\uae30\uacc4, \uae30\uad00", 
+    "difficulty": 6, 
+    "chunk": 20, 
+    "question": "die Maschine", 
+    "info1": "(die Maschinen)", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": true, 
+    "info2": "Die Waschmaschine ist g\u00fcnstig."
+  }, 
+  {
     "answer": "\uc18c\ub140,  \uc5ec\uc790\uc544\uc774", 
-    "difficulty": 1, 
+    "difficulty": 6, 
     "chunk": 20, 
     "question": "das M\u00e4dchen", 
     "info1": "(die M\u00e4dchen)", 
     "date": "2019-02-02 10:32:44.069715", 
     "learned": false, 
     "info2": "Familie Kurz bekommt ein Baby. - Junge oder M\u00e4dchen?"
-  }, 
-  {
-    "answer": "\ub0a8\uc790", 
-    "difficulty": 1, 
-    "chunk": 20, 
-    "question": "der Mann", 
-    "info1": "(die M\u00e4nner)", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Mein Mann arbeitet bei der Polizei."
-  }, 
-  {
-    "answer": "\uae30\uacc4, \uae30\uad00", 
-    "difficulty": 1, 
-    "chunk": 20, 
-    "question": "die Maschine", 
-    "info1": "(die Maschinen)", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Die Waschmaschine ist g\u00fcnstig."
-  }, 
-  {
-    "answer": "\ubc14\ub2e4, \ub300\uc591", 
-    "difficulty": 1, 
-    "chunk": 21, 
-    "question": "das Meer ", 
-    "info1": "", 
-    "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
-    "info2": "Wir machen Urlaub am Meer."
   }, 
   {
     "answer": "\uc778\uac04, \uc0ac\ub78c", 
@@ -2126,7 +2116,7 @@
     "question": "die Miete ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Die Miete f\u00fcr diese Wohnung ist 600 Euro."
   }, 
   {
@@ -2136,7 +2126,7 @@
     "question": "die Milch ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Die Milch steht im K\u00fchlschrank."
   }, 
   {
@@ -2146,7 +2136,7 @@
     "question": "die Mitte ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Der Lehrer steht in der Mitte des Klassenzimmers."
   }, 
   {
@@ -2156,7 +2146,7 @@
     "question": "die M\u00f6bel (pl.) ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Sind die M\u00f6bel neu?"
   }, 
   {
@@ -2166,7 +2156,7 @@
     "question": "der Moment ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Moment mal bitte!"
   }, 
   {
@@ -2176,7 +2166,7 @@
     "question": "der Mund ", 
     "info1": "", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "\u00d6ffnen Sie den Mund."
   }, 
   {
@@ -2186,7 +2176,7 @@
     "question": "die Mutter", 
     "info1": "(die M\u00fctter)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Frau Bergh\u00e4user ist die Mutter von Michaela."
   }, 
   {
@@ -2196,8 +2186,18 @@
     "question": "der Name", 
     "info1": "(die Namen)", 
     "date": "2019-02-02 10:32:44.069715", 
-    "learned": false, 
+    "learned": true, 
     "info2": "Mein Name ist Thomas Schmidt."
+  }, 
+  {
+    "answer": "\ubc14\ub2e4, \ub300\uc591", 
+    "difficulty": 1, 
+    "chunk": 21, 
+    "question": "das Meer ", 
+    "info1": "", 
+    "date": "2019-02-02 10:32:44.069715", 
+    "learned": false, 
+    "info2": "Wir machen Urlaub am Meer."
   }, 
   {
     "answer": "\ubc88\ud638", 

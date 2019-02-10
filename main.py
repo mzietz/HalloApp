@@ -265,7 +265,7 @@ class HalloApp(App):
             self.sm.current = 'pageone'
 
     def go_to_chunkpage(self):
-        self.sm.transition.direction = 'left'
+        self.sm.transition.direction = 'right'
         self.lib.save_vocabs()
         self.lib.save_decks()
         if self.lib.difficulty == 0:
@@ -286,16 +286,16 @@ class HalloApp(App):
 
     def go_to_one(self, direction):
         self.answered = False
-        if self.lib.cards_left() == 1 and direction == 'left':
+        if self.lib.cards_left() == 1 and direction == 'right':
             self.lib.add_swipe('right')
             self.go_to_chunkpage()
         else:   
-            if direction == 'left':
+            if direction == 'right':
                 self.lib.i_know_card()
-                self.pageone.picture_answer = "data/pictures/plusone_green.png"
-            elif direction == 'right':
+                self.pageone.picture_answer = "data/pictures/plusone_green2.png"
+            elif direction == 'left':
                 self.lib.i_dont_know_card()
-                self.pageone.picture_answer = "data/pictures/plusone_red.png"
+                self.pageone.picture_answer = "data/pictures/plusone_red2.png"
             self.lib.next_card()
             self.vocab1 = self.lib.library[self.lib.current_card]["question"]
             self.answer1 = ""
@@ -306,15 +306,15 @@ class HalloApp(App):
 
     def go_to_two(self, direction):
         self.answered = False
-        if self.lib.cards_left() == 1 and direction == 'left':
+        if self.lib.cards_left() == 1 and direction == 'right':
             self.lib.add_swipe('right')
             self.go_to_chunkpage()
         else:
-            if direction == 'left':
-                self.pagetwo.picture_answer = "data/pictures/plusone_green.png"
+            if direction == 'right':
+                self.pagetwo.picture_answer = "data/pictures/plusone_green2.png"
                 self.lib.i_know_card()
-            elif direction == 'right':
-                self.pagetwo.picture_answer = "data/pictures/plusone_red.png"
+            elif direction == 'left':
+                self.pagetwo.picture_answer = "data/pictures/plusone_red2.png"
                 self.lib.i_dont_know_card()
             self.lib.next_card()
             self.vocab2 = self.lib.library[self.lib.current_card]["question"]

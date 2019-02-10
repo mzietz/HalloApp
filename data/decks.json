@@ -3,9 +3,9 @@
   "decks": [
     {
       "cards": 341, 
-      "swipe_left": 16, 
-      "swipe_right": 451, 
-      "selected": false, 
+      "swipe_left": 39, 
+      "swipe_right": 517, 
+      "selected": true, 
       "text": "a1nomen"
     }, 
     {
@@ -61,7 +61,7 @@
       "cards": 1, 
       "swipe_left": 3, 
       "swipe_right": 22, 
-      "selected": true, 
+      "selected": false, 
       "text": "b1nomen"
     }, 
     {
