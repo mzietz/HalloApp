@@ -254,8 +254,14 @@
                 size: self.size
                 source: root.picture
         Button:
+            canvas:
+                Color:
+                    rgb: 0.4, 1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
             size_hint: 0.3, 0.15
-            pos_hint: {"top": 0.9, 'right': 0.9}
+            pos_hint: {"center_x": 0.28, 'center_y': 0.86}
             background_color: (.99,.99,.99,0)
             on_release:
                 app.go_to_about()
