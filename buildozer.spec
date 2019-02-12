@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = 할로독일어
+title = 할로 독일어
 
 # (str) Package name
 package.name = HalloApp

@@ -111,16 +111,16 @@
 
         BoxLayout:
             Image:
-                source: root.picture
+                id: howto
+                source: root.howto_image
                 size_hint: 0.7, 0.7
                 pos_hint: {"center_x": 0.5, 'center_y':0.35}
-                opacity: root.picture_opacity
+#                opacity: root.picture_opacity
                 allow_stretch: True
                     
         Image:
             id: right
             source: root.picture_answer
- #           size_hint: 0.6, 0.4
             allow_stretch: True
 
 
@@ -254,12 +254,6 @@
                 size: self.size
                 source: root.picture
         Button:
-            canvas:
-                Color:
-                    rgb: 0.4, 1, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
             size_hint: 0.3, 0.15
             pos_hint: {"center_x": 0.28, 'center_y': 0.86}
             background_color: (.99,.99,.99,0)

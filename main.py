@@ -7,36 +7,42 @@ import random
 from os.path import join, exists
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition
-from kivy.uix.label import Label
 from kivy.properties import StringProperty, NumericProperty, ObjectProperty, BooleanProperty, ListProperty
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.behaviors import FocusBehavior
+from kivy.base import EventLoop
+from kivy.animation import Animation
 from operator import itemgetter, attrgetter
 from jsonlibrary import Library
-from kivy.base import EventLoop
-
-from kivy.animation import Animation
-from kivy.clock import Clock
 
 class SwipeManager(ScreenManager):
     pass
 
 class PageOne(Screen):
-    picture = StringProperty("data/pictures/anleitung.png")
+    howto_image = StringProperty("data/pictures/anleitung.png")
     picture_answer = StringProperty("")
-    picture_opacity = NumericProperty(1)
+    show_howto = BooleanProperty(True)
     line_image = StringProperty("")
 
     def __init__(self, **kwargs):
         super(PageOne, self).__init__(**kwargs)
         self.ids.right.pos_hint ={'center_y': -0.3, 'center_x': .5}
         self.ids.right.size_hint =(0.7, 1)
+        self.ids.howto.pos_hint ={'center_y': -0.5, 'center_x': .5}
+        self.ids.howto.size_hint =(0.7, 0.7)
 
     def on_pre_enter(self):
         animation = Animation(pos_hint = {'center_y': 0.2}, t='in_out_cubic', duration=0.5)
         animation += Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.7)
         animation.start(self.ids.right)
+
+    def on_enter(self):
+         if self.show_howto is True:
+            animation = Animation(pos_hint = {'center_y': 0.4}, t='in_out_cubic', duration=0.5)
+            # animation.bind(on_complete=self.deanimate_deck_size)
+            animation.start(self.ids.howto)
+
+    def deanimate_howto(self, *args):
+        animation = Animation(pos_hint = {'center_y': -0.5}, t='in_out_cubic', duration=0.3)
+        animation.start(self.ids.howto)
 
 class PageTwo(Screen):
     picture_answer = StringProperty("")
@@ -127,7 +133,6 @@ class DataPage(Screen):
         self.ids.size.size_hint =(0.45, 0.45)
 
     def animate_deck_size(self, size):
-        print size
         animation = Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.15)
         animation.bind(on_complete=self.deanimate_deck_size)
         self.deck_size_cache = size
@@ -326,9 +331,9 @@ class HalloApp(App):
     
     def load_intro(self):
         if self.lib.firsttime:
-            self.pageone.picture_opacity = 1
+            self.pageone.show_howto = True
         else:
-            self.pageone.picture_opacity = 0
+            self.pageone.show_howto = False
         self.lib.firsttime = False
         self.lib.save_decks()
 
@@ -364,8 +369,9 @@ class HalloApp(App):
             self.distance = touch.x - self.coordinate
         except:
             pass
-        if self.pageone.picture_opacity != 0:
-            self.pageone.picture_opacity = 0    
+        if self.pageone.show_howto != False:
+            self.pageone.deanimate_howto()
+            self.pageone.show_howto = False    
         else:
             if self.answered == False:
                 self.show_answer(self.pageone)

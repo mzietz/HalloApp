@@ -1,1 +1,2702 @@
-[{"date": "2018-12-19 12:08:38.804181", "chunk": 0, "question": "Error", "difficulty": 0, "answer": "Deck leider nicht vorhanden","info1": "", "info2": "", "learned": false}]
+[
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "einpacken", 
+    "info1": "(packt ein, hat eingepackt)", 
+    "difficulty": 1, 
+    "answer": "\uc2f8\ub2e4, \ud3ec\uc7a5\ud558\ub2e4 ", 
+    "learned": false, 
+    "info2": "Pack bitte die Handt\u00fccher ein !  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "lesen", 
+    "info1": "(liest, hat gelesen)", 
+    "difficulty": 1, 
+    "answer": "\uc77d\ub2e4", 
+    "learned": false, 
+    "info2": "In der Schule lesen wir ein Buch von Goethe.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 0, 
+    "question": "st\u00f6ren", 
+    "info1": "(st\u00f6rt, hat gest\u00f6rt)", 
+    "difficulty": 1, 
+    "answer": "\ubc29\ud574\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "St\u00f6re ich?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "abholen", 
+    "info1": "(holt ab, hat abgeholt)", 
+    "difficulty": 1, 
+    "answer": "\ub370\ub824\uc624\ub2e4, \ubc1b\ub2e4", 
+    "learned": false, 
+    "info2": "Wann kann ich die Sachen bei dir abholen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "gewinnen", 
+    "info1": "(gewinnt, hat gewonnen)", 
+    "difficulty": 1, 
+    "answer": "\uc774\uae30\ub2e4", 
+    "learned": false, 
+    "info2": "Unsere Mannschaft hat gewonnen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "buchstabieren", 
+    "info1": "(buchstabiert, hat buchstabiert)", 
+    "difficulty": 1, 
+    "answer": "\ud55c\uc790\ud55c\uc790 \uc77d\ub2e4/\ub9d0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "W\u00fcrden Sie bitte Ihren Namen buchstabieren?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "reiten", 
+    "info1": "(reitet, ist geritten)", 
+    "difficulty": 1, 
+    "answer": "\ub9d0\uc744 \ud0c0\ub2e4", 
+    "learned": false, 
+    "info2": "M\u00f6chtest du reiten lernen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "h\u00e4ngen", 
+    "info1": "(h\u00e4ngt, hat gehangen)", 
+    "difficulty": 1, 
+    "answer": "\ub9e4\ub2ec\ub824 \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Im Museum h\u00e4ngen moderne Bilder.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "schaffen", 
+    "info1": "(schafft, hat geschafft)", 
+    "difficulty": 1, 
+    "answer": "\uc774\ub8e8\ub2e4, \uc774\ub8e9\ud558\ub2e4, \ud560\uc218\uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Kannst du mir bitte helfen? Ich schaffe das nicht alleine."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 0, 
+    "question": "berichten", 
+    "info1": "(berichtet, hat berichtet)", 
+    "difficulty": 1, 
+    "answer": "\ubcf4\uace0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Alle Zeitungen berichten von dem Unfall.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 1, 
+    "question": "schimpfen", 
+    "info1": "(schimpft, hat geschimpft)", 
+    "difficulty": 1, 
+    "answer": "\ud63c\ub0b4\ub2e4", 
+    "learned": false, 
+    "info2": "Warum schimpfst du denn so laut?"
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 1, 
+    "question": "braten", 
+    "info1": "(br\u00e4t, hat gebraten)", 
+    "difficulty": 1, 
+    "answer": "(\uace0\uae30\ub97c) \uad7d\ub2e4, \ubcf6\ub2e4", 
+    "learned": false, 
+    "info2": "Braten Sie das Fleisch in etwas \u00d6l !  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 1, 
+    "question": "werden", 
+    "info1": "(wird, ist geworden)", 
+    "difficulty": 1, 
+    "answer": "\ub418\ub2e4, \uc0dd\uae30\ub2e4", 
+    "learned": false, 
+    "info2": "Mein Sohn will Arzt werden.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 1, 
+    "question": "geh\u00f6ren", 
+    "info1": "(geh\u00f6rt, hat geh\u00f6rt)", 
+    "difficulty": 1, 
+    "answer": "\uc18c\uc720\ud558\ub2e4, \ub204\uad6c\uc758 \uac83\uc774\ub2e4", 
+    "learned": false, 
+    "info2": "Geh\u00f6rt der Stift dir?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 1, 
+    "question": "suchen", 
+    "info1": "(sucht, hat gesucht)", 
+    "difficulty": 1, 
+    "answer": "\ubb34\uc5c7\uc744 \ucc3e\ub2e4", 
+    "learned": false, 
+    "info2": "Suchst du etwas?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 1, 
+    "question": "lieben", 
+    "info1": "(liebt, hat geliebt)", 
+    "difficulty": 1, 
+    "answer": "\uc0ac\ub791\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich liebe dich!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 1, 
+    "question": "vermieten", 
+    "info1": "(vermietet, hat vermietet)", 
+    "difficulty": 1, 
+    "answer": "(\ub3c8 \ubc1b\uace0) \ube4c\ub824\uc8fc\ub2e4, \uc784\ub300\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Wohnung ist schon vermietet.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 1, 
+    "question": "(sich) unterhalten", 
+    "info1": "(unterh\u00e4lt, hat unterhalten)", 
+    "difficulty": 1, 
+    "answer": "\ub300\ud654\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir haben uns \u00fcber das Fu\u00dfballspiel unterhalten.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 1, 
+    "question": "m\u00fcssen", 
+    "info1": "(muss, hat gemusst)", 
+    "difficulty": 1, 
+    "answer": "...\ud558\uc9c0 \uc54a\uc73c\uba74 \uc548\ub418\ub2e4, ...\ud574\uc57c \ud55c\ub2e4", 
+    "learned": false, 
+    "info2": "Ich muss jeden Tag von 8 Uhr bis 18 Uhr arbeiten.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 1, 
+    "question": "kaufen", 
+    "info1": "(kauft, hat gekauft)", 
+    "difficulty": 1, 
+    "answer": "\uc0ac\ub2e4, \uad6c\uc785\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Tim kauft sich ein neues Auto.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 2, 
+    "question": "brauchen", 
+    "info1": "(braucht, hat gebraucht)", 
+    "difficulty": 1, 
+    "answer": "\ud544\uc694\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich brauche ein neues Auto.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 2, 
+    "question": "sparen", 
+    "info1": "(spart, hat gespart)", 
+    "difficulty": 1, 
+    "answer": "\uc808\uc57d\ud558\ub2e4, \uc544\ub07c\ub2e4", 
+    "learned": false, 
+    "info2": "Ein neues Auto ist sehr teuer. Ich muss sparen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 2, 
+    "question": "fehlen", 
+    "info1": "(fehlt, hat gefehlt)", 
+    "difficulty": 1, 
+    "answer": "\uc5c6\ub2e4, \uc5c6\uc5b4\uc84c\ub2e4", 
+    "learned": false, 
+    "info2": "Herr M\u00fcller ist nicht da, er fehlt schon seit drei  Tagen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 2, 
+    "question": "(sich) anmelden", 
+    "info1": "(anmeldet, hat angemeldet.)", 
+    "difficulty": 1, 
+    "answer": "\ub4f1\ub85d\ud558\ub2e4, \uc2e0\uccad\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wo kann ich mich f\u00fcr den Kurs anmelden?"
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 2, 
+    "question": "(sich) w\u00fcnschen", 
+    "info1": "(w\u00fcnscht, hat gew\u00fcnscht)", 
+    "difficulty": 1, 
+    "answer": "\uc6d0\ud558\ub2e4, \ubc14\ub77c\ub2e4, \uc18c\ub9dd\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich w\u00fcnsche mir eine Kamera zum Geburtstag.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 2, 
+    "question": "verpassen", 
+    "info1": "(verpasst, hat verpasst)", 
+    "difficulty": 1, 
+    "answer": "\ub193\uce58\ub2e4, \ub9cc\ub098\uc9c0 \ubabb\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe den Zug verpasst.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 2, 
+    "question": "ausf\u00fcllen", 
+    "info1": "(f\u00fcllt aus,  hat ausgef\u00fcllt)", 
+    "difficulty": 1, 
+    "answer": "\uc791\uc131\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "F\u00fcllen Sie/F\u00fcll bitte dieses Formular aus!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 2, 
+    "question": "tun", 
+    "info1": "(tut, hat getan)", 
+    "difficulty": 1, 
+    "answer": "\ud558\ub2e4, \ud589\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Mein R\u00fccken tut weh.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 2, 
+    "question": "k\u00f6nnen", 
+    "info1": "(kann, hat gekonnt)", 
+    "difficulty": 1, 
+    "answer": "\ud560 \uc904 \uc54c\ub2e4, \ud560 \uc218 \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Ich kann Deutsch und Russisch. Aber Englisch kann ich nicht."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 2, 
+    "question": "machen", 
+    "info1": "(macht, hat gemacht)", 
+    "difficulty": 1, 
+    "answer": "\ub9cc\ub4e4\ub2e4, \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Was machst du heute Abend?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 3, 
+    "question": "finden", 
+    "info1": "(findet, hat gefunden)", 
+    "difficulty": 1, 
+    "answer": "\ubc1c\uacac\ud558\ub2e4, \ucc3e\uc544\ub0b4\ub2e4", 
+    "learned": false, 
+    "info2": "Wir m\u00fcssen den Schl\u00fcssel finden.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 3, 
+    "question": "putzen", 
+    "info1": "(putzt, hat geputzt)", 
+    "difficulty": 1, 
+    "answer": "\uccad\uc18c\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich muss heute noch das Bad putzen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 3, 
+    "question": "studieren", 
+    "info1": "(studiert, hat studiert)", 
+    "difficulty": 1, 
+    "answer": "\ub300\ud559\uc5d0\uc11c \ubc30\uc6b0\ub2e4", 
+    "learned": false, 
+    "info2": "Ich studiere in Mainz.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 3, 
+    "question": "m\u00f6gen", 
+    "info1": "(mag, hat gemocht)", 
+    "difficulty": 1, 
+    "answer": "\uc88b\uc544\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Magst du Schokolade? - Nein, ich mag keine  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 3, 
+    "question": "leihen", 
+    "info1": "(leiht, hat geliehen)", 
+    "difficulty": 1, 
+    "answer": "\ube4c\ub824 \uc8fc\ub2e4", 
+    "learned": false, 
+    "info2": "Kannst du mir f\u00fcnf Euro leihen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 3, 
+    "question": "verdienen", 
+    "info1": "(verdient, hat verdient)", 
+    "difficulty": 1, 
+    "answer": "(\uc77c\ud558\uc5ec) \uc5bb\ub2e4, \ubc8c\ub2e4", 
+    "learned": false, 
+    "info2": "Ich verdiene 1.500 Euro im Monat.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 3, 
+    "question": "verstehen", 
+    "info1": "(versteht, hat verstanden)", 
+    "difficulty": 1, 
+    "answer": "\ub4e3\ub2e4, \ub4e4\uc5b4\uc11c \uc54c\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen Sie mich verstehen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 3, 
+    "question": "stattfinden", 
+    "info1": "(findet statt,  hat stattgefunden)", 
+    "difficulty": 1, 
+    "answer": "\uac1c\ucd5c\ub418\ub2e4", 
+    "learned": false, 
+    "info2": "Das Spiel findet auch bei Regen statt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 3, 
+    "question": "abgeben", 
+    "info1": "(gibt ab, hat abgegeben)", 
+    "difficulty": 1, 
+    "answer": "\uc8fc\ub2e4, \uc81c\ucd9c\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich muss meinen Schl\u00fcssel an der Rezeption  gibt ab, abgeben."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 3, 
+    "question": "erkl\u00e4ren", 
+    "info1": "(erkl\u00e4rt, hat erkl\u00e4rt)", 
+    "difficulty": 1, 
+    "answer": "\uc124\uba85\ud558\ub2e4, \ud574\uba85\ud558\ub2e4, \ud574\uc11d\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich verstehe das nicht. Kannst du mir das erkl\u00e4ren?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "essen", 
+    "info1": "(isst, hat gegessen)", 
+    "difficulty": 1, 
+    "answer": "\uba39\ub2e4", 
+    "learned": false, 
+    "info2": "Was gibt es zu essen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "buchen", 
+    "info1": "(bucht, hat gebucht)", 
+    "difficulty": 1, 
+    "answer": "\uc608\uc57d\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Morgen buche ich unsere Urlaubsreise.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "fragen", 
+    "info1": "(fragt, hat gefragt)", 
+    "difficulty": 1, 
+    "answer": "\ubb3b\ub2e4, \uc9c8\ubb38\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er fragt, wann er kommen kann.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "scheinen", 
+    "info1": "(scheint, hat geschienen)", 
+    "difficulty": 1, 
+    "answer": "\ube5b\ub098\ub2e4, \ube44\uce58\ub2e4", 
+    "learned": false, 
+    "info2": "Die Sonne scheint.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "(sich) entschuldigen", 
+    "info1": "(entschuldigt, hat entschuldigt)", 
+    "difficulty": 1, 
+    "answer": "\uc6a9\uc11c\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich entschuldige mich."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "schmecken", 
+    "info1": "(schmeckt, hat geschmeckt)", 
+    "difficulty": 1, 
+    "answer": "\u2026\ud55c \ub9db\uc774 \ub098\ub2e4", 
+    "learned": false, 
+    "info2": "Schmeckt dir die Suppe?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "schenken", 
+    "info1": "(schenkt, hat geschenkt)", 
+    "difficulty": 1, 
+    "answer": "\uc120\ubb3c\ud558\ub2e4, \uc8fc\ub2e4", 
+    "learned": false, 
+    "info2": "Was schenken wir Michael zum Geburtstag?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "empfehlen", 
+    "info1": "(empfiehlt, hat empfohlen)", 
+    "difficulty": 1, 
+    "answer": "\ucd94\ucc9c\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Welchen Wein k\u00f6nnen Sie mir empfehlen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 4, 
+    "question": "helfen ", 
+    "info1": "(ilft, hat geholfen)", 
+    "difficulty": 1, 
+    "answer": "\ub204\uad6c\ub97c \ub3d5\ub2e4", 
+    "learned": false, 
+    "info2": "W\u00fcrden Sie mir bitte helfen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 4, 
+    "question": "erk\u00e4ltet sein", 
+    "info1": "(ist erk\u00e4ltet, ist erk\u00e4ltet gewesen)", 
+    "difficulty": 1, 
+    "answer": "\uac10\uae30 \ub4e4\ub2e4", 
+    "learned": false, 
+    "info2": "Lisa ist erk\u00e4ltet. Sie kann heute nicht zur Schule gehen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 5, 
+    "question": "gratulieren", 
+    "info1": "(gratuliert, hat gratuliert)", 
+    "difficulty": 1, 
+    "answer": "\ucd95\ud558\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich gratuliere dir!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 5, 
+    "question": "(aus)tauschen", 
+    "info1": "(tauscht, hat getauscht)", 
+    "difficulty": 1, 
+    "answer": "(\uc11c\ub85c) \uad50\ud658\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen wir unsere Adressen austauschen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 5, 
+    "question": "sagen", 
+    "info1": "(sagt, hat gesagt)", 
+    "difficulty": 1, 
+    "answer": "\ub9d0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Entschuldigung, was haben Sie gesagt?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 5, 
+    "question": "kennenlernen", 
+    "info1": "(lernt kennen, hat kennengelernt)", 
+    "difficulty": 1, 
+    "answer": "\uc544\ub294 \uc0ac\uc774\uac00 \ub418\ub2e4", 
+    "learned": false, 
+    "info2": "Wo habt ihr euch kennengelernt? - Wir haben uns in M\u00fcnchen kennengelernt."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 5, 
+    "question": "(sich) umziehen", 
+    "info1": "(zieht um, ist/hat umgezogen)", 
+    "difficulty": 1, 
+    "answer": "\uc774\uc0ac \uac00\ub2e4, \uc637\uc744 \uac08\uc544\uc785\ub2e4", 
+    "learned": false, 
+    "info2": "N\u00e4chsten Monat ziehen wir um. Nach dem Sport habe ich mich umgezogen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 5, 
+    "question": "schlafen", 
+    "info1": "(schl\u00e4ft, hat geschlafen)", 
+    "difficulty": 1, 
+    "answer": "\uc790\ub2e4, \uc7a0\uc790\ub2e4", 
+    "learned": false, 
+    "info2": "Ich schlafe meistens acht Stunden.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 5, 
+    "question": "einsteigen", 
+    "info1": "(steigt ein, ist eingestiegen)", 
+    "difficulty": 1, 
+    "answer": "\uc62c\ub77c\ud0c0\ub2e4", 
+    "learned": false, 
+    "info2": "Schnell, steig ein, der Zug f\u00e4hrt gleich ab.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 5, 
+    "question": "wissen", 
+    "info1": "(wei\u00df, hat gewusst)", 
+    "difficulty": 1, 
+    "answer": "\uc54c\ub2e4, \uc54c\uace0 \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Wei\u00dft du, wie der Hausmeister hei\u00dft?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 5, 
+    "question": "antworten", 
+    "info1": "(antwortet, hat geantwortet)", 
+    "difficulty": 1, 
+    "answer": "\ub300\ub2f5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er antwortet nicht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 5, 
+    "question": "(sich) f\u00fchlen", 
+    "info1": "(f\u00fchlt, hat gef\u00fchlt)", 
+    "difficulty": 1, 
+    "answer": "\ub4e4\ub2e4, \ub290\ub07c\ub2e4", 
+    "learned": false, 
+    "info2": "Wie f\u00fchlen Sie sich?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 6, 
+    "question": "husten", 
+    "info1": "(hustet, hat gehustet)", 
+    "difficulty": 1, 
+    "answer": "\uae30\uce68\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Sie hustet seit zwei Tagen. Sie ist krank.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 6, 
+    "question": "surfen", 
+    "info1": "(surft, hat/ist gesurft)", 
+    "difficulty": 1, 
+    "answer": "\ud30c\ub3c4\ud0c0\uae30\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte gern surfen lernen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 6, 
+    "question": "weinen", 
+    "info1": "(weint, hat geweint)", 
+    "difficulty": 1, 
+    "answer": "\uc6b8\ub2e4, \ub208\ubb3c\uc744 \ud758\ub9ac\ub2e4", 
+    "learned": false, 
+    "info2": "Warum weint das Baby?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 6, 
+    "question": "bleiben", 
+    "info1": "(bleibt, ist geblieben)", 
+    "difficulty": 1, 
+    "answer": "\uba38\ubb34\ub974\ub2e4, \ub0a8\ub2e4", 
+    "learned": false, 
+    "info2": "Wir bleiben drei Tage in Berlin.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 6, 
+    "question": "tragen", 
+    "info1": "(tr\u00e4gt, hat getragen)", 
+    "difficulty": 1, 
+    "answer": "\ub098\ub974\ub2e4, \ub4e4\uace0 \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Ich kann den Koffer nicht tragen, er ist zu schwer.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 6, 
+    "question": "(sich) k\u00fcmmern", 
+    "info1": "(k\u00fcmmert, hat gek\u00fcmmert)", 
+    "difficulty": 1, 
+    "answer": "\ub3cc\ubcf4\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe jetzt keine Zeit. Ich muss mich um das  Essen k\u00fcmmern."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 6, 
+    "question": "anrufen", 
+    "info1": "(ruft an, hat angerufen)", 
+    "difficulty": 1, 
+    "answer": "\uc804\ud654\ud558\ub2e4", 
+    "learned": false, 
+    "info2": " Kann ich Sie heute Abend anrufen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 6, 
+    "question": "kosten", 
+    "info1": "(kostet,  hat gekostet)", 
+    "difficulty": 1, 
+    "answer": "...\uc6d0\uc785\ub2c8\ub2e4", 
+    "learned": false, 
+    "info2": "Wie viel kostet das Buch? - 20 Euro."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 6, 
+    "question": "auspacken", 
+    "info1": "(packt aus,  hat ausgepackt)", 
+    "difficulty": 1, 
+    "answer": "\ud480\ub2e4, \uaebc\ub0b4\ub2e4", 
+    "learned": false, 
+    "info2": "Packst du bitte den Koffer aus?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 6, 
+    "question": "verreisen", 
+    "info1": "(verreist, ist verreist)", 
+    "difficulty": 1, 
+    "answer": "\uc5ec\ud589\uc744 \ub5a0\ub098\ub2e4", 
+    "learned": false, 
+    "info2": "Verreist ihr in den Ferien?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 7, 
+    "question": "wecken", 
+    "info1": "(weckt, hat geweckt)", 
+    "difficulty": 1, 
+    "answer": "\uae68\uc6b0\ub2e4", 
+    "learned": false, 
+    "info2": "Bitte wecken Sie mich morgen fr\u00fch um f\u00fcnf.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 7, 
+    "question": "baden", 
+    "info1": "(badet, hat gebadet)", 
+    "difficulty": 1, 
+    "answer": "\ubaa9\uc695\uc744 \ud558\ub2e4, \uc218\uc601\ud558\ud558", 
+    "learned": false, 
+    "info2": "Ich bade nicht so gern, ich dusche lieber.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 7, 
+    "question": "(sich) verlieben", 
+    "info1": "(verliebt, hat verliebt)", 
+    "difficulty": 1, 
+    "answer": "\uc0ac\ub791\uc5d0 \ube60\uc9c0\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe mich in sie verliebt."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 7, 
+    "question": "aufmachen", 
+    "info1": "(macht auf,  hat aufgemacht)", 
+    "difficulty": 1, 
+    "answer": "\uc5f4\uc5b4\ub193\uace0\u00a0\uc788\ub2e4, \uc5f4\uc5b4\ub450\uace0 \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Kannst du bitte die T\u00fcr aufmachen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 7, 
+    "question": "(sich) bewerben", 
+    "info1": "(bewirbt, hat beworben)", 
+    "difficulty": 1, 
+    "answer": "\uc2e0\uccad\ud558\ub2e4, \uc9c0\uc6d0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe mich bei vier Firmen beworben."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 7, 
+    "question": "wohnen", 
+    "info1": "(wohnt, hat gewohnt)", 
+    "difficulty": 1, 
+    "answer": "\uc0b4\ub2e4, \uac70\uc8fc\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich wohne in Kiel.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 7, 
+    "question": "(sich) beeilen", 
+    "info1": "(beeilt, hat beeilt)", 
+    "difficulty": 1, 
+    "answer": "\uc11c\ub450\ub974\ub2e4", 
+    "learned": false, 
+    "info2": "Kannst du dich bitte beeilen? Der Bus f\u00e4hrt  gleich ab!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 7, 
+    "question": "(sich) vorstellen", 
+    "info1": "(stellt vor, hat vorgestellt)", 
+    "difficulty": 1, 
+    "answer": "\uc790\uae30\ub97c \uc18c\uac1c\ud558\ub2e4, \ub9c8\uc74c\uc5d0 \uadf8\ub9ac\ub2e4", 
+    "learned": false, 
+    "info2": "Wir wollen uns kennenlernen. K\u00f6nnen Sie sich bitte vorstellen?"
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 7, 
+    "question": "vereinbaren", 
+    "info1": "(vereinbart, hat vereinbart)", 
+    "difficulty": 1, 
+    "answer": "\uc57d\uc18d\uc744 \uc7a1\ub2e4, \uc57d\uc18d\uc744 \uc815\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen wir einen Termin vereinbaren?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 7, 
+    "question": "ausziehen", 
+    "info1": "(zieht aus, ist ausgezogen)", 
+    "difficulty": 1, 
+    "answer": "\ud1f4\uac70\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Nachbarn sind am Wochenende ausgezogen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 8, 
+    "question": "besuchen", 
+    "info1": "(besucht, hat besucht)", 
+    "difficulty": 1, 
+    "answer": "\ubc29\ubb38\ud558\ub2e4, \ubb38\uc548\uac00\ub2e4", 
+    "learned": false, 
+    "info2": "Darf ich dich mal besuchen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 8, 
+    "question": "parken", 
+    "info1": "(parkt, hat geparkt)", 
+    "difficulty": 1, 
+    "answer": "\uc8fc\ucc28\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Darf ich hier parken?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 8, 
+    "question": "verlieren", 
+    "info1": "(verliert, hat verloren)", 
+    "difficulty": 1, 
+    "answer": "\uc783\ub2e4, \uc783\uc5b4\ubc84\ub9ac\ub2e4, \uc9c0\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe meinen Schl\u00fcssel verloren.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 8, 
+    "question": "(sich) streiten", 
+    "info1": "(streitet, hat gestritten)", 
+    "difficulty": 1, 
+    "answer": "\uc2f8\uc6b0\ub2e4, \ub9d0\ub2e4\ud23c\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir haben uns gestritten."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 8, 
+    "question": "packen", 
+    "info1": "(packt, hat gepackt)", 
+    "difficulty": 1, 
+    "answer": "\uc2f8\ub2e4, \uc9d0\uc744 \uafb8\ub9ac\ub2e4, \ud3ec\uc7a5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich muss noch meinen Koffer packen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 8, 
+    "question": "(sich) setzen", 
+    "info1": "(setzt, hat gesetzt)", 
+    "difficulty": 1, 
+    "answer": "\uc549\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe mich auf den Stuhl gesetzt"
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 8, 
+    "question": "liegen", 
+    "info1": "(liegt, hat/ist gelegen)", 
+    "difficulty": 1, 
+    "answer": "\ub204\uc6cc \uc788\ub2e4, \ub193\uc5ec \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Die Zeitung liegt auf dem Tisch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 8, 
+    "question": "tanzen", 
+    "info1": "(tanzt, hat getanzt)", 
+    "difficulty": 1, 
+    "answer": "\ucda4\ucd94\ub2e4", 
+    "learned": false, 
+    "info2": "Tanzen Sie gern?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 8, 
+    "question": "anbieten", 
+    "info1": "(bietet an,  hat angeboten)", 
+    "difficulty": 1, 
+    "answer": "\uc81c\uc548\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Darf ich Ihnen/dir ein St\u00fcck Kuchen anbieten?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 8, 
+    "question": "\u00fcbersetzen", 
+    "info1": "(\u00fcbersetzt,  hat \u00fcbersetzt)", 
+    "difficulty": 1, 
+    "answer": "\ubc88\uc5ed\ud558\ub2e4,\ud1b5\uc5ed\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen Sie mir den Brief bitte \u00fcbersetzen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 9, 
+    "question": "tr\u00e4umen", 
+    "info1": "(tr\u00e4umt, hat getr\u00e4umt)", 
+    "difficulty": 1, 
+    "answer": "\uafc8\uafb8\ub2e4, \uafc8\uc5d0\uc11c \ubcf4\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe schlecht getr\u00e4umt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 9, 
+    "question": "chatten", 
+    "info1": "(chattet, hat gechattet)", 
+    "difficulty": 1, 
+    "answer": "\ucc44\ud305 \ud558\ub2e4, \uc218\ub2e4\ub97c \ub5a8\ub2e4", 
+    "learned": false, 
+    "info2": "Luis chattet gern mit seinen Freunden im Internet.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 9, 
+    "question": "l\u00fcgen", 
+    "info1": "(l\u00fcgt, hat gelogen)", 
+    "difficulty": 1, 
+    "answer": "\uac70\uc9d3\ub9d0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Du sollst nicht l\u00fcgen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 9, 
+    "question": "backen", 
+    "info1": "(b\u00e4ckt/backt, hat gebacken)", 
+    "difficulty": 1, 
+    "answer": "\uad7d\ub2e4, \uad6c\uc6cc\uc9c0\ub2e4", 
+    "learned": false, 
+    "info2": "Wenn du kommst, backe ich einen Kuchen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 9, 
+    "question": "beginnen", 
+    "info1": "(beginnt, hat begonnen)", 
+    "difficulty": 1, 
+    "answer": "\uc2dc\uc791\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Das Spiel beginnt um 15.30 Uhr.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 9, 
+    "question": "probieren", 
+    "info1": "(probiert, hat probiert)", 
+    "difficulty": 1, 
+    "answer": "\ud574\ubcf4\ub2e4,  \ub9db\ubcf4\ub2e4", 
+    "learned": false, 
+    "info2": "M\u00f6chten Sie den K\u00e4se probieren?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 9, 
+    "question": "sterben", 
+    "info1": "(stirbt, ist gestorben)", 
+    "difficulty": 1, 
+    "answer": "\uc8fd\ub2e4", 
+    "learned": false, 
+    "info2": "Herr M\u00fcller kommt heute nicht. Sein Vater ist gestern gestorben."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 9, 
+    "question": "(sich) vorbereiten", 
+    "info1": "(bereitet vor, hat vorbereitet)", 
+    "difficulty": 1, 
+    "answer": "\uc900\ube44\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Morgen mache ich eine Party. Ich muss noch viel daf\u00fcr vorbereiten."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 9, 
+    "question": "herstellen", 
+    "info1": "(stellt her, hat hergestellt)", 
+    "difficulty": 1, 
+    "answer": "\uc0dd\uc0b0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "In unserer Firma stellen wir M\u00f6bel her.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 9, 
+    "question": "einkaufen", 
+    "info1": "(kauft ein,  hat eingekauft)", 
+    "difficulty": 1, 
+    "answer": "\uc7a5\ubcf4\ub7ec \uac00\ub2e4", 
+    "learned": false, 
+    "info2": "Ich muss noch f\u00fcr morgen einkaufen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "erz\u00e4hlen", 
+    "info1": "(erz\u00e4hlt, hat erz\u00e4hlt)", 
+    "difficulty": 1, 
+    "answer": "\uc774\uc57c\uae30 \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir m\u00fcssen euch etwas erz\u00e4hlen!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "erreichen", 
+    "info1": "(erreicht, hat erreicht)", 
+    "difficulty": 1, 
+    "answer": "\ubb34\uc5c7\uc5d0 \ub2ff\ub2e4, \ub2e4\ub2e4\ub974\ub2e4", 
+    "learned": false, 
+    "info2": "Wenn wir uns beeilen, erreichen wir noch den Zug  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "kennen", 
+    "info1": "(kennt, hat gekannt)", 
+    "difficulty": 1, 
+    "answer": "\uc54c(\uace0 \uc788) \ub2e4", 
+    "learned": false, 
+    "info2": "Kennen Sie diese Frau? - Nein, leider nicht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 10, 
+    "question": "leidtun/leid tun", 
+    "info1": "(tut leid, hat leid getan)", 
+    "difficulty": 1, 
+    "answer": "\ubbf8\uc548 \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Es tut mir leid, dass ich nicht kommen kann.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "dr\u00fccken", 
+    "info1": "(dr\u00fcckt, hat gedr\u00fcckt)", 
+    "difficulty": 1, 
+    "answer": "\ub204\ub974\ub2e4, \ubc00\ub2e4", 
+    "learned": false, 
+    "info2": "An dieser T\u00fcr musst du dr\u00fccken, nicht ziehen, dann geht sie auf."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "(sich) informieren", 
+    "info1": "(informiert, hat informiert)", 
+    "difficulty": 1, 
+    "answer": "\uac00\ub974\uce58\ub2e4, \uad50\uc2dc\ud558\ub2e4.", 
+    "learned": false, 
+    "info2": "Hast du dich \u00fcber die Pr\u00fcfung informiert?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 10, 
+    "question": "vergleichen", 
+    "info1": "(vergleicht, hat verglichen)", 
+    "difficulty": 1, 
+    "answer": "\ube44\uad50\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Vergleichen Sie die Angebote!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "kontrollieren", 
+    "info1": "(kontrolliert, hat kontrolliert)", 
+    "difficulty": 1, 
+    "answer": "\uac80\uc0ac\ud558\ub2e4, \uc0b4\ud53c\ub2e4, \uc81c\uc5b4\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen Sie bei meinem Auto bitte das \u00d6l kontrollieren?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "k\u00fcndigen", 
+    "info1": "(k\u00fcndigt, hat gek\u00fcndigt)", 
+    "difficulty": 1, 
+    "answer": "\ud574\uc57d\uc744 (\ud574\uace0) \ud1b5\uace0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Meine Arbeit gef\u00e4llt mir nicht mehr. Ich habe heute gek\u00fcndigt."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 10, 
+    "question": "anfangen", 
+    "info1": "(f\u00e4ngt an, hat angefangen)", 
+    "difficulty": 1, 
+    "answer": "\uc2dc\uc791\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Hier f\u00e4ngt die Bahnhofstra\u00dfe an.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "(sich) bedanken", 
+    "info1": "(bedankt, hat bedankt)", 
+    "difficulty": 1, 
+    "answer": "(\ub204\uad6c\uc5d0\uac8c) \uac10\uc0ac\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte mich f\u00fcr die Hilfe bedanken.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "aufh\u00f6ren", 
+    "info1": "(h\u00f6rt auf, hat aufgeh\u00f6rt)", 
+    "difficulty": 1, 
+    "answer": "\ub05d\ub098\ub2e4", 
+    "learned": false, 
+    "info2": "Wann h\u00f6rt ihr mit der Arbeit auf?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "malen", 
+    "info1": "(malt, hat gemalt)", 
+    "difficulty": 1, 
+    "answer": "\uadf8\ub9ac\ub2e4", 
+    "learned": false, 
+    "info2": "Mein Sohn kann gut malen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "fr\u00fchst\u00fccken", 
+    "info1": "(fr\u00fchst\u00fcckt, hat gefr\u00fchst\u00fcckt)", 
+    "difficulty": 1, 
+    "answer": "\uc544\uce68 \uc2dd\uc0ac\ub97c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich fr\u00fchst\u00fccke immer um 9:00 Uhr.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "fallen", 
+    "info1": "(f\u00e4llt, ist gefallen)", 
+    "difficulty": 1, 
+    "answer": "\ub5a8\uc5b4\uc9c0\ub2e4,  \uc4f0\ub7ec\uc9c0\ub2e4", 
+    "learned": false, 
+    "info2": "Pass auf, das Glas f\u00e4llt gleich vom Tisch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "sehen", 
+    "info1": "(sieht, hat gesehen)", 
+    "difficulty": 1, 
+    "answer": "\ubcf4\ub2e4", 
+    "learned": false, 
+    "info2": "Ich kann dich nicht sehen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "nennen", 
+    "info1": "(nennt, hat genannt)", 
+    "difficulty": 1, 
+    "answer": "\uc774\ub984\uc9d3\ub2e4, \uba85\uba85\ud558\ub2e4, ...\ub77c\uace0 \ubd80\ub974\ub2e4", 
+    "learned": false, 
+    "info2": "Mein Freund hei\u00dft Alexander, aber alle nennen ihn Alex."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "ankommen", 
+    "info1": "(kommt an, ist angekommen)", 
+    "difficulty": 1, 
+    "answer": "\ub3c4\ucc29\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wann kommt dieser Zug in Hamburg an?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "nehmen", 
+    "info1": "(nimmt, hat genommen)", 
+    "difficulty": 1, 
+    "answer": "\uac00\uc838\uac00\ub2e4, \uc120\ud0dd\ud558\ub2e4, \uba39\ub2e4", 
+    "learned": false, 
+    "info2": "Nehmen Sie die Tabletten vor dem Essen!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 11, 
+    "question": "dauern", 
+    "info1": "(dauert, hat gedauert)", 
+    "difficulty": 1, 
+    "answer": "(\uc2dc\uac04) \uac78\ub9ac\ub2e4", 
+    "learned": false, 
+    "info2": "Wie lange dauert die Pause? - Eine halbe Stunde.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 12, 
+    "question": "begr\u00fcnden", 
+    "info1": "(begr\u00fcndet, hat begr\u00fcndet)", 
+    "difficulty": 1, 
+    "answer": "\uc99d\uba85\ud558\ub2e4, \ud655\uc99d\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Bitte begr\u00fcnden Sie Ihre Meinung.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 12, 
+    "question": "geben", 
+    "info1": "(gibt, hat gegeben)", 
+    "difficulty": 1, 
+    "answer": "\uc8fc\ub2e4, \ub0b4\uc8fc\ub2e4", 
+    "learned": false, 
+    "info2": "Kannst du mir mal deinen Stift geben?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 12, 
+    "question": "wollen", 
+    "info1": "(will, hat gewollt)", 
+    "difficulty": 1, 
+    "answer": "\uc6d0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wollen Sie einen Kaffee trinken?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 12, 
+    "question": "wandern", 
+    "info1": "(wandert, ist gewandert)", 
+    "difficulty": 1, 
+    "answer": "\ub3c4\ubcf4 \uc5ec\ud589\ud558\ub2e4, \uac77\ub2e4", 
+    "learned": false, 
+    "info2": "Wir gehen oft wandern.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 12, 
+    "question": "fotografieren", 
+    "info1": "(fotografiert, hat fotografiert)", 
+    "difficulty": 1, 
+    "answer": "\uc0ac\uc9c4\uc744 \ucc0d\ub2e4, \uc0ac\uc9c4 \ucd2c\uc601\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich fotografiere gern.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 12, 
+    "question": "drucken", 
+    "info1": "(druckt, hat gedruckt)", 
+    "difficulty": 1, 
+    "answer": "\ud504\ub9b0\ud2b8\ub97c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "W\u00e4hle einfach \u201eDatei drucken\u201c!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 12, 
+    "question": "(sich) eintragen", 
+    "info1": "(tr\u00e4gt ein, hat eingetragen)", 
+    "difficulty": 1, 
+    "answer": "\ub4f1\ub85d\ud558\ub2e4, \uae30\uc785\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Du muss dich in die Liste eintragen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 12, 
+    "question": "erlaubt sein", 
+    "info1": "(ist erlaubt, ist erlaubt gewesen)", 
+    "difficulty": 1, 
+    "answer": "\ud5c8\uac00 \ubc1b\ub2e4", 
+    "learned": false, 
+    "info2": "Parken ist hier nicht erlaubt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 12, 
+    "question": "feiern", 
+    "info1": "(feiert, hat gefeiert)", 
+    "difficulty": 1, 
+    "answer": "\ub180\ub2e4, \ud30c\ud2f0\ub97c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir feiern heute meinen Geburtstag.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 12, 
+    "question": "trainieren", 
+    "info1": "(trainiert, hat trainiert)", 
+    "difficulty": 1, 
+    "answer": "\uc5f0\uc2b5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir trainieren einmal pro Woche im Sportverein.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "lernen", 
+    "info1": "(lernt, hat gelernt)", 
+    "difficulty": 1, 
+    "answer": "\ubc30\uc6b0\ub2e4, \uc2b5\ub4dd\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wie lange lernen Sie schon Deutsch?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 13, 
+    "question": "spazieren gehen", 
+    "info1": "(geht spazieren, ist spazieren gegangen)", 
+    "difficulty": 1, 
+    "answer": "\uc0b0\ucc45\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir gehen sonntags immer spazieren.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "aufstehen", 
+    "info1": "(steht auf,  ist aufgestanden)", 
+    "difficulty": 1, 
+    "answer": "\uc77c\uc5b4\ub098\ub2e4", 
+    "learned": false, 
+    "info2": "Ich stehe jeden Morgen um sieben Uhr auf.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "planen", 
+    "info1": "(plant, hat geplant)", 
+    "difficulty": 1, 
+    "answer": "\uacc4\ud68d\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir sollen zusammen eine Klassenparty planen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "heiraten", 
+    "info1": "(heiratet, hat geheiratet)", 
+    "difficulty": 1, 
+    "answer": "\uacb0\ud63c\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Meine Schwester heiratet n\u00e4chsten Monat.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "bestellen", 
+    "info1": "(bestellt, hat bestellt)", 
+    "difficulty": 1, 
+    "answer": "\uc8fc\ubb38\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir m\u00f6chten bitte bestellen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "best\u00e4tigen", 
+    "info1": "(best\u00e4tigt, hat best\u00e4tigt)", 
+    "difficulty": 1, 
+    "answer": "\ud655\uc778\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich kann best\u00e4tigen, dass er hier war.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "m\u00f6chten", 
+    "info1": "(m\u00f6chte, hat gemocht)", 
+    "difficulty": 1, 
+    "answer": "\uc6d0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Was m\u00f6chten Sie trinken?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 13, 
+    "question": "lachen", 
+    "info1": "(lacht, hat gelacht)", 
+    "difficulty": 1, 
+    "answer": "\uc6c3\ub2e4", 
+    "learned": false, 
+    "info2": "Die Kinder lachen \u00fcber den Witz.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 13, 
+    "question": "teilen", 
+    "info1": "(teilt, hat geteilt)", 
+    "difficulty": 1, 
+    "answer": "\ub098\ub204\ub2e4", 
+    "learned": false, 
+    "info2": "Wollen wir die Pizza teilen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 14, 
+    "question": "zeichnen", 
+    "info1": "(zeichnet, hat gezeichnet)", 
+    "difficulty": 1, 
+    "answer": "\uadf8\ub9bc\uc744 \uadf8\ub9ac\ub2e4", 
+    "learned": false, 
+    "info2": "Caterina kann gut zeichnen. Sieh mal das Bild hier.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 14, 
+    "question": "erlauben", 
+    "info1": "(erlaubt, hat erlaubt)", 
+    "difficulty": 1, 
+    "answer": "\ud5c8\uac00\ud558\ub2e4, \ub3d9\uc758\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Meine Kinder d\u00fcrfen diesen Film sehen. Ich habe es ihnen erlaubt."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 14, 
+    "question": "vergessen", 
+    "info1": "(vergisst, hat vergessen)", 
+    "difficulty": 1, 
+    "answer": "\uc78a\ub2e4, \uc0dd\uac01\uc9c0 \uc54a\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe meine Hausaufgaben vergessen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 14, 
+    "question": "rechnen", 
+    "info1": "(rechnet, hat gerechnet)", 
+    "difficulty": 1, 
+    "answer": "\uacc4\uc0b0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Sarah kann gut rechnen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 14, 
+    "question": "basteln", 
+    "info1": "(bastelt, hat gebastelt)", 
+    "difficulty": 1, 
+    "answer": "(\ucde8\ubbf8\ub85c \uc218\uc81c\ud488\uc744) \ub9cc\ub4e4\ub2e4, \uacf5\uc791\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Kinder haben etwas gebastelt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 14, 
+    "question": "fliegen", 
+    "info1": "(fliegt, geflogen)", 
+    "difficulty": 1, 
+    "answer": "\ub0a0\ub2e4, \ube44\ud589\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich fliege in den Ferien nach Spanien.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 14, 
+    "question": "denken", 
+    "info1": "(denkt, hat gedacht)", 
+    "difficulty": 1, 
+    "answer": "\uc0dd\uac01\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich denke, du hast recht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 14, 
+    "question": "aussprechen", 
+    "info1": "(spricht aus,  hat ausgesprochen)", 
+    "difficulty": 1, 
+    "answer": "\ubc1c\uc74c\ud558\ub2e4, \ub9d0\ud558\ub2e4\u00a0", 
+    "learned": false, 
+    "info2": "Wie spricht man das Wort aus?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 14, 
+    "question": "(sich) freuen", 
+    "info1": "(freut, hat gefreut)", 
+    "difficulty": 1, 
+    "answer": "\uae30\uc058\uac8c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Kinder freuen sich schon auf die Ferien.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 14, 
+    "question": "kommen", 
+    "info1": "(kommt, ist gekommen)", 
+    "difficulty": 1, 
+    "answer": "\uc624\ub2e4, \ub3c4\ucc29\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Woher kommen Sie? - Aus Frankreich.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "danken", 
+    "info1": "(dankt, hat gedankt)", 
+    "difficulty": 1, 
+    "answer": "\uac10\uc0ac\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich danke Ihnen f\u00fcr die Einladung.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "regnen", 
+    "info1": "(regnet, hat geregnet)", 
+    "difficulty": 1, 
+    "answer": "\ube44\uac00 \uc628\ub2e4", 
+    "learned": false, 
+    "info2": "Wenn es regnet, bleiben wir zu Hause.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "liefern", 
+    "info1": "(liefert, hat geliefert)", 
+    "difficulty": 1, 
+    "answer": "\ubc30\ub2ec\ud558\ub2e4, \ub370\ub9ac\uace0 \uac00\ub2e4", 
+    "learned": false, 
+    "info2": "Wir liefern Ihnen den Schrank nach Hause.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "gehen", 
+    "info1": "(geht, ist gegangen)", 
+    "difficulty": 1, 
+    "answer": "\uac77\ub2e4, \uac78\uc5b4\uac00\ub2e4", 
+    "learned": false, 
+    "info2": "Ich wei\u00df nicht, wie das geht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "singen", 
+    "info1": "(singt, hat gesungen)", 
+    "difficulty": 1, 
+    "answer": "\ub178\ub798\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er singt gern.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "meinen", 
+    "info1": "(meint, hat gemeint)", 
+    "difficulty": 1, 
+    "answer": "\uc0dd\uac01\ud558\ub2e4, \u2219\u2219\u2219\ub77c\uace0 \uc5ec\uae30\ub2e4, \ubbff\ub2e4", 
+    "learned": false, 
+    "info2": "Wie meinst du das? Erkl\u00e4r mir das bitte genauer!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "kriegen", 
+    "info1": "(kriegt, hat gekriegt)", 
+    "difficulty": 1, 
+    "answer": "\uc5bb\ub2e4, \ubc1b\ub2e4", 
+    "learned": false, 
+    "info2": "Ich kriege 15 Euro pro Stunde f\u00fcr meinen Job.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "joggen", 
+    "info1": "(joggt, ist/hat gejoggt)", 
+    "difficulty": 1, 
+    "answer": "\uc870\uae45\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich jogge gern im Park.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 15, 
+    "question": "verabredet sein", 
+    "info1": "(ist verabredet, ist verabredet gewesen)", 
+    "difficulty": 1, 
+    "answer": "\uc57d\uc18d \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Ich bin mit meiner Freundin verabredet.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 15, 
+    "question": "sprechen", 
+    "info1": "(spricht, hat gesprochen)", 
+    "difficulty": 1, 
+    "answer": "\ub9d0\ud558\ub2e4, \uc774\uc57c\uae30\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Kann ich (mit) Herrn Klein sprechen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "speichern", 
+    "info1": "(speichert, hat gespeichert)", 
+    "difficulty": 1, 
+    "answer": "\uc800\uc7a5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Sie m\u00fcssen die Datei speichern.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "(sich) ausruhen", 
+    "info1": "(ruht aus, hat ausgeruht)", 
+    "difficulty": 1, 
+    "answer": "\uc26c\ub2e4", 
+    "learned": false, 
+    "info2": "Ich muss mich ein bisschen ausruhen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "sein", 
+    "info1": "(ist, ist gewesen)", 
+    "difficulty": 1, 
+    "answer": "\uc788\ub2e4, \uc774\ub2e4, \uc874\uc7ac\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Das sind meine Kollegen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "aufr\u00e4umen", 
+    "info1": "(r\u00e4umt auf,  hat aufger\u00e4umt)", 
+    "difficulty": 1, 
+    "answer": "\uce58\uc6b0\ub2e4", 
+    "learned": false, 
+    "info2": "Die Kinder m\u00fcssen ihr Zimmer aufr\u00e4umen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 16, 
+    "question": "(sich) verletzen", 
+    "info1": "(verletzt, hat verletzt)", 
+    "difficulty": 1, 
+    "answer": "\ub2e4\uce58\ub2e4", 
+    "learned": false, 
+    "info2": "Haben Sie sich verletzt?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "benutzen", 
+    "info1": "(benutzt, hat benutzt)", 
+    "difficulty": 1, 
+    "answer": "\uc774\uc6a9\ud558\ub2e4, \uc0ac\uc6a9\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Aufz\u00fcge bitte nicht benutzen!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "riechen", 
+    "info1": "(riecht, hat gerochen)", 
+    "difficulty": 1, 
+    "answer": "\ub0c4\uc0c8\ub97c \ud48d\uae30\ub2e4, \ub0c4\uc0c8\uac00 \ub098\ub2e4", 
+    "learned": false, 
+    "info2": "Diese Blumen riechen gut.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "reservieren", 
+    "info1": "(reserviert, hat reserviert)", 
+    "difficulty": 1, 
+    "answer": "\uc608\uc57d\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Reservieren Sie bitte ein Doppelzimmer.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "ansehen", 
+    "info1": "(sieht an, hat angesehen)", 
+    "difficulty": 1, 
+    "answer": "\ubcf4\ub2e4, \ubc14\ub77c\ubcf4\ub2e4", 
+    "learned": false, 
+    "info2": "Darf ich eure Urlaubsfotos ansehen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 16, 
+    "question": "merken", 
+    "info1": "(merkt, hat gemerkt)", 
+    "difficulty": 1, 
+    "answer": "\uae30\uc5b5\ud558\ub2e4, \uae68\ub2eb\ub2e4", 
+    "learned": false, 
+    "info2": "Ich kann mir keine Zahlen merken. Ich vergesse sie sofort."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 17, 
+    "question": "besichtigen", 
+    "info1": "(besichtigt, hat besichtigt)", 
+    "difficulty": 1, 
+    "answer": "\ubc29\ubb38\ud558\ub2e4, \uad6c\uacbd\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte gern das Schloss besichtigen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 17, 
+    "question": "bitten", 
+    "info1": "(bittet, hat gebeten)", 
+    "difficulty": 1, 
+    "answer": "\ubd80\ud0c1\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Darf ich Sie um etwas bitten?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 17, 
+    "question": "telefonieren", 
+    "info1": "(telefoniert, hat telefoniert)", 
+    "difficulty": 1, 
+    "answer": "\uc804\ud654 \ud1b5\ud654\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich muss kurz telefonieren.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 17, 
+    "question": "\u00fcben", 
+    "info1": "(\u00fcbt, hat ge\u00fcbt)", 
+    "difficulty": 1, 
+    "answer": "\uc5f0\uc2b5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich lerne gerade Gitarre spielen. Ich \u00fcbe jeden Tag zwei Stunden."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 17, 
+    "question": "warten", 
+    "info1": "(wartet, hat gewartet)", 
+    "difficulty": 1, 
+    "answer": "\uae30\ub2e4\ub9ac\ub2e4, \ub300\uae30\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen Sie ein paar Minuten warten?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 17, 
+    "question": "trinken", 
+    "info1": "(trinkt, hat getrunken)", 
+    "difficulty": 1, 
+    "answer": "\ub9c8\uc2dc\ub2e4", 
+    "learned": false, 
+    "info2": "M\u00f6chtest du etwas trinken?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 17, 
+    "question": "aussehen", 
+    "info1": "(sieht aus, hat ausgesehen)", 
+    "difficulty": 1, 
+    "answer": "\ubcf4\uc774\ub2e4", 
+    "learned": false, 
+    "info2": "Wie sieht er aus? - Gro\u00df und blond.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 17, 
+    "question": "unterschreiben", 
+    "info1": "(unterschreibt, hat unterschrieben)", 
+    "difficulty": 1, 
+    "answer": "...\uc5d0 \uc11c\uba85\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wo muss ich unterschreiben?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 17, 
+    "question": "schwimmen", 
+    "info1": "(schwimmt, ist geschwommen)", 
+    "difficulty": 1, 
+    "answer": "\uc218\uc601\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich schwimme t\u00e4glich einen Kilometer.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 17, 
+    "question": "abschlie\u00dfen", 
+    "info1": "(schlie\u00dft ab, hat abgeschlossen)", 
+    "difficulty": 1, 
+    "answer": "\uc7a0\uadf8\ub2e4, \ub05d\ub0b4\ub2e4", 
+    "learned": false, 
+    "info2": "Hast du die T\u00fcr abgeschlossen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 18, 
+    "question": "(sich) waschen", 
+    "info1": "(w\u00e4scht, hat gewaschen)", 
+    "difficulty": 1, 
+    "answer": "\uc53b\ub2e4, \ube68\ub798\ud558\ub2e4, \uc138\ucc99\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich will mich noch schnell waschen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 18, 
+    "question": "(sich) beschweren", 
+    "info1": "(beschwert, hat beschwert)", 
+    "difficulty": 1, 
+    "answer": "\ubd88\ud3c9\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Hier ist es zu laut. Wo k\u00f6nnen wir uns beschweren?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 18, 
+    "question": "reden", 
+    "info1": "(redet, hat geredet)", 
+    "difficulty": 1, 
+    "answer": "\ub9d0\ud558\ub2e4, \uc774\uc57c\uae30\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Mit meiner Freundin kann ich \u00fcber alles reden.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 18, 
+    "question": "(sich) treffen", 
+    "info1": "(trifft, hat getroffen)", 
+    "difficulty": 1, 
+    "answer": "\ub9cc\ub098\ub2e4, \ub9de\ub2e4, \ub9de\ud788\ub2e4", 
+    "learned": false, 
+    "info2": "Wir treffen uns immer freitags.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 18, 
+    "question": "w\u00e4hlen", 
+    "info1": "(w\u00e4hlt, hat gew\u00e4hlt)", 
+    "difficulty": 1, 
+    "answer": "\uace0\ub974\ub2e4, \uc120\ud0dd\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Sie m\u00fcssen erst eine Null w\u00e4hlen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 18, 
+    "question": "mieten", 
+    "info1": "(mietet, hat gemietet)", 
+    "difficulty": 1, 
+    "answer": "\uc784\ucc28\ud558\ub2e4, \ube4c\ub9ac\ub2e4", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte ein Auto mieten.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 18, 
+    "question": "verschieben", 
+    "info1": "(verschiebt, hat verschoben)", 
+    "difficulty": 1, 
+    "answer": "\uc5f0\uae30\ud558\ub2e4 , \uc62e\uae30\ub2e4", 
+    "learned": false, 
+    "info2": "Leider muss ich den Termin verschieben.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 18, 
+    "question": "versuchen", 
+    "info1": "(versucht, hat versucht)", 
+    "difficulty": 1, 
+    "answer": "\ud574\ubcf4\ub2e4, \uc2dc\ub3c4\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Kann ich es auch einmal versuchen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 18, 
+    "question": "hoffen", 
+    "info1": "(hofft, hat gehofft)", 
+    "difficulty": 1, 
+    "answer": "\ud76c\ub9dd\ud558\ub2e4, \ubbff\ub2e4, \uae30\ub300\ub97c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich hoffe, dass es dir gut geht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 18, 
+    "question": "bezahlen", 
+    "info1": "(bezahlt, hat bezahlt)", 
+    "difficulty": 1, 
+    "answer": "\ub0b4\ub2e4, \uac1a\ub2e4", 
+    "learned": false, 
+    "info2": "Wo kann ich bezahlen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 19, 
+    "question": "unternehmen", 
+    "info1": "(unternimmt, hat unternommen)", 
+    "difficulty": 1, 
+    "answer": "\ubc8c\uc774\ub2e4", 
+    "learned": false, 
+    "info2": "Wollen wir heute Abend etwas unternehmen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "kochen", 
+    "info1": "(kocht, hat gekocht)", 
+    "difficulty": 1, 
+    "answer": "\uc694\ub9ac\ud558\ub2e4, \ub053\uc774\ub2e4", 
+    "learned": false, 
+    "info2": "Herr Georgi kann gut kochen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "anmachen", 
+    "info1": "(macht an,  hat angemacht)", 
+    "difficulty": 1, 
+    "answer": "\ud0a4\ub2e4", 
+    "learned": false, 
+    "info2": "Mach bitte das Licht an!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "(sich) interessieren", 
+    "info1": "(interessiert, hat interessiert)", 
+    "difficulty": 1, 
+    "answer": "\ubb34\uc5c7\uc5d0 \uad00\uc2ec\uc744 (\ud765\ubbf8\ub97c) \uac00\uc9c0\ub2e4", 
+    "learned": false, 
+    "info2": "Den Artikel \u00fcber Brasilien finde ich sehr interessant."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "halten", 
+    "info1": "(h\u00e4lt, hat gehalten)", 
+    "difficulty": 1, 
+    "answer": "\uba48\ucd94\ub2e4, \uc7a1\ub2e4", 
+    "learned": false, 
+    "info2": "Dieser Zug h\u00e4lt nicht in R\u00fcdesheim. Kannst du mal kurz meine Jacke halten?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "einziehen", 
+    "info1": "(zieht ein, ist eingezogen)", 
+    "difficulty": 1, 
+    "answer": "\uc774\uc0ac\ub97c \uc624\ub2e4", 
+    "learned": false, 
+    "info2": "Im Juni ziehen unsere neuen Nachbarn ein.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "ausmachen", 
+    "info1": "(macht aus,  hat ausgemacht)", 
+    "difficulty": 1, 
+    "answer": "\ub044\ub2e4", 
+    "learned": false, 
+    "info2": "Mach bitte das Licht aus!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "gefallen", 
+    "info1": "(gef\u00e4llt, hat gefallen)", 
+    "difficulty": 1, 
+    "answer": "\ub9d8\uc5d0 \ub4e4\ub2e4", 
+    "learned": false, 
+    "info2": "Das Bild gef\u00e4llt mir.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 19, 
+    "question": "lassen", 
+    "info1": "(l\u00e4sst, hat gelassen)", 
+    "difficulty": 1, 
+    "answer": "\uadf8\ub9cc\ub450\ub2e4, \uc911\uc9c0\ud558\ub2e4, \ub193\uc544\ub450\ub2e4", 
+    "learned": false, 
+    "info2": "Lass mich in Ruhe!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 19, 
+    "question": "untersuchen", 
+    "info1": "(untersucht, hat untersucht)", 
+    "difficulty": 1, 
+    "answer": "\uac80\uc0ac\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Der Arzt hat mich untersucht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 20, 
+    "question": "rauchen", 
+    "info1": "(raucht, hat geraucht)", 
+    "difficulty": 1, 
+    "answer": "\ub2f4\ubc30\ub97c \ud53c\uc6b0\ub2e4", 
+    "learned": false, 
+    "info2": "St\u00f6rt es Sie, wenn ich rauche?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 20, 
+    "question": "glauben", 
+    "info1": "(glaubt, hat geglaubt)", 
+    "difficulty": 1, 
+    "answer": "\ubbff\ub2e4", 
+    "learned": false, 
+    "info2": "Sie k\u00f6nnen mir glauben, es ist so.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 20, 
+    "question": "h\u00f6ren", 
+    "info1": "(h\u00f6rt, hat geh\u00f6rt)", 
+    "difficulty": 1, 
+    "answer": "\ub4e3\ub2e4", 
+    "learned": false, 
+    "info2": "H\u00f6r mal! Was ist das?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 20, 
+    "question": "(an)(aus)ziehen", 
+    "info1": "(zieht (an/aus), hat angezogen)", 
+    "difficulty": 1, 
+    "answer": "\uc785\ud788\ub2e4, \ubc97\ub2e4", 
+    "learned": false, 
+    "info2": "Er hat sein T-Shirt ausgezogen und ein Hemd angezogen."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 20, 
+    "question": "leben", 
+    "info1": "(lebt, hat gelebt)", 
+    "difficulty": 1, 
+    "answer": "\uc0b4\uc544 \uc788\ub2e4, \uc0dd\uc874\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Sie lebt bei ihrer Schwester.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 20, 
+    "question": "(sich) schneiden", 
+    "info1": "(schneidet, hat geschnitten)", 
+    "difficulty": 1, 
+    "answer": "\uc790\ub974\ub2e4", 
+    "learned": false, 
+    "info2": "Wer schneidet dir die Haare?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 20, 
+    "question": "wechseln", 
+    "info1": "(wechselt, hat gewechselt)", 
+    "difficulty": 1, 
+    "answer": "\ubc14\uafb8\ub2e4, \uace0\uce58\ub2e4, \ubcc0\uacbd\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir m\u00fcssen den Reifen wechseln.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 20, 
+    "question": "reparieren", 
+    "info1": "(repariert, hat repariert)", 
+    "difficulty": 1, 
+    "answer": "\uc218\ub9ac\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er muss den Motor reparieren.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 20, 
+    "question": "hei\u00dfen", 
+    "info1": "(hei\u00dft, hat gehei\u00dfen)", 
+    "difficulty": 1, 
+    "answer": "\uc774\ub77c\uace0 \ubd80\ub974\ub2e4/\ud558\ub2e4, \uc77c\uceeb\ub2e4", 
+    "learned": false, 
+    "info2": "Ich hei\u00dfe Charlotte Meier.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 20, 
+    "question": "wehtun", 
+    "info1": "(tut weh, hat weh getan)", 
+    "difficulty": 1, 
+    "answer": "\uc544\ud504\ub2e4", 
+    "learned": false, 
+    "info2": "Wo tut es weh?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 21, 
+    "question": "aufpassen", 
+    "info1": "(passt auf, hat aufgepasst)", 
+    "difficulty": 1, 
+    "answer": "\uc870\uc2ec\ud558\ub2e4, \ub9c8\uc74c\uc4f0\ub2e4", 
+    "learned": false, 
+    "info2": "Pass auf, der Teller f\u00e4llt gleich auf den Boden!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 21, 
+    "question": "beenden", 
+    "info1": "(beendet, hat beendet)", 
+    "difficulty": 1, 
+    "answer": "\ub05d\ub0b4\ub2e4, \ub9c8\uce58\ub2e4", 
+    "learned": false, 
+    "info2": "Du musst deine Ausbildung auf jeden Fall beenden.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 21, 
+    "question": "schicken", 
+    "info1": "(schickt, hat geschickt)", 
+    "difficulty": 1, 
+    "answer": "\ubcf4\ub0b4\ub2e4", 
+    "learned": false, 
+    "info2": "Bitte schicken Sie mir eine E-Mail.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 21, 
+    "question": "schneien", 
+    "info1": "(schneit, hat geschneit)", 
+    "difficulty": 1, 
+    "answer": "\ub208\uc774 \uc624\ub2e4", 
+    "learned": false, 
+    "info2": "Morgen schneit es.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 21, 
+    "question": "zahlen", 
+    "info1": "(zahlt, hat gezahlt)", 
+    "difficulty": 1, 
+    "answer": "(\ub3c8\uc744) \ub0b4\ub2e4, \uc9c0\uae09\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Entschuldigung, zahlen bitte!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 21, 
+    "question": "holen", 
+    "info1": "(holt, hat geholt)", 
+    "difficulty": 1, 
+    "answer": "\uac00\uc838\uc624\ub2e4, \uaebc\ub0b4\ub2e4, \uc0ac\uc624\ub2e4", 
+    "learned": false, 
+    "info2": "Soll ich uns etwas zu trinken holen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 21, 
+    "question": "stellen", 
+    "info1": "(stellt, hat gestellt)", 
+    "difficulty": 1, 
+    "answer": "\uc138\uc6b0\ub2e4, (\uc138\uc6cc) \ub193\ub2e4", 
+    "learned": false, 
+    "info2": "Stell die Milch bitte in den K\u00fchlschrank!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 21, 
+    "question": "bedeuten", 
+    "info1": "(bedeutet, hat bedeutet)", 
+    "difficulty": 1, 
+    "answer": "\ub73b\ud558\ub2e4, \uc758\ubbf8\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Was bedeutet das Wort?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 21, 
+    "question": "(sich) erinnern", 
+    "info1": "(erinnert, hat erinnert)", 
+    "difficulty": 1, 
+    "answer": "\uc0dd\uac01\ub098\ub2e4, \uc0dd\uac01\ub098\uac8c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Kannst du mich morgen bitte an meinen Arzttermin erinnern?"
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 21, 
+    "question": "\u00fcberweisen", 
+    "info1": "(\u00fcberweist, hat \u00fcberwiesen)", 
+    "difficulty": 1, 
+    "answer": "\uc1a1\uae08\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Sie k\u00f6nnen das Geld auch \u00fcberweisen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "austragen", 
+    "info1": "(tr\u00e4gt aus,  hat ausgetragen)", 
+    "difficulty": 1, 
+    "answer": "\ubc30\ub2ec\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er tr\u00e4gt jeden Morgen die Zeitung aus.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "enden", 
+    "info1": "(endet, hat geendet)", 
+    "difficulty": 1, 
+    "answer": "\ub05d\ub0b4\ub2e4, \ub2e4\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Stra\u00dfe endet hier.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "passieren", 
+    "info1": "(passiert, ist passiert)", 
+    "difficulty": 1, 
+    "answer": "\ud1b5\uacfc\ud558\ub2e4, \ud1b5\ud589\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wie ist der Unfall passiert?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 22, 
+    "question": "zuh\u00f6ren", 
+    "info1": "(h\u00f6rt zu, hat zugeh\u00f6rt)", 
+    "difficulty": 1, 
+    "answer": "\ub4e3\ub2e4, \ub300\ud654\ub97c \ub4e3\ub2e4", 
+    "learned": false, 
+    "info2": "H\u00f6r mir doch mal zu! Ich rede mit dir.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "reisen", 
+    "info1": "(reist, ist gereist)", 
+    "difficulty": 1, 
+    "answer": "\uc5ec\ud589\ud558\ub2e4, \uc5ec\ud589\uc744 \ub5a0\ub098\ub2e4", 
+    "learned": false, 
+    "info2": "Ich reise gern.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "diskutieren", 
+    "info1": "(diskutiert, hat diskutiert)", 
+    "difficulty": 1, 
+    "answer": "\ud1a0\ub860\ud558\ub2e4.", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte das mit meinen Kollegen diskutieren.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 22, 
+    "question": "umsteigen", 
+    "info1": "(steigt um,  ist umgestiegen)", 
+    "difficulty": 1, 
+    "answer": "\uac08\uc544\ud0c0\ub2e4", 
+    "learned": false, 
+    "info2": "Sie m\u00fcssen in Mannheim umsteigen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "organisieren", 
+    "info1": "(organisiert, hat organisiert)", 
+    "difficulty": 1, 
+    "answer": "\uacc4\ud68d(\uc900\ube44)\ud558\ub2e4, \uc870\uc9c1\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Frau Gomez organisiert unseren Ausflug.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "spielen", 
+    "info1": "(spielt, hat gespielt)", 
+    "difficulty": 1, 
+    "answer": "\ub180\uc774 \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Kinder spielen drau\u00dfen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 22, 
+    "question": "notieren", 
+    "info1": "(notiert, hat notiert)", 
+    "difficulty": 1, 
+    "answer": "\uc801\uc5b4\ub450\ub2e4, \uba54\ubaa8\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Notieren Sie bitte alle wichtigen Informationen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "legen", 
+    "info1": "(legt, hat gelegt)", 
+    "difficulty": 1, 
+    "answer": "\ub450\ub2e4, \ub193\ub2e4, \ub215\ud788\ub2e4", 
+    "learned": false, 
+    "info2": "Legen Sie das Buch auf den Tisch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 23, 
+    "question": "wiederholen", 
+    "info1": "(wiederholt, hat wiederholt)", 
+    "difficulty": 1, 
+    "answer": "\ub418\ud480\uc774\ud558\ub2e4, \ubc18\ubcf5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen Sie das bitte wiederholen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "passen", 
+    "info1": "(passt, hat gepasst)", 
+    "difficulty": 1, 
+    "answer": "(\uaf2d)\ub9de\ub2e4, \ud3b8\ub9ac\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Die Bluse passt mir nicht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "bringen", 
+    "info1": "(bringt, hat gebracht)", 
+    "difficulty": 1, 
+    "answer": "\ubcf4\ub0b4\ub2e4", 
+    "learned": false, 
+    "info2": "Bringen Sie mir bitte noch einen Kaffee!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "d\u00fcrfen", 
+    "info1": "(darf, hat gedurft)", 
+    "difficulty": 1, 
+    "answer": "\u2026\uba74\ub41c\ub2e4, ...\ub3c4\ub41c\ub2e4", 
+    "learned": false, 
+    "info2": "Sie d\u00fcrfen hier nicht parken.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "sollen", 
+    "info1": "(sollte, hat gesollt)", 
+    "difficulty": 1, 
+    "answer": "...\ud574\uc57c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wann soll ich kommen und was soll ich mitbringen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "schreiben", 
+    "info1": "(schreibt, hat geschrieben)", 
+    "difficulty": 1, 
+    "answer": "\uc4f0\ub2e4, \uc801\ub2e4", 
+    "learned": false, 
+    "info2": "Ich schreibe dir eine E-Mail.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "bestehen", 
+    "info1": "(besteht, hat bestanden)", 
+    "difficulty": 1, 
+    "answer": "\ud569\uaca9\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe die Pr\u00fcfung bestanden!  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "rufen", 
+    "info1": "(ruft, hat gerufen)", 
+    "difficulty": 1, 
+    "answer": "\uc678\uce58\ub2e4, \ubd80\ub974\ub2e4", 
+    "learned": false, 
+    "info2": "Rufst du bitte die Kinder. Das Essen ist fertig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 23, 
+    "question": "arbeiten", 
+    "info1": "(arbeitet, hat gearbeitet)", 
+    "difficulty": 1, 
+    "answer": "\uc77c\ud558\ub2e4, \ub178\ub3d9\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wo arbeiten Sie?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 24, 
+    "question": "pr\u00fcfen", 
+    "info1": "(pr\u00fcft, hat gepr\u00fcft)", 
+    "difficulty": 1, 
+    "answer": "\uc2dc\ud5d8\ud574 \ubcf4\ub2e4, \ud655\uc778\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Bitte pr\u00fcfen Sie die Rechnung sofort.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 24, 
+    "question": "teilnehmen", 
+    "info1": "(nimmt teil,  hat teilgenommen)", 
+    "difficulty": 1, 
+    "answer": "\ucc38\uac00\ud558\ub2e4, \ucc38\uc5ec\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte an dem Tanzkurs teilnehmen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 24, 
+    "question": "laufen", 
+    "info1": "(l\u00e4uft, ist gelaufen)", 
+    "difficulty": 1, 
+    "answer": "\ub2ec\ub9ac\ub2e4, \ub6f0\uc5b4\uac00\ub2e4", 
+    "learned": false, 
+    "info2": "Ich gehe jeden Morgen laufen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 24, 
+    "question": "fertig sein", 
+    "info1": "(ist fertig, ist fertig gewesen)", 
+    "difficulty": 1, 
+    "answer": "\uc900\ube44\uac00 \ub418\uc5b4 \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Das Essen ist gleich fertig. Kommst du?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 24, 
+    "question": "(sich) duschen", 
+    "info1": "(duscht, hat geduscht)", 
+    "difficulty": 1, 
+    "answer": "\uc0e4\uc6cc\ub97c \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "M\u00f6chten Sie sich duschen? Das Badezimmer ist dort  hinten links."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 24, 
+    "question": "verbieten", 
+    "info1": "(ist verboten, ist verboten gewesen)", 
+    "difficulty": 1, 
+    "answer": "\uae08\ud558\ub2e4, \uae08\uc9c0\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Hier ist Rauchen verboten.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 24, 
+    "question": "schlie\u00dfen", 
+    "info1": "(schlie\u00dft, hat geschlossen)", 
+    "difficulty": 1, 
+    "answer": "\ub2eb\ub2e4, \ub36e\ub2e4", 
+    "learned": false, 
+    "info2": "Bitte schlie\u00dfen Sie die T\u00fcr.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 24, 
+    "question": "aussteigen", 
+    "info1": "(steigt aus, ist ausgestiegen)", 
+    "difficulty": 1, 
+    "answer": "\ub5a0\ub098\ub2e4", 
+    "learned": false, 
+    "info2": "Wo m\u00fcssen wir aussteigen? - An der n\u00e4chsten Haltestelle."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 24, 
+    "question": "raten", 
+    "info1": "(r\u00e4t, hat geraten)", 
+    "difficulty": 1, 
+    "answer": "\ucd94\ucc9c\ud558\ub2e4, \ub9de\ucdb0\ubcf4\ub2e4", 
+    "learned": false, 
+    "info2": "Ich wei\u00df nicht, welches Handy ich kaufen soll. Was raten Sie mir?"
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 24, 
+    "question": "daf\u00fcr/dagegen sein", 
+    "info1": "(ist dagegen, ist dagegen gewesen)", 
+    "difficulty": 1, 
+    "answer": " \ucc2c\uc131\ud558\ub2e4/ \ubc18\ub300\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Ich bin daf\u00fcr/dagegen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 25, 
+    "question": "zeigen", 
+    "info1": "(zeigt, hat gezeigt)", 
+    "difficulty": 1, 
+    "answer": "\ubcf4\uc5ec\uc8fc\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen Sie mir bitte den Weg zum Bahnhof zeigen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 25, 
+    "question": "einladen", 
+    "info1": "(l\u00e4dt ein, hat eingeladen)", 
+    "difficulty": 1, 
+    "answer": "\ucd08\ub300\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Darf ich Sie zu einem Kaffee einladen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 25, 
+    "question": "klappen", 
+    "info1": "(klappt, hat geklappt)", 
+    "difficulty": 1, 
+    "answer": "\ub41c\ub2e4, \uc798\ub41c\ub2e4, \uc131\uacf5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen wir uns heute Mittag treffen? - Ja, das klappt."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 25, 
+    "question": "abfahren", 
+    "info1": "(f\u00e4hrt ab, ist abgefahren)", 
+    "difficulty": 1, 
+    "answer": "\ucd9c\ubc1c\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Achtung an Gleis 17! Der Zug M\u00fcnchen - Paris f\u00e4hrt jetzt ab."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 25, 
+    "question": "verkaufen", 
+    "info1": "(verkauft, hat verkauft)", 
+    "difficulty": 1, 
+    "answer": "\ud314\ub2e4, \ub9e4\uac01\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er verkauft sein altes Auto.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 25, 
+    "question": "beantworten", 
+    "info1": "(beantwortet, hat beantwortet)", 
+    "difficulty": 1, 
+    "answer": "\ub2f5\ud558\ub2e4, \uc751\ub2f5\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "K\u00f6nnen Sie meine Frage bitte beantworten?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 25, 
+    "question": "haben", 
+    "info1": "(hat, hat gehabt)", 
+    "difficulty": 1, 
+    "answer": "\uac00\uc9c0(\uace0 \uc788)\ub2e4", 
+    "learned": false, 
+    "info2": "Ich habe ein neues Auto.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 25, 
+    "question": "zumachen", 
+    "info1": "(macht zu,  hat zugemacht)", 
+    "difficulty": 1, 
+    "answer": "\ub2eb\ub2e4", 
+    "learned": false, 
+    "info2": "Machst du bitte das Fenster zu?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.347279", 
+    "chunk": 25, 
+    "question": "stehen", 
+    "info1": "(steht, hat/ist gestanden)", 
+    "difficulty": 1, 
+    "answer": "\uc11c\ub2e4, \uc11c \uc788\ub2e4", 
+    "learned": false, 
+    "info2": "Der Bus steht schon an der Haltestelle.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 25, 
+    "question": "grillen", 
+    "info1": "(grillt, hat gegrillt)", 
+    "difficulty": 1, 
+    "answer": "\uad7d\ub2e4", 
+    "learned": false, 
+    "info2": "Heute grillen wir im Garten.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "beschreiben", 
+    "info1": "(beschreibt, hat beschrieben)", 
+    "difficulty": 1, 
+    "answer": "\ubb18\uc0ac\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Kannst du mir den Weg zum Bahnhof beschreiben?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "bauen", 
+    "info1": "(baut, hat gebaut)", 
+    "difficulty": 1, 
+    "answer": "\uc138\uc6b0\ub2e4, \uc9d3\ub2e4, \uac74\ucd95\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Unsere Nachbarn bauen ein neues Haus.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "renovieren", 
+    "info1": "(renoviert, hat renoviert)", 
+    "difficulty": 1, 
+    "answer": "(\uac74\ubb3c\uc744) \ubcf4\uc218\ud558\ub2e4, \uac1c\ucd95\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Wir renovieren das ganze Haus.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "ausgeben", 
+    "info1": "(gibt aus, hat ausgegeben)", 
+    "difficulty": 1, 
+    "answer": "\uc9c0\ucd9c\ud558\ub2e4 ", 
+    "learned": false, 
+    "info2": "Agata gibt viel Geld f\u00fcr B\u00fccher aus.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "sammeln", 
+    "info1": "(sammelt, hat gesammelt)", 
+    "difficulty": 1, 
+    "answer": "\ubaa8\uc73c\ub2e4", 
+    "learned": false, 
+    "info2": "Peter sammelt Briefmarken.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "fernsehen", 
+    "info1": "(sieht fern,  hat ferngesehen)", 
+    "difficulty": 1, 
+    "answer": "\ud154\ub808\ube44\uc804\uc744 \ubcf4\ub2e4", 
+    "learned": false, 
+    "info2": "Lass uns heute Abend mal fernsehen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "beraten", 
+    "info1": "(ber\u00e4t, hat beraten)", 
+    "difficulty": 1, 
+    "answer": "\uc870\uc5b8\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Unsere Sekret\u00e4rin ber\u00e4t Sie gern, wenn Sie Fragen haben."
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "bekommen", 
+    "info1": "(bekommt, hat bekommen)", 
+    "difficulty": 1, 
+    "answer": "\uc5bb\ub2e4, \ubc1b\ub2e4, \ud68d\ub4dd\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Haben Sie meinen Brief bekommen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "herunterladen", 
+    "info1": "(l\u00e4dt herunter, hat heruntergeladen)", 
+    "difficulty": 1, 
+    "answer": "\ub2e4\uc6b4\ub85c\ub4dc \ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er l\u00e4dt die Musik aus dem Internet herunter.  "
+  }, 
+  {
+    "date": "2019-02-10 21:27:18.341229", 
+    "chunk": 26, 
+    "question": "ausgehen", 
+    "info1": "(geht aus, ist ausgegangen)", 
+    "difficulty": 1, 
+    "answer": "\ub370\uc774\ud2b8\ud558\ub7ec \uac00\ub2e4", 
+    "learned": false, 
+    "info2": "Gehen wir am Freitag zusammen aus?  "
+  }
+]

@@ -45,7 +45,6 @@ class Library:
         for x in self.decks:
             if x["text"] == self.current_deck:
                 x["selected"] = True
-#                print "saved {} as current deck".format(self.current_deck)
             else:
                 x["selected"] = False
 

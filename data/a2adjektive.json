@@ -1,1 +1,1612 @@
-[{"answer": "Deck leider nicht vorhanden", "chunk": 0, "question": "Error", "info1": "", "difficulty": 1, "date": "2018-12-29 22:07:18.914747", "learned": false, "info2": ""}]
+[
+  {
+    "date": "2019-02-10 21:28:10.652842", 
+    "chunk": 0, 
+    "question": "aktuell ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud604\uc2e4\uc758, \uc2e4\uc81c\uc758, \ud604\uc7ac\uc758", 
+    "learned": false, 
+    "info2": "Das ist das aktuelle Kinoprogramm.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 0, 
+    "question": "sch\u00f6n ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc544\ub984\ub2e4\uc6b4, \uba4b\uc9c4", 
+    "learned": false, 
+    "info2": "Sch\u00f6ne Ferien!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 0, 
+    "question": "n\u00fctzlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub3c4\uc6c0\uc774 \ub41c, \uc4f8\ubaa8 \uc788\ub294", 
+    "learned": false, 
+    "info2": "Danke f\u00fcr den Tipp. Er war sehr n\u00fctzlich.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 0, 
+    "question": "schwach ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc57d\ud55c", 
+    "learned": false, 
+    "info2": "Er ist krank und schwach.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 0, 
+    "question": "faul ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac8c\uc73c\ub978", 
+    "learned": false, 
+    "info2": "Heute sind wir faul: Wir machen keine Hausauf-  gaben und arbeiten nicht."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 0, 
+    "question": "letzt- ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub9c8\uc9c0\ub9c9\uc758, \ucd5c\uc885", 
+    "learned": false, 
+    "info2": "Morgen ist der letzte Kurstag.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 0, 
+    "question": "wunderbar ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uad49\uc7a5\ud55c, \ub9d0\ud560 \uc218\uc5c6\uc774 \uc544\ub984\ub2e4\uc6b4", 
+    "learned": false, 
+    "info2": "Diese Schokolade schmeckt wunderbar.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 0, 
+    "question": "lustig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc7ac\ubc0c\ub294", 
+    "learned": false, 
+    "info2": "Warum lacht ihr? Was ist so lustig?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 0, 
+    "question": "m\u00fcde ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud53c\ub85c\ud55c, \uc9c0\uce5c", 
+    "learned": false, 
+    "info2": "Ich bin m\u00fcde. Ich gehe schlafen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 0, 
+    "question": "weit ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uba40\ub9ac, \ub113\uc740", 
+    "learned": false, 
+    "info2": "Zum Bahnhof ist es nicht weit.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 1, 
+    "question": "schlimm ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub098\uc05c, \uc2ec\ud55c", 
+    "learned": false, 
+    "info2": "Kein Problem, das ist nicht so schlimm.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 1, 
+    "question": "furchtbar ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubb34\uc11c\uc6b4, \ub450\ub824\uc6b4, \ubb34\uc2dc\ubb34\uc2dc\ud55c", 
+    "learned": false, 
+    "info2": "Er hat furchtbare Schmerzen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 1, 
+    "question": "kalt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ucd94\uc6b4, \ucc2c", 
+    "learned": false, 
+    "info2": "Heute ist es sehr kalt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 1, 
+    "question": "fr\u00fch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc774\ub978, \uc870\uae30\uc758", 
+    "learned": false, 
+    "info2": "Geht es auch sp\u00e4ter? Sechs Uhr ist mir zu fr\u00fch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 1, 
+    "question": "flei\u00dfig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubd80\uc9c0\ub7f0\ud55c, \uc5f4\uc2ec\uc778.", 
+    "learned": false, 
+    "info2": "Ibrahim ist sehr flei\u00dfig. Er macht immer seine  Hausaufgaben."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 1, 
+    "question": "normal ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud45c\uc900\uc758, \uc815\uaddc\uc758", 
+    "learned": false, 
+    "info2": "Das ist doch ganz normal.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 1, 
+    "question": "neblig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc548\uac1c \ub080", 
+    "learned": false, 
+    "info2": "Fahr vorsichtig! Es ist neblig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 1, 
+    "question": "windig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubc14\ub78c\uc774 \ub9ce\uc774 \ubd80\ub294", 
+    "learned": false, 
+    "info2": "Heute ist es sehr windig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 1, 
+    "question": "teuer ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ube44\uc2fc", 
+    "learned": false, 
+    "info2": "Das ist mir zu teuer.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 1, 
+    "question": "laut ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2dc\ub044\ub7ec\uc6b4", 
+    "learned": false, 
+    "info2": "Nicht so laut! Das Baby schl\u00e4ft.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 2, 
+    "question": "krank ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc553\ub294, \ubcd1\ub4e0", 
+    "learned": false, 
+    "info2": "Ich kann heute nicht zur Arbeit kommen, ich bin  krank."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 2, 
+    "question": "richtig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub9de\ub294, \ud2c0\ub9bc\uc5c6\ub294, \uc815\ud655\ud55c", 
+    "learned": false, 
+    "info2": "Habe ich das richtig verstanden?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 2, 
+    "question": "g\u00fcnstig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "(\uac12\uc774) \uc2fc", 
+    "learned": false, 
+    "info2": "In diesem Laden gibt es immer g\u00fcnstige Angebote.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 2, 
+    "question": "offen ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc5f4\ub9b0, \ub2eb\ud788\uc9c0 \uc54a\uc740", 
+    "learned": false, 
+    "info2": "Ist das Fenster im Bad noch offen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 2, 
+    "question": "frisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2dc\uc6d0\ud55c", 
+    "learned": false, 
+    "info2": "Das Brot ist noch ganz frisch. Ich habe es gerade  gekauft."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 2, 
+    "question": "hart ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub531\ub531\ud55c, \ub2e8\ub2e8\ud55c", 
+    "learned": false, 
+    "info2": "Ich finde das Bett zu hart.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.652842", 
+    "chunk": 2, 
+    "question": "allein ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud63c\uc790, \ub2e4\ub978 \uc0ac\ub78c \uc5c6\uc774", 
+    "learned": false, 
+    "info2": "Kommt seine Freundin mit? - Nein, er kommt allein.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 2, 
+    "question": "international ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uad6d\uc81c\uc801\uc778", 
+    "learned": false, 
+    "info2": "Unser Deutschkurs ist international."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 2, 
+    "question": "interessant ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud765\ubbf8(\uc7ac\ubbf8)\uc788\ub294", 
+    "learned": false, 
+    "info2": "Ich lese gerade ein interessantes Buch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 2, 
+    "question": "schmutzig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub354\ub7ec\uc6b4", 
+    "learned": false, 
+    "info2": "Das Handtuch ist schmutzig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 3, 
+    "question": "witzig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc6c3\uae30\ub294, \uc7ac\ubbf8\uc788\ub294", 
+    "learned": false, 
+    "info2": "Warum lachst du? Ich finde das nicht witzig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 3, 
+    "question": "komisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc774\uc0c1\ud55c, \uc7ac\ubbf8\uc788\ub294", 
+    "learned": false, 
+    "info2": "Der Film war sehr komisch. Wir haben viel gelacht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 3, 
+    "question": "intelligent ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uba38\ub9ac\uac00 \uc88b\uc740, \ub611\ub611\ud55c", 
+    "learned": false, 
+    "info2": "Einstein war sehr intelligent.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 3, 
+    "question": "vorsichtig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc870\uc2ec\uc2a4\ub7ec\uc6b4", 
+    "learned": false, 
+    "info2": "Sei vorsichtig!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 3, 
+    "question": "sonnig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud654\ucc3d\ud55c", 
+    "learned": false, 
+    "info2": "Morgen ist das Wetter wieder warm und sonnig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 3, 
+    "question": "verschieden ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub2e4\ub978, \ucc28\uc774\uac00 \ub098\ub294", 
+    "learned": false, 
+    "info2": "Unsere beiden Kinder sind sehr verschieden.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 3, 
+    "question": "blond ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae08\ubc1c\uc758", 
+    "learned": false, 
+    "info2": "Lisa hat blonde Haare.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 3, 
+    "question": "oft ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc790\uc8fc, \uc5ec\ub7ec \ubc88", 
+    "learned": false, 
+    "info2": "Ich gehe nicht oft ins Kino.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 3, 
+    "question": "jung ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc80a\uc740, \uc5b4\ub9b0", 
+    "learned": false, 
+    "info2": "Claudia ist 21. \u2013 Was? Noch so jung?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 3, 
+    "question": "hoch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub192\uc740", 
+    "learned": false, 
+    "info2": "Der Mount Everest ist circa 8.880 Meter hoch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 4, 
+    "question": "freiwillig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc790\ubc1c\uc801\uc73c\ub85c, \uc790\uc728\uc801\uc73c\ub85c", 
+    "learned": false, 
+    "info2": "Manchmal bleibe ich freiwillig l\u00e4nger im B\u00fcro.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 4, 
+    "question": "m\u00f6glich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac00\ub2a5\ud55c, \ud560 \uc218 \uc788\ub294", 
+    "learned": false, 
+    "info2": "Kann ich bitte sofort einen Termin haben? - Das ist  leider nicht m\u00f6glich."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 4, 
+    "question": "einfach ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac04\ub2e8\ud55c, \uc26c\uc6b4", 
+    "learned": false, 
+    "info2": "Die Pr\u00fcfung ist ganz einfach.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 4, 
+    "question": "weich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubd80\ub4dc\ub7ec\uc6b4", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte zum Fr\u00fchst\u00fcck ein weiches Ei.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 4, 
+    "question": "langsam ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub290\ub9b0", 
+    "learned": false, 
+    "info2": "K\u00f6nnten Sie bitte etwas langsamer sprechen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 4, 
+    "question": "g\u00fcltig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc720\ud6a8\ud55c", 
+    "learned": false, 
+    "info2": "Der Pass ist nicht mehr g\u00fcltig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 4, 
+    "question": "bekannt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc798 \uc54c\ub824\uc9c4, \uc720\uba85\ud55c", 
+    "learned": false, 
+    "info2": "Picasso ist sehr bekannt. Er ist ein bekannter Maler.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 4, 
+    "question": "klein ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc791\uc740, \uc801\uc740", 
+    "learned": false, 
+    "info2": "Unsere Wohnung ist sehr klein.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 4, 
+    "question": "meist- ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub300\ubd80\ubd84", 
+    "learned": false, 
+    "info2": "Ich bin neu hier im Haus. Die meisten Nachbarn  kenne ich noch nicht."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 4, 
+    "question": "langweilig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc9c0\ub8e8\ud55c, \uc9c0\uaca8\uc6b4", 
+    "learned": false, 
+    "info2": "Mir ist langweilig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 5, 
+    "question": "sympathisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub3d9\uc815\uc744 \ub290\ub080, \ub9c8\uc74c\uc5d0 \ub4dc\ub294", 
+    "learned": false, 
+    "info2": "Der neue Chef ist sehr sympathisch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 5, 
+    "question": "dringend ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc11c\ub458\ub7ec\uc57c \ud560, \uae09\ud55c", 
+    "learned": false, 
+    "info2": "Bitte kommen Sie schnell. Es ist dringend.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 5, 
+    "question": "schriftlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae00\uc790\uc758,  \uc50c\uc5b4\uc9c4", 
+    "learned": false, 
+    "info2": "Sie m\u00fcssen sich schriftlich anmelden.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 5, 
+    "question": "gl\u00fccklich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud589\ubcf5\ud55c, \uc6b4\uc774 \uc88b\uc740", 
+    "learned": false, 
+    "info2": "Meine Tochter ist gl\u00fccklich verheiratet.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 5, 
+    "question": "bequem ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud3b8\uc548\ud55c", 
+    "learned": false, 
+    "info2": "Das Sofa ist sehr bequem.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 5, 
+    "question": "wach ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae68\uc5b4 \uc788\ub294", 
+    "learned": false, 
+    "info2": "Bist du schon lange wach?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 5, 
+    "question": "beliebt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc778\uae30 \uc788\ub294", 
+    "learned": false, 
+    "info2": "Fu\u00dfball ist bei vielen Menschen beliebt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656823", 
+    "chunk": 5, 
+    "question": "schlecht ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub098\uc05c, \uc548\uc88b\uc740", 
+    "learned": false, 
+    "info2": "Das Wetter ist schlecht. Wir haben schon seit einer  Woche schlechtes Wetter."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 5, 
+    "question": "besonders ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub9e4\uc6b0, \uad49\uc7a5\ud788, \ub530\ub85c\ub530\ub85c", 
+    "learned": false, 
+    "info2": "Dieses Angebot ist besonders g\u00fcnstig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 5, 
+    "question": "echt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2e4\uc81c\uc758, \uc9c4\uc9dc\uc758", 
+    "learned": false, 
+    "info2": "Ist das Bild ein echter Picasso?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 6, 
+    "question": "preiswert ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc801\ub2f9\ud55c \uac12\uc758, \ube44\uc2f8\uc9c0 \uc54a\uc740", 
+    "learned": false, 
+    "info2": "Die Jacke ist sehr preiswert. Sie kostet nur 15 Euro.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 6, 
+    "question": "typisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc804\ud615\uc801\uc778, \ub300\ud45c\uc801\uc778", 
+    "learned": false, 
+    "info2": "Diese Musik ist typisch f\u00fcr dieses Land.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.652842", 
+    "chunk": 6, 
+    "question": "aktiv ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud65c\ub3d9\uc801\uc778, \ud65c\ubc1c\ud55c", 
+    "learned": false, 
+    "info2": "Peter ist sehr aktiv und macht viel Sport.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 6, 
+    "question": "eilig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc11c\ub458\ub7ec\uc57c \ud560, \uae34\uae09\ud55c", 
+    "learned": false, 
+    "info2": "Hast du es eilig?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 6, 
+    "question": "deutlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubd84\uba85\ud55c", 
+    "learned": false, 
+    "info2": "Sprechen Sie bitte deutlich!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 6, 
+    "question": "schrecklich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubb34\uc11c\uc6b4, \ub054\ucc0d\ud55c", 
+    "learned": false, 
+    "info2": "Ich finde ihren Rock schrecklich. Er sieht furchtbar  aus!"
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 6, 
+    "question": "freundlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uce5c\uc808\ud55c, \ucc29\ud558\ub2e4", 
+    "learned": false, 
+    "info2": "Er ist immer sehr freundlich zu mir.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 6, 
+    "question": "weiblich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc5ec\uc790\uc758, \uc554\ucef7\uc758", 
+    "learned": false, 
+    "info2": "W\u00e4hlen Sie bitte: \u201eweiblich\u201c oder \u201em\u00e4nnlich\u201c.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 6, 
+    "question": "modern ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud604\ub300\uc758", 
+    "learned": false, 
+    "info2": "Das Stadtzentrum von Frankfurt ist sehr modern.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 6, 
+    "question": "wahr ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc9c4\uc2e4\ud55c, \ub9de\ub294", 
+    "learned": false, 
+    "info2": "Das ist (nicht) wahr!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 7, 
+    "question": "leicht ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac00\ubcbc\uc6b4", 
+    "learned": false, 
+    "info2": "Das Paket ist leicht, es wiegt nur ein Kilo.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 7, 
+    "question": "aufregend ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc790\uadf9\uc801, \uae34\uc7a5\uac10 \uc788\ub294", 
+    "learned": false, 
+    "info2": "Die letzte Woche war sehr aufregend.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 7, 
+    "question": "frei ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc790\uc720\ub85c\uc6b4, ...\uc5d0 \uc5c6\ub2e4", 
+    "learned": false, 
+    "info2": "Entschuldigung, ist dieser Platz noch frei?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 7, 
+    "question": "sp\u00e4t ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub2a6\uc740, \uc9c0\uac01\ud55c", 
+    "learned": false, 
+    "info2": "Es ist schon sp\u00e4t, ich muss gehen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 7, 
+    "question": "privat ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac1c\uc778\uc758, \uc0ac\uc720\uc758", 
+    "learned": false, 
+    "info2": "Das ist meine Nummer im B\u00fcro und das ist meine private Handynummer."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 7, 
+    "question": "sportlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2a4\ud3ec\uce20\uc758, \uc6b4\ub3d9\uc758", 
+    "learned": false, 
+    "info2": "Tom ist sehr sportlich.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 7, 
+    "question": "toll ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uba4b\uc9c4, \uc544\uc8fc \uc798", 
+    "learned": false, 
+    "info2": "Der Urlaub war toll.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 7, 
+    "question": "klug ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uba38\ub9ac\uac00 \uc88b\uc740, \ub611\ub611\ud55c", 
+    "learned": false, 
+    "info2": "Molly ist ein kluges M\u00e4dchen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 7, 
+    "question": "schnell ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ube60\ub978", 
+    "learned": false, 
+    "info2": "Warum f\u00e4hrst du so schnell?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 7, 
+    "question": "ruhig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc870\uc6a9\ud55c, \ub9d0\uc5c6\ub294", 
+    "learned": false, 
+    "info2": "Ich m\u00f6chte ein ruhiges Zimmer.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 8, 
+    "question": "unbedingt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubb34\uc870\uac74\uc801\uc778, \uc808\ub300\uc801\uc778", 
+    "learned": false, 
+    "info2": "Ich muss unbedingt mit dir sprechen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.652842", 
+    "chunk": 8, 
+    "question": "alt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub098\uc774\uac00 \ub4e0", 
+    "learned": false, 
+    "info2": "Wie alt sind Sie?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 8, 
+    "question": "stressig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2a4\ud2b8\ub808\uc2a4\ub97c \uc8fc\ub294, \ub108\ubb34 \ud798\ub4dc\ub294", 
+    "learned": false, 
+    "info2": "Meine Arbeit ist stressig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 8, 
+    "question": "pl\u00f6tzlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac11\uc790\uae30, \uae09\uc791\uc2a4\ub7fd\uac8c", 
+    "learned": false, 
+    "info2": "Pl\u00f6tzlich war das Licht aus.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 8, 
+    "question": "gro\u00df ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud070, \uac15\ud55c", 
+    "learned": false, 
+    "info2": "Mein Bruder und ich sind gleich gro\u00df.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 8, 
+    "question": "zufrieden ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub9cc\uc871\ud55c", 
+    "learned": false, 
+    "info2": "Ich bin mit der Wohnung zufrieden. Sie ist nicht  gro\u00df, aber sie hat einen Balkon."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 8, 
+    "question": "nass ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc816\uc740, \ucd95\ucd95\ud55c", 
+    "learned": false, 
+    "info2": "Geh nicht mit den nassen Schuhen ins  Wohnzimmer!"
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 8, 
+    "question": "super ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uba4b\uc9c4, \ucd5c\uace0\uc758, \uc88b\uc740", 
+    "learned": false, 
+    "info2": "Der Film ist super.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 8, 
+    "question": "fantastisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae30\ub9c9\ud788\uac8c \uc88b\uc740, \ud658\uc0c1\uc801\uc778", 
+    "learned": false, 
+    "info2": "Dein neues Kleid sieht fantastisch aus!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 8, 
+    "question": "m\u00e4nnlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub0a8\uc790\uc758, \uc218\ucef7\uc758", 
+    "learned": false, 
+    "info2": "Bitte w\u00e4hlen Sie: \u201eweiblich\u201c oder \u201em\u00e4nnlich\u201c.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656823", 
+    "chunk": 9, 
+    "question": "sauer ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2e0(\ub9db \ub098\ub294)", 
+    "learned": false, 
+    "info2": "Zitronen sind mir zu sauer.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 9, 
+    "question": "egal ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc544\ubb34\uac70\ub098 ,\uc544\ubb34\ub798\ub3c4 \uc88b\uc740", 
+    "learned": false, 
+    "info2": "Das ist mir egal.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 9, 
+    "question": "rund ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub465\uadfc, \ub3d9\uadf8\ub780, \uc6d0\ud615\uc758", 
+    "learned": false, 
+    "info2": "Unser Wohnzimmertisch ist rund.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656823", 
+    "chunk": 9, 
+    "question": "sch\u00e4dlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc720\ud574\ud55c, \ud574\ub85c\uc6b4", 
+    "learned": false, 
+    "info2": "Rauchen ist sch\u00e4dlich f\u00fcr die Gesundheit.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 9, 
+    "question": "fit ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uccb4\ub825\uc774 \uac00\uc7a5 \uc88b\uc740", 
+    "learned": false, 
+    "info2": "Tom will fit sein. Er geht jeden Tag ins Fitnessstudio."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 9, 
+    "question": "praktisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2e4\uc6a9\uc801\uc778", 
+    "learned": false, 
+    "info2": "Mit meinem neuen Handy kann ich auch im Internet  surfen und Fotos machen. Das finde ich sehr"
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 9, 
+    "question": "bl\u00f6d ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc5b4\ub9ac\uc11d\ub2e4", 
+    "learned": false, 
+    "info2": "Ich finde es bl\u00f6d, dass du morgen gehen musst.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 9, 
+    "question": "leise ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub0ae\uc740 \ubaa9\uc18c\ub9ac\uc758", 
+    "learned": false, 
+    "info2": "Seid leise. Die anderen schlafen schon.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 9, 
+    "question": "bew\u00f6lkt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud750\ub9b0, \uad6c\ub984\uc774 \uc794\ub729 \ub080", 
+    "learned": false, 
+    "info2": "Heute ist es bew\u00f6lkt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 9, 
+    "question": "romantisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub85c\ub9e8\ud2f1\ud55c", 
+    "learned": false, 
+    "info2": "Dieser Film ist sehr romantisch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 10, 
+    "question": "fett ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae30\ub984\uc9c4, \uc9c0\ubc29\uc774 \ub9ce\uc740, \ub6b1\ub6b1\ud55c", 
+    "learned": false, 
+    "info2": "Die Wurst ist mir zu fett.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 10, 
+    "question": "kaputt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uace0\uc7a5\uc774 \ub09c", 
+    "learned": false, 
+    "info2": "Unsere Waschmaschine ist kaputt.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 10, 
+    "question": "billig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "(\uac12\uc774) \uc2fc", 
+    "learned": false, 
+    "info2": "Das W\u00f6rterbuch kostet nur f\u00fcnf Euro. - F\u00fcnf Euro?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 10, 
+    "question": "kostenlos ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubb34\ub8cc\uc758", 
+    "learned": false, 
+    "info2": "Diese Zeitschrift kostet nichts. Sie ist kostenlos.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 10, 
+    "question": "streng ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc5c4\uaca9\ud55c", 
+    "learned": false, 
+    "info2": "Der Lehrer von meiner Tochter ist sehr streng.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656823", 
+    "chunk": 10, 
+    "question": "scharf ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub9f5\ub2e4", 
+    "learned": false, 
+    "info2": "Die Suppe ist mir zu scharf.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 10, 
+    "question": "sicher ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc548\uc804\ud55c, \uc704\ud5d8\uc774 \uc5c6\ub294", 
+    "learned": false, 
+    "info2": "Dieses Auto ist besonders sicher.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 10, 
+    "question": "dunkel ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc5b4\ub450\uc6b4, \uc554\ud751\uc758", 
+    "learned": false, 
+    "info2": "Um sechs Uhr ist es schon dunkel.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 10, 
+    "question": "gesund ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac74\uac15\ud55c, \ud2bc\ud2bc\ud55c", 
+    "learned": false, 
+    "info2": "Ich hatte Grippe. Jetzt bin ich wieder gesund.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 10, 
+    "question": "b\u00f6se ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub098\uc05c, \ubd88\ucf8c\ud55c", 
+    "learned": false, 
+    "info2": "Sie ist richtig b\u00f6se auf mich.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 11, 
+    "question": "sauber ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae68\ub057\ud55c", 
+    "learned": false, 
+    "info2": "Bringen Sie mir bitte ein sauberes Glas!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 11, 
+    "question": "gef\u00e4hrlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc704\ud5d8\ud55c", 
+    "learned": false, 
+    "info2": "Du darfst nicht bei Rot \u00fcber die Stra\u00dfe gehen. Das  ist gef\u00e4hrlich."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 11, 
+    "question": "falsch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud2c0\ub9b0, \uc798\ubabb\ub41c", 
+    "learned": false, 
+    "info2": "Die L\u00f6sung ist falsch.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 11, 
+    "question": "dick ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub450\uaebc\uc6b4, \ub6b1\ub6b1\ud55c", 
+    "learned": false, 
+    "info2": "Ich bin zu dick. Ich muss weniger essen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 11, 
+    "question": "wichtig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc911\uc694\ud55c", 
+    "learned": false, 
+    "info2": "Es ist wichtig, dass Sie auch kommen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 11, 
+    "question": "ledig", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubbf8\ud63c\uc758", 
+    "learned": false, 
+    "info2": "Ich bin ledig."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 11, 
+    "question": "direkt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub611\ubc14\ub978, \uace7\uc740", 
+    "learned": false, 
+    "info2": "Wir wohnen direkt \u00fcber dem Caf\u00e9.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 11, 
+    "question": "spannend ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae34\uc7a5\uc2dc\ud0a4\ub2e4, \ud765\ubbf8\uc9c4\uc9c4\ud55c", 
+    "learned": false, 
+    "info2": "Ich finde den Film sehr spannend.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 11, 
+    "question": "automatisch ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc790\ub3d9\uc801\uc778", 
+    "learned": false, 
+    "info2": "Achtung, die T\u00fcren schlie\u00dfen automatisch!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 11, 
+    "question": "s\u00fc\u00df ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub2e8, \ub9db\uc788\ub294, \uadc0\uc5ec\uc6b4", 
+    "learned": false, 
+    "info2": "Ich finde die Torte zu s\u00fc\u00df.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 12, 
+    "question": "eng ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub2e8\ub2e8\ud55c, \uaf49 \uc870\uc5ec \uc788\ub294", 
+    "learned": false, 
+    "info2": "Diese Hose ist zu eng. Gibt es sie auch eine  Nummer gr\u00f6\u00dfer?"
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 12, 
+    "question": "ber\u00fchmt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc720\uba85\ud55c", 
+    "learned": false, 
+    "info2": "Thomas M\u00fcller ist ein ber\u00fchmter Fu\u00dfballspieler.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 12, 
+    "question": "reich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub3c8 \ub9ce\uc740, \ubd80\uc790\uc778", 
+    "learned": false, 
+    "info2": "Lotte ist reich. Sie hat sehr viel Geld.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 12, 
+    "question": "fremd ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc678\ub798\uc758, \uc678\uad6d\uc5d0\uc11c \uc628", 
+    "learned": false, 
+    "info2": "Das wei\u00df ich nicht; ich bin fremd hier.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 12, 
+    "question": "bunt ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud615\ud615\uc0c9\uc0c9\uc758, \uc0c9\ucc44\uac00 \ud48d\ubd80\ud55c", 
+    "learned": false, 
+    "info2": "Anna tr\u00e4gt gern bunte Kleider.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 12, 
+    "question": "froh ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae30\ubed0\ud558\ub294, \ubc18\uac00\uc6cc\ud558\ub294", 
+    "learned": false, 
+    "info2": "Ich bin froh, dass du kommen kannst.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 12, 
+    "question": "schwer ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubb34\uac70\uc6b4", 
+    "learned": false, 
+    "info2": "Wie schwer ist das Paket?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 12, 
+    "question": "trocken ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub9c8\ub978, \uac74\uc870\ud55c", 
+    "learned": false, 
+    "info2": "Die W\u00e4sche ist bald trocken.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 12, 
+    "question": "notwendig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uaf2d \ud544\uc694\ud55c", 
+    "learned": false, 
+    "info2": "Muss ich noch einmal kommen? - Nein, das ist nicht notwendig."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 12, 
+    "question": "nerv\u00f6s ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae34\uc7a5\ud55c, \ubd88\uc548\uc744 \ub290\ub080", 
+    "learned": false, 
+    "info2": "Bei Pr\u00fcfungen bin ich immer sehr nerv\u00f6s.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 13, 
+    "question": "getrennt / geschieden", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc774\ud63c\ud55c", 
+    "learned": false, 
+    "info2": "Wir sind geschieden."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 13, 
+    "question": "d\u00fcnn ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc587\uc740, \ub9c8\ub978", 
+    "learned": false, 
+    "info2": "Das Buch ist sehr d\u00fcnn. Es hat nur 40 Seiten.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 13, 
+    "question": "tief ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae4a\uc740", 
+    "learned": false, 
+    "info2": "Vorsicht, das Wasser ist tief!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 13, 
+    "question": "neu ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc0c8, \uc0c8\ub85c\uc6b4", 
+    "learned": false, 
+    "info2": "Ich bin der neue Mitarbeiter.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 13, 
+    "question": "lieb- ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc0ac\ub791\ud558\ub294", 
+    "learned": false, 
+    "info2": "Liebe Susanne, lieber Hans,  Ich fahre lieber mit dem Zug als mit dem Bus."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 13, 
+    "question": "arm ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac00\ub09c\ud55c", 
+    "learned": false, 
+    "info2": "Sie haben nicht viel Geld, sie sind arm.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 13, 
+    "question": "p\u00fcnktlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2dc\uac04\uc744 \uc5c4\uc218\ud558\ub294, \uc815\uc2dc\uc758", 
+    "learned": false, 
+    "info2": "Der Bus f\u00e4hrt p\u00fcnktlich um acht Uhr.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 13, 
+    "question": "online ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc628\ub77c\uc778", 
+    "learned": false, 
+    "info2": "Wann bist du wieder online?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 13, 
+    "question": "zusammen ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ud568\uaed8, \uac19\uc774", 
+    "learned": false, 
+    "info2": "Wollen wir zusammen essen gehen?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 13, 
+    "question": "warm ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub530\ub73b\ud55c, \ub728\uac70\uc6b4", 
+    "learned": false, 
+    "info2": "Hier ist es sehr warm.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 14, 
+    "question": "dumm ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc5b4\ub9ac\uc11d\ub2e4, \uba4d\uccad\ud55c", 
+    "learned": false, 
+    "info2": "Ich finde den Film dumm.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 14, 
+    "question": "voll ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac00\ub4dd \ucc2c, \ud48d\ub9cc\ud55c, \ub108\ubb34", 
+    "learned": false, 
+    "info2": "Morgens und abends sind die Z\u00fcge immer sehr voll. "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 14, 
+    "question": "schwierig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc5b4\ub824\uc6b4", 
+    "learned": false, 
+    "info2": "Die Pr\u00fcfung war nicht schwierig.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.652842", 
+    "chunk": 14, 
+    "question": "arbeitslos ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2e4\uc9c1\uc911\uc778, \uc2e4\uc9c1\ud55c", 
+    "learned": false, 
+    "info2": "Seit wann ist er schon arbeitslos?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 14, 
+    "question": "schwanger ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc784\uc2e0\ud55c", 
+    "learned": false, 
+    "info2": "Lena ist schwanger. Sie bekommt im Juli ein Kind.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 14, 
+    "question": "lang ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae34, \uae38\uc774\uac00 \uc788\ub294", 
+    "learned": false, 
+    "info2": "Die Hose ist zu lang. K\u00f6nnen Sie sie \u00e4ndern?  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.653831", 
+    "chunk": 14, 
+    "question": "bitter ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc4f4", 
+    "learned": false, 
+    "info2": "Kaffee ohne Zucker schmeckt bitter.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 14, 
+    "question": "verheiratet", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uae30\ud63c\uc758", 
+    "learned": false, 
+    "info2": "Wir sind verheiratet."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 14, 
+    "question": "tot ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc8fd\uc740", 
+    "learned": false, 
+    "info2": "Meine Gro\u00dfeltern sind schon lange tot.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 14, 
+    "question": "k\u00fchl ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc11c\ub298\ud55c, \ucc2c", 
+    "learned": false, 
+    "info2": "Es ist k\u00fchl drau\u00dfen. Zieh dir eine Jacke an.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 15, 
+    "question": "nett ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uce5c\uc808\ud55c, \uae30\ubd84 \uc88b\uc740", 
+    "learned": false, 
+    "info2": "Ich habe viele nette Kollegen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 15, 
+    "question": "genau ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub531 \ub4e4\uc5b4\ub9de\ub294, \uc815\ud655\ud55c", 
+    "learned": false, 
+    "info2": "Sind Sie sicher, dass die Pr\u00fcfung am 15. Juni ist? -  Ja, das wei\u00df ich genau."
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 15, 
+    "question": "hei\u00df ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub354\uc6b4, \ub728\uac70\uc6b4", 
+    "learned": false, 
+    "info2": "Vorsicht, der Tee ist hei\u00df!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.657469", 
+    "chunk": 15, 
+    "question": "traurig ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc2ac\ud37c\ud558\ub294, \uc2ac\ud508", 
+    "learned": false, 
+    "info2": "Ich bin sehr traurig. Meine Katze ist weggelaufen.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656823", 
+    "chunk": 15, 
+    "question": "schade ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc544\uae4c\uc6b4", 
+    "learned": false, 
+    "info2": "Schade, dass du nicht kommen kannst.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 15, 
+    "question": "herzlich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc9c4\uc2ec\uc758, \uac04\uc808\ud55c", 
+    "learned": false, 
+    "info2": "Herzlichen Gl\u00fcckwunsch!  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 15, 
+    "question": "h\u00e4sslich ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ubabb\uc0dd\uae34", 
+    "learned": false, 
+    "info2": "Ich finde das Kleid h\u00e4sslich. Es gef\u00e4llt mir nicht.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.654945", 
+    "chunk": 15, 
+    "question": "hell ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ub9d1\uc740", 
+    "learned": false, 
+    "info2": "Im Sommer ist es bis 21 Uhr hell.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 15, 
+    "question": "kurz ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uc9e7\uc740, \uac00\uae4c\uc6b4, \uc791\uc740", 
+    "learned": false, 
+    "info2": "Ricardo hat kurze Haare.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.655826", 
+    "chunk": 15, 
+    "question": "leer ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\ube48, \uc0ac\ub78c\uc774 \uc5c6\ub294", 
+    "learned": false, 
+    "info2": "Die Kanne ist fast leer. Ich mache neuen Tee.  "
+  }, 
+  {
+    "date": "2019-02-10 21:28:10.656918", 
+    "chunk": 16, 
+    "question": "stark ", 
+    "info1": "", 
+    "difficulty": 1, 
+    "answer": "\uac15\ud55c, \ud798\uc13c", 
+    "learned": false, 
+    "info2": "Ich habe starke Kopfschmerzen.  "
+  }
+]
