@@ -4,7 +4,7 @@
 title = 할로 독일어
 
 # (str) Package name
-package.name = halloapp
+package.name = HalloApp
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = de.dogileo
@@ -28,7 +28,7 @@ source.exclude_dirs = tests, bin, archiv, utils
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.1
+version = 1.0
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -51,7 +51,7 @@ presplash.filename = %(source.dir)s/data/pictures/logo_sepia.png
 # (str) Icon of the application
 icon.filename = %(source.dir)s/data/pictures/hallologo.png
 
-# (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
+# (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
 
 # (list) List of service to declare
@@ -87,20 +87,17 @@ fullscreen = 0
 # (list) Permissions
 #android.permissions = INTERNET
 
-# (int) Target Android API, should be as high as possible.
-#android.api = 27
+# (int) Android API to use
+android.api = 27
 
-# (int) Minimum API your APK will support.
-#android.minapi = 21
+# (int) Minimum API required
+android.minapi = 21
 
 # (int) Android SDK version to use
 #android.sdk = 20
 
 # (str) Android NDK version to use
-#android.ndk = 17c
-
-# (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
-#android.ndk_api = 21
+android.ndk = 16b
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
@@ -118,12 +115,6 @@ fullscreen = 0
 # This can be useful to avoid excess Internet downloads or save time
 # when an update is due and you just want to test/build your package
 # android.skip_update = False
-
-# (bool) If True, then automatically accept SDK license
-# agreements. This is intended for automation only. If set to False,
-# the default, you will be shown the license when first running
-# buildozer.
-# android.accept_sdk_license = False
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.renpy.android.PythonActivity
@@ -158,8 +149,8 @@ fullscreen = 0
 # (list) Java classes to add as activities to the manifest.
 #android.add_activites = com.example.ExampleActivity
 
-# (str) python-for-android branch to use, defaults to master
-#p4a.branch = master
+# (str) python-for-android branch to use, defaults to stable
+#p4a.branch = stable
 
 # (str) OUYA Console category. Should be one of GAME or APP
 # If you leave this blank, OUYA support will not be enabled
@@ -226,16 +217,6 @@ android.arch = armeabi-v7a
 
 # (str) Path to a custom kivy-ios folder
 #ios.kivy_ios_dir = ../kivy-ios
-# Alternately, specify the URL and branch of a git checkout:
-ios.kivy_ios_url = https://github.com/kivy/kivy-ios
-ios.kivy_ios_branch = master
-
-# Another platform dependency: ios-deploy
-# Uncomment to use a custom checkout
-#ios.ios_deploy_dir = ../ios_deploy
-# Or specify URL and branch
-ios.ios_deploy_url = https://github.com/phonegap/ios-deploy
-ios.ios_deploy_branch = 1.7.0
 
 # (str) Name of the certificate to use for signing the debug version
 # Get a list of available identities: buildozer ios list_identities

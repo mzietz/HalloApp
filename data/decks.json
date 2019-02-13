@@ -1,88 +1,88 @@
 {
-  "firsttime": true, 
+  "firsttime": true,
   "decks": [
     {
-      "cards": 364, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": true, 
+      "cards": 364,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": true,
       "text": "a1nomen"
-    }, 
+    },
     {
-      "cards": 150, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 150,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "a1verben"
-    }, 
+    },
     {
-      "cards": 84, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 84,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "a1adjektive"
-    }, 
+    },
     {
-      "cards": 165, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 165,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "a1rest"
-    }, 
+    },
     {
-      "cards": 596, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 596,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "a2nomen"
-    }, 
+    },
     {
-      "cards": 270, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 270,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "a2verben"
-    }, 
+    },
     {
-      "cards": 161, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 161,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "a2adjektive"
-    }, 
+    },
     {
-      "cards": 166, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 166,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "a2rest"
-    }, 
+    },
     {
-      "cards": 1, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 1,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "b1nomen"
-    }, 
+    },
     {
-      "cards": 1, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 1,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "b1verben"
-    }, 
+    },
     {
-      "cards": 1, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 1,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "b1adjektive"
-    }, 
+    },
     {
-      "cards": 1, 
-      "swipe_left": 0, 
-      "swipe_right": 0, 
-      "selected": false, 
+      "cards": 1,
+      "swipe_left": 0,
+      "swipe_right": 0,
+      "selected": false,
       "text": "b1rest"
     }
   ]

@@ -105,7 +105,7 @@ class Library:
         """Calculats which chunk of cards is next"""
         self.nextThree = []
         self.finished = False
-        for x in range(3):
+        for x in xrange(3):
             if len(self.library) > 30: # in case of not yet implemented decks get selected
                 s = sorted(self.library, key=lambda k: k['difficulty'], reverse=True)[x*self.chunk_size]
             else:

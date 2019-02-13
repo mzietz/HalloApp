@@ -433,7 +433,7 @@ class HalloApp(App):
         self.choose_deck_pictures(deck)
 
     def button_animation(self):
-        pass
+        print "test"
 
     def set_deck_and_level_images(self, page, level, deck):
         if deck == "nomen":
