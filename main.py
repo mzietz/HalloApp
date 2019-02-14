@@ -34,10 +34,9 @@ class PageOne(Screen):
         animation += Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.7)
         animation.start(self.ids.right)
 
-    def on_enter(self):
+    def on_pre_enter(self):
          if self.show_howto is True:
             animation = Animation(pos_hint = {'center_y': 0.4}, t='in_out_cubic', duration=0.5)
-            # animation.bind(on_complete=self.deanimate_deck_size)
             animation.start(self.ids.howto)
 
     def deanimate_howto(self, *args):
