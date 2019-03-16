@@ -10,7 +10,7 @@ from selenium import webdriver
 
 ger_list = []
 
-with open("raw_data/A2rest.txt") as f:
+with open("raw_data/B1nomen.txt") as f:
 	for line in f:
 #		line = line.split(" ")
 #		line = line[1]
@@ -40,5 +40,5 @@ for i, vocab in enumerate(ger_list):
 		kor_list.append(kor)
 	except:
 		kor_list.append("Error")
-	with open('A2rest_kor.json', 'w') as fd:
+	with open('B1nomen_json.json', 'w') as fd:
 		json.dump(kor_list, fd)

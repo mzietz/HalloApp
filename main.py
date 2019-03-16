@@ -17,6 +17,7 @@ class SwipeManager(ScreenManager):
     pass
 
 class PageOne(Screen):
+    """Study Screen One. Alternates with Study Screen Two"""
     howto_image = StringProperty("data/pictures/anleitung.png")
     picture_answer = StringProperty("")
     show_howto = BooleanProperty(True)
@@ -34,7 +35,7 @@ class PageOne(Screen):
         animation += Animation(pos_hint = {'center_y': -0.3}, t='in_out_cubic', duration=0.7)
         animation.start(self.ids.right)
 
-    def on_pre_enter(self):
+    def on_enter(self):
          if self.show_howto is True:
             animation = Animation(pos_hint = {'center_y': 0.4}, t='in_out_cubic', duration=0.5)
             animation.start(self.ids.howto)
@@ -44,6 +45,7 @@ class PageOne(Screen):
         animation.start(self.ids.howto)
 
 class PageTwo(Screen):
+    """Study Screen Two. Alternates with Study Screen One"""
     picture_answer = StringProperty("")
     line_image = StringProperty("")
 
@@ -58,6 +60,7 @@ class PageTwo(Screen):
         animation.start(self.ids.right)
 
 class FinishedPage(Screen):
+    """A screen which appears when the user finished a deck"""
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     picture = StringProperty("data/pictures/homescreen2.png")
     refresh_image = StringProperty("data/pictures/deck_refresh.png")
@@ -74,6 +77,7 @@ class FinishedPage(Screen):
         animation.start(self.ids.complete)
 
 class VocabFrontPage(Screen):
+    """A screen which appears when starting studying a deck"""
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     picture = StringProperty("data/pictures/homescreen2.png")
     start_image = StringProperty("data/pictures/start_pixel.png")
@@ -81,11 +85,13 @@ class VocabFrontPage(Screen):
     level = StringProperty("")
 
 class HomePage(Screen):
+    """First page a user sees"""
     picture = StringProperty("data/pictures/homescreen.png")
     data_image = StringProperty("data/pictures/data_button_stark.png")
     deck_image = StringProperty("data/pictures/deck_hallo.png")
 
 class ChunkPage(Screen):
+    """Displays all Chunk Information"""
     picture = StringProperty("data/pictures/homescreen2.png")
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     continue_image = StringProperty("data/pictures/weiter_pixel.png")
@@ -107,10 +113,12 @@ class ChunkPage(Screen):
         animation = Animation(pos_hint = {'center_y': 1.35}, t='in_out_cubic', duration=0.5)
         animation.start(self.ids.chunk_complete)
 class AboutPage(Screen):
+    """Displays aadditional information"""
     picture = StringProperty("data/pictures/aboutdesign.png")
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
 
 class DataPage(Screen):
+    """Displays all available decks"""
     back_image = StringProperty("data/pictures/mario_hand_schatten.png")
     picture = StringProperty("data/pictures/homescreen2.png")
     size_image = StringProperty("data/pictures/weiter_pixel.png")
@@ -205,6 +213,7 @@ class HalloApp(App):
         return self.sm
 
     def init(self):
+        """Initializes a deck. Gets called each time a user starts studying a deck"""
         self.lib.current_chunk = self.lib.next_chunk()
         self.lib.reset_learned_status()
         self.lib.next_card()
@@ -242,6 +251,7 @@ class HalloApp(App):
         self.sm.current = 'vocabfrontpage'
         
     def set_current_deck(self):
+        """Sets the current deck"""
         for x in self.lib.decks:
             if x["selected"] == True:
                 self.current_deck = x["text"]
@@ -289,6 +299,7 @@ class HalloApp(App):
         self.sm.current = 'aboutpage'
 
     def go_to_one(self, direction):
+        """Alternating between two screens while studying a deck"""
         self.answered = False
         if self.lib.cards_left() == 1 and direction == 'right':
             self.lib.add_swipe('right')
@@ -309,6 +320,7 @@ class HalloApp(App):
             self.sm.current = 'pageone'
 
     def go_to_two(self, direction):
+        """Alternating between two screens while studying a deck"""
         self.answered = False
         if self.lib.cards_left() == 1 and direction == 'right':
             self.lib.add_swipe('right')
@@ -329,6 +341,7 @@ class HalloApp(App):
             self.sm.current = 'pagetwo'
     
     def load_intro(self):
+        """First time users get displayed a tutorial page"""
         if self.lib.firsttime:
             self.pageone.show_howto = True
         else:
@@ -347,12 +360,15 @@ class HalloApp(App):
             self.info22 = self.lib.library[self.lib.current_card]["info2"]
 
     def touchdown(self, touch):
+        """Swipe is implemented manually"""
         self.coordinate = touch.x   
 
     def reset_current_deck(self):
+        """Resets and shuffles current deck"""
         self.lib.reset_deck()
 
     def touchup_on_pagetwo(self, touch):
+        """Swipe is implemented manually"""
         self.distance = touch.x - self.coordinate       
         if self.answered == False:
             self.show_answer(self.pagetwo)
@@ -364,6 +380,7 @@ class HalloApp(App):
                 self.go_to_one('left')
 
     def touchup_on_pageone(self, touch):
+        """Swipe is implemented manually"""
         try:
             self.distance = touch.x - self.coordinate
         except:
@@ -387,17 +404,20 @@ class HalloApp(App):
         self.choose_level_pictures(level)
     
     def reset_deck_pictures(self):
+        """Resets deck images on datapage"""
         self.datapage.nomen_image = "data/pictures/deck_hallo_raw.png"
         self.datapage.verben_image = "data/pictures/deck_hallo_raw.png"
         self.datapage.adjektive_image = "data/pictures/deck_hallo_raw.png"
         self.datapage.rest_image = "data/pictures/deck_hallo_raw.png"
 
     def reset_level_pictures(self):
+        """Resets level images on datapage"""
         self.datapage.a1_image = "data/pictures/A1.png"
         self.datapage.a2_image = "data/pictures/A2.png"
         self.datapage.b1_image = "data/pictures/B1.png"
     
     def choose_deck_pictures(self, deck):
+        """Sets deck images on datapage"""
         if deck == "nomen":
             self.datapage.nomen_image = "data/pictures/nomen.png"
         if deck == "verben":
@@ -408,6 +428,7 @@ class HalloApp(App):
             self.datapage.rest_image = "data/pictures/rest.png"
 
     def choose_level_pictures(self, level):
+        """Sets level images on datapage"""
         if level == "a1":
             self.currentLevel = "a1"
             self.datapage.a1_image = "data/pictures/A1gross.png"
@@ -422,6 +443,7 @@ class HalloApp(App):
             self.reset_deck_pictures()    
     
     def on_deck_button(self, deck):
+        """Press on Button on datapage"""
         self.current_deck = self.currentLevel + deck
         self.lib.current_deck = self.current_deck
         self.lib.save_decks()
@@ -435,6 +457,7 @@ class HalloApp(App):
         pass
 
     def set_deck_and_level_images(self, page, level, deck):
+        """Sets deck images on vocabfrontpage and chunkpage"""
         if deck == "nomen":
             self.vocabfrontpage.deck = "명사"
             self.chunkpage.deck = "명사"
@@ -476,6 +499,7 @@ class HalloApp(App):
             self.finishedpage.refresh_image = "data/pictures/deck_refresh_down.png"
 
     def reset_images(self, instance):
+        """Resets all animated images"""
         self.vocabfrontpage.back_image = "data/pictures/mario_hand_schatten.png"
         self.datapage.back_image = "data/pictures/mario_hand_schatten.png"
         self.chunkpage.back_image = "data/pictures/mario_hand_schatten.png"
@@ -488,6 +512,7 @@ class HalloApp(App):
         self.finishedpage.refresh_image = "data/pictures/deck_refresh.png"
 
     def set_random_line(self):
+        """Chooses between a set of lines in the study screens"""
         line = random.choice(self.lines)
         self.pageone.line_image = line
         self.pagetwo.line_image = line
