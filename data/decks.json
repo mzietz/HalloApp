@@ -1,10 +1,10 @@
 {
-  "firsttime": false,
+  "firsttime": true,
   "decks": [
     {
       "cards": 364,
-      "swipe_left": 5,
-      "swipe_right": 20,
+      "swipe_left": 0,
+      "swipe_right": 0,
       "selected": true,
       "text": "a1nomen"
     },

@@ -101,67 +101,97 @@
   },
   {
     "answer": "\uba54\ub274, \uc2dd\ub2e8",
-    "difficulty": 1,
+    "difficulty": 2,
     "chunk": 1,
     "question": "die Speisekarte ",
     "date": "2019-02-12 18:31:58.662216",
     "info1": "",
-    "learned": false,
+    "learned": true,
     "info2": "Bringen Sie mir die Speisekarte, bitte."
   },
   {
     "answer": "\uc0c1\uad00, \uc0c1\uc0ac",
-    "difficulty": 1,
+    "difficulty": 2,
     "chunk": 1,
     "question": "der Chef ",
     "date": "2019-02-12 18:31:58.662216",
     "info1": "",
-    "learned": false,
+    "learned": true,
     "info2": "Wir haben eine neue Chefin."
   },
   {
     "answer": "\ubc29",
-    "difficulty": 1,
+    "difficulty": 2,
     "chunk": 1,
     "question": "der Raum",
     "date": "2019-02-12 18:31:58.662216",
     "info1": "(die R\u00e4ume)",
-    "learned": false,
+    "learned": true,
     "info2": "Der Unterricht ist in Raum 332."
   },
   {
-    "answer": "\ucd08\ub300, \uccad\ucca9",
-    "difficulty": 1,
-    "chunk": 1,
-    "question": "die Einladung ",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": "Danke f\u00fcr die Einladung!"
-  },
-  {
     "answer": "\ub0a8\ud3b8",
-    "difficulty": 1,
+    "difficulty": 2,
     "chunk": 1,
     "question": "der Ehemann",
     "date": "2019-02-12 18:31:58.662216",
     "info1": "(die Ehem\u00e4nner)",
-    "learned": false,
+    "learned": true,
     "info2": "Das ist mein (Ehe-) Frau."
   },
   {
     "answer": "\uc5ec\uc790, \ubbf8\uc2a4",
-    "difficulty": 1,
+    "difficulty": 2,
     "chunk": 1,
     "question": "die Frau",
     "date": "2019-02-12 18:31:58.662216",
     "info1": "(die Frauen)",
-    "learned": false,
+    "learned": true,
     "info2": "Das ist Frau Becker."
   },
   {
+    "answer": "9\uc6d4",
+    "difficulty": 2,
+    "chunk": 1,
+    "question": "der September",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": ""
+  },
+  {
+    "answer": "\ucc28",
+    "difficulty": 2,
+    "chunk": 1,
+    "question": "der Tee ",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": "Ich trinke morgens immer Tee."
+  },
+  {
+    "answer": "\uacf5\ud68c\ub2f9, \uac15\ub2f9",
+    "difficulty": 2,
+    "chunk": 1,
+    "question": "die Halle ",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": "Wir treffen uns in Halle B"
+  },
+  {
+    "answer": "\ucd08\ub300, \uccad\ucca9",
+    "difficulty": 2,
+    "chunk": 1,
+    "question": "die Einladung ",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": "Danke f\u00fcr die Einladung!"
+  },
+  {
     "answer": "\uc785\uad6c",
-    "difficulty": 1,
+    "difficulty": 2,
     "chunk": 1,
     "question": "der Eingang ",
     "date": "2019-02-12 18:31:58.662216",
@@ -170,43 +200,13 @@
     "info2": "Der Eingang ist um die Ecke."
   },
   {
-    "answer": "9\uc6d4",
-    "difficulty": 1,
-    "chunk": 1,
-    "question": "der September",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": ""
-  },
-  {
-    "answer": "\ucc28",
-    "difficulty": 1,
-    "chunk": 1,
-    "question": "der Tee ",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": "Ich trinke morgens immer Tee."
-  },
-  {
-    "answer": "\uacf5\ud68c\ub2f9, \uac15\ub2f9",
-    "difficulty": 1,
-    "chunk": 1,
-    "question": "die Halle ",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": "Wir treffen uns in Halle B"
-  },
-  {
     "answer": "\ud615\uc81c",
     "difficulty": 1,
     "chunk": 2,
     "question": "die Geschwister (pl.)  ",
     "date": "2019-02-12 18:31:58.662216",
     "info1": "",
-    "learned": false,
+    "learned": true,
     "info2": "Ich habe leider keine Geschwister."
   },
   {
@@ -216,8 +216,78 @@
     "question": "die Gruppe",
     "date": "2019-02-12 18:31:58.662216",
     "info1": "(die Gruppen)",
-    "learned": false,
+    "learned": true,
     "info2": "Die erste Gruppe beginnt um 16 Uhr."
+  },
+  {
+    "answer": "\uc544\uce68",
+    "difficulty": 1,
+    "chunk": 2,
+    "question": "der Morgen",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": "Morgen fr\u00fch fahre ich nach Berlin."
+  },
+  {
+    "answer": "\uc601\ud654\uad00",
+    "difficulty": 1,
+    "chunk": 2,
+    "question": "das Kino",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "(die Kinos)",
+    "learned": true,
+    "info2": "Wir sehen heute Abend im Kino einen sch\u00f6nen Film."
+  },
+  {
+    "answer": "\uc0d0\ub7ec\ub4dc",
+    "difficulty": 1,
+    "chunk": 2,
+    "question": "der Salat ",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": "Wie schmeckt dir der Salat?"
+  },
+  {
+    "answer": "\uc6b0\uc720",
+    "difficulty": 1,
+    "chunk": 2,
+    "question": "die Milch ",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": "Die Milch steht im K\u00fchlschrank."
+  },
+  {
+    "answer": "\uba38\ub9ac\ud138, \ud138",
+    "difficulty": 1,
+    "chunk": 2,
+    "question": "das Haar",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "(die Haare)",
+    "learned": true,
+    "info2": "Sie hat lange Haare."
+  },
+  {
+    "answer": "\uc18c\ub140,  \uc5ec\uc790\uc544\uc774",
+    "difficulty": 1,
+    "chunk": 2,
+    "question": "das M\u00e4dchen",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "(die M\u00e4dchen)",
+    "learned": true,
+    "info2": "Familie Kurz bekommt ein Baby. - Junge oder M\u00e4dchen?"
+  },
+  {
+    "answer": "12\uc6d4",
+    "difficulty": 1,
+    "chunk": 2,
+    "question": "der Dezember",
+    "date": "2019-02-12 18:31:58.662216",
+    "info1": "",
+    "learned": true,
+    "info2": ""
   },
   {
     "answer": "\uc54c\ub9bc, \uc815\ubcf4, \uc548\ub0b4",
@@ -228,76 +298,6 @@
     "info1": "(die Ausk\u00fcnfte)",
     "learned": false,
     "info2": "K\u00f6nnen Sie mir eine Auskunft geben?"
-  },
-  {
-    "answer": "\uc544\uce68",
-    "difficulty": 1,
-    "chunk": 2,
-    "question": "der Morgen",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": "Morgen fr\u00fch fahre ich nach Berlin."
-  },
-  {
-    "answer": "\uc601\ud654\uad00",
-    "difficulty": 1,
-    "chunk": 2,
-    "question": "das Kino",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "(die Kinos)",
-    "learned": false,
-    "info2": "Wir sehen heute Abend im Kino einen sch\u00f6nen Film."
-  },
-  {
-    "answer": "\uc0d0\ub7ec\ub4dc",
-    "difficulty": 1,
-    "chunk": 2,
-    "question": "der Salat ",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": "Wie schmeckt dir der Salat?"
-  },
-  {
-    "answer": "\uc6b0\uc720",
-    "difficulty": 1,
-    "chunk": 2,
-    "question": "die Milch ",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": "Die Milch steht im K\u00fchlschrank."
-  },
-  {
-    "answer": "\uba38\ub9ac\ud138, \ud138",
-    "difficulty": 1,
-    "chunk": 2,
-    "question": "das Haar",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "(die Haare)",
-    "learned": false,
-    "info2": "Sie hat lange Haare."
-  },
-  {
-    "answer": "\uc18c\ub140,  \uc5ec\uc790\uc544\uc774",
-    "difficulty": 1,
-    "chunk": 2,
-    "question": "das M\u00e4dchen",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "(die M\u00e4dchen)",
-    "learned": false,
-    "info2": "Familie Kurz bekommt ein Baby. - Junge oder M\u00e4dchen?"
-  },
-  {
-    "answer": "12\uc6d4",
-    "difficulty": 1,
-    "chunk": 2,
-    "question": "der Dezember",
-    "date": "2019-02-12 18:31:58.662216",
-    "info1": "",
-    "learned": false,
-    "info2": ""
   },
   {
     "answer": "\uc2e0\ubd84\uc99d\uba85\uc11c",

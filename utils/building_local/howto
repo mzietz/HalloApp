@@ -1,0 +1,6 @@
+Commit changes to git
+copy changes to hallodogileo folder
+source halloapp virtual env
+set keys in virutal env
+go to hallodogileo
+buildozer android release
