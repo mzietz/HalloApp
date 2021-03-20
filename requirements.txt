@@ -7,7 +7,7 @@ colorama==0.4.1
 Cython==0.25.2
 docutils==0.14
 idna==2.8
-Jinja2==2.10
+Jinja2==2.11.3
 Kivy-Garden==0.1.4
 MarkupSafe==1.1.0
 pexpect==4.6.0
